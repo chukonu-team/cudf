@@ -79,7 +79,6 @@ option(CUDA_ENABLE_LINEINFO
 option(CUDA_WARNINGS_AS_ERRORS "Enable -Werror=all-warnings for all CUDA compilation" ON)
 # cudart can be statically linked or dynamically linked. The python ecosystem wants dynamic linking
 option(CUDA_STATIC_RUNTIME "Statically link the CUDA runtime" OFF)
-option(CUDA_STATIC_CUFILE "Statically link cuFile" OFF)
 
 set(DEFAULT_CUDF_BUILD_STREAMS_TEST_UTIL ON)
 if(CUDA_STATIC_RUNTIME OR NOT BUILD_SHARED_LIBS)
@@ -924,15 +923,6 @@ target_compile_definitions(
 # Enable remote IO through KvikIO
 target_compile_definitions(cudf PRIVATE $<$<BOOL:${CUDF_KVIKIO_REMOTE_IO}>:CUDF_KVIKIO_REMOTE_IO>)
 
-# Enable cuFile support
-set(_cufile_suffix)
-if(CUDA_STATIC_CUFILE)
-  set(_cufile_suffix _static)
-endif()
-if(TARGET CUDA::cuFile${_cufile_suffix})
-  target_compile_definitions(cudf PRIVATE CUDF_CUFILE_FOUND)
-endif()
-
 # Remove this after upgrading to a CCCL that has a proper CMake option. See
 # https://github.com/NVIDIA/cccl/pull/2844
 target_compile_definitions(cudf PRIVATE THRUST_FORCE_32_BIT_OFFSET_TYPE=1)
@@ -944,15 +934,8 @@ add_dependencies(cudf jitify_preprocess_run)
 target_link_libraries(
   cudf
   PUBLIC CCCL::CCCL rmm::rmm rmm::rmm_logger $<BUILD_LOCAL_INTERFACE:BS::thread_pool> cudf_logger
-  PRIVATE $<BUILD_LOCAL_INTERFACE:nvtx3::nvtx3-cpp>
-          cuco::cuco
-          ZLIB::ZLIB
-          nvcomp::nvcomp
-          kvikio::kvikio
-          $<TARGET_NAME_IF_EXISTS:CUDA::cuFile${_cufile_suffix}>
-          nanoarrow
-          rmm::rmm_logger_impl
-          cudf_logger_impl
+  PRIVATE $<BUILD_LOCAL_INTERFACE:nvtx3::nvtx3-cpp> cuco::cuco ZLIB::ZLIB nvcomp::nvcomp
+          kvikio::kvikio nanoarrow rmm::rmm_logger_impl cudf_logger_impl
 )
 
 # Add Conda library, and include paths if specified
