@@ -5,7 +5,6 @@ import numpy as np
 import pandas as pd
 import pytest
 
-ibis.set_backend("pandas")
 ibis.options.interactive = False
 
 
