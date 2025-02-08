@@ -1,0 +1,1 @@
+[2025-02-07 12:09:04.135] [CUDF] [warning] Running benchmarks without dropping the L3 cache; results may not reflect file IO throughput

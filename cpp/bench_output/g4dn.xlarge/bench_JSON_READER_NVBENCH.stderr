@@ -1,0 +1,4 @@
+[2025-02-07 12:17:12.638] [CUDF] [warning] Running benchmarks without dropping the L3 cache; results may not reflect file IO throughput
+[2025-02-07 12:17:13.500] [RMM] [error] [A][Stream 0x1][Upstream 2486491904B][FAILURE maximum pool size exceeded]
+[2025-02-07 12:37:34.720] [RMM] [error] [A][Stream 0x1][Upstream 866415872B][FAILURE maximum pool size exceeded]
+[2025-02-07 12:45:22.270] [RMM] [error] [A][Stream 0x1][Upstream 866415872B][FAILURE maximum pool size exceeded]

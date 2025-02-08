@@ -1,0 +1,382 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/114] concatenate [Device=0 num_rows=64 num_cols=2 nulls=0]
+Pass: Cold: 0.011887ms GPU, 0.015758ms CPU, 0.50s total GPU, 2.96s total wall, 42064x 
+Run:  [2/114] concatenate [Device=0 num_rows=512 num_cols=2 nulls=0]
+Pass: Cold: 0.011972ms GPU, 0.015692ms CPU, 0.50s total GPU, 2.92s total wall, 41776x 
+Run:  [3/114] concatenate [Device=0 num_rows=4096 num_cols=2 nulls=0]
+Pass: Cold: 0.011905ms GPU, 0.015620ms CPU, 0.50s total GPU, 2.93s total wall, 42000x 
+Run:  [4/114] concatenate [Device=0 num_rows=32768 num_cols=2 nulls=0]
+Pass: Cold: 0.013998ms GPU, 0.017716ms CPU, 0.50s total GPU, 2.42s total wall, 35728x 
+Run:  [5/114] concatenate [Device=0 num_rows=262144 num_cols=2 nulls=0]
+Pass: Cold: 0.043476ms GPU, 0.047234ms CPU, 0.50s total GPU, 0.94s total wall, 11504x 
+Run:  [6/114] concatenate [Device=0 num_rows=64 num_cols=8 nulls=0]
+Pass: Cold: 0.024155ms GPU, 0.027787ms CPU, 0.50s total GPU, 1.42s total wall, 20704x 
+Run:  [7/114] concatenate [Device=0 num_rows=512 num_cols=8 nulls=0]
+Pass: Cold: 0.024855ms GPU, 0.028570ms CPU, 0.50s total GPU, 1.39s total wall, 20128x 
+Run:  [8/114] concatenate [Device=0 num_rows=4096 num_cols=8 nulls=0]
+Pass: Cold: 0.025156ms GPU, 0.028829ms CPU, 0.50s total GPU, 1.36s total wall, 19888x 
+Run:  [9/114] concatenate [Device=0 num_rows=32768 num_cols=8 nulls=0]
+Pass: Cold: 0.040010ms GPU, 0.043747ms CPU, 0.50s total GPU, 0.99s total wall, 12512x 
+Run:  [10/114] concatenate [Device=0 num_rows=262144 num_cols=8 nulls=0]
+Pass: Cold: 0.160017ms GPU, 0.163866ms CPU, 0.50s total GPU, 0.61s total wall, 3136x 
+Run:  [11/114] concatenate [Device=0 num_rows=64 num_cols=64 nulls=0]
+Pass: Cold: 0.033105ms GPU, 0.036697ms CPU, 0.50s total GPU, 1.11s total wall, 15104x 
+Run:  [12/114] concatenate [Device=0 num_rows=512 num_cols=64 nulls=0]
+Pass: Cold: 0.034613ms GPU, 0.038274ms CPU, 0.50s total GPU, 1.07s total wall, 14448x 
+Run:  [13/114] concatenate [Device=0 num_rows=4096 num_cols=64 nulls=0]
+Pass: Cold: 0.048983ms GPU, 0.052669ms CPU, 0.50s total GPU, 0.88s total wall, 10208x 
+Run:  [14/114] concatenate [Device=0 num_rows=32768 num_cols=64 nulls=0]
+Pass: Cold: 0.173694ms GPU, 0.177650ms CPU, 0.50s total GPU, 0.60s total wall, 2880x 
+Run:  [15/114] concatenate [Device=0 num_rows=262144 num_cols=64 nulls=0]
+Pass: Cold: 1.145602ms GPU, 1.150110ms CPU, 2.20s total GPU, 2.27s total wall, 1920x 
+Run:  [16/114] concatenate [Device=0 num_rows=64 num_cols=512 nulls=0]
+Pass: Cold: 0.115234ms GPU, 0.118875ms CPU, 0.50s total GPU, 0.64s total wall, 4352x 
+Run:  [17/114] concatenate [Device=0 num_rows=512 num_cols=512 nulls=0]
+Pass: Cold: 0.125447ms GPU, 0.129145ms CPU, 0.50s total GPU, 0.63s total wall, 4000x 
+Run:  [18/114] concatenate [Device=0 num_rows=4096 num_cols=512 nulls=0]
+Pass: Cold: 0.261779ms GPU, 0.265613ms CPU, 0.50s total GPU, 0.56s total wall, 1920x 
+Run:  [19/114] concatenate [Device=0 num_rows=32768 num_cols=512 nulls=0]
+Pass: Cold: 1.543249ms GPU, 1.547709ms CPU, 4.15s total GPU, 4.24s total wall, 2688x 
+Run:  [20/114] concatenate [Device=0 num_rows=262144 num_cols=512 nulls=0]
+Warn: Current measurement timed out (15.01s) while over noise threshold (1.68% > 0.50%)
+Pass: Cold: 12.113417ms GPU, 12.118213ms CPU, 14.96s total GPU, 15.01s total wall, 1235x 
+Run:  [21/114] concatenate [Device=0 num_rows=64 num_cols=1024 nulls=0]
+Pass: Cold: 0.210482ms GPU, 0.214169ms CPU, 0.50s total GPU, 0.58s total wall, 2384x 
+Run:  [22/114] concatenate [Device=0 num_rows=512 num_cols=1024 nulls=0]
+Pass: Cold: 0.233144ms GPU, 0.236923ms CPU, 0.50s total GPU, 0.57s total wall, 2160x 
+Run:  [23/114] concatenate [Device=0 num_rows=4096 num_cols=1024 nulls=0]
+Pass: Cold: 0.532024ms GPU, 0.535996ms CPU, 1.23s total GPU, 1.30s total wall, 2304x 
+Run:  [24/114] concatenate [Device=0 num_rows=32768 num_cols=1024 nulls=0]
+Pass: Cold: 3.366559ms GPU, 3.371137ms CPU, 7.22s total GPU, 7.30s total wall, 2144x 
+Run:  [25/114] concatenate [Device=0 num_rows=262144 num_cols=1024 nulls=0]
+Warn: Current measurement timed out (15.00s) while over noise threshold (1.58% > 0.50%)
+Pass: Cold: 26.417585ms GPU, 26.422784ms CPU, 14.98s total GPU, 15.00s total wall, 567x 
+Run:  [26/114] concatenate [Device=0 num_rows=64 num_cols=2 nulls=0.3]
+Pass: Cold: 0.011778ms GPU, 0.015497ms CPU, 0.50s total GPU, 2.98s total wall, 42464x 
+Run:  [27/114] concatenate [Device=0 num_rows=512 num_cols=2 nulls=0.3]
+Pass: Cold: 0.011909ms GPU, 0.015637ms CPU, 0.50s total GPU, 2.94s total wall, 42000x 
+Run:  [28/114] concatenate [Device=0 num_rows=4096 num_cols=2 nulls=0.3]
+Pass: Cold: 0.011980ms GPU, 0.015691ms CPU, 0.50s total GPU, 2.91s total wall, 41744x 
+Run:  [29/114] concatenate [Device=0 num_rows=32768 num_cols=2 nulls=0.3]
+Pass: Cold: 0.014027ms GPU, 0.017751ms CPU, 0.50s total GPU, 2.41s total wall, 35648x 
+Run:  [30/114] concatenate [Device=0 num_rows=262144 num_cols=2 nulls=0.3]
+Pass: Cold: 0.043518ms GPU, 0.047261ms CPU, 0.50s total GPU, 0.94s total wall, 11504x 
+Run:  [31/114] concatenate [Device=0 num_rows=64 num_cols=8 nulls=0.3]
+Pass: Cold: 0.024362ms GPU, 0.027987ms CPU, 0.50s total GPU, 1.41s total wall, 20528x 
+Run:  [32/114] concatenate [Device=0 num_rows=512 num_cols=8 nulls=0.3]
+Pass: Cold: 0.024579ms GPU, 0.028292ms CPU, 0.50s total GPU, 1.40s total wall, 20352x 
+Run:  [33/114] concatenate [Device=0 num_rows=4096 num_cols=8 nulls=0.3]
+Pass: Cold: 0.025038ms GPU, 0.028708ms CPU, 0.50s total GPU, 1.37s total wall, 19984x 
+Run:  [34/114] concatenate [Device=0 num_rows=32768 num_cols=8 nulls=0.3]
+Pass: Cold: 0.040238ms GPU, 0.043989ms CPU, 0.50s total GPU, 0.99s total wall, 12432x 
+Run:  [35/114] concatenate [Device=0 num_rows=262144 num_cols=8 nulls=0.3]
+Pass: Cold: 0.159683ms GPU, 0.163585ms CPU, 0.50s total GPU, 0.61s total wall, 3136x 
+Run:  [36/114] concatenate [Device=0 num_rows=64 num_cols=64 nulls=0.3]
+Pass: Cold: 0.033995ms GPU, 0.037599ms CPU, 0.50s total GPU, 1.09s total wall, 14720x 
+Run:  [37/114] concatenate [Device=0 num_rows=512 num_cols=64 nulls=0.3]
+Pass: Cold: 0.035419ms GPU, 0.039078ms CPU, 0.50s total GPU, 1.06s total wall, 14128x 
+Run:  [38/114] concatenate [Device=0 num_rows=4096 num_cols=64 nulls=0.3]
+Pass: Cold: 0.049281ms GPU, 0.052989ms CPU, 0.50s total GPU, 0.88s total wall, 10160x 
+Run:  [39/114] concatenate [Device=0 num_rows=32768 num_cols=64 nulls=0.3]
+Pass: Cold: 0.174229ms GPU, 0.178203ms CPU, 0.54s total GPU, 0.64s total wall, 3072x 
+Run:  [40/114] concatenate [Device=0 num_rows=262144 num_cols=64 nulls=0.3]
+Pass: Cold: 1.151340ms GPU, 1.155909ms CPU, 1.75s total GPU, 1.80s total wall, 1520x 
+Run:  [41/114] concatenate [Device=0 num_rows=64 num_cols=512 nulls=0.3]
+Pass: Cold: 0.117951ms GPU, 0.121618ms CPU, 0.50s total GPU, 0.64s total wall, 4240x 
+Run:  [42/114] concatenate [Device=0 num_rows=512 num_cols=512 nulls=0.3]
+Pass: Cold: 0.127677ms GPU, 0.131394ms CPU, 0.50s total GPU, 0.63s total wall, 3920x 
+Run:  [43/114] concatenate [Device=0 num_rows=4096 num_cols=512 nulls=0.3]
+Pass: Cold: 0.263158ms GPU, 0.267012ms CPU, 0.50s total GPU, 0.56s total wall, 1904x 
+Run:  [44/114] concatenate [Device=0 num_rows=32768 num_cols=512 nulls=0.3]
+Pass: Cold: 1.542807ms GPU, 1.547252ms CPU, 4.27s total GPU, 4.37s total wall, 2768x 
+Run:  [45/114] concatenate [Device=0 num_rows=262144 num_cols=512 nulls=0.3]
+Pass: Cold: 12.165113ms GPU, 12.169738ms CPU, 10.90s total GPU, 10.93s total wall, 896x 
+Run:  [46/114] concatenate [Device=0 num_rows=64 num_cols=1024 nulls=0.3]
+Pass: Cold: 0.212021ms GPU, 0.215685ms CPU, 0.50s total GPU, 0.58s total wall, 2368x 
+Run:  [47/114] concatenate [Device=0 num_rows=512 num_cols=1024 nulls=0.3]
+Pass: Cold: 0.233451ms GPU, 0.237168ms CPU, 0.50s total GPU, 0.57s total wall, 2144x 
+Run:  [48/114] concatenate [Device=0 num_rows=4096 num_cols=1024 nulls=0.3]
+Pass: Cold: 0.533830ms GPU, 0.537828ms CPU, 1.33s total GPU, 1.42s total wall, 2496x 
+Run:  [49/114] concatenate [Device=0 num_rows=32768 num_cols=1024 nulls=0.3]
+Pass: Cold: 3.383318ms GPU, 3.387916ms CPU, 7.09s total GPU, 7.17s total wall, 2096x 
+Run:  [50/114] concatenate [Device=0 num_rows=262144 num_cols=1024 nulls=0.3]
+Warn: Current measurement timed out (15.00s) while over noise threshold (1.71% > 0.50%)
+Pass: Cold: 26.604366ms GPU, 26.609208ms CPU, 14.98s total GPU, 15.00s total wall, 563x 
+Run:  [51/114] concatenate_strings [Device=0 num_rows=256 num_cols=2 row_width=32 nulls=0]
+Pass: Cold: 0.053817ms GPU, 0.057513ms CPU, 0.50s total GPU, 0.84s total wall, 9296x 
+Run:  [52/114] concatenate_strings [Device=0 num_rows=512 num_cols=2 row_width=32 nulls=0]
+Pass: Cold: 0.053986ms GPU, 0.057690ms CPU, 0.50s total GPU, 0.84s total wall, 9264x 
+Run:  [53/114] concatenate_strings [Device=0 num_rows=4096 num_cols=2 row_width=32 nulls=0]
+Pass: Cold: 0.054809ms GPU, 0.058553ms CPU, 0.50s total GPU, 0.83s total wall, 9136x 
+Run:  [54/114] concatenate_strings [Device=0 num_rows=16384 num_cols=2 row_width=32 nulls=0]
+Pass: Cold: 0.064602ms GPU, 0.068366ms CPU, 0.50s total GPU, 0.77s total wall, 7744x 
+Run:  [55/114] concatenate_strings [Device=0 num_rows=256 num_cols=8 row_width=32 nulls=0]
+Pass: Cold: 0.055600ms GPU, 0.059328ms CPU, 0.50s total GPU, 0.83s total wall, 9008x 
+Run:  [56/114] concatenate_strings [Device=0 num_rows=512 num_cols=8 row_width=32 nulls=0]
+Pass: Cold: 0.055645ms GPU, 0.059349ms CPU, 0.50s total GPU, 0.83s total wall, 8992x 
+Run:  [57/114] concatenate_strings [Device=0 num_rows=4096 num_cols=8 row_width=32 nulls=0]
+Pass: Cold: 0.068927ms GPU, 0.072687ms CPU, 0.50s total GPU, 0.75s total wall, 7264x 
+Run:  [58/114] concatenate_strings [Device=0 num_rows=16384 num_cols=8 row_width=32 nulls=0]
+Pass: Cold: 0.121126ms GPU, 0.124979ms CPU, 0.50s total GPU, 0.64s total wall, 4128x 
+Run:  [59/114] concatenate_strings [Device=0 num_rows=256 num_cols=64 row_width=32 nulls=0]
+Pass: Cold: 0.080286ms GPU, 0.084056ms CPU, 0.50s total GPU, 0.71s total wall, 6240x 
+Run:  [60/114] concatenate_strings [Device=0 num_rows=512 num_cols=64 row_width=32 nulls=0]
+Pass: Cold: 0.092646ms GPU, 0.096450ms CPU, 0.50s total GPU, 0.68s total wall, 5408x 
+Run:  [61/114] concatenate_strings [Device=0 num_rows=4096 num_cols=64 row_width=32 nulls=0]
+Pass: Cold: 0.298257ms GPU, 0.302820ms CPU, 0.76s total GPU, 0.84s total wall, 2544x 
+Run:  [62/114] concatenate_strings [Device=0 num_rows=16384 num_cols=64 row_width=32 nulls=0]
+Pass: Cold: 1.069990ms GPU, 1.074302ms CPU, 1.49s total GPU, 1.54s total wall, 1392x 
+Run:  [63/114] concatenate_strings [Device=0 num_rows=256 num_cols=256 row_width=32 nulls=0]
+Pass: Cold: 0.190026ms GPU, 0.193851ms CPU, 0.50s total GPU, 0.58s total wall, 2640x 
+Run:  [64/114] concatenate_strings [Device=0 num_rows=512 num_cols=256 row_width=32 nulls=0]
+Pass: Cold: 0.254144ms GPU, 0.257911ms CPU, 0.50s total GPU, 0.56s total wall, 1968x 
+Run:  [65/114] concatenate_strings [Device=0 num_rows=4096 num_cols=256 row_width=32 nulls=0]
+Pass: Cold: 1.360375ms GPU, 1.364699ms CPU, 2.11s total GPU, 2.16s total wall, 1552x 
+Run:  [66/114] concatenate_strings [Device=0 num_rows=16384 num_cols=256 row_width=32 nulls=0]
+Pass: Cold: 5.173126ms GPU, 5.177522ms CPU, 2.90s total GPU, 2.92s total wall, 560x 
+Run:  [67/114] concatenate_strings [Device=0 num_rows=256 num_cols=2 row_width=128 nulls=0]
+Pass: Cold: 0.053809ms GPU, 0.057505ms CPU, 0.50s total GPU, 0.84s total wall, 9296x 
+Run:  [68/114] concatenate_strings [Device=0 num_rows=512 num_cols=2 row_width=128 nulls=0]
+Pass: Cold: 0.053944ms GPU, 0.057699ms CPU, 0.50s total GPU, 0.84s total wall, 9280x 
+Run:  [69/114] concatenate_strings [Device=0 num_rows=4096 num_cols=2 row_width=128 nulls=0]
+Pass: Cold: 0.064064ms GPU, 0.067798ms CPU, 0.50s total GPU, 0.77s total wall, 7808x 
+Run:  [70/114] concatenate_strings [Device=0 num_rows=16384 num_cols=2 row_width=128 nulls=0]
+Pass: Cold: 0.106040ms GPU, 0.109787ms CPU, 0.57s total GPU, 0.76s total wall, 5408x 
+Run:  [71/114] concatenate_strings [Device=0 num_rows=256 num_cols=8 row_width=128 nulls=0]
+Pass: Cold: 0.057044ms GPU, 0.060752ms CPU, 0.50s total GPU, 0.81s total wall, 8768x 
+Run:  [72/114] concatenate_strings [Device=0 num_rows=512 num_cols=8 row_width=128 nulls=0]
+Pass: Cold: 0.060804ms GPU, 0.064516ms CPU, 0.50s total GPU, 0.79s total wall, 8224x 
+Run:  [73/114] concatenate_strings [Device=0 num_rows=4096 num_cols=8 row_width=128 nulls=0]
+Pass: Cold: 0.117437ms GPU, 0.121289ms CPU, 0.50s total GPU, 0.64s total wall, 4272x 
+Run:  [74/114] concatenate_strings [Device=0 num_rows=16384 num_cols=8 row_width=128 nulls=0]
+Pass: Cold: 0.264008ms GPU, 0.267757ms CPU, 0.50s total GPU, 0.56s total wall, 1904x 
+Run:  [75/114] concatenate_strings [Device=0 num_rows=256 num_cols=64 row_width=128 nulls=0]
+Pass: Cold: 0.115623ms GPU, 0.119379ms CPU, 0.50s total GPU, 0.64s total wall, 4336x 
+Run:  [76/114] concatenate_strings [Device=0 num_rows=512 num_cols=64 row_width=128 nulls=0]
+Pass: Cold: 0.171272ms GPU, 0.175187ms CPU, 0.56s total GPU, 0.66s total wall, 3264x 
+Run:  [77/114] concatenate_strings [Device=0 num_rows=4096 num_cols=64 row_width=128 nulls=0]
+Pass: Cold: 1.018476ms GPU, 1.022740ms CPU, 1.97s total GPU, 2.04s total wall, 1936x 
+Run:  [78/114] concatenate_strings [Device=0 num_rows=16384 num_cols=64 row_width=128 nulls=0]
+Pass: Cold: 1.771200ms GPU, 1.774927ms CPU, 3.32s total GPU, 3.38s total wall, 1872x 
+Run:  [79/114] concatenate_strings [Device=0 num_rows=256 num_cols=256 row_width=128 nulls=0]
+Pass: Cold: 0.396244ms GPU, 0.400173ms CPU, 0.50s total GPU, 0.54s total wall, 1264x 
+Run:  [80/114] concatenate_strings [Device=0 num_rows=512 num_cols=256 row_width=128 nulls=0]
+Pass: Cold: 0.697436ms GPU, 0.701581ms CPU, 1.74s total GPU, 1.82s total wall, 2496x 
+Run:  [81/114] concatenate_strings [Device=0 num_rows=4096 num_cols=256 row_width=128 nulls=0]
+Pass: Cold: 4.937725ms GPU, 4.942308ms CPU, 4.11s total GPU, 4.14s total wall, 832x 
+Run:  [82/114] concatenate_strings [Device=0 num_rows=16384 num_cols=256 row_width=128 nulls=0]
+Pass: Cold: 7.051800ms GPU, 7.055530ms CPU, 5.19s total GPU, 5.21s total wall, 736x 
+Run:  [83/114] concatenate_strings [Device=0 num_rows=256 num_cols=2 row_width=32 nulls=0.3]
+Pass: Cold: 0.053767ms GPU, 0.057477ms CPU, 0.50s total GPU, 0.84s total wall, 9312x 
+Run:  [84/114] concatenate_strings [Device=0 num_rows=512 num_cols=2 row_width=32 nulls=0.3]
+Pass: Cold: 0.054110ms GPU, 0.057789ms CPU, 0.50s total GPU, 0.84s total wall, 9248x 
+Run:  [85/114] concatenate_strings [Device=0 num_rows=4096 num_cols=2 row_width=32 nulls=0.3]
+Pass: Cold: 0.054644ms GPU, 0.058363ms CPU, 0.50s total GPU, 0.83s total wall, 9152x 
+Run:  [86/114] concatenate_strings [Device=0 num_rows=16384 num_cols=2 row_width=32 nulls=0.3]
+Pass: Cold: 0.064570ms GPU, 0.068330ms CPU, 0.51s total GPU, 0.79s total wall, 7904x 
+Run:  [87/114] concatenate_strings [Device=0 num_rows=256 num_cols=8 row_width=32 nulls=0.3]
+Pass: Cold: 0.055355ms GPU, 0.059107ms CPU, 0.50s total GPU, 0.83s total wall, 9040x 
+Run:  [88/114] concatenate_strings [Device=0 num_rows=512 num_cols=8 row_width=32 nulls=0.3]
+Pass: Cold: 0.055401ms GPU, 0.059111ms CPU, 0.50s total GPU, 0.83s total wall, 9040x 
+Run:  [89/114] concatenate_strings [Device=0 num_rows=4096 num_cols=8 row_width=32 nulls=0.3]
+Pass: Cold: 0.069561ms GPU, 0.073320ms CPU, 0.50s total GPU, 0.75s total wall, 7200x 
+Run:  [90/114] concatenate_strings [Device=0 num_rows=16384 num_cols=8 row_width=32 nulls=0.3]
+Pass: Cold: 0.120790ms GPU, 0.124639ms CPU, 0.50s total GPU, 0.64s total wall, 4144x 
+Run:  [91/114] concatenate_strings [Device=0 num_rows=256 num_cols=64 row_width=32 nulls=0.3]
+Pass: Cold: 0.080111ms GPU, 0.083882ms CPU, 0.50s total GPU, 0.71s total wall, 6256x 
+Run:  [92/114] concatenate_strings [Device=0 num_rows=512 num_cols=64 row_width=32 nulls=0.3]
+Pass: Cold: 0.093262ms GPU, 0.097048ms CPU, 0.50s total GPU, 0.68s total wall, 5376x 
+Run:  [93/114] concatenate_strings [Device=0 num_rows=4096 num_cols=64 row_width=32 nulls=0.3]
+Pass: Cold: 0.299012ms GPU, 0.303412ms CPU, 0.75s total GPU, 0.83s total wall, 2512x 
+Run:  [94/114] concatenate_strings [Device=0 num_rows=16384 num_cols=64 row_width=32 nulls=0.3]
+Pass: Cold: 1.066803ms GPU, 1.071103ms CPU, 1.66s total GPU, 1.71s total wall, 1552x 
+Run:  [95/114] concatenate_strings [Device=0 num_rows=256 num_cols=256 row_width=32 nulls=0.3]
+Pass: Cold: 0.191042ms GPU, 0.194849ms CPU, 0.50s total GPU, 0.58s total wall, 2624x 
+Run:  [96/114] concatenate_strings [Device=0 num_rows=512 num_cols=256 row_width=32 nulls=0.3]
+Pass: Cold: 0.256232ms GPU, 0.260047ms CPU, 0.63s total GPU, 0.71s total wall, 2464x 
+Run:  [97/114] concatenate_strings [Device=0 num_rows=4096 num_cols=256 row_width=32 nulls=0.3]
+Pass: Cold: 1.356399ms GPU, 1.360654ms CPU, 3.26s total GPU, 3.34s total wall, 2400x 
+Run:  [98/114] concatenate_strings [Device=0 num_rows=16384 num_cols=256 row_width=32 nulls=0.3]
+Pass: Cold: 5.168685ms GPU, 5.173263ms CPU, 2.81s total GPU, 2.83s total wall, 544x 
+Run:  [99/114] concatenate_strings [Device=0 num_rows=256 num_cols=2 row_width=128 nulls=0.3]
+Pass: Cold: 0.053703ms GPU, 0.057418ms CPU, 0.50s total GPU, 0.84s total wall, 9312x 
+Run:  [100/114] concatenate_strings [Device=0 num_rows=512 num_cols=2 row_width=128 nulls=0.3]
+Pass: Cold: 0.053639ms GPU, 0.057365ms CPU, 0.50s total GPU, 0.84s total wall, 9328x 
+Run:  [101/114] concatenate_strings [Device=0 num_rows=4096 num_cols=2 row_width=128 nulls=0.3]
+Pass: Cold: 0.064404ms GPU, 0.068162ms CPU, 0.50s total GPU, 0.77s total wall, 7776x 
+Run:  [102/114] concatenate_strings [Device=0 num_rows=16384 num_cols=2 row_width=128 nulls=0.3]
+Pass: Cold: 0.105802ms GPU, 0.109579ms CPU, 0.50s total GPU, 0.66s total wall, 4736x 
+Run:  [103/114] concatenate_strings [Device=0 num_rows=256 num_cols=8 row_width=128 nulls=0.3]
+Pass: Cold: 0.057672ms GPU, 0.061397ms CPU, 0.52s total GPU, 0.84s total wall, 8992x 
+Run:  [104/114] concatenate_strings [Device=0 num_rows=512 num_cols=8 row_width=128 nulls=0.3]
+Pass: Cold: 0.060747ms GPU, 0.064500ms CPU, 0.50s total GPU, 0.79s total wall, 8240x 
+Run:  [105/114] concatenate_strings [Device=0 num_rows=4096 num_cols=8 row_width=128 nulls=0.3]
+Pass: Cold: 0.117356ms GPU, 0.121226ms CPU, 0.50s total GPU, 0.64s total wall, 4272x 
+Run:  [106/114] concatenate_strings [Device=0 num_rows=16384 num_cols=8 row_width=128 nulls=0.3]
+Pass: Cold: 0.266826ms GPU, 0.270591ms CPU, 0.75s total GPU, 0.84s total wall, 2800x 
+Run:  [107/114] concatenate_strings [Device=0 num_rows=256 num_cols=64 row_width=128 nulls=0.3]
+Pass: Cold: 0.115480ms GPU, 0.119259ms CPU, 0.50s total GPU, 0.64s total wall, 4336x 
+Run:  [108/114] concatenate_strings [Device=0 num_rows=512 num_cols=64 row_width=128 nulls=0.3]
+Pass: Cold: 0.169822ms GPU, 0.173696ms CPU, 0.50s total GPU, 0.60s total wall, 2960x 
+Run:  [109/114] concatenate_strings [Device=0 num_rows=4096 num_cols=64 row_width=128 nulls=0.3]
+Pass: Cold: 1.020598ms GPU, 1.024894ms CPU, 2.50s total GPU, 2.58s total wall, 2448x 
+Run:  [110/114] concatenate_strings [Device=0 num_rows=16384 num_cols=64 row_width=128 nulls=0.3]
+Pass: Cold: 1.791636ms GPU, 1.795392ms CPU, 4.04s total GPU, 4.12s total wall, 2256x 
+Run:  [111/114] concatenate_strings [Device=0 num_rows=256 num_cols=256 row_width=128 nulls=0.3]
+Pass: Cold: 0.398060ms GPU, 0.402104ms CPU, 0.72s total GPU, 0.78s total wall, 1808x 
+Run:  [112/114] concatenate_strings [Device=0 num_rows=512 num_cols=256 row_width=128 nulls=0.3]
+Pass: Cold: 0.698326ms GPU, 0.702415ms CPU, 1.72s total GPU, 1.80s total wall, 2464x 
+Run:  [113/114] concatenate_strings [Device=0 num_rows=4096 num_cols=256 row_width=128 nulls=0.3]
+Pass: Cold: 4.937413ms GPU, 4.942086ms CPU, 4.34s total GPU, 4.38s total wall, 880x 
+Run:  [114/114] concatenate_strings [Device=0 num_rows=16384 num_cols=256 row_width=128 nulls=0.3]
+Pass: Cold: 7.114491ms GPU, 7.118228ms CPU, 6.94s total GPU, 6.98s total wall, 976x 
+```
+
+# Benchmark Results
+
+## concatenate
+
+### [0] Tesla T4
+
+| num_rows | num_cols | nulls | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | GlobalMem BW | BWUtil |
+|----------|----------|-------|---------|------------|--------|------------|--------|--------------|--------|
+|       64 |        2 |     0 |  42064x |  15.758 us | 35.47% |  11.887 us | 12.39% | 172.286 MB/s |  0.05% |
+|      512 |        2 |     0 |  41776x |  15.692 us | 35.13% |  11.972 us | 16.22% |   1.369 GB/s |  0.43% |
+|     4096 |        2 |     0 |  42000x |  15.620 us | 33.49% |  11.905 us | 11.58% |  11.010 GB/s |  3.44% |
+|    32768 |        2 |     0 |  35728x |  17.716 us | 28.44% |  13.998 us |  9.55% |  74.907 GB/s | 23.40% |
+|   262144 |        2 |     0 |  11504x |  47.234 us |  9.28% |  43.476 us |  2.94% | 192.948 GB/s | 60.28% |
+|       64 |        8 |     0 |  20704x |  27.787 us | 16.79% |  24.155 us |  7.14% | 339.140 MB/s |  0.11% |
+|      512 |        8 |     0 |  20128x |  28.570 us | 18.87% |  24.855 us | 11.11% |   2.637 GB/s |  0.82% |
+|     4096 |        8 |     0 |  19888x |  28.829 us | 18.91% |  25.156 us | 11.80% |  20.842 GB/s |  6.51% |
+|    32768 |        8 |     0 |  12512x |  43.747 us | 10.26% |  40.010 us |  4.00% | 104.830 GB/s | 32.75% |
+|   262144 |        8 |     0 |   3136x | 163.866 us |  3.31% | 160.017 us |  2.14% | 209.693 GB/s | 65.52% |
+|       64 |       64 |     0 |  15104x |  36.697 us | 12.78% |  33.105 us |  6.58% |   1.980 GB/s |  0.62% |
+|      512 |       64 |     0 |  14448x |  38.274 us | 15.75% |  34.613 us | 11.45% |  15.147 GB/s |  4.73% |
+|     4096 |       64 |     0 |  10208x |  52.669 us |  8.46% |  48.983 us |  3.80% |  85.628 GB/s | 26.75% |
+|    32768 |       64 |     0 |   2880x | 177.650 us |  2.64% | 173.694 us |  1.28% | 193.181 GB/s | 60.36% |
+|   262144 |       64 |     0 |   1920x |   1.150 ms |  1.98% |   1.146 ms |  1.92% | 234.318 GB/s | 73.21% |
+|       64 |      512 |     0 |   4352x | 118.875 us |  4.62% | 115.234 us |  3.33% |   4.550 GB/s |  1.42% |
+|      512 |      512 |     0 |   4000x | 129.145 us |  4.29% | 125.447 us |  3.10% |  33.435 GB/s | 10.45% |
+|     4096 |      512 |     0 |   1920x | 265.613 us |  2.09% | 261.779 us |  1.49% | 128.179 GB/s | 40.05% |
+|    32768 |      512 |     0 |   2688x |   1.548 ms |  2.39% |   1.543 ms |  2.36% | 173.942 GB/s | 54.35% |
+|   262144 |      512 |     0 |   1235x |  12.118 ms |  1.68% |  12.113 ms |  1.68% | 177.281 GB/s | 55.39% |
+|       64 |     1024 |     0 |   2384x | 214.169 us |  3.47% | 210.482 us |  2.98% |   4.982 GB/s |  1.56% |
+|      512 |     1024 |     0 |   2160x | 236.923 us |  2.97% | 233.144 us |  2.48% |  35.980 GB/s | 11.24% |
+|     4096 |     1024 |     0 |   2304x | 535.996 us |  2.40% | 532.024 us |  2.27% | 126.139 GB/s | 39.41% |
+|    32768 |     1024 |     0 |   2144x |   3.371 ms |  2.11% |   3.367 ms |  2.10% | 159.472 GB/s | 49.82% |
+|   262144 |     1024 |     0 |    567x |  26.423 ms |  1.58% |  26.418 ms |  1.58% | 162.580 GB/s | 50.80% |
+|       64 |        2 |   0.3 |  42464x |  15.497 us | 34.85% |  11.778 us | 14.13% | 173.881 MB/s |  0.05% |
+|      512 |        2 |   0.3 |  42000x |  15.637 us | 34.05% |  11.909 us | 12.96% |   1.376 GB/s |  0.43% |
+|     4096 |        2 |   0.3 |  41744x |  15.691 us | 34.26% |  11.980 us | 13.93% |  10.941 GB/s |  3.42% |
+|    32768 |        2 |   0.3 |  35648x |  17.751 us | 28.41% |  14.027 us |  9.40% |  74.755 GB/s | 23.36% |
+|   262144 |        2 |   0.3 |  11504x |  47.261 us |  9.11% |  43.518 us |  2.77% | 192.764 GB/s | 60.23% |
+|       64 |        8 |   0.3 |  20528x |  27.987 us | 17.40% |  24.362 us |  8.80% | 336.260 MB/s |  0.11% |
+|      512 |        8 |   0.3 |  20352x |  28.292 us | 16.79% |  24.579 us |  6.92% |   2.666 GB/s |  0.83% |
+|     4096 |        8 |   0.3 |  19984x |  28.708 us | 17.37% |  25.038 us |  8.93% |  20.940 GB/s |  6.54% |
+|    32768 |        8 |   0.3 |  12432x |  43.989 us | 10.64% |  40.238 us |  4.82% | 104.238 GB/s | 32.57% |
+|   262144 |        8 |   0.3 |   3136x | 163.585 us |  2.87% | 159.683 us |  1.38% | 210.131 GB/s | 65.65% |
+|       64 |       64 |   0.3 |  14720x |  37.599 us | 12.68% |  33.995 us |  6.81% |   1.928 GB/s |  0.60% |
+|      512 |       64 |   0.3 |  14128x |  39.078 us | 16.45% |  35.419 us | 12.68% |  14.802 GB/s |  4.62% |
+|     4096 |       64 |   0.3 |  10160x |  52.989 us |  8.47% |  49.281 us |  3.75% |  85.110 GB/s | 26.59% |
+|    32768 |       64 |   0.3 |   3072x | 178.203 us |  3.09% | 174.229 us |  2.06% | 192.588 GB/s | 60.17% |
+|   262144 |       64 |   0.3 |   1520x |   1.156 ms |  1.94% |   1.151 ms |  1.90% | 233.150 GB/s | 72.84% |
+|       64 |      512 |   0.3 |   4240x | 121.618 us |  7.53% | 117.951 us |  6.86% |   4.445 GB/s |  1.39% |
+|      512 |      512 |   0.3 |   3920x | 131.394 us |  4.56% | 127.677 us |  3.50% |  32.851 GB/s | 10.26% |
+|     4096 |      512 |   0.3 |   1904x | 267.012 us |  2.13% | 263.158 us |  1.54% | 127.507 GB/s | 39.84% |
+|    32768 |      512 |   0.3 |   2768x |   1.547 ms |  2.46% |   1.543 ms |  2.44% | 173.992 GB/s | 54.36% |
+|   262144 |      512 |   0.3 |    896x |  12.170 ms |  1.82% |  12.165 ms |  1.82% | 176.528 GB/s | 55.15% |
+|       64 |     1024 |   0.3 |   2368x | 215.685 us |  3.31% | 212.021 us |  2.82% |   4.946 GB/s |  1.55% |
+|      512 |     1024 |   0.3 |   2144x | 237.168 us |  2.62% | 233.451 us |  2.09% |  35.933 GB/s | 11.23% |
+|     4096 |     1024 |   0.3 |   2496x | 537.828 us |  2.17% | 533.830 us |  2.02% | 125.712 GB/s | 39.28% |
+|    32768 |     1024 |   0.3 |   2096x |   3.388 ms |  2.07% |   3.383 ms |  2.06% | 158.682 GB/s | 49.58% |
+|   262144 |     1024 |   0.3 |    563x |  26.609 ms |  1.71% |  26.604 ms |  1.71% | 161.438 GB/s | 50.44% |
+
+## concatenate_strings
+
+### [0] Tesla T4
+
+| num_rows | num_cols | row_width | nulls | Samples |  CPU Time  | Noise  |  GPU Time  | Noise | GlobalMem BW | BWUtil  |
+|----------|----------|-----------|-------|---------|------------|--------|------------|-------|--------------|---------|
+|      256 |        2 |        32 |     0 |   9296x |  57.513 us |  8.82% |  53.817 us | 5.41% |   1.404 GB/s |   0.44% |
+|      512 |        2 |        32 |     0 |   9264x |  57.690 us | 10.51% |  53.986 us | 7.87% |   2.791 GB/s |   0.87% |
+|     4096 |        2 |        32 |     0 |   9136x |  58.553 us |  8.63% |  54.809 us | 5.12% |  21.625 GB/s |   6.76% |
+|    16384 |        2 |        32 |     0 |   7744x |  68.366 us |  9.61% |  64.602 us | 7.49% |  73.160 GB/s |  22.86% |
+|      256 |        8 |        32 |     0 |   9008x |  59.328 us |  8.70% |  55.600 us | 5.49% |   5.438 GB/s |   1.70% |
+|      512 |        8 |        32 |     0 |   8992x |  59.349 us |  8.65% |  55.645 us | 5.48% |  10.833 GB/s |   3.38% |
+|     4096 |        8 |        32 |     0 |   7264x |  72.687 us |  7.77% |  68.927 us | 5.40% |  68.783 GB/s |  21.49% |
+|    16384 |        8 |        32 |     0 |   4128x | 124.979 us |  4.19% | 121.126 us | 2.68% | 156.077 GB/s |  48.76% |
+|      256 |       64 |        32 |     0 |   6240x |  84.056 us |  6.35% |  80.286 us | 4.19% |  30.125 GB/s |   9.41% |
+|      512 |       64 |        32 |     0 |   5408x |  96.450 us |  6.61% |  92.646 us | 5.07% |  52.050 GB/s |  16.26% |
+|     4096 |       64 |        32 |     0 |   2544x | 302.820 us |  3.08% | 298.257 us | 2.58% | 127.165 GB/s |  39.73% |
+|    16384 |       64 |        32 |     0 |   1392x |   1.074 ms |  1.60% |   1.070 ms | 1.53% | 141.347 GB/s |  44.16% |
+|      256 |      256 |        32 |     0 |   2640x | 193.851 us |  3.78% | 190.026 us | 3.16% |  50.911 GB/s |  15.91% |
+|      512 |      256 |        32 |     0 |   1968x | 257.911 us |  2.33% | 254.144 us | 1.81% |  75.898 GB/s |  23.71% |
+|     4096 |      256 |        32 |     0 |   1552x |   1.365 ms |  2.33% |   1.360 ms | 2.30% | 111.522 GB/s |  34.84% |
+|    16384 |      256 |        32 |     0 |    560x |   5.178 ms |  1.20% |   5.173 ms | 1.19% | 116.943 GB/s |  36.54% |
+|      256 |        2 |       128 |     0 |   9296x |  57.505 us |  8.83% |  53.809 us | 5.50% |   5.636 GB/s |   1.76% |
+|      512 |        2 |       128 |     0 |   9280x |  57.699 us |  9.78% |  53.944 us | 6.73% |  11.147 GB/s |   3.48% |
+|     4096 |        2 |       128 |     0 |   7808x |  67.798 us |  7.52% |  64.064 us | 4.70% |  74.044 GB/s |  23.13% |
+|    16384 |        2 |       128 |     0 |   5408x | 109.787 us |  5.71% | 106.040 us | 4.47% | 178.184 GB/s |  55.67% |
+|      256 |        8 |       128 |     0 |   8768x |  60.752 us |  7.98% |  57.044 us | 4.53% |  21.265 GB/s |   6.64% |
+|      512 |        8 |       128 |     0 |   8224x |  64.516 us |  7.52% |  60.804 us | 4.34% |  39.558 GB/s |  12.36% |
+|     4096 |        8 |       128 |     0 |   4272x | 121.289 us |  4.80% | 117.437 us | 3.42% | 161.568 GB/s |  50.48% |
+|    16384 |        8 |       128 |     0 |   1904x | 267.757 us |  2.33% | 264.008 us | 1.84% | 286.275 GB/s |  89.44% |
+|      256 |       64 |       128 |     0 |   4336x | 119.379 us |  4.46% | 115.623 us | 3.02% |  83.932 GB/s |  26.22% |
+|      512 |       64 |       128 |     0 |   3264x | 175.187 us |  4.42% | 171.272 us | 3.58% | 112.350 GB/s |  35.10% |
+|     4096 |       64 |       128 |     0 |   1936x |   1.023 ms |  2.13% |   1.018 ms | 2.09% | 149.040 GB/s |  46.57% |
+|    16384 |       64 |       128 |     0 |   1872x |   1.775 ms |  3.19% |   1.771 ms | 3.18% | 341.368 GB/s | 106.66% |
+|      256 |      256 |       128 |     0 |   1264x | 400.173 us |  1.77% | 396.244 us | 1.47% |  97.964 GB/s |  30.61% |
+|      512 |      256 |       128 |     0 |   2496x | 701.581 us |  1.81% | 697.436 us | 1.69% | 110.361 GB/s |  34.48% |
+|     4096 |      256 |       128 |     0 |    832x |   4.942 ms |  1.12% |   4.938 ms | 1.12% | 122.966 GB/s |  38.42% |
+|    16384 |      256 |       128 |     0 |    736x |   7.056 ms |  2.98% |   7.052 ms | 2.98% | 342.965 GB/s | 107.16% |
+|      256 |        2 |        32 |   0.3 |   9312x |  57.477 us |  8.58% |  53.767 us | 4.98% |   1.406 GB/s |   0.44% |
+|      512 |        2 |        32 |   0.3 |   9248x |  57.789 us | 10.34% |  54.110 us | 7.67% |   2.785 GB/s |   0.87% |
+|     4096 |        2 |        32 |   0.3 |   9152x |  58.363 us |  8.25% |  54.644 us | 4.57% |  21.690 GB/s |   6.78% |
+|    16384 |        2 |        32 |   0.3 |   7904x |  68.330 us | 10.44% |  64.570 us | 8.56% |  73.196 GB/s |  22.87% |
+|      256 |        8 |        32 |   0.3 |   9040x |  59.107 us |  8.50% |  55.355 us | 5.03% |   5.462 GB/s |   1.71% |
+|      512 |        8 |        32 |   0.3 |   9040x |  59.111 us |  8.50% |  55.401 us | 5.17% |  10.880 GB/s |   3.40% |
+|     4096 |        8 |        32 |   0.3 |   7200x |  73.320 us | 10.89% |  69.561 us | 9.35% |  68.155 GB/s |  21.29% |
+|    16384 |        8 |        32 |   0.3 |   4144x | 124.639 us |  4.09% | 120.790 us | 2.49% | 156.511 GB/s |  48.90% |
+|      256 |       64 |        32 |   0.3 |   6256x |  83.882 us |  6.09% |  80.111 us | 3.79% |  30.191 GB/s |   9.43% |
+|      512 |       64 |        32 |   0.3 |   5376x |  97.048 us |  9.23% |  93.262 us | 8.25% |  51.706 GB/s |  16.16% |
+|     4096 |       64 |        32 |   0.3 |   2512x | 303.412 us |  3.05% | 299.012 us | 2.61% | 126.844 GB/s |  39.63% |
+|    16384 |       64 |        32 |   0.3 |   1552x |   1.071 ms |  1.45% |   1.067 ms | 1.38% | 141.769 GB/s |  44.29% |
+|      256 |      256 |        32 |   0.3 |   2624x | 194.849 us |  3.65% | 191.042 us | 3.04% |  50.641 GB/s |  15.82% |
+|      512 |      256 |        32 |   0.3 |   2464x | 260.047 us |  4.04% | 256.232 us | 3.72% |  75.280 GB/s |  23.52% |
+|     4096 |      256 |        32 |   0.3 |   2400x |   1.361 ms |  1.96% |   1.356 ms | 1.93% | 111.849 GB/s |  34.95% |
+|    16384 |      256 |        32 |   0.3 |    544x |   5.173 ms |  1.22% |   5.169 ms | 1.21% | 117.043 GB/s |  36.57% |
+|      256 |        2 |       128 |   0.3 |   9312x |  57.418 us |  8.58% |  53.703 us | 4.93% |   5.647 GB/s |   1.76% |
+|      512 |        2 |       128 |   0.3 |   9328x |  57.365 us |  8.58% |  53.639 us | 4.95% |  11.211 GB/s |   3.50% |
+|     4096 |        2 |       128 |   0.3 |   7776x |  68.162 us |  8.50% |  64.404 us | 6.05% |  73.652 GB/s |  23.01% |
+|    16384 |        2 |       128 |   0.3 |   4736x | 109.579 us |  4.89% | 105.802 us | 3.28% | 178.586 GB/s |  55.80% |
+|      256 |        8 |       128 |   0.3 |   8992x |  61.397 us |  9.10% |  57.672 us | 6.35% |  21.034 GB/s |   6.57% |
+|      512 |        8 |       128 |   0.3 |   8240x |  64.500 us |  7.46% |  60.747 us | 4.08% |  39.595 GB/s |  12.37% |
+|     4096 |        8 |       128 |   0.3 |   4272x | 121.226 us |  4.16% | 117.356 us | 2.47% | 161.681 GB/s |  50.52% |
+|    16384 |        8 |       128 |   0.3 |   2800x | 270.591 us |  6.67% | 266.826 us | 6.50% | 283.252 GB/s |  88.50% |
+|      256 |       64 |       128 |   0.3 |   4336x | 119.259 us |  4.19% | 115.480 us | 2.61% |  84.035 GB/s |  26.26% |
+|      512 |       64 |       128 |   0.3 |   2960x | 173.696 us |  3.14% | 169.822 us | 2.15% | 113.309 GB/s |  35.40% |
+|     4096 |       64 |       128 |   0.3 |   2448x |   1.025 ms |  2.46% |   1.021 ms | 2.42% | 148.730 GB/s |  46.47% |
+|    16384 |       64 |       128 |   0.3 |   2256x |   1.795 ms |  4.56% |   1.792 ms | 4.55% | 337.474 GB/s | 105.44% |
+|      256 |      256 |       128 |   0.3 |   1808x | 402.104 us |  2.50% | 398.060 us | 2.25% |  97.517 GB/s |  30.47% |
+|      512 |      256 |       128 |   0.3 |   2464x | 702.415 us |  1.66% | 698.326 us | 1.55% | 110.220 GB/s |  34.44% |
+|     4096 |      256 |       128 |   0.3 |    880x |   4.942 ms |  1.16% |   4.937 ms | 1.15% | 122.974 GB/s |  38.42% |
+|    16384 |      256 |       128 |   0.3 |    976x |   7.118 ms |  2.67% |   7.114 ms | 2.67% | 339.943 GB/s | 106.21% |

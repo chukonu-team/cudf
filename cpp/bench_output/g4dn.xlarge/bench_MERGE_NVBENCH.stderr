@@ -1,0 +1,5 @@
+[2025-02-07 13:47:17.132] [RMM] [error] [A][Stream 0x1][Upstream 4284932864B][FAILURE maximum pool size exceeded]
+[2025-02-07 13:47:37.525] [RMM] [error] [A][Stream 0x1][Upstream 4289108992B][FAILURE maximum pool size exceeded]
+[2025-02-07 13:47:37.539] [RMM] [error] [A][Stream 0x1][Upstream 8640367104B][FAILURE maximum pool size exceeded]
+[2025-02-07 13:47:37.554] [RMM] [error] [A][Stream 0x1][Upstream 17280846592B][FAILURE maximum pool size exceeded]
+[2025-02-07 13:47:37.571] [RMM] [error] [A][Stream 0x1][Upstream 34561609216B][FAILURE maximum pool size exceeded]

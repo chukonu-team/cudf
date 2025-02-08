@@ -1,0 +1,40 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/23] json_write_io [Device=0 io=FILEPATH]
+Warn: Current measurement timed out (20.83s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (20.83s) before accumulating min_samples (2 < 4)
+Pass: Cold: 10413.687012ms GPU, 10413.574200ms CPU, 20.83s total GPU, 20.83s total wall, 2x 
+Run:  [2/23] json_write_io [Device=0 io=HOST_BUFFER]
+Warn: Current measurement timed out (15.56s) while over noise threshold (inf% > 0.50%)
+Pass: Cold: 3890.953064ms GPU, 3890.916922ms CPU, 15.56s total GPU, 15.56s total wall, 4x 
+Run:  [3/23] json_write_io [Device=0 io=DEVICE_BUFFER]
+Warn: Current measurement timed out (15.57s) while over noise threshold (inf% > 0.50%)
+Pass: Cold: 3891.456482ms GPU, 3891.415062ms CPU, 15.57s total GPU, 15.57s total wall, 4x 
+Run:  [4/23] json_write_options [Device=0 json_lines=0 include_nulls=0 rows_per_chunk=2^10]
+Warn: Current measurement timed out (17.26s) while over noise threshold (inf% > 0.50%)
+Pass: Cold: 4316.134399ms GPU, 4316.083255ms CPU, 17.26s total GPU, 17.26s total wall, 4x 
+Run:  [5/23] json_write_options [Device=0 json_lines=1 include_nulls=0 rows_per_chunk=2^10]
+Skip: Skipping for unrequired rows_per_chunk combinations
+Run:  [6/23] json_write_options [Device=0 json_lines=0 include_nulls=1 rows_per_chunk=2^10]
+Skip: Skipping for unrequired rows_per_chunk combinations
+Run:  [7/23] json_write_options [Device=0 json_lines=1 include_nulls=1 rows_per_chunk=2^10]
+Skip: Skipping for unrequired rows_per_chunk combinations
+Run:  [8/23] json_write_options [Device=0 json_lines=0 include_nulls=0 rows_per_chunk=2^15]

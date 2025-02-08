@@ -1,0 +1,555 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=0 run_length=1]
+Pass: Cold: 261.737329ms GPU, 261.739517ms CPU, 1.31s total GPU, 1.31s total wall, 5x 
+Run:  [2/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=1000 run_length=1]
+Warn: Current measurement timed out (15.03s) while over noise threshold (0.76% > 0.50%)
+Pass: Cold: 108.791837ms GPU, 108.795762ms CPU, 15.01s total GPU, 15.03s total wall, 138x 
+Run:  [3/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=10000 run_length=1]
+Warn: Current measurement timed out (15.11s) while over noise threshold (0.99% > 0.50%)
+Pass: Cold: 127.941491ms GPU, 127.945211ms CPU, 15.10s total GPU, 15.11s total wall, 118x 
+Run:  [4/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=100000 run_length=1]
+Pass: Cold: 239.339731ms GPU, 239.342675ms CPU, 1.20s total GPU, 1.20s total wall, 5x 
+Run:  [5/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=0 run_length=8]
+Warn: Current measurement timed out (15.05s) while over noise threshold (0.65% > 0.50%)
+Pass: Cold: 185.712746ms GPU, 185.716320ms CPU, 15.04s total GPU, 15.05s total wall, 81x 
+Run:  [6/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=1000 run_length=8]
+Pass: Cold: 139.331378ms GPU, 139.334999ms CPU, 0.70s total GPU, 0.70s total wall, 5x 
+Run:  [7/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=10000 run_length=8]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.58% > 0.50%)
+Pass: Cold: 144.310685ms GPU, 144.314334ms CPU, 15.01s total GPU, 15.02s total wall, 104x 
+Run:  [8/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=100000 run_length=8]
+Pass: Cold: 168.671472ms GPU, 168.676724ms CPU, 0.84s total GPU, 0.84s total wall, 5x 
+Run:  [9/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=0 run_length=32]
+Pass: Cold: 98.620299ms GPU, 98.624366ms CPU, 0.59s total GPU, 0.59s total wall, 6x 
+Run:  [10/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=1000 run_length=32]
+Pass: Cold: 81.447658ms GPU, 81.451577ms CPU, 1.06s total GPU, 1.06s total wall, 13x 
+Run:  [11/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=10000 run_length=32]
+Pass: Cold: 88.102151ms GPU, 88.106462ms CPU, 9.87s total GPU, 9.88s total wall, 112x 
+Run:  [12/154] parquet_write_encode [Device=0 data_type=INTEGRAL cardinality=100000 run_length=32]
+Pass: Cold: 96.664299ms GPU, 96.668263ms CPU, 7.73s total GPU, 7.74s total wall, 80x 
+Run:  [13/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=0 run_length=1]
+Pass: Cold: 245.335590ms GPU, 245.338272ms CPU, 1.23s total GPU, 1.23s total wall, 5x 
+Run:  [14/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=1000 run_length=1]
+Pass: Cold: 73.621514ms GPU, 73.625833ms CPU, 9.42s total GPU, 9.44s total wall, 128x 
+Run:  [15/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=10000 run_length=1]
+Pass: Cold: 91.302780ms GPU, 91.306929ms CPU, 7.30s total GPU, 7.31s total wall, 80x 
+Run:  [16/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=100000 run_length=1]
+Pass: Cold: 232.208365ms GPU, 232.211553ms CPU, 1.16s total GPU, 1.16s total wall, 5x 
+Run:  [17/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=0 run_length=8]
+Warn: Current measurement timed out (15.03s) while over noise threshold (0.68% > 0.50%)
+Pass: Cold: 136.532169ms GPU, 136.535751ms CPU, 15.02s total GPU, 15.03s total wall, 110x 
+Run:  [18/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=1000 run_length=8]
+Pass: Cold: 91.323172ms GPU, 91.327109ms CPU, 0.64s total GPU, 0.64s total wall, 7x 
+Run:  [19/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=10000 run_length=8]
+Pass: Cold: 97.427219ms GPU, 97.431202ms CPU, 0.88s total GPU, 0.88s total wall, 9x 
+Run:  [20/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=100000 run_length=8]
+Pass: Cold: 121.556552ms GPU, 121.560207ms CPU, 0.61s total GPU, 0.61s total wall, 5x 
+Run:  [21/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=0 run_length=32]
+Pass: Cold: 68.109779ms GPU, 68.114080ms CPU, 5.45s total GPU, 5.46s total wall, 80x 
+Run:  [22/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=1000 run_length=32]
+Pass: Cold: 53.678819ms GPU, 53.683033ms CPU, 6.87s total GPU, 6.88s total wall, 128x 
+Run:  [23/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=10000 run_length=32]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.78% > 0.50%)
+Pass: Cold: 59.274686ms GPU, 59.278870ms CPU, 15.00s total GPU, 15.02s total wall, 253x 
+Run:  [24/154] parquet_write_encode [Device=0 data_type=FLOAT cardinality=100000 run_length=32]
+Pass: Cold: 66.413678ms GPU, 66.418043ms CPU, 9.56s total GPU, 9.58s total wall, 144x 
+Run:  [25/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=0 run_length=1]
+Pass: Cold: 143.048996ms GPU, 143.053721ms CPU, 0.72s total GPU, 0.72s total wall, 5x 
+Run:  [26/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=1000 run_length=1]
+Pass: Cold: 138.354379ms GPU, 138.359463ms CPU, 0.69s total GPU, 0.69s total wall, 5x 
+Run:  [27/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=10000 run_length=1]
+Pass: Cold: 142.175879ms GPU, 142.180235ms CPU, 0.71s total GPU, 0.71s total wall, 5x 
+Run:  [28/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=100000 run_length=1]
+Pass: Cold: 142.617419ms GPU, 142.622271ms CPU, 0.71s total GPU, 0.71s total wall, 5x 
+Run:  [29/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=0 run_length=8]
+Pass: Cold: 143.627588ms GPU, 143.631921ms CPU, 0.72s total GPU, 0.72s total wall, 5x 
+Run:  [30/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=1000 run_length=8]
+Pass: Cold: 143.351117ms GPU, 143.355397ms CPU, 1.29s total GPU, 1.29s total wall, 9x 
+Run:  [31/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=10000 run_length=8]
+Pass: Cold: 143.801639ms GPU, 143.806243ms CPU, 0.72s total GPU, 0.72s total wall, 5x 
+Run:  [32/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=100000 run_length=8]
+Pass: Cold: 143.576160ms GPU, 143.580593ms CPU, 3.30s total GPU, 3.31s total wall, 23x 
+Run:  [33/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=0 run_length=32]
+Pass: Cold: 133.632534ms GPU, 133.636978ms CPU, 3.34s total GPU, 3.34s total wall, 25x 
+Run:  [34/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=1000 run_length=32]
+Pass: Cold: 133.532830ms GPU, 133.537295ms CPU, 0.93s total GPU, 0.94s total wall, 7x 
+Run:  [35/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=10000 run_length=32]
+Pass: Cold: 133.561587ms GPU, 133.565895ms CPU, 0.80s total GPU, 0.80s total wall, 6x 
+Run:  [36/154] parquet_write_encode [Device=0 data_type=BOOL8 cardinality=100000 run_length=32]
+Pass: Cold: 133.356262ms GPU, 133.360486ms CPU, 0.93s total GPU, 0.93s total wall, 7x 
+Run:  [37/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=0 run_length=1]
+Pass: Cold: 270.459296ms GPU, 270.461834ms CPU, 1.35s total GPU, 1.35s total wall, 5x 
+Run:  [38/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=1000 run_length=1]
+Pass: Cold: 49.126572ms GPU, 49.130729ms CPU, 3.93s total GPU, 3.94s total wall, 80x 
+Run:  [39/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=10000 run_length=1]
+Warn: Current measurement timed out (15.06s) while over noise threshold (0.84% > 0.50%)
+Pass: Cold: 67.727212ms GPU, 67.731426ms CPU, 15.04s total GPU, 15.06s total wall, 222x 
+Run:  [40/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=100000 run_length=1]
+Pass: Cold: 242.664679ms GPU, 242.667663ms CPU, 1.21s total GPU, 1.21s total wall, 5x 
+Run:  [41/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=0 run_length=8]
+Pass: Cold: 118.566712ms GPU, 118.570549ms CPU, 3.68s total GPU, 3.68s total wall, 31x 
+Run:  [42/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=1000 run_length=8]
+Pass: Cold: 60.736786ms GPU, 60.740873ms CPU, 1.58s total GPU, 1.58s total wall, 26x 
+Run:  [43/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=10000 run_length=8]
+Pass: Cold: 72.389260ms GPU, 72.393257ms CPU, 9.27s total GPU, 9.28s total wall, 128x 
+Run:  [44/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=100000 run_length=8]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.77% > 0.50%)
+Pass: Cold: 136.284787ms GPU, 136.288421ms CPU, 14.99s total GPU, 15.00s total wall, 110x 
+Run:  [45/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=0 run_length=32]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.87% > 0.50%)
+Pass: Cold: 67.818689ms GPU, 67.822882ms CPU, 14.99s total GPU, 15.01s total wall, 221x 
+Run:  [46/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=1000 run_length=32]
+Warn: Current measurement timed out (15.03s) while over noise threshold (1.00% > 0.50%)
+Pass: Cold: 36.555813ms GPU, 36.560427ms CPU, 14.99s total GPU, 15.03s total wall, 410x 
+Run:  [47/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=10000 run_length=32]
+Warn: Current measurement timed out (15.01s) while over noise threshold (1.11% > 0.50%)
+Pass: Cold: 46.939493ms GPU, 46.943695ms CPU, 14.97s total GPU, 15.01s total wall, 319x 
+Run:  [48/154] parquet_write_encode [Device=0 data_type=DECIMAL cardinality=100000 run_length=32]
+Warn: Current measurement timed out (15.05s) while over noise threshold (1.11% > 0.50%)
+Pass: Cold: 64.193363ms GPU, 64.197711ms CPU, 15.02s total GPU, 15.05s total wall, 234x 
+Run:  [49/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=0 run_length=1]
+Pass: Cold: 325.806854ms GPU, 325.809015ms CPU, 1.63s total GPU, 1.63s total wall, 5x 
+Run:  [50/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=1000 run_length=1]
+Pass: Cold: 61.652903ms GPU, 61.657338ms CPU, 0.55s total GPU, 0.56s total wall, 9x 
+Run:  [51/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=10000 run_length=1]
+Pass: Cold: 83.824382ms GPU, 83.829092ms CPU, 6.71s total GPU, 6.72s total wall, 80x 
+Run:  [52/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=100000 run_length=1]
+Pass: Cold: 255.123990ms GPU, 255.126490ms CPU, 1.28s total GPU, 1.28s total wall, 5x 
+Run:  [53/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=0 run_length=8]
+Pass: Cold: 195.788756ms GPU, 195.791692ms CPU, 2.15s total GPU, 2.16s total wall, 11x 
+Run:  [54/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=1000 run_length=8]
+Pass: Cold: 75.688219ms GPU, 75.692426ms CPU, 0.61s total GPU, 0.61s total wall, 8x 
+Run:  [55/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=10000 run_length=8]
+Pass: Cold: 87.260123ms GPU, 87.264353ms CPU, 1.57s total GPU, 1.57s total wall, 18x 
+Run:  [56/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=100000 run_length=8]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.85% > 0.50%)
+Pass: Cold: 151.590251ms GPU, 151.593761ms CPU, 15.01s total GPU, 15.02s total wall, 99x 
+Run:  [57/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=0 run_length=32]
+Warn: Current measurement timed out (15.06s) while over noise threshold (1.05% > 0.50%)
+Pass: Cold: 78.750743ms GPU, 78.754931ms CPU, 15.04s total GPU, 15.06s total wall, 191x 
+Run:  [58/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=1000 run_length=32]
+Pass: Cold: 44.658384ms GPU, 44.662984ms CPU, 12.86s total GPU, 12.90s total wall, 288x 
+Run:  [59/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=10000 run_length=32]
+Pass: Cold: 55.453958ms GPU, 55.458515ms CPU, 6.21s total GPU, 6.23s total wall, 112x 
+Run:  [60/154] parquet_write_encode [Device=0 data_type=TIMESTAMP cardinality=100000 run_length=32]
+Pass: Cold: 74.516434ms GPU, 74.521020ms CPU, 0.52s total GPU, 0.52s total wall, 7x 
+Run:  [61/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=0 run_length=1]
+Pass: Cold: 181.144971ms GPU, 181.148382ms CPU, 0.91s total GPU, 0.91s total wall, 5x 
+Run:  [62/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=1000 run_length=1]
+Pass: Cold: 60.600831ms GPU, 60.605292ms CPU, 12.60s total GPU, 12.63s total wall, 208x 
+Run:  [63/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=10000 run_length=1]
+Pass: Cold: 74.164615ms GPU, 74.168849ms CPU, 5.93s total GPU, 5.94s total wall, 80x 
+Run:  [64/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=100000 run_length=1]
+Pass: Cold: 179.945467ms GPU, 179.948841ms CPU, 6.12s total GPU, 6.12s total wall, 34x 
+Run:  [65/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=0 run_length=8]
+Pass: Cold: 119.923251ms GPU, 119.927046ms CPU, 0.60s total GPU, 0.60s total wall, 5x 
+Run:  [66/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=1000 run_length=8]
+Pass: Cold: 76.034811ms GPU, 76.038734ms CPU, 0.53s total GPU, 0.53s total wall, 7x 
+Run:  [67/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=10000 run_length=8]
+Pass: Cold: 80.485784ms GPU, 80.489960ms CPU, 0.89s total GPU, 0.89s total wall, 11x 
+Run:  [68/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=100000 run_length=8]
+Pass: Cold: 104.189082ms GPU, 104.193281ms CPU, 0.52s total GPU, 0.52s total wall, 5x 
+Run:  [69/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=0 run_length=32]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.63% > 0.50%)
+Pass: Cold: 57.209412ms GPU, 57.213808ms CPU, 14.99s total GPU, 15.02s total wall, 262x 
+Run:  [70/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=1000 run_length=32]
+Pass: Cold: 44.011248ms GPU, 44.015681ms CPU, 6.34s total GPU, 6.35s total wall, 144x 
+Run:  [71/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=10000 run_length=32]
+Pass: Cold: 48.923493ms GPU, 48.928248ms CPU, 3.91s total GPU, 3.92s total wall, 80x 
+Run:  [72/154] parquet_write_encode [Device=0 data_type=DURATION cardinality=100000 run_length=32]
+Pass: Cold: 55.712185ms GPU, 55.717016ms CPU, 4.46s total GPU, 4.47s total wall, 80x 
+Run:  [73/154] parquet_write_encode [Device=0 data_type=STRING cardinality=0 run_length=1]
+Pass: Cold: 283.834113ms GPU, 283.836540ms CPU, 1.42s total GPU, 1.42s total wall, 5x 
+Run:  [74/154] parquet_write_encode [Device=0 data_type=STRING cardinality=1000 run_length=1]
+Warn: Current measurement timed out (15.04s) while over noise threshold (0.62% > 0.50%)
+Pass: Cold: 62.834727ms GPU, 62.839134ms CPU, 15.02s total GPU, 15.04s total wall, 239x 
+Run:  [75/154] parquet_write_encode [Device=0 data_type=STRING cardinality=10000 run_length=1]
+Pass: Cold: 92.767858ms GPU, 92.771883ms CPU, 0.65s total GPU, 0.65s total wall, 7x 
+Run:  [76/154] parquet_write_encode [Device=0 data_type=STRING cardinality=100000 run_length=1]
+Pass: Cold: 284.384418ms GPU, 284.386607ms CPU, 1.42s total GPU, 1.42s total wall, 5x 
+Run:  [77/154] parquet_write_encode [Device=0 data_type=STRING cardinality=0 run_length=8]
+Pass: Cold: 282.139996ms GPU, 282.142652ms CPU, 1.41s total GPU, 1.41s total wall, 5x 
+Run:  [78/154] parquet_write_encode [Device=0 data_type=STRING cardinality=1000 run_length=8]
+Pass: Cold: 50.167395ms GPU, 50.171890ms CPU, 0.85s total GPU, 0.85s total wall, 17x 
+Run:  [79/154] parquet_write_encode [Device=0 data_type=STRING cardinality=10000 run_length=8]
+Pass: Cold: 63.847420ms GPU, 63.851757ms CPU, 7.15s total GPU, 7.17s total wall, 112x 
+Run:  [80/154] parquet_write_encode [Device=0 data_type=STRING cardinality=100000 run_length=8]
+Pass: Cold: 101.011434ms GPU, 101.015272ms CPU, 12.93s total GPU, 12.95s total wall, 128x 
+Run:  [81/154] parquet_write_encode [Device=0 data_type=STRING cardinality=0 run_length=32]
+Pass: Cold: 283.244818ms GPU, 283.246817ms CPU, 1.42s total GPU, 1.42s total wall, 5x 
+Run:  [82/154] parquet_write_encode [Device=0 data_type=STRING cardinality=1000 run_length=32]
+Pass: Cold: 34.142522ms GPU, 34.147214ms CPU, 4.37s total GPU, 4.38s total wall, 128x 
+Run:  [83/154] parquet_write_encode [Device=0 data_type=STRING cardinality=10000 run_length=32]
+Warn: Current measurement timed out (15.04s) while over noise threshold (1.42% > 0.50%)
+Pass: Cold: 42.960723ms GPU, 42.965287ms CPU, 14.99s total GPU, 15.04s total wall, 349x 
+Run:  [84/154] parquet_write_encode [Device=0 data_type=STRING cardinality=100000 run_length=32]
+Pass: Cold: 48.974555ms GPU, 48.979192ms CPU, 3.92s total GPU, 3.93s total wall, 80x 
+Run:  [85/154] parquet_write_encode [Device=0 data_type=LIST cardinality=0 run_length=1]
+Pass: Cold: 408.645837ms GPU, 408.647063ms CPU, 2.04s total GPU, 2.05s total wall, 5x 
+Run:  [86/154] parquet_write_encode [Device=0 data_type=LIST cardinality=1000 run_length=1]
+Pass: Cold: 241.763080ms GPU, 241.765596ms CPU, 1.21s total GPU, 1.21s total wall, 5x 
+Run:  [87/154] parquet_write_encode [Device=0 data_type=LIST cardinality=10000 run_length=1]
+Pass: Cold: 382.952167ms GPU, 382.954083ms CPU, 1.91s total GPU, 1.92s total wall, 5x 
+Run:  [88/154] parquet_write_encode [Device=0 data_type=LIST cardinality=100000 run_length=1]
+Pass: Cold: 451.494727ms GPU, 451.496317ms CPU, 2.26s total GPU, 2.26s total wall, 5x 
+Run:  [89/154] parquet_write_encode [Device=0 data_type=LIST cardinality=0 run_length=8]
+Pass: Cold: 253.269277ms GPU, 253.272243ms CPU, 14.69s total GPU, 14.70s total wall, 58x 
+Run:  [90/154] parquet_write_encode [Device=0 data_type=LIST cardinality=1000 run_length=8]
+Pass: Cold: 228.396457ms GPU, 228.399628ms CPU, 1.14s total GPU, 1.14s total wall, 5x 
+Run:  [91/154] parquet_write_encode [Device=0 data_type=LIST cardinality=10000 run_length=8]
+Pass: Cold: 232.301791ms GPU, 232.305228ms CPU, 1.16s total GPU, 1.16s total wall, 5x 
+Run:  [92/154] parquet_write_encode [Device=0 data_type=LIST cardinality=100000 run_length=8]
+Pass: Cold: 232.727264ms GPU, 232.730567ms CPU, 1.16s total GPU, 1.16s total wall, 5x 
+Run:  [93/154] parquet_write_encode [Device=0 data_type=LIST cardinality=0 run_length=32]
+Pass: Cold: 164.678168ms GPU, 164.682257ms CPU, 0.82s total GPU, 0.82s total wall, 5x 
+Run:  [94/154] parquet_write_encode [Device=0 data_type=LIST cardinality=1000 run_length=32]
+Pass: Cold: 156.875955ms GPU, 156.879779ms CPU, 0.78s total GPU, 0.79s total wall, 5x 
+Run:  [95/154] parquet_write_encode [Device=0 data_type=LIST cardinality=10000 run_length=32]
+Pass: Cold: 158.358707ms GPU, 158.362350ms CPU, 0.79s total GPU, 0.79s total wall, 5x 
+Run:  [96/154] parquet_write_encode [Device=0 data_type=LIST cardinality=100000 run_length=32]
+Pass: Cold: 163.606161ms GPU, 163.609773ms CPU, 0.82s total GPU, 0.82s total wall, 5x 
+Run:  [97/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=0 run_length=1]
+Pass: Cold: 283.460156ms GPU, 283.463342ms CPU, 1.42s total GPU, 1.42s total wall, 5x 
+Run:  [98/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=1000 run_length=1]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.78% > 0.50%)
+Pass: Cold: 89.175466ms GPU, 89.180852ms CPU, 14.98s total GPU, 15.01s total wall, 168x 
+Run:  [99/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=10000 run_length=1]
+Pass: Cold: 131.058650ms GPU, 131.063380ms CPU, 6.03s total GPU, 6.04s total wall, 46x 
+Run:  [100/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=100000 run_length=1]
+Pass: Cold: 306.237366ms GPU, 306.240920ms CPU, 1.53s total GPU, 1.53s total wall, 5x 
+Run:  [101/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=0 run_length=8]
+Pass: Cold: 249.301639ms GPU, 249.305442ms CPU, 1.25s total GPU, 1.25s total wall, 5x 
+Run:  [102/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=1000 run_length=8]
+Pass: Cold: 90.492353ms GPU, 90.497244ms CPU, 0.81s total GPU, 0.82s total wall, 9x 
+Run:  [103/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=10000 run_length=8]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.78% > 0.50%)
+Pass: Cold: 108.698327ms GPU, 108.703233ms CPU, 15.00s total GPU, 15.02s total wall, 138x 
+Run:  [104/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=100000 run_length=8]
+Pass: Cold: 138.657485ms GPU, 138.661906ms CPU, 13.31s total GPU, 13.33s total wall, 96x 
+Run:  [105/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=0 run_length=32]
+Pass: Cold: 224.263824ms GPU, 224.267545ms CPU, 1.12s total GPU, 1.12s total wall, 5x 
+Run:  [106/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=1000 run_length=32]
+Pass: Cold: 62.698321ms GPU, 62.703306ms CPU, 10.03s total GPU, 10.06s total wall, 160x 
+Run:  [107/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=10000 run_length=32]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.89% > 0.50%)
+Pass: Cold: 73.377647ms GPU, 73.382680ms CPU, 14.97s total GPU, 15.00s total wall, 204x 
+Run:  [108/154] parquet_write_encode [Device=0 data_type=STRUCT cardinality=100000 run_length=32]
+Warn: Current measurement timed out (15.05s) while over noise threshold (0.91% > 0.50%)
+Pass: Cold: 77.818804ms GPU, 77.824088ms CPU, 15.02s total GPU, 15.05s total wall, 193x 
+Run:  [109/154] parquet_write_io_compression [Device=0 io=FILEPATH compression=SNAPPY cardinality=0 run_length=1]
+Pass: Cold: 3622.446582ms GPU, 3622.422858ms CPU, 18.11s total GPU, 18.45s total wall, 5x 
+Run:  [110/154] parquet_write_io_compression [Device=0 io=FILEPATH compression=SNAPPY cardinality=1000 run_length=1]
+Pass: Cold: 1163.715869ms GPU, 1163.715227ms CPU, 5.82s total GPU, 5.94s total wall, 5x 
+Run:  [111/154] parquet_write_io_compression [Device=0 io=FILEPATH compression=SNAPPY cardinality=0 run_length=32]
+Warn: Current measurement timed out (15.27s) while over noise threshold (3.43% > 0.50%)
+Pass: Cold: 488.080014ms GPU, 488.087631ms CPU, 14.64s total GPU, 15.27s total wall, 30x 
+Run:  [112/154] parquet_write_io_compression [Device=0 io=FILEPATH compression=SNAPPY cardinality=1000 run_length=32]
+Warn: Current measurement timed out (15.02s) while over noise threshold (2.99% > 0.50%)
+Pass: Cold: 198.311347ms GPU, 198.319303ms CPU, 14.68s total GPU, 15.02s total wall, 74x 
+Run:  [113/154] parquet_write_io_compression [Device=0 io=FILEPATH compression=NONE cardinality=0 run_length=1]
+Warn: Current measurement timed out (15.05s) while over noise threshold (inf% > 0.50%)
+Pass: Cold: 3695.512512ms GPU, 3695.480515ms CPU, 14.78s total GPU, 15.05s total wall, 4x 
+Run:  [114/154] parquet_write_io_compression [Device=0 io=FILEPATH compression=NONE cardinality=1000 run_length=1]
+Pass: Cold: 1224.443774ms GPU, 1224.443812ms CPU, 6.12s total GPU, 6.25s total wall, 5x 
+Run:  [115/154] parquet_write_io_compression [Device=0 io=FILEPATH compression=NONE cardinality=0 run_length=32]
+Pass: Cold: 3250.783643ms GPU, 3250.746998ms CPU, 16.25s total GPU, 16.55s total wall, 5x 
+Run:  [116/154] parquet_write_io_compression [Device=0 io=FILEPATH compression=NONE cardinality=1000 run_length=32]
+Warn: Current measurement timed out (15.03s) while over noise threshold (10.59% > 0.50%)
+Pass: Cold: 219.111076ms GPU, 219.119717ms CPU, 13.80s total GPU, 15.03s total wall, 63x 
+Run:  [117/154] parquet_write_io_compression [Device=0 io=HOST_BUFFER compression=SNAPPY cardinality=0 run_length=1]
+Warn: Current measurement timed out (15.96s) while over noise threshold (1.11% > 0.50%)
+Pass: Cold: 1305.600240ms GPU, 1305.591548ms CPU, 15.67s total GPU, 15.96s total wall, 12x 
+Run:  [118/154] parquet_write_io_compression [Device=0 io=HOST_BUFFER compression=SNAPPY cardinality=1000 run_length=1]
+Pass: Cold: 477.248568ms GPU, 477.248035ms CPU, 7.64s total GPU, 7.73s total wall, 16x 
+Run:  [119/154] parquet_write_io_compression [Device=0 io=HOST_BUFFER compression=SNAPPY cardinality=0 run_length=32]
+Warn: Current measurement timed out (15.13s) while over noise threshold (0.85% > 0.50%)
+Pass: Cold: 262.621075ms GPU, 262.621900ms CPU, 14.97s total GPU, 15.13s total wall, 57x 
+Run:  [120/154] parquet_write_io_compression [Device=0 io=HOST_BUFFER compression=SNAPPY cardinality=1000 run_length=32]
+Pass: Cold: 191.066672ms GPU, 191.068808ms CPU, 0.96s total GPU, 0.97s total wall, 5x 
+Run:  [121/154] parquet_write_io_compression [Device=0 io=HOST_BUFFER compression=NONE cardinality=0 run_length=1]
+Pass: Cold: 1184.489233ms GPU, 1184.488474ms CPU, 5.92s total GPU, 6.04s total wall, 5x 
+Run:  [122/154] parquet_write_io_compression [Device=0 io=HOST_BUFFER compression=NONE cardinality=1000 run_length=1]
+Pass: Cold: 493.715564ms GPU, 493.713642ms CPU, 2.47s total GPU, 2.50s total wall, 5x 
+Run:  [123/154] parquet_write_io_compression [Device=0 io=HOST_BUFFER compression=NONE cardinality=0 run_length=32]
+Pass: Cold: 1001.628259ms GPU, 1001.626974ms CPU, 5.01s total GPU, 5.11s total wall, 5x 
+Run:  [124/154] parquet_write_io_compression [Device=0 io=HOST_BUFFER compression=NONE cardinality=1000 run_length=32]
+Warn: Current measurement timed out (15.09s) while over noise threshold (1.60% > 0.50%)
+Pass: Cold: 176.760818ms GPU, 176.762494ms CPU, 14.85s total GPU, 15.09s total wall, 84x 
+Run:  [125/154] parquet_write_io_compression [Device=0 io=VOID compression=SNAPPY cardinality=0 run_length=1]
+Pass: Cold: 281.532672ms GPU, 281.535623ms CPU, 1.41s total GPU, 1.41s total wall, 5x 
+Run:  [126/154] parquet_write_io_compression [Device=0 io=VOID compression=SNAPPY cardinality=1000 run_length=1]
+Warn: Current measurement timed out (15.20s) while over noise threshold (0.76% > 0.50%)
+Pass: Cold: 202.554600ms GPU, 202.557196ms CPU, 15.19s total GPU, 15.20s total wall, 75x 
+Run:  [127/154] parquet_write_io_compression [Device=0 io=VOID compression=SNAPPY cardinality=0 run_length=32]
+Pass: Cold: 162.731738ms GPU, 162.734819ms CPU, 0.98s total GPU, 0.98s total wall, 6x 
+Run:  [128/154] parquet_write_io_compression [Device=0 io=VOID compression=SNAPPY cardinality=1000 run_length=32]
+Warn: Current measurement timed out (15.11s) while over noise threshold (0.54% > 0.50%)
+Pass: Cold: 154.042455ms GPU, 154.045779ms CPU, 15.10s total GPU, 15.11s total wall, 98x 
+Run:  [129/154] parquet_write_io_compression [Device=0 io=VOID compression=NONE cardinality=0 run_length=1]
+Pass: Cold: 164.331656ms GPU, 164.334437ms CPU, 2.63s total GPU, 2.63s total wall, 16x 
+Run:  [130/154] parquet_write_io_compression [Device=0 io=VOID compression=NONE cardinality=1000 run_length=1]
+Warn: Current measurement timed out (15.04s) while over noise threshold (1.18% > 0.50%)
+Pass: Cold: 151.799598ms GPU, 151.803015ms CPU, 15.03s total GPU, 15.04s total wall, 99x 
+Run:  [131/154] parquet_write_io_compression [Device=0 io=VOID compression=NONE cardinality=0 run_length=32]
+Warn: Current measurement timed out (15.04s) while over noise threshold (0.67% > 0.50%)
+Pass: Cold: 121.164955ms GPU, 121.168687ms CPU, 15.02s total GPU, 15.04s total wall, 124x 
+Run:  [132/154] parquet_write_io_compression [Device=0 io=VOID compression=NONE cardinality=1000 run_length=32]
+Pass: Cold: 129.285027ms GPU, 129.288630ms CPU, 10.34s total GPU, 10.35s total wall, 80x 
+Run:  [133/154] parquet_write_options [Device=0 statistics=STATISTICS_NONE compression=SNAPPY file_path=unused_path.parquet]
+Warn: Current measurement timed out (15.81s) while over noise threshold (8.04% > 0.50%)
+Pass: Cold: 810.343920ms GPU, 810.347868ms CPU, 15.40s total GPU, 15.81s total wall, 19x 
+Run:  [134/154] parquet_write_options [Device=0 statistics=STATISTICS_NONE compression=SNAPPY file_path=]
+Pass: Cold: 825.581580ms GPU, 825.584111ms CPU, 4.13s total GPU, 4.23s total wall, 5x 
+Run:  [135/154] parquet_write_options [Device=0 statistics=STATISTICS_NONE compression=NONE file_path=unused_path.parquet]
+Pass: Cold: 934.788379ms GPU, 934.789809ms CPU, 4.67s total GPU, 4.78s total wall, 5x 
+Run:  [136/154] parquet_write_options [Device=0 statistics=STATISTICS_NONE compression=NONE file_path=]
+Pass: Cold: 934.365698ms GPU, 934.366052ms CPU, 4.67s total GPU, 4.78s total wall, 5x 
+Run:  [137/154] parquet_write_options [Device=0 statistics=STATISTICS_ROWGROUP compression=SNAPPY file_path=unused_path.parquet]
+Pass: Cold: 824.983594ms GPU, 824.985244ms CPU, 4.12s total GPU, 4.23s total wall, 5x 
+Run:  [138/154] parquet_write_options [Device=0 statistics=STATISTICS_ROWGROUP compression=SNAPPY file_path=]
+Pass: Cold: 827.895972ms GPU, 827.897268ms CPU, 4.14s total GPU, 4.23s total wall, 5x 
+Run:  [139/154] parquet_write_options [Device=0 statistics=STATISTICS_ROWGROUP compression=NONE file_path=unused_path.parquet]
+Pass: Cold: 934.084814ms GPU, 934.083658ms CPU, 4.67s total GPU, 4.79s total wall, 5x 
+Run:  [140/154] parquet_write_options [Device=0 statistics=STATISTICS_ROWGROUP compression=NONE file_path=]
+Pass: Cold: 933.183667ms GPU, 933.185434ms CPU, 4.67s total GPU, 4.78s total wall, 5x 
+Run:  [141/154] parquet_write_options [Device=0 statistics=STATISTICS_COLUMN compression=SNAPPY file_path=unused_path.parquet]
+Pass: Cold: 826.846619ms GPU, 826.850019ms CPU, 4.13s total GPU, 4.24s total wall, 5x 
+Run:  [142/154] parquet_write_options [Device=0 statistics=STATISTICS_COLUMN compression=SNAPPY file_path=]
+Pass: Cold: 824.428113ms GPU, 824.429944ms CPU, 4.12s total GPU, 4.23s total wall, 5x 
+Run:  [143/154] parquet_write_options [Device=0 statistics=STATISTICS_COLUMN compression=NONE file_path=unused_path.parquet]
+Pass: Cold: 933.469385ms GPU, 933.471163ms CPU, 4.67s total GPU, 4.78s total wall, 5x 
+Run:  [144/154] parquet_write_options [Device=0 statistics=STATISTICS_COLUMN compression=NONE file_path=]
+Pass: Cold: 934.884961ms GPU, 934.885870ms CPU, 4.67s total GPU, 4.78s total wall, 5x 
+Run:  [145/154] parquet_write_options [Device=0 statistics=STATISTICS_PAGE compression=SNAPPY file_path=unused_path.parquet]
+Pass: Cold: 826.960034ms GPU, 826.963346ms CPU, 4.13s total GPU, 4.24s total wall, 5x 
+Run:  [146/154] parquet_write_options [Device=0 statistics=STATISTICS_PAGE compression=SNAPPY file_path=]
+Pass: Cold: 828.415955ms GPU, 828.417285ms CPU, 4.14s total GPU, 4.24s total wall, 5x 
+Run:  [147/154] parquet_write_options [Device=0 statistics=STATISTICS_PAGE compression=NONE file_path=unused_path.parquet]
+Pass: Cold: 935.373059ms GPU, 935.373602ms CPU, 4.68s total GPU, 4.79s total wall, 5x 
+Run:  [148/154] parquet_write_options [Device=0 statistics=STATISTICS_PAGE compression=NONE file_path=]
+Pass: Cold: 932.827014ms GPU, 932.828237ms CPU, 4.66s total GPU, 4.78s total wall, 5x 
+Run:  [149/154] parquet_write_num_cols [Device=0 num_cols=8]
+Pass: Cold: 161.453622ms GPU, 161.456451ms CPU, 0.81s total GPU, 0.81s total wall, 5x 
+Run:  [150/154] parquet_write_num_cols [Device=0 num_cols=1024]
+Pass: Cold: 190.686423ms GPU, 190.692327ms CPU, 0.95s total GPU, 0.95s total wall, 5x 
+Run:  [151/154] parquet_chunked_write [Device=0 num_cols=8 num_chunks=8]
+Pass: Cold: 177.731433ms GPU, 177.734064ms CPU, 0.89s total GPU, 0.89s total wall, 5x 
+Run:  [152/154] parquet_chunked_write [Device=0 num_cols=1024 num_chunks=8]
+Warn: Current measurement timed out (15.41s) while over noise threshold (0.62% > 0.50%)
+Pass: Cold: 426.298797ms GPU, 426.305340ms CPU, 15.35s total GPU, 15.41s total wall, 36x 
+Run:  [153/154] parquet_chunked_write [Device=0 num_cols=8 num_chunks=64]
+Pass: Cold: 365.695471ms GPU, 365.696198ms CPU, 1.83s total GPU, 1.83s total wall, 5x 
+Run:  [154/154] parquet_chunked_write [Device=0 num_cols=1024 num_chunks=64]
+Warn: Current measurement timed out (16.56s) while over noise threshold (1.59% > 0.50%)
+Pass: Cold: 2746.519043ms GPU, 2746.494705ms CPU, 16.48s total GPU, 16.56s total wall, 6x 
+```
+
+# Benchmark Results
+
+## parquet_write_encode
+
+### [0] Tesla T4
+
+| data_type | cardinality | run_length | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|-----------|-------------|------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|  INTEGRAL |           0 |          1 |      5x | 261.740 ms | 0.12% | 261.737 ms | 0.12% |       2051182052 |         2.222 GiB |       494.613 MiB |
+|  INTEGRAL |        1000 |          1 |    138x | 108.796 ms | 0.76% | 108.792 ms | 0.76% |       4934845538 |         2.862 GiB |       160.766 MiB |
+|  INTEGRAL |       10000 |          1 |    118x | 127.945 ms | 0.99% | 127.941 ms | 0.99% |       4196222105 |         2.862 GiB |       210.774 MiB |
+|  INTEGRAL |      100000 |          1 |      5x | 239.343 ms | 0.33% | 239.340 ms | 0.33% |       2243133265 |         2.862 GiB |       283.091 MiB |
+|  INTEGRAL |           0 |          8 |     81x | 185.716 ms | 0.65% | 185.713 ms | 0.65% |       2890867337 |         2.862 GiB |       108.263 MiB |
+|  INTEGRAL |        1000 |          8 |      5x | 139.335 ms | 0.42% | 139.331 ms | 0.42% |       3853194585 |         2.862 GiB |        55.408 MiB |
+|  INTEGRAL |       10000 |          8 |    104x | 144.314 ms | 0.58% | 144.311 ms | 0.58% |       3720243661 |         2.862 GiB |        60.059 MiB |
+|  INTEGRAL |      100000 |          8 |      5x | 168.677 ms | 0.41% | 168.671 ms | 0.41% |       3182938437 |         2.862 GiB |        82.537 MiB |
+|  INTEGRAL |           0 |         32 |      6x |  98.624 ms | 0.48% |  98.620 ms | 0.48% |       5443817523 |         2.862 GiB |        26.792 MiB |
+|  INTEGRAL |        1000 |         32 |     13x |  81.452 ms | 0.49% |  81.448 ms | 0.49% |       6591606481 |         2.862 GiB |        13.819 MiB |
+|  INTEGRAL |       10000 |         32 |    112x |  88.106 ms | 0.65% |  88.102 ms | 0.65% |       6093732145 |         2.862 GiB |        17.986 MiB |
+|  INTEGRAL |      100000 |         32 |     80x |  96.668 ms | 0.67% |  96.664 ms | 0.67% |       5553973032 |         2.862 GiB |        25.069 MiB |
+|     FLOAT |           0 |          1 |      5x | 245.338 ms | 0.17% | 245.336 ms | 0.17% |       2188312396 |         1.122 GiB |       510.128 MiB |
+|     FLOAT |        1000 |          1 |    128x |  73.626 ms | 1.29% |  73.622 ms | 1.29% |       7292310146 |         1.834 GiB |       109.525 MiB |
+|     FLOAT |       10000 |          1 |     80x |  91.307 ms | 1.60% |  91.303 ms | 1.60% |       5880115722 |         1.834 GiB |       157.735 MiB |
+|     FLOAT |      100000 |          1 |      5x | 232.212 ms | 0.42% | 232.208 ms | 0.42% |       2312022274 |         1.834 GiB |       245.915 MiB |
+|     FLOAT |           0 |          8 |    110x | 136.536 ms | 0.68% | 136.532 ms | 0.68% |       3932193541 |         1.834 GiB |        96.189 MiB |
+|     FLOAT |        1000 |          8 |      7x |  91.327 ms | 0.49% |  91.323 ms | 0.49% |       5878802692 |         1.834 GiB |        37.050 MiB |
+|     FLOAT |       10000 |          8 |      9x |  97.431 ms | 0.49% |  97.427 ms | 0.49% |       5510481749 |         1.834 GiB |        42.534 MiB |
+|     FLOAT |      100000 |          8 |      5x | 121.560 ms | 0.33% | 121.557 ms | 0.33% |       4416634912 |         1.834 GiB |        68.552 MiB |
+|     FLOAT |           0 |         32 |     80x |  68.114 ms | 0.76% |  68.110 ms | 0.76% |       7882435038 |         1.834 GiB |        22.663 MiB |
+|     FLOAT |        1000 |         32 |    128x |  53.683 ms | 0.66% |  53.679 ms | 0.66% |      10001541121 |         1.834 GiB |         9.234 MiB |
+|     FLOAT |       10000 |         32 |    253x |  59.279 ms | 0.78% |  59.275 ms | 0.78% |       9057338824 |         1.834 GiB |        13.857 MiB |
+|     FLOAT |      100000 |         32 |    144x |  66.418 ms | 0.77% |  66.414 ms | 0.77% |       8083740156 |         1.834 GiB |        21.032 MiB |
+|     BOOL8 |           0 |          1 |      5x | 143.054 ms | 0.32% | 143.049 ms | 0.32% |       3753056135 |         1.369 GiB |        80.461 MiB |
+|     BOOL8 |        1000 |          1 |      5x | 138.359 ms | 0.49% | 138.354 ms | 0.49% |       3880404182 |         1.370 GiB |        78.709 MiB |
+|     BOOL8 |       10000 |          1 |      5x | 142.180 ms | 0.14% | 142.176 ms | 0.14% |       3776104048 |         1.368 GiB |        80.632 MiB |
+|     BOOL8 |      100000 |          1 |      5x | 142.622 ms | 0.23% | 142.617 ms | 0.23% |       3764413310 |         1.369 GiB |        80.534 MiB |
+|     BOOL8 |           0 |          8 |      5x | 143.632 ms | 0.37% | 143.628 ms | 0.37% |       3737937257 |         1.369 GiB |        50.128 MiB |
+|     BOOL8 |        1000 |          8 |      9x | 143.355 ms | 0.47% | 143.351 ms | 0.47% |       3745146356 |         1.369 GiB |        49.697 MiB |
+|     BOOL8 |       10000 |          8 |      5x | 143.806 ms | 0.42% | 143.802 ms | 0.42% |       3733413029 |         1.368 GiB |        50.135 MiB |
+|     BOOL8 |      100000 |          8 |     23x | 143.581 ms | 0.50% | 143.576 ms | 0.50% |       3739276160 |         1.369 GiB |        50.141 MiB |
+|     BOOL8 |           0 |         32 |     25x | 133.637 ms | 0.49% | 133.633 ms | 0.49% |       4017516525 |         1.369 GiB |        24.220 MiB |
+|     BOOL8 |        1000 |         32 |      7x | 133.537 ms | 0.48% | 133.533 ms | 0.48% |       4020516231 |         1.369 GiB |        24.105 MiB |
+|     BOOL8 |       10000 |         32 |      6x | 133.566 ms | 0.49% | 133.562 ms | 0.49% |       4019650589 |         1.368 GiB |        24.214 MiB |
+|     BOOL8 |      100000 |         32 |      7x | 133.360 ms | 0.47% | 133.356 ms | 0.47% |       4025839530 |         1.369 GiB |        24.220 MiB |
+|   DECIMAL |           0 |          1 |      5x | 270.462 ms | 0.31% | 270.459 ms | 0.31% |       1985034053 |         1.105 GiB |       399.018 MiB |
+|   DECIMAL |        1000 |          1 |     80x |  49.131 ms | 0.63% |  49.127 ms | 0.63% |      10928320324 |         1.154 GiB |        71.009 MiB |
+|   DECIMAL |       10000 |          1 |    222x |  67.731 ms | 0.84% |  67.727 ms | 0.84% |       7926960147 |         1.154 GiB |       102.156 MiB |
+|   DECIMAL |      100000 |          1 |      5x | 242.668 ms | 0.19% | 242.665 ms | 0.19% |       2212398253 |         1.218 GiB |       277.839 MiB |
+|   DECIMAL |           0 |          8 |     31x | 118.571 ms | 0.50% | 118.567 ms | 0.50% |       4528007088 |         1.218 GiB |        77.942 MiB |
+|   DECIMAL |        1000 |          8 |     26x |  60.741 ms | 0.50% |  60.737 ms | 0.50% |       8839303916 |         1.154 GiB |        23.981 MiB |
+|   DECIMAL |       10000 |          8 |    128x |  72.393 ms | 0.63% |  72.389 ms | 0.63% |       7416444214 |         1.154 GiB |        27.291 MiB |
+|   DECIMAL |      100000 |          8 |    110x | 136.288 ms | 0.77% | 136.285 ms | 0.77% |       3939331181 |         1.154 GiB |        46.674 MiB |
+|   DECIMAL |           0 |         32 |    221x |  67.823 ms | 0.87% |  67.819 ms | 0.87% |       7916267915 |         1.154 GiB |        16.127 MiB |
+|   DECIMAL |        1000 |         32 |    410x |  36.560 ms | 1.00% |  36.556 ms | 1.00% |      14686335059 |         1.154 GiB |         5.960 MiB |
+|   DECIMAL |       10000 |         32 |    319x |  46.944 ms | 1.11% |  46.939 ms | 1.11% |      11437509704 |         1.154 GiB |         9.095 MiB |
+|   DECIMAL |      100000 |         32 |    234x |  64.198 ms | 1.11% |  64.193 ms | 1.11% |       8363339876 |         1.154 GiB |        14.848 MiB |
+| TIMESTAMP |           0 |          1 |      5x | 325.809 ms | 0.16% | 325.807 ms | 0.16% |       1647819574 |         1.196 GiB |       460.719 MiB |
+| TIMESTAMP |        1000 |          1 |      9x |  61.657 ms | 0.50% |  61.653 ms | 0.50% |       8707958324 |         1.498 GiB |        91.659 MiB |
+| TIMESTAMP |       10000 |          1 |     80x |  83.829 ms | 1.31% |  83.824 ms | 1.31% |       6404710632 |         1.498 GiB |       131.807 MiB |
+| TIMESTAMP |      100000 |          1 |      5x | 255.126 ms | 0.28% | 255.124 ms | 0.28% |       2104352915 |         1.498 GiB |       208.183 MiB |
+| TIMESTAMP |           0 |          8 |     11x | 195.792 ms | 0.48% | 195.789 ms | 0.48% |       2742092667 |         1.498 GiB |        81.272 MiB |
+| TIMESTAMP |        1000 |          8 |      8x |  75.692 ms | 0.49% |  75.688 ms | 0.49% |       7093189912 |         1.498 GiB |        31.110 MiB |
+| TIMESTAMP |       10000 |          8 |     18x |  87.264 ms | 0.49% |  87.260 ms | 0.49% |       6152534444 |         1.498 GiB |        36.848 MiB |
+| TIMESTAMP |      100000 |          8 |     99x | 151.594 ms | 0.85% | 151.590 ms | 0.85% |       3541592602 |         1.498 GiB |        58.446 MiB |
+| TIMESTAMP |           0 |         32 |    191x |  78.755 ms | 1.05% |  78.751 ms | 1.05% |       6817344108 |         1.498 GiB |        19.610 MiB |
+| TIMESTAMP |        1000 |         32 |    288x |  44.663 ms | 0.85% |  44.658 ms | 0.85% |      12021727194 |         1.498 GiB |         7.908 MiB |
+| TIMESTAMP |       10000 |         32 |    112x |  55.459 ms | 0.69% |  55.454 ms | 0.69% |       9681381335 |         1.498 GiB |        12.073 MiB |
+| TIMESTAMP |      100000 |         32 |      7x |  74.521 ms | 0.48% |  74.516 ms | 0.48% |       7204731697 |         1.498 GiB |        18.191 MiB |
+|  DURATION |           0 |          1 |      5x | 181.148 ms | 0.15% | 181.145 ms | 0.15% |       2963763829 |       975.070 MiB |       355.595 MiB |
+|  DURATION |        1000 |          1 |    208x |  60.605 ms | 0.50% |  60.601 ms | 0.50% |       8859134549 |         1.498 GiB |        89.655 MiB |
+|  DURATION |       10000 |          1 |     80x |  74.169 ms | 1.20% |  74.165 ms | 1.20% |       7238909197 |         1.498 GiB |       124.317 MiB |
+|  DURATION |      100000 |          1 |     34x | 179.949 ms | 0.50% | 179.945 ms | 0.50% |       2983520062 |         1.498 GiB |       186.397 MiB |
+|  DURATION |           0 |          8 |      5x | 119.927 ms | 0.32% | 119.923 ms | 0.32% |       4476787495 |         1.498 GiB |        70.684 MiB |
+|  DURATION |        1000 |          8 |      7x |  76.039 ms | 0.12% |  76.035 ms | 0.12% |       7060856819 |         1.498 GiB |        30.572 MiB |
+|  DURATION |       10000 |          8 |     11x |  80.490 ms | 0.48% |  80.486 ms | 0.48% |       6670381868 |         1.498 GiB |        35.093 MiB |
+|  DURATION |      100000 |          8 |      5x | 104.193 ms | 0.49% | 104.189 ms | 0.49% |       5152851910 |         1.498 GiB |        51.319 MiB |
+|  DURATION |           0 |         32 |    262x |  57.214 ms | 0.63% |  57.209 ms | 0.63% |       9384310961 |         1.498 GiB |        16.369 MiB |
+|  DURATION |        1000 |         32 |    144x |  44.016 ms | 0.84% |  44.011 ms | 0.84% |      12198493153 |         1.498 GiB |         7.685 MiB |
+|  DURATION |       10000 |         32 |     80x |  48.928 ms | 0.90% |  48.923 ms | 0.90% |      10973683152 |         1.498 GiB |        10.715 MiB |
+|  DURATION |      100000 |         32 |     80x |  55.717 ms | 0.66% |  55.712 ms | 0.66% |       9636507870 |         1.498 GiB |        15.290 MiB |
+|    STRING |           0 |          1 |      5x | 283.837 ms | 0.11% | 283.834 ms | 0.11% |       1891495377 |         1.136 GiB |       502.783 MiB |
+|    STRING |        1000 |          1 |    239x |  62.839 ms | 0.62% |  62.835 ms | 0.62% |       8544175160 |       588.009 MiB |        35.546 MiB |
+|    STRING |       10000 |          1 |      7x |  92.772 ms | 0.49% |  92.768 ms | 0.49% |       5787251341 |       588.009 MiB |        59.259 MiB |
+|    STRING |      100000 |          1 |      5x | 284.387 ms | 0.34% | 284.384 ms | 0.34% |       1887835192 |         1.136 GiB |       500.029 MiB |
+|    STRING |           0 |          8 |      5x | 282.143 ms | 0.20% | 282.140 ms | 0.20% |       1902852906 |         1.136 GiB |       502.783 MiB |
+|    STRING |        1000 |          8 |     17x |  50.172 ms | 0.50% |  50.167 ms | 0.50% |      10701590295 |       588.009 MiB |        12.625 MiB |
+|    STRING |       10000 |          8 |    112x |  63.852 ms | 1.03% |  63.847 ms | 1.03% |       8408654703 |       588.009 MiB |        22.596 MiB |
+|    STRING |      100000 |          8 |    128x | 101.015 ms | 0.85% | 101.011 ms | 0.85% |       5314951875 |       588.009 MiB |        52.165 MiB |
+|    STRING |           0 |         32 |      5x | 283.247 ms | 0.19% | 283.245 ms | 0.19% |       1895430658 |         1.136 GiB |       502.783 MiB |
+|    STRING |        1000 |         32 |    128x |  34.147 ms | 1.37% |  34.143 ms | 1.37% |      15724406943 |       588.009 MiB |         3.825 MiB |
+|    STRING |       10000 |         32 |    349x |  42.965 ms | 1.42% |  42.961 ms | 1.42% |      12496784911 |       588.009 MiB |        10.598 MiB |
+|    STRING |      100000 |         32 |     80x |  48.979 ms | 1.27% |  48.975 ms | 1.27% |      10962241713 |       588.009 MiB |        15.475 MiB |
+|      LIST |           0 |          1 |      5x | 408.647 ms | 0.14% | 408.646 ms | 0.14% |       1313780449 |         1.500 GiB |       462.560 MiB |
+|      LIST |        1000 |          1 |      5x | 241.766 ms | 0.50% | 241.763 ms | 0.50% |       2220648878 |         2.570 GiB |       156.866 MiB |
+|      LIST |       10000 |          1 |      5x | 382.954 ms | 0.28% | 382.952 ms | 0.28% |       1401926816 |         2.570 GiB |       214.573 MiB |
+|      LIST |      100000 |          1 |      5x | 451.496 ms | 0.29% | 451.495 ms | 0.29% |       1189096750 |         2.570 GiB |       275.550 MiB |
+|      LIST |           0 |          8 |     58x | 253.272 ms | 0.50% | 253.269 ms | 0.50% |       2119763273 |         2.570 GiB |       120.002 MiB |
+|      LIST |        1000 |          8 |      5x | 228.400 ms | 0.22% | 228.396 ms | 0.22% |       2350609634 |         2.570 GiB |        61.588 MiB |
+|      LIST |       10000 |          8 |      5x | 232.305 ms | 0.09% | 232.302 ms | 0.09% |       2311092431 |         2.570 GiB |        63.756 MiB |
+|      LIST |      100000 |          8 |      5x | 232.731 ms | 0.43% | 232.727 ms | 0.43% |       2306867282 |         2.570 GiB |        95.811 MiB |
+|      LIST |           0 |         32 |      5x | 164.682 ms | 0.49% | 164.678 ms | 0.49% |       3260121966 |         2.570 GiB |        37.483 MiB |
+|      LIST |        1000 |         32 |      5x | 156.880 ms | 0.38% | 156.876 ms | 0.38% |       3422263860 |         2.570 GiB |        25.680 MiB |
+|      LIST |       10000 |         32 |      5x | 158.362 ms | 0.40% | 158.359 ms | 0.40% |       3390220363 |         2.570 GiB |        27.726 MiB |
+|      LIST |      100000 |         32 |      5x | 163.610 ms | 0.37% | 163.606 ms | 0.37% |       3281483454 |         2.570 GiB |        34.565 MiB |
+|    STRUCT |           0 |          1 |      5x | 283.463 ms | 0.07% | 283.460 ms | 0.07% |       1893990743 |         1.155 GiB |       506.115 MiB |
+|    STRUCT |        1000 |          1 |    168x |  89.181 ms | 0.78% |  89.175 ms | 0.78% |       6020388062 |         1.348 GiB |        75.350 MiB |
+|    STRUCT |       10000 |          1 |     46x | 131.063 ms | 0.50% | 131.059 ms | 0.50% |       4096417235 |         1.348 GiB |       117.443 MiB |
+|    STRUCT |      100000 |          1 |      5x | 306.241 ms | 0.27% | 306.237 ms | 0.27% |       1753120200 |         1.491 GiB |       470.801 MiB |
+|    STRUCT |           0 |          8 |      5x | 249.305 ms | 0.15% | 249.302 ms | 0.15% |       2153499329 |         1.426 GiB |       386.653 MiB |
+|    STRUCT |        1000 |          8 |      9x |  90.497 ms | 0.50% |  90.492 ms | 0.50% |       5932776586 |         1.348 GiB |        27.790 MiB |
+|    STRUCT |       10000 |          8 |    138x | 108.703 ms | 0.78% | 108.698 ms | 0.78% |       4939090829 |         1.348 GiB |        40.958 MiB |
+|    STRUCT |      100000 |          8 |     96x | 138.662 ms | 0.86% | 138.657 ms | 0.86% |       3871921614 |         1.348 GiB |        70.966 MiB |
+|    STRUCT |           0 |         32 |      5x | 224.268 ms | 0.26% | 224.264 ms | 0.26% |       2393925606 |         1.388 GiB |       363.137 MiB |
+|    STRUCT |        1000 |         32 |    160x |  62.703 ms | 0.98% |  62.698 ms | 0.98% |       8562763786 |         1.348 GiB |         9.204 MiB |
+|    STRUCT |       10000 |         32 |    204x |  73.383 ms | 0.89% |  73.378 ms | 0.89% |       7316545715 |         1.348 GiB |        16.658 MiB |
+|    STRUCT |      100000 |         32 |    193x |  77.824 ms | 0.91% |  77.819 ms | 0.91% |       6898986964 |         1.348 GiB |        20.712 MiB |
+
+## parquet_write_io_compression
+
+### [0] Tesla T4
+
+|     io      | compression | cardinality | run_length | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | bytes_per_second | peak_memory_usage | encoded_file_size |
+|-------------|-------------|-------------|------------|---------|------------|--------|------------|--------|------------------|-------------------|-------------------|
+|    FILEPATH |      SNAPPY |           0 |          1 |      5x |    3.622 s |  0.16% |    3.622 s |  0.16% |        148206716 |         1.489 GiB |       461.927 MiB |
+|    FILEPATH |      SNAPPY |        1000 |          1 |      5x |    1.164 s |  0.25% |    1.164 s |  0.25% |        461341918 |         2.088 GiB |       148.605 MiB |
+|    FILEPATH |      SNAPPY |           0 |         32 |     30x | 488.088 ms |  3.43% | 488.080 ms |  3.43% |       1099964957 |         1.580 GiB |        64.113 MiB |
+|    FILEPATH |      SNAPPY |        1000 |         32 |     74x | 198.319 ms |  2.99% | 198.311 ms |  2.99% |       2707212274 |         2.088 GiB |        23.310 MiB |
+|    FILEPATH |        NONE |           0 |          1 |      4x |    3.695 s |   inf% |    3.696 s |   inf% |        145276442 |         1.489 GiB |       471.121 MiB |
+|    FILEPATH |        NONE |        1000 |          1 |      5x |    1.224 s |  0.17% |    1.224 s |  0.17% |        438461057 |         2.088 GiB |       156.430 MiB |
+|    FILEPATH |        NONE |           0 |         32 |      5x |    3.251 s |  0.08% |    3.251 s |  0.08% |        165151228 |         1.580 GiB |       414.352 MiB |
+|    FILEPATH |        NONE |        1000 |         32 |     63x | 219.120 ms | 10.59% | 219.111 ms | 10.59% |       2450222602 |         2.088 GiB |        30.066 MiB |
+| HOST_BUFFER |      SNAPPY |           0 |          1 |     12x |    1.306 s |  1.11% |    1.306 s |  1.11% |        411206198 |         1.489 GiB |       461.927 MiB |
+| HOST_BUFFER |      SNAPPY |        1000 |          1 |     16x | 477.248 ms |  0.49% | 477.249 ms |  0.49% |       1124929331 |         2.088 GiB |       148.605 MiB |
+| HOST_BUFFER |      SNAPPY |           0 |         32 |     57x | 262.622 ms |  0.85% | 262.621 ms |  0.85% |       2044279622 |         1.580 GiB |        64.113 MiB |
+| HOST_BUFFER |      SNAPPY |        1000 |         32 |      5x | 191.069 ms |  0.38% | 191.067 ms |  0.38% |       2809861641 |         2.088 GiB |        23.310 MiB |
+| HOST_BUFFER |        NONE |           0 |          1 |      5x |    1.184 s |  0.23% |    1.184 s |  0.23% |        453250985 |         1.489 GiB |       471.121 MiB |
+| HOST_BUFFER |        NONE |        1000 |          1 |      5x | 493.714 ms |  0.48% | 493.716 ms |  0.48% |       1087409332 |         2.088 GiB |       156.430 MiB |
+| HOST_BUFFER |        NONE |           0 |         32 |      5x |    1.002 s |  0.37% |    1.002 s |  0.37% |        535998168 |         1.580 GiB |       414.352 MiB |
+| HOST_BUFFER |        NONE |        1000 |         32 |     84x | 176.762 ms |  1.60% | 176.761 ms |  1.60% |       3037273295 |         2.088 GiB |        30.066 MiB |
+|        VOID |      SNAPPY |           0 |          1 |      5x | 281.536 ms |  0.39% | 281.533 ms |  0.39% |       1906957753 |         1.489 GiB |       461.927 MiB |
+|        VOID |      SNAPPY |        1000 |          1 |     75x | 202.557 ms |  0.76% | 202.555 ms |  0.76% |       2650499729 |         2.088 GiB |       148.605 MiB |
+|        VOID |      SNAPPY |           0 |         32 |      6x | 162.735 ms |  0.48% | 162.732 ms |  0.48% |       3299116197 |         1.580 GiB |        64.113 MiB |
+|        VOID |      SNAPPY |        1000 |         32 |     98x | 154.046 ms |  0.54% | 154.042 ms |  0.54% |       3485213934 |         2.088 GiB |        23.310 MiB |
+|        VOID |        NONE |           0 |          1 |     16x | 164.334 ms |  0.49% | 164.332 ms |  0.49% |       3266996290 |         1.489 GiB |       471.121 MiB |
+|        VOID |        NONE |        1000 |          1 |     99x | 151.803 ms |  1.18% | 151.800 ms |  1.18% |       3536708383 |         2.088 GiB |       156.430 MiB |
+|        VOID |        NONE |           0 |         32 |    124x | 121.169 ms |  0.67% | 121.165 ms |  0.67% |       4430909193 |         1.580 GiB |       414.352 MiB |
+|        VOID |        NONE |        1000 |         32 |     80x | 129.289 ms |  0.98% | 129.285 ms |  0.98% |       4152614767 |         2.088 GiB |        30.066 MiB |
+
+## parquet_write_options
+
+### [0] Tesla T4
+
+|     statistics      | compression |      file_path      | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|---------------------|-------------|---------------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|     STATISTICS_NONE |      SNAPPY | unused_path.parquet |     19x | 810.348 ms | 8.04% | 810.344 ms | 8.04% |        662522292 |         1.950 GiB |       106.018 MiB |
+|     STATISTICS_NONE |      SNAPPY |                     |      5x | 825.584 ms | 0.28% | 825.582 ms | 0.29% |        650294198 |         1.950 GiB |       106.011 MiB |
+|     STATISTICS_NONE |        NONE | unused_path.parquet |      5x | 934.790 ms | 0.18% | 934.788 ms | 0.18% |        574323476 |         1.950 GiB |       119.765 MiB |
+|     STATISTICS_NONE |        NONE |                     |      5x | 934.366 ms | 0.21% | 934.366 ms | 0.21% |        574583284 |         1.950 GiB |       119.765 MiB |
+| STATISTICS_ROWGROUP |      SNAPPY | unused_path.parquet |      5x | 824.985 ms | 0.13% | 824.984 ms | 0.13% |        650765561 |         1.950 GiB |       105.989 MiB |
+| STATISTICS_ROWGROUP |      SNAPPY |                     |      5x | 827.897 ms | 0.13% | 827.896 ms | 0.13% |        648476294 |         1.950 GiB |       106.008 MiB |
+| STATISTICS_ROWGROUP |        NONE | unused_path.parquet |      5x | 934.084 ms | 0.27% | 934.085 ms | 0.27% |        574756064 |         1.950 GiB |       119.765 MiB |
+| STATISTICS_ROWGROUP |        NONE |                     |      5x | 933.185 ms | 0.27% | 933.184 ms | 0.27% |        575311089 |         1.950 GiB |       119.765 MiB |
+|   STATISTICS_COLUMN |      SNAPPY | unused_path.parquet |      5x | 826.850 ms | 0.22% | 826.847 ms | 0.22% |        649299277 |         1.950 GiB |       106.078 MiB |
+|   STATISTICS_COLUMN |      SNAPPY |                     |      5x | 824.430 ms | 0.30% | 824.428 ms | 0.30% |        651204033 |         1.950 GiB |       106.040 MiB |
+|   STATISTICS_COLUMN |        NONE | unused_path.parquet |      5x | 933.471 ms | 0.20% | 933.469 ms | 0.20% |        575134997 |         1.950 GiB |       119.809 MiB |
+|   STATISTICS_COLUMN |        NONE |                     |      5x | 934.886 ms | 0.14% | 934.885 ms | 0.14% |        574264144 |         1.950 GiB |       119.809 MiB |
+|     STATISTICS_PAGE |      SNAPPY | unused_path.parquet |      5x | 826.963 ms | 0.27% | 826.960 ms | 0.27% |        649210227 |         1.950 GiB |       106.042 MiB |
+|     STATISTICS_PAGE |      SNAPPY |                     |      5x | 828.417 ms | 0.22% | 828.416 ms | 0.22% |        648069256 |         1.950 GiB |       106.058 MiB |
+|     STATISTICS_PAGE |        NONE | unused_path.parquet |      5x | 935.374 ms | 0.10% | 935.373 ms | 0.10% |        573964480 |         1.950 GiB |       119.787 MiB |
+|     STATISTICS_PAGE |        NONE |                     |      5x | 932.828 ms | 0.22% | 932.827 ms | 0.22% |        575531051 |         1.950 GiB |       119.787 MiB |
+
+## parquet_write_num_cols
+
+### [0] Tesla T4
+
+| num_cols | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|----------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|        8 |      5x | 161.456 ms | 0.30% | 161.454 ms | 0.30% |       3325232991 |         2.656 GiB |       112.735 MiB |
+|     1024 |      5x | 190.692 ms | 0.46% | 190.686 ms | 0.46% |       2815464805 |         3.502 GiB |       119.065 MiB |
+
+## parquet_chunked_write
+
+### [0] Tesla T4
+
+| num_cols | num_chunks | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|----------|------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|        8 |          8 |      5x | 177.734 ms | 0.33% | 177.731 ms | 0.33% |       3020686339 |       339.561 MiB |       113.130 MiB |
+|     1024 |          8 |     36x | 426.305 ms | 0.62% | 426.299 ms | 0.62% |       1259377028 |       339.156 MiB |       157.389 MiB |
+|        8 |         64 |      5x | 365.696 ms | 0.20% | 365.695 ms | 0.20% |       1468081926 |        43.993 MiB |       115.240 MiB |
+|     1024 |         64 |      6x |    2.746 s | 1.59% |    2.747 s | 1.59% |        195473216 |        42.898 MiB |       210.208 MiB |

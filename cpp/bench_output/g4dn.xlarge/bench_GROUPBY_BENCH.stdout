@@ -1,0 +1,43 @@
+--------------------------------------------------------------------------------------------
+Benchmark                                                  Time             CPU   Iterations
+--------------------------------------------------------------------------------------------
+Groupby/Basic/10000/manual_time                        0.144 ms        0.171 ms         4895
+Groupby/Basic/1000000/manual_time                       1.13 ms         1.14 ms          623
+Groupby/Basic/10000000/manual_time                      10.2 ms         10.2 ms           68
+Groupby/Basic/100000000/manual_time                     99.1 ms         99.1 ms            7
+Groupby/PreSorted/1000000/manual_time                  0.340 ms        0.360 ms         2068
+Groupby/PreSorted/10000000/manual_time                  2.21 ms         2.23 ms          313
+Groupby/PreSorted/100000000/manual_time                 21.9 ms         22.5 ms           30
+Groupby/PreSortedNth/1000000/manual_time               0.159 ms        0.187 ms         4318
+Groupby/PreSortedNth/10000000/manual_time              0.904 ms        0.934 ms          750
+Groupby/PreSortedNth/100000000/manual_time              8.75 ms         9.05 ms           62
+Groupby/Shift/1000000/manual_time                      0.536 ms        0.557 ms         1092
+Groupby/Shift/10000000/manual_time                      5.74 ms         5.76 ms          113
+Groupby/Shift/100000000/manual_time                     1294 ms         1294 ms            1
+Groupby/Aggregation/10000/manual_time                   1.94 ms         1.97 ms          357
+Groupby/Aggregation/16384/manual_time                   1.94 ms         1.97 ms          360
+Groupby/Aggregation/65536/manual_time                   2.17 ms         2.20 ms          323
+Groupby/Aggregation/262144/manual_time                  4.10 ms         4.13 ms          170
+Groupby/Aggregation/1048576/manual_time                 12.4 ms         12.5 ms           54
+Groupby/Aggregation/4194304/manual_time                 48.6 ms         48.6 ms           14
+Groupby/Aggregation/10000000/manual_time                 131 ms          131 ms            4
+Groupby/Scan/10000/manual_time                          1.70 ms         1.72 ms          406
+Groupby/Scan/16384/manual_time                          1.72 ms         1.75 ms          407
+Groupby/Scan/65536/manual_time                          2.02 ms         2.05 ms          346
+Groupby/Scan/262144/manual_time                         4.35 ms         4.38 ms          162
+Groupby/Scan/1048576/manual_time                        14.5 ms         14.5 ms           47
+Groupby/Scan/4194304/manual_time                        58.1 ms         58.2 ms            9
+Groupby/Scan/10000000/manual_time                        149 ms          149 ms            4
+Groupby/BasicNoRequest/10000/manual_time               0.092 ms        0.119 ms         7573
+Groupby/BasicNoRequest/1000000/manual_time             0.912 ms        0.930 ms          763
+Groupby/BasicNoRequest/10000000/manual_time             8.41 ms         8.42 ms           83
+Groupby/BasicNoRequest/100000000/manual_time            83.1 ms         83.1 ms            8
+Groupby/PreSortedNoRequests/1000000/manual_time        0.492 ms        0.513 ms         1421
+Groupby/PreSortedNoRequests/10000000/manual_time        3.13 ms         3.16 ms          224
+Groupby/PreSortedNoRequests/100000000/manual_time       26.2 ms         26.9 ms           26
+Groupby/BasicSumScan/1000000/manual_time               0.755 ms        0.778 ms          850
+Groupby/BasicSumScan/10000000/manual_time               9.06 ms         9.09 ms           70
+Groupby/BasicSumScan/100000000/manual_time               908 ms          908 ms            1
+Groupby/PreSortedSumScan/1000000/manual_time           0.233 ms        0.262 ms         2984
+Groupby/PreSortedSumScan/10000000/manual_time           2.03 ms         2.06 ms          341
+Groupby/PreSortedSumScan/100000000/manual_time          20.9 ms         21.4 ms           32

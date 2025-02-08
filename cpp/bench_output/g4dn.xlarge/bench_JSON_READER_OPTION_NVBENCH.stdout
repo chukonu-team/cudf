@@ -1,0 +1,114 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/20] jsonlines_reader_normalize_single_quotes [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=1]
+Pass: Cold: 1083.749721ms GPU, 1083.743493ms CPU, 7.59s total GPU, 7.59s total wall, 7x 
+Run:  [2/20] jsonlines_reader_normalize_single_quotes [Device=0 row_selection=ALL normalize_single_quotes=YES normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=1]
+Pass: Cold: 1138.980469ms GPU, 1138.972950ms CPU, 7.97s total GPU, 7.97s total wall, 7x 
+Run:  [3/20] jsonlines_reader_normalize_whitespace [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=1]
+Pass: Cold: 1084.923811ms GPU, 1084.917142ms CPU, 7.59s total GPU, 7.59s total wall, 7x 
+Run:  [4/20] jsonlines_reader_normalize_whitespace [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=YES mixed_types_as_string=NO recovery_mode=FAIL num_chunks=1]
+Pass: Cold: 1084.217442ms GPU, 1084.210688ms CPU, 7.59s total GPU, 7.59s total wall, 7x 
+Run:  [5/20] jsonlines_reader_mixed_types_as_string [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=RECOVER_WITH_NULL num_chunks=1]
+Pass: Cold: 1199.423950ms GPU, 1199.415721ms CPU, 8.40s total GPU, 8.40s total wall, 7x 
+Run:  [6/20] jsonlines_reader_mixed_types_as_string [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=1]
+Pass: Cold: 1085.558071ms GPU, 1085.551122ms CPU, 7.60s total GPU, 7.60s total wall, 7x 
+Run:  [7/20] jsonlines_reader_mixed_types_as_string [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=YES recovery_mode=RECOVER_WITH_NULL num_chunks=1]
+Pass: Cold: 1232.906145ms GPU, 1232.897865ms CPU, 8.63s total GPU, 8.63s total wall, 7x 
+Run:  [8/20] jsonlines_reader_mixed_types_as_string [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=YES recovery_mode=FAIL num_chunks=1]
+Pass: Cold: 1117.679827ms GPU, 1117.674474ms CPU, 7.82s total GPU, 7.82s total wall, 7x 
+Run:  [9/20] jsonlines_reader_row_selection [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=1]
+Pass: Cold: 1085.463396ms GPU, 1085.456566ms CPU, 7.60s total GPU, 7.60s total wall, 7x 
+Run:  [10/20] jsonlines_reader_row_selection [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=2]
+Skip: No point running the same benchmark multiple times for different num_chunks when all rows are being selected anyway
+Run:  [11/20] jsonlines_reader_row_selection [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=3]
+Skip: No point running the same benchmark multiple times for different num_chunks when all rows are being selected anyway
+Run:  [12/20] jsonlines_reader_row_selection [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=4]
+Skip: No point running the same benchmark multiple times for different num_chunks when all rows are being selected anyway
+Run:  [13/20] jsonlines_reader_row_selection [Device=0 row_selection=ALL normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=5]
+Skip: No point running the same benchmark multiple times for different num_chunks when all rows are being selected anyway
+Run:  [14/20] jsonlines_reader_row_selection [Device=0 row_selection=BYTE_RANGE normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=1]
+Pass: Cold: 1085.029489ms GPU, 1085.022882ms CPU, 7.60s total GPU, 7.60s total wall, 7x 
+Run:  [15/20] jsonlines_reader_row_selection [Device=0 row_selection=BYTE_RANGE normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=2]
+Pass: Cold: 1083.173200ms GPU, 1083.166190ms CPU, 7.58s total GPU, 7.58s total wall, 7x 
+Run:  [16/20] jsonlines_reader_row_selection [Device=0 row_selection=BYTE_RANGE normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=3]
+Pass: Cold: 1081.449079ms GPU, 1081.442118ms CPU, 7.57s total GPU, 7.57s total wall, 7x 
+Run:  [17/20] jsonlines_reader_row_selection [Device=0 row_selection=BYTE_RANGE normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=4]
+Pass: Cold: 1059.934222ms GPU, 1059.927167ms CPU, 7.42s total GPU, 7.42s total wall, 7x 
+Run:  [18/20] jsonlines_reader_row_selection [Device=0 row_selection=BYTE_RANGE normalize_single_quotes=NO normalize_whitespace=NO mixed_types_as_string=NO recovery_mode=FAIL num_chunks=5]
+Pass: Cold: 1047.898751ms GPU, 1047.892264ms CPU, 7.34s total GPU, 7.34s total wall, 7x 
+Run:  [19/20] json_reader [Device=0 json_lines=YES]
+Pass: Cold: 1084.880249ms GPU, 1084.873274ms CPU, 7.59s total GPU, 7.60s total wall, 7x 
+Run:  [20/20] json_reader [Device=0 json_lines=NO]
+Pass: Cold: 1086.264300ms GPU, 1086.257664ms CPU, 7.60s total GPU, 7.60s total wall, 7x 
+```
+
+# Benchmark Results
+
+## jsonlines_reader_normalize_single_quotes
+
+### [0] Tesla T4
+
+| row_selection | normalize_single_quotes | normalize_whitespace | mixed_types_as_string | recovery_mode | num_chunks | Samples | CPU Time | Noise | GPU Time | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|---------------|-------------------------|----------------------|-----------------------|---------------|------------|---------|----------|-------|----------|-------|------------------|-------------------|-------------------|
+|           ALL |                      NO |                   NO |                    NO |          FAIL |          1 |      7x |  1.084 s | 0.33% |  1.084 s | 0.33% |        495382745 |         6.602 GiB |         1.177 GiB |
+|           ALL |                     YES |                   NO |                    NO |          FAIL |          1 |      7x |  1.139 s | 0.29% |  1.139 s | 0.29% |        471360946 |         7.779 GiB |         1.177 GiB |
+
+## jsonlines_reader_normalize_whitespace
+
+### [0] Tesla T4
+
+| row_selection | normalize_single_quotes | normalize_whitespace | mixed_types_as_string | recovery_mode | num_chunks | Samples | CPU Time | Noise | GPU Time | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|---------------|-------------------------|----------------------|-----------------------|---------------|------------|---------|----------|-------|----------|-------|------------------|-------------------|-------------------|
+|           ALL |                      NO |                   NO |                    NO |          FAIL |          1 |      7x |  1.085 s | 0.33% |  1.085 s | 0.33% |        494846648 |         6.602 GiB |         1.177 GiB |
+|           ALL |                      NO |                  YES |                    NO |          FAIL |          1 |      7x |  1.084 s | 0.20% |  1.084 s | 0.20% |        495169041 |         6.602 GiB |         1.177 GiB |
+
+## jsonlines_reader_mixed_types_as_string
+
+### [0] Tesla T4
+
+| row_selection | normalize_single_quotes | normalize_whitespace | mixed_types_as_string |   recovery_mode   | num_chunks | Samples | CPU Time | Noise | GPU Time | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|---------------|-------------------------|----------------------|-----------------------|-------------------|------------|---------|----------|-------|----------|-------|------------------|-------------------|-------------------|
+|           ALL |                      NO |                   NO |                    NO | RECOVER_WITH_NULL |          1 |      7x |  1.199 s | 0.11% |  1.199 s | 0.11% |        447607296 |         6.602 GiB |         1.177 GiB |
+|           ALL |                      NO |                   NO |                    NO |              FAIL |          1 |      7x |  1.086 s | 0.27% |  1.086 s | 0.27% |        494557524 |         6.602 GiB |         1.177 GiB |
+|           ALL |                      NO |                   NO |                   YES | RECOVER_WITH_NULL |          1 |      7x |  1.233 s | 0.06% |  1.233 s | 0.06% |        435451566 |         6.602 GiB |         1.177 GiB |
+|           ALL |                      NO |                   NO |                   YES |              FAIL |          1 |      7x |  1.118 s | 0.16% |  1.118 s | 0.16% |        480344101 |         6.602 GiB |         1.177 GiB |
+
+## jsonlines_reader_row_selection
+
+### [0] Tesla T4
+
+| row_selection | normalize_single_quotes | normalize_whitespace | mixed_types_as_string | recovery_mode | num_chunks | Samples | CPU Time | Noise | GPU Time | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|---------------|-------------------------|----------------------|-----------------------|---------------|------------|---------|----------|-------|----------|-------|------------------|-------------------|-------------------|
+|           ALL |                      NO |                   NO |                    NO |          FAIL |          1 |      7x |  1.085 s | 0.23% |  1.085 s | 0.23% |        494600659 |         6.602 GiB |         1.177 GiB |
+|    BYTE_RANGE |                      NO |                   NO |                    NO |          FAIL |          1 |      7x |  1.085 s | 0.18% |  1.085 s | 0.18% |        494798452 |         6.602 GiB |         1.177 GiB |
+|    BYTE_RANGE |                      NO |                   NO |                    NO |          FAIL |          2 |      7x |  1.083 s | 0.13% |  1.083 s | 0.13% |        495646413 |         3.303 GiB |         1.177 GiB |
+|    BYTE_RANGE |                      NO |                   NO |                    NO |          FAIL |          3 |      7x |  1.081 s | 0.19% |  1.081 s | 0.19% |        496436607 |         2.203 GiB |         1.177 GiB |
+|    BYTE_RANGE |                      NO |                   NO |                    NO |          FAIL |          4 |      7x |  1.060 s | 0.15% |  1.060 s | 0.15% |        506513424 |         1.652 GiB |         1.177 GiB |
+|    BYTE_RANGE |                      NO |                   NO |                    NO |          FAIL |          5 |      7x |  1.048 s | 0.11% |  1.048 s | 0.11% |        512330901 |         1.322 GiB |         1.177 GiB |
+
+## json_reader
+
+### [0] Tesla T4
+
+| json_lines | Samples | CPU Time | Noise | GPU Time | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|------------|---------|----------|-------|----------|-------|------------------|-------------------|-------------------|
+|        YES |      7x |  1.085 s | 0.21% |  1.085 s | 0.21% |        494866518 |         6.602 GiB |         1.177 GiB |
+|         NO |      7x |  1.086 s | 0.27% |  1.086 s | 0.27% |        494235990 |         6.603 GiB |         1.177 GiB |

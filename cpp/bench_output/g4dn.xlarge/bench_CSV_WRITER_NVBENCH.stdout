@@ -1,0 +1,155 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/32] csv_write_dtype_io [Device=0 data_type=INTEGRAL io=FILEPATH]
+Warn: Current measurement timed out (16.19s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (16.19s) before accumulating min_samples (3 < 4)
+Pass: Cold: 5307.157552ms GPU, 5307.109013ms CPU, 15.92s total GPU, 16.19s total wall, 3x 
+Run:  [2/32] csv_write_dtype_io [Device=0 data_type=INTEGRAL io=HOST_BUFFER]
+Pass: Cold: 2193.666553ms GPU, 2193.650506ms CPU, 10.97s total GPU, 11.13s total wall, 5x 
+Run:  [3/32] csv_write_dtype_io [Device=0 data_type=INTEGRAL io=VOID]
+Pass: Cold: 516.218652ms GPU, 516.216913ms CPU, 2.58s total GPU, 2.58s total wall, 5x 
+Run:  [4/32] csv_write_dtype_io [Device=0 data_type=FLOAT io=FILEPATH]
+Warn: Current measurement timed out (17.81s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (17.81s) before accumulating min_samples (3 < 4)
+Pass: Cold: 5841.918457ms GPU, 5841.858718ms CPU, 17.53s total GPU, 17.81s total wall, 3x 
+Run:  [5/32] csv_write_dtype_io [Device=0 data_type=FLOAT io=HOST_BUFFER]
+Pass: Cold: 2457.547461ms GPU, 2457.525376ms CPU, 12.29s total GPU, 12.46s total wall, 5x 
+Run:  [6/32] csv_write_dtype_io [Device=0 data_type=FLOAT io=VOID]
+Pass: Cold: 674.838330ms GPU, 674.833465ms CPU, 3.37s total GPU, 3.37s total wall, 5x 
+Run:  [7/32] csv_write_dtype_io [Device=0 data_type=DECIMAL io=FILEPATH]
+Warn: Current measurement timed out (20.97s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (20.97s) before accumulating min_samples (3 < 4)
+Pass: Cold: 6886.548665ms GPU, 6886.467341ms CPU, 20.66s total GPU, 20.97s total wall, 3x 
+Run:  [8/32] csv_write_dtype_io [Device=0 data_type=DECIMAL io=HOST_BUFFER]
+Warn: Current measurement timed out (15.15s) while over noise threshold (0.88% > 0.50%)
+Pass: Cold: 2992.855225ms GPU, 2992.825226ms CPU, 14.96s total GPU, 15.15s total wall, 5x 
+Run:  [9/32] csv_write_dtype_io [Device=0 data_type=DECIMAL io=VOID]
+Pass: Cold: 1025.402905ms GPU, 1025.393469ms CPU, 5.13s total GPU, 5.13s total wall, 5x 
+Run:  [10/32] csv_write_dtype_io [Device=0 data_type=TIMESTAMP io=FILEPATH]
+Warn: Current measurement timed out (21.51s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (21.51s) before accumulating min_samples (3 < 4)
+Pass: Cold: 7062.742188ms GPU, 7062.662572ms CPU, 21.19s total GPU, 21.51s total wall, 3x 
+Run:  [11/32] csv_write_dtype_io [Device=0 data_type=TIMESTAMP io=HOST_BUFFER]
+Warn: Current measurement timed out (15.34s) while over noise threshold (0.63% > 0.50%)
+Pass: Cold: 3029.735400ms GPU, 3029.706237ms CPU, 15.15s total GPU, 15.34s total wall, 5x 
+Run:  [12/32] csv_write_dtype_io [Device=0 data_type=TIMESTAMP io=VOID]
+Pass: Cold: 988.491443ms GPU, 988.482388ms CPU, 4.94s total GPU, 4.94s total wall, 5x 
+Run:  [13/32] csv_write_dtype_io [Device=0 data_type=DURATION io=FILEPATH]
+Warn: Current measurement timed out (17.67s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (17.67s) before accumulating min_samples (2 < 4)
+Pass: Cold: 8703.545898ms GPU, 8703.442560ms CPU, 17.41s total GPU, 17.67s total wall, 2x 
+Run:  [14/32] csv_write_dtype_io [Device=0 data_type=DURATION io=HOST_BUFFER]
+Pass: Cold: 3660.269531ms GPU, 3660.231952ms CPU, 18.30s total GPU, 18.54s total wall, 5x 
+Run:  [15/32] csv_write_dtype_io [Device=0 data_type=DURATION io=VOID]
+Pass: Cold: 1227.148364ms GPU, 1227.136600ms CPU, 6.14s total GPU, 6.14s total wall, 5x 
+Run:  [16/32] csv_write_dtype_io [Device=0 data_type=STRING io=FILEPATH]
+Pass: Cold: 1827.420532ms GPU, 1827.410181ms CPU, 9.14s total GPU, 9.30s total wall, 5x 
+Run:  [17/32] csv_write_dtype_io [Device=0 data_type=STRING io=HOST_BUFFER]
+Pass: Cold: 735.185925ms GPU, 735.185901ms CPU, 3.68s total GPU, 3.73s total wall, 5x 
+Run:  [18/32] csv_write_dtype_io [Device=0 data_type=STRING io=VOID]
+Pass: Cold: 155.091476ms GPU, 155.093669ms CPU, 0.78s total GPU, 0.78s total wall, 5x 
+Run:  [19/32] csv_write_options [Device=0 na_per_len=0 rows_per_chunk=2^8]
+Warn: Current measurement timed out (24.37s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (24.37s) before accumulating min_samples (2 < 4)
+Pass: Cold: 12150.002441ms GPU, 12149.853740ms CPU, 24.30s total GPU, 24.37s total wall, 2x 
+Run:  [20/32] csv_write_options [Device=0 na_per_len=16 rows_per_chunk=2^8]
+Warn: Current measurement timed out (24.64s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (24.64s) before accumulating min_samples (2 < 4)
+Pass: Cold: 12287.456543ms GPU, 12287.307556ms CPU, 24.57s total GPU, 24.64s total wall, 2x 
+Run:  [21/32] csv_write_options [Device=0 na_per_len=0 rows_per_chunk=2^10]
+Warn: Current measurement timed out (19.04s) while over noise threshold (inf% > 0.50%)
+Pass: Cold: 4725.596191ms GPU, 4725.539407ms CPU, 18.90s total GPU, 19.04s total wall, 4x 
+Run:  [22/32] csv_write_options [Device=0 na_per_len=16 rows_per_chunk=2^10]
+Warn: Current measurement timed out (18.99s) while over noise threshold (inf% > 0.50%)
+Pass: Cold: 4712.852783ms GPU, 4712.797882ms CPU, 18.85s total GPU, 18.99s total wall, 4x 
+Run:  [23/32] csv_write_options [Device=0 na_per_len=0 rows_per_chunk=2^12]
+Warn: Current measurement timed out (15.71s) while over noise threshold (0.83% > 0.50%)
+Pass: Cold: 2584.961060ms GPU, 2584.931173ms CPU, 15.51s total GPU, 15.71s total wall, 6x 
+Run:  [24/32] csv_write_options [Device=0 na_per_len=16 rows_per_chunk=2^12]
+Warn: Current measurement timed out (15.07s) while over noise threshold (0.72% > 0.50%)
+Pass: Cold: 2478.231974ms GPU, 2478.203330ms CPU, 14.87s total GPU, 15.07s total wall, 6x 
+Run:  [25/32] csv_write_options [Device=0 na_per_len=0 rows_per_chunk=2^14]
+Warn: Current measurement timed out (16.03s) while over noise threshold (1.00% > 0.50%)
+Pass: Cold: 1970.306427ms GPU, 1970.285376ms CPU, 15.76s total GPU, 16.03s total wall, 8x 
+Run:  [26/32] csv_write_options [Device=0 na_per_len=16 rows_per_chunk=2^14]
+Warn: Current measurement timed out (15.71s) while over noise threshold (0.90% > 0.50%)
+Pass: Cold: 2210.407540ms GPU, 2210.383551ms CPU, 15.47s total GPU, 15.71s total wall, 7x 
+Run:  [27/32] csv_write_options [Device=0 na_per_len=0 rows_per_chunk=2^16]
+Pass: Cold: 2290.059082ms GPU, 2290.033237ms CPU, 11.45s total GPU, 11.63s total wall, 5x 
+Run:  [28/32] csv_write_options [Device=0 na_per_len=16 rows_per_chunk=2^16]
+Pass: Cold: 2316.436377ms GPU, 2316.414242ms CPU, 11.58s total GPU, 11.76s total wall, 5x 
+Run:  [29/32] csv_write_options [Device=0 na_per_len=0 rows_per_chunk=2^18]
+Pass: Cold: 2927.109814ms GPU, 2927.079898ms CPU, 14.64s total GPU, 14.82s total wall, 5x 
+Run:  [30/32] csv_write_options [Device=0 na_per_len=16 rows_per_chunk=2^18]
+Pass: Cold: 2565.030859ms GPU, 2565.007562ms CPU, 12.83s total GPU, 12.99s total wall, 5x 
+Run:  [31/32] csv_write_options [Device=0 na_per_len=0 rows_per_chunk=2^20]
+Pass: Cold: 2286.989648ms GPU, 2286.973722ms CPU, 11.43s total GPU, 11.61s total wall, 5x 
+Run:  [32/32] csv_write_options [Device=0 na_per_len=16 rows_per_chunk=2^20]
+Pass: Cold: 2294.129102ms GPU, 2294.109546ms CPU, 11.47s total GPU, 11.64s total wall, 5x 
+```
+
+# Benchmark Results
+
+## csv_write_dtype_io
+
+### [0] Tesla T4
+
+| data_type |     io      | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|-----------|-------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|  INTEGRAL |    FILEPATH |      3x |    5.307 s |  inf% |    5.307 s |  inf% |         50579892 |         2.266 GiB |       671.889 MiB |
+|  INTEGRAL | HOST_BUFFER |      5x |    2.194 s | 0.21% |    2.194 s | 0.21% |        122368395 |         2.266 GiB |       671.889 MiB |
+|  INTEGRAL |        VOID |      5x | 516.217 ms | 0.09% | 516.219 ms | 0.09% |        520003403 |         2.266 GiB |       671.889 MiB |
+|     FLOAT |    FILEPATH |      3x |    5.842 s |  inf% |    5.842 s |  inf% |         45949880 |         2.260 GiB |       713.653 MiB |
+|     FLOAT | HOST_BUFFER |      5x |    2.458 s | 0.26% |    2.458 s | 0.26% |        109229001 |         2.260 GiB |       713.653 MiB |
+|     FLOAT |        VOID |      5x | 674.833 ms | 0.08% | 674.838 ms | 0.08% |        397777429 |         2.260 GiB |       713.653 MiB |
+|   DECIMAL |    FILEPATH |      3x |    6.886 s |  inf% |    6.887 s |  inf% |         38979678 |         2.404 GiB |       783.255 MiB |
+|   DECIMAL | HOST_BUFFER |      5x |    2.993 s | 0.88% |    2.993 s | 0.88% |         89692095 |         2.404 GiB |       783.255 MiB |
+|   DECIMAL |        VOID |      5x |    1.025 s | 0.04% |    1.025 s | 0.04% |        261785347 |         2.404 GiB |       783.255 MiB |
+| TIMESTAMP |    FILEPATH |      3x |    7.063 s |  inf% |    7.063 s |  inf% |         38007256 |         2.526 GiB |       814.047 MiB |
+| TIMESTAMP | HOST_BUFFER |      5x |    3.030 s | 0.63% |    3.030 s | 0.63% |         88600296 |         2.526 GiB |       814.047 MiB |
+| TIMESTAMP |        VOID |      5x | 988.482 ms | 0.06% | 988.491 ms | 0.06% |        271560728 |         2.526 GiB |       814.047 MiB |
+|  DURATION |    FILEPATH |      2x |    8.703 s |  inf% |    8.704 s |  inf% |         30842079 |         2.997 GiB |       974.849 MiB |
+|  DURATION | HOST_BUFFER |      5x |    3.660 s | 0.17% |    3.660 s | 0.17% |         73337620 |         2.997 GiB |       974.849 MiB |
+|  DURATION |        VOID |      5x |    1.227 s | 0.03% |    1.227 s | 0.03% |        218747352 |         2.997 GiB |       974.849 MiB |
+|    STRING |    FILEPATH |      5x |    1.827 s | 0.15% |    1.827 s | 0.15% |        146893093 |       753.482 MiB |       232.968 MiB |
+|    STRING | HOST_BUFFER |      5x | 735.186 ms | 0.22% | 735.186 ms | 0.22% |        365125945 |       753.482 MiB |       232.968 MiB |
+|    STRING |        VOID |      5x | 155.094 ms | 0.25% | 155.091 ms | 0.25% |       1730820172 |       753.482 MiB |       232.968 MiB |
+
+## csv_write_options
+
+### [0] Tesla T4
+
+| na_per_len | rows_per_chunk | Samples | CPU Time | Noise | GPU Time | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|------------|----------------|---------|----------|-------|----------|-------|------------------|-------------------|-------------------|
+|          0 |      2^8 = 256 |      2x | 12.150 s |  inf% | 12.150 s |  inf% |         22093448 |       383.359 KiB |       716.399 MiB |
+|         16 |      2^8 = 256 |      2x | 12.287 s |  inf% | 12.287 s |  inf% |         21846299 |       384.141 KiB |       722.378 MiB |
+|          0 |    2^10 = 1024 |      4x |  4.726 s |  inf% |  4.726 s |  inf% |         56804569 |         1.481 MiB |       716.399 MiB |
+|         16 |    2^10 = 1024 |      4x |  4.713 s |  inf% |  4.713 s |  inf% |         56958167 |         1.487 MiB |       722.378 MiB |
+|          0 |    2^12 = 4096 |      6x |  2.585 s | 0.83% |  2.585 s | 0.83% |        103845067 |         5.898 MiB |       716.399 MiB |
+|         16 |    2^12 = 4096 |      6x |  2.478 s | 0.72% |  2.478 s | 0.72% |        108317324 |         5.923 MiB |       722.378 MiB |
+|          0 |   2^14 = 16384 |      8x |  1.970 s | 1.00% |  1.970 s | 1.00% |        136240461 |        23.551 MiB |       716.399 MiB |
+|         16 |   2^14 = 16384 |      7x |  2.210 s | 0.90% |  2.210 s | 0.90% |        121441612 |        23.664 MiB |       722.378 MiB |
+|          0 |   2^16 = 65536 |      5x |  2.290 s | 0.42% |  2.290 s | 0.42% |        117217698 |        94.145 MiB |       716.399 MiB |
+|         16 |   2^16 = 65536 |      5x |  2.316 s | 0.15% |  2.316 s | 0.15% |        115882939 |        94.624 MiB |       722.378 MiB |
+|          0 |  2^18 = 262144 |      5x |  2.927 s | 0.16% |  2.927 s | 0.16% |         91706657 |       376.484 MiB |       716.399 MiB |
+|         16 |  2^18 = 262144 |      5x |  2.565 s | 0.17% |  2.565 s | 0.17% |        104651940 |       378.370 MiB |       722.378 MiB |
+|          0 | 2^20 = 1048576 |      5x |  2.287 s | 0.13% |  2.287 s | 0.13% |        117375020 |         1.470 GiB |       716.399 MiB |
+|         16 | 2^20 = 1048576 |      5x |  2.294 s | 0.24% |  2.294 s | 0.24% |        117009742 |         1.478 GiB |       722.378 MiB |

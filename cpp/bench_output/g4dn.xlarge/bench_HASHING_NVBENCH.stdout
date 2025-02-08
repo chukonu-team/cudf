@@ -1,0 +1,124 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/28] hashing [Device=0 num_rows=65536 nulls=0 hash_name=murmurhash3_x86_32]
+Pass: Cold: 0.042934ms GPU, 0.047013ms CPU, 0.50s total GPU, 0.95s total wall, 11648x 
+Run:  [2/28] hashing [Device=0 num_rows=16777216 nulls=0 hash_name=murmurhash3_x86_32]
+Pass: Cold: 3.105955ms GPU, 3.110392ms CPU, 6.41s total GPU, 6.47s total wall, 2064x 
+Run:  [3/28] hashing [Device=0 num_rows=65536 nulls=0.1 hash_name=murmurhash3_x86_32]
+Pass: Cold: 0.069066ms GPU, 0.072722ms CPU, 0.50s total GPU, 0.75s total wall, 7248x 
+Run:  [4/28] hashing [Device=0 num_rows=16777216 nulls=0.1 hash_name=murmurhash3_x86_32]
+Pass: Cold: 3.270627ms GPU, 3.274936ms CPU, 5.44s total GPU, 5.49s total wall, 1664x 
+Run:  [5/28] hashing [Device=0 num_rows=65536 nulls=0 hash_name=md5]
+Pass: Cold: 0.212484ms GPU, 0.216246ms CPU, 0.55s total GPU, 0.64s total wall, 2608x 
+Run:  [6/28] hashing [Device=0 num_rows=16777216 nulls=0 hash_name=md5]
+Warn: Current measurement timed out (15.01s) while over noise threshold (1.28% > 0.50%)
+Pass: Cold: 37.857421ms GPU, 37.861169ms CPU, 14.99s total GPU, 15.01s total wall, 396x 
+Run:  [7/28] hashing [Device=0 num_rows=65536 nulls=0.1 hash_name=md5]
+Pass: Cold: 0.217984ms GPU, 0.221782ms CPU, 0.54s total GPU, 0.62s total wall, 2480x 
+Run:  [8/28] hashing [Device=0 num_rows=16777216 nulls=0.1 hash_name=md5]
+Warn: Current measurement timed out (15.03s) while over noise threshold (1.46% > 0.50%)
+Pass: Cold: 39.509005ms GPU, 39.512718ms CPU, 15.01s total GPU, 15.03s total wall, 380x 
+Run:  [9/28] hashing [Device=0 num_rows=65536 nulls=0 hash_name=sha1]
+Pass: Cold: 0.239550ms GPU, 0.243191ms CPU, 0.57s total GPU, 0.65s total wall, 2384x 
+Run:  [10/28] hashing [Device=0 num_rows=16777216 nulls=0 hash_name=sha1]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.99% > 0.50%)
+Pass: Cold: 47.286520ms GPU, 47.290186ms CPU, 14.99s total GPU, 15.00s total wall, 317x 
+Run:  [11/28] hashing [Device=0 num_rows=65536 nulls=0.1 hash_name=sha1]
+Pass: Cold: 0.245961ms GPU, 0.249671ms CPU, 0.60s total GPU, 0.68s total wall, 2448x 
+Run:  [12/28] hashing [Device=0 num_rows=16777216 nulls=0.1 hash_name=sha1]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.87% > 0.50%)
+Pass: Cold: 49.480625ms GPU, 49.484358ms CPU, 14.99s total GPU, 15.00s total wall, 303x 
+Run:  [13/28] hashing [Device=0 num_rows=65536 nulls=0 hash_name=sha224]
+Pass: Cold: 0.333549ms GPU, 0.337316ms CPU, 0.70s total GPU, 0.77s total wall, 2112x 
+Run:  [14/28] hashing [Device=0 num_rows=16777216 nulls=0 hash_name=sha224]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.84% > 0.50%)
+Pass: Cold: 69.811972ms GPU, 69.815486ms CPU, 15.01s total GPU, 15.02s total wall, 215x 
+Run:  [15/28] hashing [Device=0 num_rows=65536 nulls=0.1 hash_name=sha224]
+Pass: Cold: 0.339669ms GPU, 0.343387ms CPU, 0.79s total GPU, 0.87s total wall, 2336x 
+Run:  [16/28] hashing [Device=0 num_rows=16777216 nulls=0.1 hash_name=sha224]
+Warn: Current measurement timed out (15.05s) while over noise threshold (0.74% > 0.50%)
+Pass: Cold: 71.979016ms GPU, 71.982528ms CPU, 15.04s total GPU, 15.05s total wall, 209x 
+Run:  [17/28] hashing [Device=0 num_rows=65536 nulls=0 hash_name=sha256]
+Pass: Cold: 0.372156ms GPU, 0.375963ms CPU, 0.70s total GPU, 0.76s total wall, 1872x 
+Run:  [18/28] hashing [Device=0 num_rows=16777216 nulls=0 hash_name=sha256]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.59% > 0.50%)
+Pass: Cold: 78.959326ms GPU, 78.963034ms CPU, 15.00s total GPU, 15.01s total wall, 190x 
+Run:  [19/28] hashing [Device=0 num_rows=65536 nulls=0.1 hash_name=sha256]
+Pass: Cold: 0.377678ms GPU, 0.381410ms CPU, 0.50s total GPU, 0.54s total wall, 1328x 
+Run:  [20/28] hashing [Device=0 num_rows=16777216 nulls=0.1 hash_name=sha256]
+Warn: Current measurement timed out (15.08s) while over noise threshold (0.59% > 0.50%)
+Pass: Cold: 81.455998ms GPU, 81.459431ms CPU, 15.07s total GPU, 15.08s total wall, 185x 
+Run:  [21/28] hashing [Device=0 num_rows=65536 nulls=0 hash_name=sha384]
+Pass: Cold: 0.743972ms GPU, 0.747722ms CPU, 0.93s total GPU, 0.97s total wall, 1248x 
+Run:  [22/28] hashing [Device=0 num_rows=16777216 nulls=0 hash_name=sha384]
+Pass: Cold: 158.866954ms GPU, 158.870375ms CPU, 1.75s total GPU, 1.75s total wall, 11x 
+Run:  [23/28] hashing [Device=0 num_rows=65536 nulls=0.1 hash_name=sha384]
+Pass: Cold: 0.744555ms GPU, 0.748217ms CPU, 0.61s total GPU, 0.63s total wall, 816x 
+Run:  [24/28] hashing [Device=0 num_rows=16777216 nulls=0.1 hash_name=sha384]
+Warn: Current measurement timed out (15.02s) while over noise threshold (2.48% > 0.50%)
+Pass: Cold: 151.718711ms GPU, 151.721677ms CPU, 15.02s total GPU, 15.02s total wall, 99x 
+Run:  [25/28] hashing [Device=0 num_rows=65536 nulls=0 hash_name=sha512]
+Pass: Cold: 1.003146ms GPU, 1.006901ms CPU, 1.20s total GPU, 1.24s total wall, 1200x 
+Run:  [26/28] hashing [Device=0 num_rows=16777216 nulls=0 hash_name=sha512]
+Pass: Cold: 215.617149ms GPU, 215.619762ms CPU, 2.37s total GPU, 2.37s total wall, 11x 
+Run:  [27/28] hashing [Device=0 num_rows=65536 nulls=0.1 hash_name=sha512]
+Pass: Cold: 1.005602ms GPU, 1.009354ms CPU, 0.71s total GPU, 0.73s total wall, 704x 
+Run:  [28/28] hashing [Device=0 num_rows=16777216 nulls=0.1 hash_name=sha512]
+Warn: Current measurement timed out (15.03s) while over noise threshold (1.12% > 0.50%)
+Pass: Cold: 211.710297ms GPU, 211.712868ms CPU, 15.03s total GPU, 15.03s total wall, 71x 
+```
+
+# Benchmark Results
+
+## hashing
+
+### [0] Tesla T4
+
+| num_rows | nulls |     hash_name      | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | GlobalMem BW | BWUtil |
+|----------|-------|--------------------|---------|------------|--------|------------|--------|--------------|--------|
+|    65536 |     0 | murmurhash3_x86_32 |  11648x |  47.013 us | 19.76% |  42.934 us | 16.25% |  42.737 GB/s | 13.35% |
+| 16777216 |     0 | murmurhash3_x86_32 |   2064x |   3.110 ms |  2.24% |   3.106 ms |  2.23% | 151.143 GB/s | 47.22% |
+|    65536 |   0.1 | murmurhash3_x86_32 |   7248x |  72.722 us |  7.86% |  69.066 us |  5.64% |  24.307 GB/s |  7.59% |
+| 16777216 |   0.1 | murmurhash3_x86_32 |   1664x |   3.275 ms |  1.73% |   3.271 ms |  1.73% | 131.154 GB/s | 40.98% |
+|    65536 |     0 |                md5 |   2608x | 216.246 us |  7.54% | 212.484 us |  7.19% |  17.271 GB/s |  5.40% |
+| 16777216 |     0 |                md5 |    396x |  37.861 ms |  1.28% |  37.857 ms |  1.28% |  24.809 GB/s |  7.75% |
+|    65536 |   0.1 |                md5 |   2480x | 221.782 us |  5.04% | 217.984 us |  4.62% |  16.119 GB/s |  5.04% |
+| 16777216 |   0.1 |                md5 |    380x |  39.513 ms |  1.46% |  39.509 ms |  1.46% |  22.747 GB/s |  7.11% |
+|    65536 |     0 |               sha1 |   2384x | 243.191 us |  3.63% | 239.550 us |  3.27% |  17.509 GB/s |  5.47% |
+| 16777216 |     0 |               sha1 |    317x |  47.290 ms |  0.99% |  47.287 ms |  0.99% |  22.700 GB/s |  7.09% |
+|    65536 |   0.1 |               sha1 |   2448x | 249.671 us |  3.39% | 245.961 us |  3.00% |  16.418 GB/s |  5.13% |
+| 16777216 |   0.1 |               sha1 |    303x |  49.484 ms |  0.87% |  49.481 ms |  0.87% |  20.876 GB/s |  6.52% |
+|    65536 |     0 |             sha224 |   2112x | 337.316 us |  2.59% | 333.549 us |  2.32% |  15.718 GB/s |  4.91% |
+| 16777216 |     0 |             sha224 |    215x |  69.815 ms |  0.84% |  69.812 ms |  0.84% |  19.221 GB/s |  6.01% |
+|    65536 |   0.1 |             sha224 |   2336x | 343.387 us |  3.48% | 339.669 us |  3.29% |  14.975 GB/s |  4.68% |
+| 16777216 |   0.1 |             sha224 |    209x |  71.983 ms |  0.74% |  71.979 ms |  0.74% |  18.080 GB/s |  5.65% |
+|    65536 |     0 |             sha256 |   1872x | 375.963 us |  3.45% | 372.156 us |  3.28% |  15.496 GB/s |  4.84% |
+| 16777216 |     0 |             sha256 |    190x |  78.963 ms |  0.59% |  78.959 ms |  0.59% |  18.694 GB/s |  5.84% |
+|    65536 |   0.1 |             sha256 |   1328x | 381.410 us |  3.24% | 377.678 us |  3.04% |  14.856 GB/s |  4.64% |
+| 16777216 |   0.1 |             sha256 |    185x |  81.459 ms |  0.59% |  81.456 ms |  0.59% |  17.624 GB/s |  5.51% |
+|    65536 |     0 |             sha384 |   1248x | 747.722 us |  4.17% | 743.972 us |  4.14% |  10.571 GB/s |  3.30% |
+| 16777216 |     0 |             sha384 |     11x | 158.870 ms |  0.32% | 158.867 ms |  0.32% |  12.671 GB/s |  3.96% |
+|    65536 |   0.1 |             sha384 |    816x | 748.217 us |  4.19% | 744.555 us |  4.16% |  10.353 GB/s |  3.23% |
+| 16777216 |   0.1 |             sha384 |     99x | 151.722 ms |  2.48% | 151.719 ms |  2.48% |  13.001 GB/s |  4.06% |
+|    65536 |     0 |             sha512 |   1200x |   1.007 ms |  3.44% |   1.003 ms |  3.42% |   9.930 GB/s |  3.10% |
+| 16777216 |     0 |             sha512 |     11x | 215.620 ms |  0.10% | 215.617 ms |  0.10% |  11.826 GB/s |  3.69% |
+|    65536 |   0.1 |             sha512 |    704x |   1.009 ms |  3.40% |   1.006 ms |  3.38% |   9.751 GB/s |  3.05% |
+| 16777216 |   0.1 |             sha512 |     71x | 211.713 ms |  1.12% | 211.710 ms |  1.12% |  11.853 GB/s |  3.70% |

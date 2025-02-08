@@ -1,0 +1,29 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7208 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/8] TDigest many tiny groups [Device=0 num_tdigests=500000 tdigest_size=1 tdigests_per_group=1 max_centroids=10000]
+Pass: Cold: 1.969877ms GPU, 1.973884ms CPU, 5.89s total GPU, 6.00s total wall, 2992x 
+Run:  [2/8] TDigest many tiny groups [Device=0 num_tdigests=500000 tdigest_size=1000 tdigests_per_group=1 max_centroids=10000]
+Fail: Unexpected error: std::bad_alloc: out_of_memory: RMM failure at:/home/ubuntu/cudf/cpp/build/_deps/rmm-src/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded
+Run:  [3/8] TDigest many tiny groups [Device=0 num_tdigests=500000 tdigest_size=1 tdigests_per_group=1 max_centroids=1000]
+Pass: Cold: 1.922389ms GPU, 1.926498ms CPU, 0.50s total GPU, 0.51s total wall, 261x 
+Run:  [4/8] TDigest many tiny groups [Device=0 num_tdigests=500000 tdigest_size=1000 tdigests_per_group=1 max_centroids=1000]
+Fail: Unexpected error: std::bad_alloc: out_of_memory: RMM failure at:/home/ubuntu/cudf/cpp/build/_deps/rmm-src/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded
+Run:  [5/8] TDigest many small groups [Device=0 num_tdigests=500000 tdigest_size=1 tdigests_per_group=3 max_centroids=10000]

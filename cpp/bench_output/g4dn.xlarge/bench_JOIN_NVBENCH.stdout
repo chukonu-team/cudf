@@ -1,0 +1,1365 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7208 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/464] left_anti_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.076190ms GPU, 0.080448ms CPU, 0.50s total GPU, 0.74s total wall, 6576x 
+Run:  [2/464] left_anti_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.091226ms GPU, 0.095302ms CPU, 0.50s total GPU, 0.69s total wall, 5488x 
+Run:  [3/464] left_anti_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 2.751941ms GPU, 2.756274ms CPU, 5.55s total GPU, 5.62s total wall, 2016x 
+Run:  [4/464] left_anti_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [5/464] left_anti_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.093850ms GPU, 0.097967ms CPU, 0.50s total GPU, 0.69s total wall, 5328x 
+Run:  [6/464] left_anti_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 2.116241ms GPU, 2.120730ms CPU, 3.72s total GPU, 3.79s total wall, 1760x 
+Run:  [7/464] left_anti_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [8/464] left_anti_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [9/464] left_anti_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 23.830537ms GPU, 23.834342ms CPU, 0.50s total GPU, 0.50s total wall, 21x 
+Run:  [10/464] left_anti_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.059874ms GPU, 0.063935ms CPU, 0.50s total GPU, 0.80s total wall, 8352x 
+Run:  [11/464] left_anti_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.071208ms GPU, 0.075256ms CPU, 0.50s total GPU, 0.76s total wall, 7024x 
+Run:  [12/464] left_anti_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 1.318709ms GPU, 1.323085ms CPU, 2.98s total GPU, 3.05s total wall, 2256x 
+Run:  [13/464] left_anti_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [14/464] left_anti_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.078594ms GPU, 0.082686ms CPU, 0.50s total GPU, 0.73s total wall, 6368x 
+Run:  [15/464] left_anti_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 1.340690ms GPU, 1.345067ms CPU, 2.77s total GPU, 2.84s total wall, 2064x 
+Run:  [16/464] left_anti_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [17/464] left_anti_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [18/464] left_anti_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 6.296266ms GPU, 6.300470ms CPU, 0.50s total GPU, 0.51s total wall, 80x 
+Run:  [19/464] left_anti_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.062672ms GPU, 0.066708ms CPU, 0.50s total GPU, 0.79s total wall, 7984x 
+Run:  [20/464] left_anti_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.078649ms GPU, 0.082661ms CPU, 0.50s total GPU, 0.73s total wall, 6368x 
+Run:  [21/464] left_anti_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 2.080949ms GPU, 2.085472ms CPU, 4.56s total GPU, 4.64s total wall, 2192x 
+Run:  [22/464] left_anti_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [23/464] left_anti_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.100552ms GPU, 0.104633ms CPU, 0.50s total GPU, 0.67s total wall, 4976x 
+Run:  [24/464] left_anti_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 2.261678ms GPU, 2.266209ms CPU, 4.92s total GPU, 5.00s total wall, 2176x 
+Run:  [25/464] left_anti_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [26/464] left_anti_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [27/464] left_anti_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 24.346631ms GPU, 24.350550ms CPU, 0.51s total GPU, 0.51s total wall, 21x 
+Run:  [28/464] left_anti_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.058040ms GPU, 0.062128ms CPU, 0.50s total GPU, 0.82s total wall, 8624x 
+Run:  [29/464] left_anti_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.071103ms GPU, 0.075166ms CPU, 0.50s total GPU, 0.76s total wall, 7040x 
+Run:  [30/464] left_anti_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 1.285004ms GPU, 1.289478ms CPU, 2.43s total GPU, 2.49s total wall, 1888x 
+Run:  [31/464] left_anti_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [32/464] left_anti_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.082802ms GPU, 0.086880ms CPU, 0.50s total GPU, 0.71s total wall, 6048x 
+Run:  [33/464] left_anti_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 1.419372ms GPU, 1.423793ms CPU, 3.27s total GPU, 3.35s total wall, 2304x 
+Run:  [34/464] left_anti_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [35/464] left_anti_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [36/464] left_anti_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 6.428752ms GPU, 6.432901ms CPU, 0.50s total GPU, 0.50s total wall, 78x 
+Run:  [37/464] left_semi_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.073069ms GPU, 0.077181ms CPU, 0.50s total GPU, 0.74s total wall, 6848x 
+Run:  [38/464] left_semi_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.091116ms GPU, 0.095157ms CPU, 0.50s total GPU, 0.69s total wall, 5488x 
+Run:  [39/464] left_semi_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 2.661859ms GPU, 2.666212ms CPU, 5.20s total GPU, 5.26s total wall, 1952x 
+Run:  [40/464] left_semi_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [41/464] left_semi_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.093686ms GPU, 0.097794ms CPU, 0.50s total GPU, 0.69s total wall, 5344x 
+Run:  [42/464] left_semi_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 2.042965ms GPU, 2.047483ms CPU, 3.24s total GPU, 3.29s total wall, 1584x 
+Run:  [43/464] left_semi_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [44/464] left_semi_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [45/464] left_semi_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 23.719428ms GPU, 23.723435ms CPU, 0.52s total GPU, 0.52s total wall, 22x 
+Run:  [46/464] left_semi_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.059774ms GPU, 0.063863ms CPU, 0.50s total GPU, 0.81s total wall, 8368x 
+Run:  [47/464] left_semi_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.070963ms GPU, 0.075044ms CPU, 0.50s total GPU, 0.75s total wall, 7056x 
+Run:  [48/464] left_semi_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 1.169290ms GPU, 1.173700ms CPU, 2.86s total GPU, 2.93s total wall, 2448x 
+Run:  [49/464] left_semi_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [50/464] left_semi_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.077774ms GPU, 0.081858ms CPU, 0.50s total GPU, 0.73s total wall, 6432x 
+Run:  [51/464] left_semi_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 1.189846ms GPU, 1.194244ms CPU, 2.84s total GPU, 2.90s total wall, 2384x 
+Run:  [52/464] left_semi_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [53/464] left_semi_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [54/464] left_semi_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 6.136958ms GPU, 6.141186ms CPU, 0.50s total GPU, 0.51s total wall, 82x 
+Run:  [55/464] left_semi_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.062483ms GPU, 0.066541ms CPU, 0.50s total GPU, 0.79s total wall, 8016x 
+Run:  [56/464] left_semi_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.078495ms GPU, 0.082605ms CPU, 0.50s total GPU, 0.73s total wall, 6384x 
+Run:  [57/464] left_semi_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 2.005788ms GPU, 2.010303ms CPU, 4.24s total GPU, 4.31s total wall, 2112x 
+Run:  [58/464] left_semi_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [59/464] left_semi_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.100466ms GPU, 0.104595ms CPU, 0.50s total GPU, 0.68s total wall, 4992x 
+Run:  [60/464] left_semi_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 2.172911ms GPU, 2.177460ms CPU, 4.90s total GPU, 4.98s total wall, 2256x 
+Run:  [61/464] left_semi_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [62/464] left_semi_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [63/464] left_semi_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 24.230834ms GPU, 24.234844ms CPU, 0.51s total GPU, 0.51s total wall, 21x 
+Run:  [64/464] left_semi_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.058443ms GPU, 0.062537ms CPU, 0.50s total GPU, 0.82s total wall, 8560x 
+Run:  [65/464] left_semi_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.070740ms GPU, 0.074838ms CPU, 0.50s total GPU, 0.75s total wall, 7072x 
+Run:  [66/464] left_semi_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 1.138849ms GPU, 1.143346ms CPU, 2.93s total GPU, 3.00s total wall, 2576x 
+Run:  [67/464] left_semi_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [68/464] left_semi_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.082558ms GPU, 0.086622ms CPU, 0.50s total GPU, 0.72s total wall, 6064x 
+Run:  [69/464] left_semi_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 1.274312ms GPU, 1.278766ms CPU, 3.12s total GPU, 3.18s total wall, 2448x 
+Run:  [70/464] left_semi_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [71/464] left_semi_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [72/464] left_semi_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 6.273356ms GPU, 6.277614ms CPU, 0.50s total GPU, 0.50s total wall, 80x 
+Run:  [73/464] conditional_inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 1.405972ms GPU, 1.409845ms CPU, 4.23s total GPU, 4.33s total wall, 3008x 
+Run:  [74/464] conditional_inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 6.801787ms GPU, 6.806035ms CPU, 9.36s total GPU, 9.41s total wall, 1376x 
+Run:  [75/464] conditional_inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [76/464] conditional_inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 686.886519ms GPU, 686.888947ms CPU, 7.56s total GPU, 7.56s total wall, 11x 
+Run:  [77/464] conditional_inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 1.799547ms GPU, 1.803451ms CPU, 5.15s total GPU, 5.25s total wall, 2864x 
+Run:  [78/464] conditional_inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 9.508159ms GPU, 9.512404ms CPU, 12.78s total GPU, 12.83s total wall, 1344x 
+Run:  [79/464] conditional_inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [80/464] conditional_inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 965.109469ms GPU, 965.110484ms CPU, 10.62s total GPU, 10.62s total wall, 11x 
+Run:  [81/464] conditional_inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 1.452458ms GPU, 1.456352ms CPU, 3.07s total GPU, 3.14s total wall, 2112x 
+Run:  [82/464] conditional_inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 6.964701ms GPU, 6.968993ms CPU, 10.14s total GPU, 10.19s total wall, 1456x 
+Run:  [83/464] conditional_inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [84/464] conditional_inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 708.553345ms GPU, 708.555235ms CPU, 7.79s total GPU, 7.79s total wall, 11x 
+Run:  [85/464] conditional_inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 1.933373ms GPU, 1.937250ms CPU, 5.75s total GPU, 5.85s total wall, 2976x 
+Run:  [86/464] conditional_inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 9.897263ms GPU, 9.901633ms CPU, 12.99s total GPU, 13.03s total wall, 1312x 
+Run:  [87/464] conditional_inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [88/464] conditional_inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 1004.843284ms GPU, 1004.843029ms CPU, 11.05s total GPU, 11.05s total wall, 11x 
+Run:  [89/464] conditional_left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 1.413866ms GPU, 1.417768ms CPU, 3.48s total GPU, 3.57s total wall, 2464x 
+Run:  [90/464] conditional_left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 6.818359ms GPU, 6.822723ms CPU, 10.04s total GPU, 10.09s total wall, 1472x 
+Run:  [91/464] conditional_left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [92/464] conditional_left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 686.247969ms GPU, 686.248942ms CPU, 7.55s total GPU, 7.55s total wall, 11x 
+Run:  [93/464] conditional_left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 1.792042ms GPU, 1.795961ms CPU, 4.16s total GPU, 4.24s total wall, 2320x 
+Run:  [94/464] conditional_left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 9.517702ms GPU, 9.522002ms CPU, 14.62s total GPU, 14.67s total wall, 1536x 
+Run:  [95/464] conditional_left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [96/464] conditional_left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 964.421803ms GPU, 964.422172ms CPU, 10.61s total GPU, 10.61s total wall, 11x 
+Run:  [97/464] conditional_left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 1.452441ms GPU, 1.456299ms CPU, 4.11s total GPU, 4.21s total wall, 2832x 
+Run:  [98/464] conditional_left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 6.982980ms GPU, 6.987298ms CPU, 10.17s total GPU, 10.22s total wall, 1456x 
+Run:  [99/464] conditional_left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [100/464] conditional_left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 707.972168ms GPU, 707.973955ms CPU, 7.79s total GPU, 7.79s total wall, 11x 
+Run:  [101/464] conditional_left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 1.935505ms GPU, 1.939326ms CPU, 5.76s total GPU, 5.86s total wall, 2976x 
+Run:  [102/464] conditional_left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 9.930413ms GPU, 9.934652ms CPU, 10.49s total GPU, 10.52s total wall, 1056x 
+Run:  [103/464] conditional_left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [104/464] conditional_left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 1003.979398ms GPU, 1003.978357ms CPU, 11.04s total GPU, 11.04s total wall, 11x 
+Run:  [105/464] inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.093929ms GPU, 0.097966ms CPU, 0.50s total GPU, 0.68s total wall, 5328x 
+Run:  [106/464] inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.157180ms GPU, 0.161211ms CPU, 0.50s total GPU, 0.61s total wall, 3184x 
+Run:  [107/464] inner_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 8.977944ms GPU, 8.982187ms CPU, 9.77s total GPU, 9.80s total wall, 1088x 
+Run:  [108/464] inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [109/464] inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.196031ms GPU, 0.200093ms CPU, 0.50s total GPU, 0.59s total wall, 2560x 
+Run:  [110/464] inner_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 9.856894ms GPU, 9.861169ms CPU, 11.67s total GPU, 11.71s total wall, 1184x 
+Run:  [111/464] inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [112/464] inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [113/464] inner_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 34.327168ms GPU, 34.331225ms CPU, 0.51s total GPU, 0.52s total wall, 15x 
+Run:  [114/464] inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.101787ms GPU, 0.105905ms CPU, 0.50s total GPU, 0.67s total wall, 4928x 
+Run:  [115/464] inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.135711ms GPU, 0.139757ms CPU, 0.50s total GPU, 0.62s total wall, 3696x 
+Run:  [116/464] inner_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 4.287736ms GPU, 4.292071ms CPU, 5.69s total GPU, 5.73s total wall, 1328x 
+Run:  [117/464] inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [118/464] inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.156964ms GPU, 0.161059ms CPU, 0.50s total GPU, 0.61s total wall, 3200x 
+Run:  [119/464] inner_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 4.530407ms GPU, 4.534742ms CPU, 7.39s total GPU, 7.45s total wall, 1632x 
+Run:  [120/464] inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [121/464] inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [122/464] inner_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 10.037993ms GPU, 10.042383ms CPU, 7.39s total GPU, 7.41s total wall, 736x 
+Run:  [123/464] inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.094372ms GPU, 0.098445ms CPU, 0.50s total GPU, 0.68s total wall, 5312x 
+Run:  [124/464] inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.162181ms GPU, 0.166204ms CPU, 0.50s total GPU, 0.60s total wall, 3088x 
+Run:  [125/464] inner_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 9.454367ms GPU, 9.458617ms CPU, 11.04s total GPU, 11.08s total wall, 1168x 
+Run:  [126/464] inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [127/464] inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.199877ms GPU, 0.203910ms CPU, 0.50s total GPU, 0.59s total wall, 2512x 
+Run:  [128/464] inner_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 10.329876ms GPU, 10.334156ms CPU, 14.88s total GPU, 14.92s total wall, 1440x 
+Run:  [129/464] inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [130/464] inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [131/464] inner_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 34.606730ms GPU, 34.610685ms CPU, 0.52s total GPU, 0.52s total wall, 15x 
+Run:  [132/464] inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.103000ms GPU, 0.107090ms CPU, 0.50s total GPU, 0.67s total wall, 4864x 
+Run:  [133/464] inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.137066ms GPU, 0.141108ms CPU, 0.50s total GPU, 0.62s total wall, 3648x 
+Run:  [134/464] inner_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 4.456449ms GPU, 4.460852ms CPU, 8.13s total GPU, 8.18s total wall, 1824x 
+Run:  [135/464] inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [136/464] inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.157906ms GPU, 0.161954ms CPU, 0.51s total GPU, 0.62s total wall, 3216x 
+Run:  [137/464] inner_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 4.834965ms GPU, 4.839331ms CPU, 8.43s total GPU, 8.48s total wall, 1744x 
+Run:  [138/464] inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [139/464] inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [140/464] inner_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 10.231923ms GPU, 10.236301ms CPU, 5.57s total GPU, 5.58s total wall, 544x 
+Run:  [141/464] left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.096708ms GPU, 0.100838ms CPU, 0.50s total GPU, 0.68s total wall, 5184x 
+Run:  [142/464] left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.174106ms GPU, 0.178155ms CPU, 0.50s total GPU, 0.59s total wall, 2880x 
+Run:  [143/464] left_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 10.229275ms GPU, 10.233555ms CPU, 9.17s total GPU, 9.20s total wall, 896x 
+Run:  [144/464] left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [145/464] left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.205707ms GPU, 0.209810ms CPU, 0.50s total GPU, 0.58s total wall, 2432x 
+Run:  [146/464] left_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 11.250892ms GPU, 11.255076ms CPU, 12.60s total GPU, 12.64s total wall, 1120x 
+Run:  [147/464] left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [148/464] left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [149/464] left_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 35.590057ms GPU, 35.594200ms CPU, 0.53s total GPU, 0.53s total wall, 15x 
+Run:  [150/464] left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.102032ms GPU, 0.106104ms CPU, 0.50s total GPU, 0.67s total wall, 4912x 
+Run:  [151/464] left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.143581ms GPU, 0.147600ms CPU, 0.50s total GPU, 0.62s total wall, 3488x 
+Run:  [152/464] left_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 5.253301ms GPU, 5.257604ms CPU, 8.49s total GPU, 8.54s total wall, 1616x 
+Run:  [153/464] left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [154/464] left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.166642ms GPU, 0.170740ms CPU, 0.50s total GPU, 0.60s total wall, 3008x 
+Run:  [155/464] left_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 5.659385ms GPU, 5.663716ms CPU, 9.69s total GPU, 9.75s total wall, 1712x 
+Run:  [156/464] left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [157/464] left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [158/464] left_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 11.279912ms GPU, 11.284213ms CPU, 0.51s total GPU, 0.51s total wall, 45x 
+Run:  [159/464] left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.097801ms GPU, 0.101878ms CPU, 0.50s total GPU, 0.68s total wall, 5120x 
+Run:  [160/464] left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.174918ms GPU, 0.178929ms CPU, 0.50s total GPU, 0.59s total wall, 2864x 
+Run:  [161/464] left_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 10.748476ms GPU, 10.752699ms CPU, 11.52s total GPU, 11.56s total wall, 1072x 
+Run:  [162/464] left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [163/464] left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.217389ms GPU, 0.221520ms CPU, 0.50s total GPU, 0.58s total wall, 2304x 
+Run:  [164/464] left_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 11.824782ms GPU, 11.829008ms CPU, 14.19s total GPU, 14.23s total wall, 1200x 
+Run:  [165/464] left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [166/464] left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [167/464] left_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 35.881904ms GPU, 35.885960ms CPU, 0.50s total GPU, 0.50s total wall, 14x 
+Run:  [168/464] left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.103058ms GPU, 0.107120ms CPU, 0.50s total GPU, 0.67s total wall, 4864x 
+Run:  [169/464] left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.144610ms GPU, 0.148663ms CPU, 0.50s total GPU, 0.62s total wall, 3472x 
+Run:  [170/464] left_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 5.409109ms GPU, 5.413420ms CPU, 9.43s total GPU, 9.49s total wall, 1744x 
+Run:  [171/464] left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [172/464] left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.167838ms GPU, 0.171909ms CPU, 0.50s total GPU, 0.60s total wall, 2992x 
+Run:  [173/464] left_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 5.994636ms GPU, 5.998975ms CPU, 10.45s total GPU, 10.51s total wall, 1744x 
+Run:  [174/464] left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [175/464] left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [176/464] left_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 11.459506ms GPU, 11.463780ms CPU, 0.58s total GPU, 0.59s total wall, 51x 
+Run:  [177/464] full_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.167166ms GPU, 0.170762ms CPU, 0.50s total GPU, 0.60s total wall, 2992x 
+Run:  [178/464] full_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.215133ms GPU, 0.219150ms CPU, 0.50s total GPU, 0.58s total wall, 2336x 
+Run:  [179/464] full_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 10.629183ms GPU, 10.633355ms CPU, 13.44s total GPU, 13.47s total wall, 1264x 
+Run:  [180/464] full_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [181/464] full_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.280405ms GPU, 0.284028ms CPU, 0.50s total GPU, 0.56s total wall, 1792x 
+Run:  [182/464] full_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 11.560907ms GPU, 11.565075ms CPU, 9.62s total GPU, 9.64s total wall, 832x 
+Run:  [183/464] full_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [184/464] full_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [185/464] full_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 41.416967ms GPU, 41.420397ms CPU, 0.54s total GPU, 0.54s total wall, 13x 
+Run:  [186/464] full_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.171983ms GPU, 0.175577ms CPU, 0.50s total GPU, 0.59s total wall, 2912x 
+Run:  [187/464] full_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.215658ms GPU, 0.219266ms CPU, 0.50s total GPU, 0.57s total wall, 2320x 
+Run:  [188/464] full_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 6.056691ms GPU, 6.060455ms CPU, 7.95s total GPU, 7.99s total wall, 1312x 
+Run:  [189/464] full_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [190/464] full_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.241473ms GPU, 0.245047ms CPU, 0.50s total GPU, 0.57s total wall, 2080x 
+Run:  [191/464] full_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 6.482683ms GPU, 6.486466ms CPU, 5.91s total GPU, 5.94s total wall, 912x 
+Run:  [192/464] full_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [193/464] full_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [194/464] full_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 13.576979ms GPU, 13.580726ms CPU, 0.50s total GPU, 0.50s total wall, 37x 
+Run:  [195/464] full_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.168022ms GPU, 0.171647ms CPU, 0.50s total GPU, 0.59s total wall, 2976x 
+Run:  [196/464] full_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.218971ms GPU, 0.223005ms CPU, 0.55s total GPU, 0.63s total wall, 2496x 
+Run:  [197/464] full_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 11.117524ms GPU, 11.121747ms CPU, 10.32s total GPU, 10.34s total wall, 928x 
+Run:  [198/464] full_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [199/464] full_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.293728ms GPU, 0.297356ms CPU, 0.54s total GPU, 0.59s total wall, 1824x 
+Run:  [200/464] full_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 12.121234ms GPU, 12.125417ms CPU, 13.96s total GPU, 13.99s total wall, 1152x 
+Run:  [201/464] full_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [202/464] full_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [203/464] full_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 41.671380ms GPU, 41.674794ms CPU, 0.54s total GPU, 0.54s total wall, 13x 
+Run:  [204/464] full_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.172687ms GPU, 0.176306ms CPU, 0.50s total GPU, 0.59s total wall, 2896x 
+Run:  [205/464] full_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.217923ms GPU, 0.221499ms CPU, 0.61s total GPU, 0.70s total wall, 2800x 
+Run:  [206/464] full_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 6.209737ms GPU, 6.213514ms CPU, 9.54s total GPU, 9.59s total wall, 1536x 
+Run:  [207/464] full_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [208/464] full_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.244351ms GPU, 0.248047ms CPU, 0.55s total GPU, 0.62s total wall, 2240x 
+Run:  [209/464] full_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 6.808843ms GPU, 6.812651ms CPU, 7.95s total GPU, 7.99s total wall, 1168x 
+Run:  [210/464] full_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [211/464] full_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [212/464] full_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 13.739566ms GPU, 13.743318ms CPU, 0.51s total GPU, 0.51s total wall, 37x 
+Run:  [213/464] mixed_inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.148023ms GPU, 0.151717ms CPU, 0.50s total GPU, 0.61s total wall, 3392x 
+Run:  [214/464] mixed_inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.239851ms GPU, 0.243578ms CPU, 0.50s total GPU, 0.57s total wall, 2096x 
+Run:  [215/464] mixed_inner_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 12.428816ms GPU, 12.433030ms CPU, 11.93s total GPU, 11.96s total wall, 960x 
+Run:  [216/464] mixed_inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [217/464] mixed_inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.302519ms GPU, 0.306253ms CPU, 0.60s total GPU, 0.66s total wall, 1984x 
+Run:  [218/464] mixed_inner_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 15.338148ms GPU, 15.342209ms CPU, 12.52s total GPU, 12.54s total wall, 816x 
+Run:  [219/464] mixed_inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [220/464] mixed_inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [221/464] mixed_inner_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 49.636425ms GPU, 49.640037ms CPU, 0.55s total GPU, 0.55s total wall, 11x 
+Run:  [222/464] mixed_inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.150686ms GPU, 0.154391ms CPU, 0.50s total GPU, 0.61s total wall, 3328x 
+Run:  [223/464] mixed_inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.301167ms GPU, 0.304987ms CPU, 0.75s total GPU, 0.83s total wall, 2480x 
+Run:  [224/464] mixed_inner_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 15.492942ms GPU, 15.497194ms CPU, 0.51s total GPU, 0.51s total wall, 33x 
+Run:  [225/464] mixed_inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [226/464] mixed_inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.345397ms GPU, 0.349152ms CPU, 0.50s total GPU, 0.55s total wall, 1456x 
+Run:  [227/464] mixed_inner_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 18.404416ms GPU, 18.409026ms CPU, 0.52s total GPU, 0.52s total wall, 28x 
+Run:  [228/464] mixed_inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [229/464] mixed_inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [230/464] mixed_inner_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 24.321982ms GPU, 24.326453ms CPU, 0.51s total GPU, 0.51s total wall, 21x 
+Run:  [231/464] mixed_inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.154222ms GPU, 0.157888ms CPU, 0.50s total GPU, 0.60s total wall, 3248x 
+Run:  [232/464] mixed_inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.270956ms GPU, 0.274704ms CPU, 0.50s total GPU, 0.56s total wall, 1856x 
+Run:  [233/464] mixed_inner_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 14.579093ms GPU, 14.583350ms CPU, 10.26s total GPU, 10.28s total wall, 704x 
+Run:  [234/464] mixed_inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [235/464] mixed_inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.335225ms GPU, 0.338961ms CPU, 0.72s total GPU, 0.78s total wall, 2144x 
+Run:  [236/464] mixed_inner_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 18.808102ms GPU, 18.812529ms CPU, 13.84s total GPU, 13.86s total wall, 736x 
+Run:  [237/464] mixed_inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [238/464] mixed_inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [239/464] mixed_inner_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 50.394534ms GPU, 50.398716ms CPU, 0.55s total GPU, 0.55s total wall, 11x 
+Run:  [240/464] mixed_inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.151168ms GPU, 0.154900ms CPU, 0.50s total GPU, 0.61s total wall, 3312x 
+Run:  [241/464] mixed_inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.303732ms GPU, 0.307433ms CPU, 0.50s total GPU, 0.55s total wall, 1648x 
+Run:  [242/464] mixed_inner_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 15.736509ms GPU, 15.740835ms CPU, 0.50s total GPU, 0.50s total wall, 32x 
+Run:  [243/464] mixed_inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [244/464] mixed_inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.353750ms GPU, 0.357525ms CPU, 0.50s total GPU, 0.55s total wall, 1424x 
+Run:  [245/464] mixed_inner_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 18.816159ms GPU, 18.820268ms CPU, 0.51s total GPU, 0.51s total wall, 27x 
+Run:  [246/464] mixed_inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [247/464] mixed_inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [248/464] mixed_inner_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 24.898810ms GPU, 24.903333ms CPU, 0.52s total GPU, 0.52s total wall, 21x 
+Run:  [249/464] mixed_left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.150438ms GPU, 0.154130ms CPU, 0.50s total GPU, 0.61s total wall, 3328x 
+Run:  [250/464] mixed_left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.249257ms GPU, 0.252958ms CPU, 0.50s total GPU, 0.57s total wall, 2016x 
+Run:  [251/464] mixed_left_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.90% > 0.50%)
+Pass: Cold: 13.641016ms GPU, 13.645246ms CPU, 14.96s total GPU, 15.00s total wall, 1097x 
+Run:  [252/464] mixed_left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [253/464] mixed_left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.314384ms GPU, 0.318121ms CPU, 0.66s total GPU, 0.72s total wall, 2096x 
+Run:  [254/464] mixed_left_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.71% > 0.50%)
+Pass: Cold: 16.541145ms GPU, 16.545397ms CPU, 14.99s total GPU, 15.01s total wall, 906x 
+Run:  [255/464] mixed_left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [256/464] mixed_left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [257/464] mixed_left_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 50.541728ms GPU, 50.545562ms CPU, 0.56s total GPU, 0.56s total wall, 11x 
+Run:  [258/464] mixed_left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.152471ms GPU, 0.156236ms CPU, 0.50s total GPU, 0.60s total wall, 3280x 
+Run:  [259/464] mixed_left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.319891ms GPU, 0.323674ms CPU, 0.50s total GPU, 0.55s total wall, 1568x 
+Run:  [260/464] mixed_left_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 17.912859ms GPU, 17.917094ms CPU, 0.50s total GPU, 0.50s total wall, 28x 
+Run:  [261/464] mixed_left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [262/464] mixed_left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.364238ms GPU, 0.368044ms CPU, 0.50s total GPU, 0.54s total wall, 1376x 
+Run:  [263/464] mixed_left_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 20.803512ms GPU, 20.807913ms CPU, 0.52s total GPU, 0.52s total wall, 25x 
+Run:  [264/464] mixed_left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [265/464] mixed_left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [266/464] mixed_left_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 26.672997ms GPU, 26.677367ms CPU, 0.51s total GPU, 0.51s total wall, 19x 
+Run:  [267/464] mixed_left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.160764ms GPU, 0.164451ms CPU, 0.50s total GPU, 0.60s total wall, 3120x 
+Run:  [268/464] mixed_left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.283372ms GPU, 0.287062ms CPU, 0.73s total GPU, 0.82s total wall, 2592x 
+Run:  [269/464] mixed_left_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 15.548109ms GPU, 15.552367ms CPU, 11.69s total GPU, 11.72s total wall, 752x 
+Run:  [270/464] mixed_left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [271/464] mixed_left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.346286ms GPU, 0.350003ms CPU, 0.50s total GPU, 0.54s total wall, 1456x 
+Run:  [272/464] mixed_left_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 19.908793ms GPU, 19.913176ms CPU, 13.38s total GPU, 13.40s total wall, 672x 
+Run:  [273/464] mixed_left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [274/464] mixed_left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [275/464] mixed_left_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 51.224093ms GPU, 51.228267ms CPU, 0.56s total GPU, 0.56s total wall, 11x 
+Run:  [276/464] mixed_left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.152427ms GPU, 0.156156ms CPU, 0.50s total GPU, 0.61s total wall, 3296x 
+Run:  [277/464] mixed_left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.323971ms GPU, 0.327720ms CPU, 0.50s total GPU, 0.55s total wall, 1552x 
+Run:  [278/464] mixed_left_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 18.166170ms GPU, 18.170094ms CPU, 0.51s total GPU, 0.51s total wall, 28x 
+Run:  [279/464] mixed_left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [280/464] mixed_left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.373509ms GPU, 0.377311ms CPU, 0.72s total GPU, 0.78s total wall, 1920x 
+Run:  [281/464] mixed_left_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 21.240956ms GPU, 21.244906ms CPU, 0.51s total GPU, 0.51s total wall, 24x 
+Run:  [282/464] mixed_left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [283/464] mixed_left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [284/464] mixed_left_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 27.304302ms GPU, 27.308592ms CPU, 0.52s total GPU, 0.52s total wall, 19x 
+Run:  [285/464] mixed_full_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.224111ms GPU, 0.227673ms CPU, 0.52s total GPU, 0.60s total wall, 2336x 
+Run:  [286/464] mixed_full_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.294431ms GPU, 0.298525ms CPU, 0.50s total GPU, 0.56s total wall, 1712x 
+Run:  [287/464] mixed_full_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 14.047590ms GPU, 14.051946ms CPU, 13.94s total GPU, 13.96s total wall, 992x 
+Run:  [288/464] mixed_full_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [289/464] mixed_full_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.397368ms GPU, 0.400901ms CPU, 0.50s total GPU, 0.54s total wall, 1264x 
+Run:  [290/464] mixed_full_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.76% > 0.50%)
+Pass: Cold: 16.839776ms GPU, 16.843951ms CPU, 14.99s total GPU, 15.01s total wall, 890x 
+Run:  [291/464] mixed_full_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [292/464] mixed_full_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [293/464] mixed_full_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 56.422394ms GPU, 56.425505ms CPU, 0.62s total GPU, 0.62s total wall, 11x 
+Run:  [294/464] mixed_full_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.226085ms GPU, 0.229680ms CPU, 0.50s total GPU, 0.57s total wall, 2224x 
+Run:  [295/464] mixed_full_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.397445ms GPU, 0.400945ms CPU, 0.50s total GPU, 0.54s total wall, 1264x 
+Run:  [296/464] mixed_full_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 18.830596ms GPU, 18.834148ms CPU, 0.51s total GPU, 0.51s total wall, 27x 
+Run:  [297/464] mixed_full_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [298/464] mixed_full_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.450962ms GPU, 0.454522ms CPU, 0.81s total GPU, 0.86s total wall, 1792x 
+Run:  [299/464] mixed_full_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 21.717572ms GPU, 21.720782ms CPU, 0.52s total GPU, 0.52s total wall, 24x 
+Run:  [300/464] mixed_full_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [301/464] mixed_full_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [302/464] mixed_full_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 29.163477ms GPU, 29.166778ms CPU, 0.52s total GPU, 0.53s total wall, 18x 
+Run:  [303/464] mixed_full_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.235539ms GPU, 0.239070ms CPU, 0.50s total GPU, 0.57s total wall, 2128x 
+Run:  [304/464] mixed_full_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.326712ms GPU, 0.330750ms CPU, 0.50s total GPU, 0.55s total wall, 1536x 
+Run:  [305/464] mixed_full_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 15.916126ms GPU, 15.920353ms CPU, 11.20s total GPU, 11.22s total wall, 704x 
+Run:  [306/464] mixed_full_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [307/464] mixed_full_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.428128ms GPU, 0.431708ms CPU, 1.12s total GPU, 1.21s total wall, 2624x 
+Run:  [308/464] mixed_full_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.83% > 0.50%)
+Pass: Cold: 20.070061ms GPU, 20.074262ms CPU, 14.99s total GPU, 15.01s total wall, 747x 
+Run:  [309/464] mixed_full_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [310/464] mixed_full_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [311/464] mixed_full_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 57.106910ms GPU, 57.110242ms CPU, 0.63s total GPU, 0.63s total wall, 11x 
+Run:  [312/464] mixed_full_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.228085ms GPU, 0.231686ms CPU, 0.50s total GPU, 0.57s total wall, 2208x 
+Run:  [313/464] mixed_full_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.400456ms GPU, 0.404058ms CPU, 0.51s total GPU, 0.55s total wall, 1264x 
+Run:  [314/464] mixed_full_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 19.067237ms GPU, 19.070543ms CPU, 0.51s total GPU, 0.52s total wall, 27x 
+Run:  [315/464] mixed_full_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [316/464] mixed_full_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.455883ms GPU, 0.459430ms CPU, 1.11s total GPU, 1.19s total wall, 2432x 
+Run:  [317/464] mixed_full_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 22.141703ms GPU, 22.145087ms CPU, 0.51s total GPU, 0.51s total wall, 23x 
+Run:  [318/464] mixed_full_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [319/464] mixed_full_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [320/464] mixed_full_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 29.799046ms GPU, 29.802483ms CPU, 0.51s total GPU, 0.51s total wall, 17x 
+Run:  [321/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.134163ms GPU, 0.138194ms CPU, 0.50s total GPU, 0.63s total wall, 3728x 
+Run:  [322/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.499787ms GPU, 0.503838ms CPU, 0.50s total GPU, 0.53s total wall, 1008x 
+Run:  [323/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 37.558422ms GPU, 37.562164ms CPU, 0.53s total GPU, 0.53s total wall, 14x 
+Run:  [324/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [325/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.566244ms GPU, 0.570286ms CPU, 0.99s total GPU, 1.04s total wall, 1744x 
+Run:  [326/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 42.626064ms GPU, 42.629640ms CPU, 0.51s total GPU, 0.51s total wall, 12x 
+Run:  [327/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [328/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [329/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 69.615920ms GPU, 69.619436ms CPU, 0.77s total GPU, 0.77s total wall, 11x 
+Run:  [330/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.134873ms GPU, 0.138864ms CPU, 0.50s total GPU, 0.63s total wall, 3712x 
+Run:  [331/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.389571ms GPU, 0.393538ms CPU, 0.50s total GPU, 0.55s total wall, 1296x 
+Run:  [332/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 26.834878ms GPU, 26.838721ms CPU, 0.51s total GPU, 0.51s total wall, 19x 
+Run:  [333/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [334/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.431919ms GPU, 0.435874ms CPU, 0.94s total GPU, 1.01s total wall, 2176x 
+Run:  [335/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 28.658115ms GPU, 28.662316ms CPU, 0.52s total GPU, 0.52s total wall, 18x 
+Run:  [336/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [337/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [338/464] mixed_left_semi_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 37.160875ms GPU, 37.164604ms CPU, 0.52s total GPU, 0.52s total wall, 14x 
+Run:  [339/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.122161ms GPU, 0.126210ms CPU, 0.50s total GPU, 0.64s total wall, 4096x 
+Run:  [340/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.489714ms GPU, 0.493744ms CPU, 0.50s total GPU, 0.53s total wall, 1024x 
+Run:  [341/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 38.217202ms GPU, 38.221008ms CPU, 0.54s total GPU, 0.54s total wall, 14x 
+Run:  [342/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [343/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.584686ms GPU, 0.588734ms CPU, 1.13s total GPU, 1.19s total wall, 1936x 
+Run:  [344/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 43.341779ms GPU, 43.345335ms CPU, 0.52s total GPU, 0.52s total wall, 12x 
+Run:  [345/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [346/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [347/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 70.657023ms GPU, 70.660433ms CPU, 0.78s total GPU, 0.78s total wall, 11x 
+Run:  [348/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.134525ms GPU, 0.138547ms CPU, 0.50s total GPU, 0.63s total wall, 3728x 
+Run:  [349/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.404807ms GPU, 0.408844ms CPU, 0.51s total GPU, 0.55s total wall, 1248x 
+Run:  [350/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 28.505582ms GPU, 28.509318ms CPU, 0.51s total GPU, 0.51s total wall, 18x 
+Run:  [351/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [352/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.434688ms GPU, 0.438690ms CPU, 0.50s total GPU, 0.54s total wall, 1152x 
+Run:  [353/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 28.731662ms GPU, 28.735459ms CPU, 0.52s total GPU, 0.52s total wall, 18x 
+Run:  [354/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [355/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [356/464] mixed_left_semi_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 35.786439ms GPU, 35.790137ms CPU, 0.50s total GPU, 0.50s total wall, 14x 
+Run:  [357/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.134784ms GPU, 0.138784ms CPU, 0.50s total GPU, 0.63s total wall, 3712x 
+Run:  [358/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.500121ms GPU, 0.504166ms CPU, 0.50s total GPU, 0.54s total wall, 1008x 
+Run:  [359/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 37.712826ms GPU, 37.716493ms CPU, 0.53s total GPU, 0.53s total wall, 14x 
+Run:  [360/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [361/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.566284ms GPU, 0.570306ms CPU, 0.51s total GPU, 0.53s total wall, 896x 
+Run:  [362/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 42.751899ms GPU, 42.755586ms CPU, 0.51s total GPU, 0.51s total wall, 12x 
+Run:  [363/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [364/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [365/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 69.716805ms GPU, 69.720209ms CPU, 0.77s total GPU, 0.77s total wall, 11x 
+Run:  [366/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.134980ms GPU, 0.138969ms CPU, 0.50s total GPU, 0.63s total wall, 3712x 
+Run:  [367/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.391739ms GPU, 0.395729ms CPU, 1.09s total GPU, 1.19s total wall, 2784x 
+Run:  [368/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 27.012845ms GPU, 27.016730ms CPU, 0.51s total GPU, 0.51s total wall, 19x 
+Run:  [369/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [370/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.431790ms GPU, 0.435799ms CPU, 1.07s total GPU, 1.16s total wall, 2480x 
+Run:  [371/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 28.821941ms GPU, 28.825617ms CPU, 0.52s total GPU, 0.52s total wall, 18x 
+Run:  [372/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [373/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [374/464] mixed_left_anti_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 37.319443ms GPU, 37.323184ms CPU, 0.52s total GPU, 0.52s total wall, 14x 
+Run:  [375/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.124248ms GPU, 0.128279ms CPU, 0.50s total GPU, 0.64s total wall, 4032x 
+Run:  [376/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.489795ms GPU, 0.493823ms CPU, 0.50s total GPU, 0.53s total wall, 1024x 
+Run:  [377/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 38.356821ms GPU, 38.360359ms CPU, 0.54s total GPU, 0.54s total wall, 14x 
+Run:  [378/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [379/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.585588ms GPU, 0.589585ms CPU, 1.56s total GPU, 1.64s total wall, 2656x 
+Run:  [380/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 43.447327ms GPU, 43.450961ms CPU, 0.52s total GPU, 0.52s total wall, 12x 
+Run:  [381/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [382/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [383/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 70.772754ms GPU, 70.776260ms CPU, 0.78s total GPU, 0.78s total wall, 11x 
+Run:  [384/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.134821ms GPU, 0.138825ms CPU, 0.50s total GPU, 0.63s total wall, 3712x 
+Run:  [385/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.405166ms GPU, 0.409194ms CPU, 0.51s total GPU, 0.55s total wall, 1248x 
+Run:  [386/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 28.694362ms GPU, 28.698997ms CPU, 0.52s total GPU, 0.52s total wall, 18x 
+Run:  [387/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [388/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.435255ms GPU, 0.439286ms CPU, 0.50s total GPU, 0.54s total wall, 1152x 
+Run:  [389/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 28.898256ms GPU, 28.901869ms CPU, 0.52s total GPU, 0.52s total wall, 18x 
+Run:  [390/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [391/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [392/464] mixed_left_anti_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 35.963036ms GPU, 35.966644ms CPU, 0.50s total GPU, 0.50s total wall, 14x 
+Run:  [393/464] distinct_inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.071820ms GPU, 0.075880ms CPU, 0.50s total GPU, 0.75s total wall, 6976x 
+Run:  [394/464] distinct_inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.092992ms GPU, 0.097018ms CPU, 0.50s total GPU, 0.69s total wall, 5392x 
+Run:  [395/464] distinct_inner_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 2.729185ms GPU, 2.733466ms CPU, 6.38s total GPU, 6.45s total wall, 2336x 
+Run:  [396/464] distinct_inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [397/464] distinct_inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.114320ms GPU, 0.118348ms CPU, 0.50s total GPU, 0.65s total wall, 4384x 
+Run:  [398/464] distinct_inner_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 2.615724ms GPU, 2.620171ms CPU, 5.52s total GPU, 5.59s total wall, 2112x 
+Run:  [399/464] distinct_inner_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [400/464] distinct_inner_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [401/464] distinct_inner_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 25.080208ms GPU, 25.084054ms CPU, 0.50s total GPU, 0.50s total wall, 20x 
+Run:  [402/464] distinct_inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.099671ms GPU, 0.103686ms CPU, 0.50s total GPU, 0.67s total wall, 5024x 
+Run:  [403/464] distinct_inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.108278ms GPU, 0.112280ms CPU, 0.50s total GPU, 0.66s total wall, 4624x 
+Run:  [404/464] distinct_inner_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 1.142313ms GPU, 1.146650ms CPU, 2.56s total GPU, 2.62s total wall, 2240x 
+Run:  [405/464] distinct_inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [406/464] distinct_inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.126590ms GPU, 0.130628ms CPU, 0.50s total GPU, 0.64s total wall, 3952x 
+Run:  [407/464] distinct_inner_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 1.397660ms GPU, 1.402004ms CPU, 3.24s total GPU, 3.30s total wall, 2320x 
+Run:  [408/464] distinct_inner_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [409/464] distinct_inner_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [410/464] distinct_inner_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 6.638931ms GPU, 6.643020ms CPU, 0.50s total GPU, 0.51s total wall, 76x 
+Run:  [411/464] distinct_inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.071541ms GPU, 0.075577ms CPU, 0.50s total GPU, 0.75s total wall, 6992x 
+Run:  [412/464] distinct_inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.093041ms GPU, 0.097053ms CPU, 0.50s total GPU, 0.69s total wall, 5376x 
+Run:  [413/464] distinct_inner_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 2.825788ms GPU, 2.830112ms CPU, 5.56s total GPU, 5.63s total wall, 1968x 
+Run:  [414/464] distinct_inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [415/464] distinct_inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.117482ms GPU, 0.121492ms CPU, 0.50s total GPU, 0.65s total wall, 4256x 
+Run:  [416/464] distinct_inner_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 2.787742ms GPU, 2.792223ms CPU, 6.60s total GPU, 6.68s total wall, 2368x 
+Run:  [417/464] distinct_inner_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [418/464] distinct_inner_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [419/464] distinct_inner_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 25.263526ms GPU, 25.267501ms CPU, 0.51s total GPU, 0.51s total wall, 20x 
+Run:  [420/464] distinct_inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.099682ms GPU, 0.103723ms CPU, 0.50s total GPU, 0.67s total wall, 5024x 
+Run:  [421/464] distinct_inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.109845ms GPU, 0.113826ms CPU, 0.50s total GPU, 0.66s total wall, 4560x 
+Run:  [422/464] distinct_inner_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 1.196780ms GPU, 1.201191ms CPU, 3.10s total GPU, 3.17s total wall, 2592x 
+Run:  [423/464] distinct_inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [424/464] distinct_inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.129685ms GPU, 0.133720ms CPU, 0.57s total GPU, 0.73s total wall, 4416x 
+Run:  [425/464] distinct_inner_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 1.492180ms GPU, 1.496539ms CPU, 3.56s total GPU, 3.62s total wall, 2384x 
+Run:  [426/464] distinct_inner_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [427/464] distinct_inner_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [428/464] distinct_inner_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 6.746725ms GPU, 6.750771ms CPU, 0.51s total GPU, 0.51s total wall, 75x 
+Run:  [429/464] distinct_left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.051441ms GPU, 0.055144ms CPU, 0.50s total GPU, 0.86s total wall, 9728x 
+Run:  [430/464] distinct_left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.068928ms GPU, 0.072645ms CPU, 0.50s total GPU, 0.75s total wall, 7264x 
+Run:  [431/464] distinct_left_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 2.438199ms GPU, 2.442513ms CPU, 5.03s total GPU, 5.11s total wall, 2064x 
+Run:  [432/464] distinct_left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [433/464] distinct_left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.089706ms GPU, 0.093491ms CPU, 0.50s total GPU, 0.69s total wall, 5584x 
+Run:  [434/464] distinct_left_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 2.314571ms GPU, 2.318852ms CPU, 5.44s total GPU, 5.53s total wall, 2352x 
+Run:  [435/464] distinct_left_join [Device=0 Key=I32 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [436/464] distinct_left_join [Device=0 Key=I32 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [437/464] distinct_left_join [Device=0 Key=I32 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 24.770312ms GPU, 24.774352ms CPU, 0.52s total GPU, 0.52s total wall, 21x 
+Run:  [438/464] distinct_left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.080205ms GPU, 0.083876ms CPU, 0.52s total GPU, 0.75s total wall, 6512x 
+Run:  [439/464] distinct_left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.085282ms GPU, 0.088967ms CPU, 0.50s total GPU, 0.70s total wall, 5872x 
+Run:  [440/464] distinct_left_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 0.906339ms GPU, 0.910519ms CPU, 2.28s total GPU, 2.36s total wall, 2512x 
+Run:  [441/464] distinct_left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [442/464] distinct_left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.103313ms GPU, 0.107028ms CPU, 0.50s total GPU, 0.66s total wall, 4848x 
+Run:  [443/464] distinct_left_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 1.162306ms GPU, 1.166512ms CPU, 2.58s total GPU, 2.65s total wall, 2224x 
+Run:  [444/464] distinct_left_join [Device=0 Key=I32 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [445/464] distinct_left_join [Device=0 Key=I32 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [446/464] distinct_left_join [Device=0 Key=I32 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 6.410924ms GPU, 6.415059ms CPU, 0.50s total GPU, 0.50s total wall, 78x 
+Run:  [447/464] distinct_left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=1000]
+Pass: Cold: 0.050742ms GPU, 0.054435ms CPU, 0.50s total GPU, 0.86s total wall, 9856x 
+Run:  [448/464] distinct_left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=1000]
+Pass: Cold: 0.069545ms GPU, 0.073295ms CPU, 0.50s total GPU, 0.75s total wall, 7200x 
+Run:  [449/464] distinct_left_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=1000]
+Pass: Cold: 2.531665ms GPU, 2.536023ms CPU, 4.78s total GPU, 4.84s total wall, 1888x 
+Run:  [450/464] distinct_left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [451/464] distinct_left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=100000]
+Pass: Cold: 0.092541ms GPU, 0.096386ms CPU, 0.50s total GPU, 0.68s total wall, 5408x 
+Run:  [452/464] distinct_left_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=100000]
+Pass: Cold: 2.501924ms GPU, 2.506332ms CPU, 5.88s total GPU, 5.96s total wall, 2352x 
+Run:  [453/464] distinct_left_join [Device=0 Key=I64 Nullable=0 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [454/464] distinct_left_join [Device=0 Key=I64 Nullable=0 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [455/464] distinct_left_join [Device=0 Key=I64 Nullable=0 left_size=10000000 right_size=10000000]
+Pass: Cold: 24.969751ms GPU, 24.973921ms CPU, 0.52s total GPU, 0.52s total wall, 21x 
+Run:  [456/464] distinct_left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=1000]
+Pass: Cold: 0.078664ms GPU, 0.082319ms CPU, 0.50s total GPU, 0.72s total wall, 6368x 
+Run:  [457/464] distinct_left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=1000]
+Pass: Cold: 0.086206ms GPU, 0.089875ms CPU, 0.50s total GPU, 0.70s total wall, 5808x 
+Run:  [458/464] distinct_left_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=1000]
+Pass: Cold: 0.960912ms GPU, 0.965900ms CPU, 2.52s total GPU, 2.61s total wall, 2624x 
+Run:  [459/464] distinct_left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=100000]
+Skip: Skip large right table
+Run:  [460/464] distinct_left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=100000]
+Pass: Cold: 0.104317ms GPU, 0.108038ms CPU, 0.50s total GPU, 0.66s total wall, 4800x 
+Run:  [461/464] distinct_left_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=100000]
+Pass: Cold: 1.257700ms GPU, 1.261918ms CPU, 3.12s total GPU, 3.19s total wall, 2480x 
+Run:  [462/464] distinct_left_join [Device=0 Key=I64 Nullable=1 left_size=1000 right_size=10000000]
+Skip: Skip large right table
+Run:  [463/464] distinct_left_join [Device=0 Key=I64 Nullable=1 left_size=100000 right_size=10000000]
+Skip: Skip large right table
+Run:  [464/464] distinct_left_join [Device=0 Key=I64 Nullable=1 left_size=10000000 right_size=10000000]
+Pass: Cold: 6.529819ms GPU, 6.533801ms CPU, 0.50s total GPU, 0.50s total wall, 77x 
+```
+
+# Benchmark Results
+
+## left_anti_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise  |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|--------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   6576x |  80.448 us | 10.10% |  76.190 us | 8.13% |
+| I32 |        0 |    100000 |       1000 |   5488x |  95.302 us |  5.27% |  91.226 us | 2.79% |
+| I32 |        0 |  10000000 |       1000 |   2016x |   2.756 ms |  1.45% |   2.752 ms | 1.44% |
+| I32 |        0 |    100000 |     100000 |   5328x |  97.967 us |  5.77% |  93.850 us | 3.65% |
+| I32 |        0 |  10000000 |     100000 |   1760x |   2.121 ms |  2.06% |   2.116 ms | 2.05% |
+| I32 |        0 |  10000000 |   10000000 |     21x |  23.834 ms |  0.06% |  23.831 ms | 0.06% |
+| I32 |        1 |      1000 |       1000 |   8352x |  63.935 us |  8.74% |  59.874 us | 5.43% |
+| I32 |        1 |    100000 |       1000 |   7024x |  75.256 us |  6.68% |  71.208 us | 3.49% |
+| I32 |        1 |  10000000 |       1000 |   2256x |   1.323 ms |  1.57% |   1.319 ms | 1.53% |
+| I32 |        1 |    100000 |     100000 |   6368x |  82.686 us |  7.30% |  78.594 us | 5.04% |
+| I32 |        1 |  10000000 |     100000 |   2064x |   1.345 ms |  1.24% |   1.341 ms | 1.19% |
+| I32 |        1 |  10000000 |   10000000 |     80x |   6.300 ms |  0.16% |   6.296 ms | 0.14% |
+| I64 |        0 |      1000 |       1000 |   7984x |  66.708 us |  9.76% |  62.672 us | 7.25% |
+| I64 |        0 |    100000 |       1000 |   6368x |  82.661 us |  6.09% |  78.649 us | 3.24% |
+| I64 |        0 |  10000000 |       1000 |   2192x |   2.085 ms |  2.40% |   2.081 ms | 2.39% |
+| I64 |        0 |    100000 |     100000 |   4976x | 104.633 us |  6.42% | 100.552 us | 4.79% |
+| I64 |        0 |  10000000 |     100000 |   2176x |   2.266 ms |  2.21% |   2.262 ms | 2.20% |
+| I64 |        0 |  10000000 |   10000000 |     21x |  24.351 ms |  0.06% |  24.347 ms | 0.06% |
+| I64 |        1 |      1000 |       1000 |   8624x |  62.128 us |  8.42% |  58.040 us | 4.51% |
+| I64 |        1 |    100000 |       1000 |   7040x |  75.166 us |  6.76% |  71.103 us | 3.53% |
+| I64 |        1 |  10000000 |       1000 |   1888x |   1.289 ms |  1.70% |   1.285 ms | 1.66% |
+| I64 |        1 |    100000 |     100000 |   6048x |  86.880 us |  6.29% |  82.802 us | 3.84% |
+| I64 |        1 |  10000000 |     100000 |   2304x |   1.424 ms |  1.35% |   1.419 ms | 1.31% |
+| I64 |        1 |  10000000 |   10000000 |     78x |   6.433 ms |  0.18% |   6.429 ms | 0.17% |
+
+## left_semi_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise  |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|--------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   6848x |  77.181 us |  6.68% |  73.069 us | 3.51% |
+| I32 |        0 |    100000 |       1000 |   5488x |  95.157 us |  5.19% |  91.116 us | 2.60% |
+| I32 |        0 |  10000000 |       1000 |   1952x |   2.666 ms |  1.76% |   2.662 ms | 1.75% |
+| I32 |        0 |    100000 |     100000 |   5344x |  97.794 us |  5.75% |  93.686 us | 3.63% |
+| I32 |        0 |  10000000 |     100000 |   1584x |   2.047 ms |  2.59% |   2.043 ms | 2.58% |
+| I32 |        0 |  10000000 |   10000000 |     22x |  23.723 ms |  0.08% |  23.719 ms | 0.07% |
+| I32 |        1 |      1000 |       1000 |   8368x |  63.863 us |  8.72% |  59.774 us | 5.32% |
+| I32 |        1 |    100000 |       1000 |   7056x |  75.044 us |  6.92% |  70.963 us | 3.77% |
+| I32 |        1 |  10000000 |       1000 |   2448x |   1.174 ms |  1.87% |   1.169 ms | 1.83% |
+| I32 |        1 |    100000 |     100000 |   6432x |  81.858 us |  6.77% |  77.774 us | 4.14% |
+| I32 |        1 |  10000000 |     100000 |   2384x |   1.194 ms |  1.56% |   1.190 ms | 1.51% |
+| I32 |        1 |  10000000 |   10000000 |     82x |   6.141 ms |  0.16% |   6.137 ms | 0.15% |
+| I64 |        0 |      1000 |       1000 |   8016x |  66.541 us |  8.47% |  62.483 us | 5.35% |
+| I64 |        0 |    100000 |       1000 |   6384x |  82.605 us |  6.18% |  78.495 us | 3.19% |
+| I64 |        0 |  10000000 |       1000 |   2112x |   2.010 ms |  2.93% |   2.006 ms | 2.92% |
+| I64 |        0 |    100000 |     100000 |   4992x | 104.595 us |  6.33% | 100.466 us | 4.69% |
+| I64 |        0 |  10000000 |     100000 |   2256x |   2.177 ms |  2.17% |   2.173 ms | 2.15% |
+| I64 |        0 |  10000000 |   10000000 |     21x |  24.235 ms |  0.05% |  24.231 ms | 0.05% |
+| I64 |        1 |      1000 |       1000 |   8560x |  62.537 us | 11.80% |  58.443 us | 9.45% |
+| I64 |        1 |    100000 |       1000 |   7072x |  74.838 us |  6.87% |  70.740 us | 3.57% |
+| I64 |        1 |  10000000 |       1000 |   2576x |   1.143 ms |  2.38% |   1.139 ms | 2.35% |
+| I64 |        1 |    100000 |     100000 |   6064x |  86.622 us |  6.65% |  82.558 us | 4.41% |
+| I64 |        1 |  10000000 |     100000 |   2448x |   1.279 ms |  1.71% |   1.274 ms | 1.67% |
+| I64 |        1 |  10000000 |   10000000 |     80x |   6.278 ms |  0.17% |   6.273 ms | 0.16% |
+
+## conditional_inner_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   3008x |   1.410 ms | 1.22% |   1.406 ms | 1.19% |
+| I32 |        0 |    100000 |       1000 |   1376x |   6.806 ms | 1.43% |   6.802 ms | 1.43% |
+| I32 |        0 |    100000 |     100000 |     11x | 686.889 ms | 0.07% | 686.887 ms | 0.07% |
+| I32 |        1 |      1000 |       1000 |   2864x |   1.803 ms | 0.75% |   1.800 ms | 0.72% |
+| I32 |        1 |    100000 |       1000 |   1344x |   9.512 ms | 1.20% |   9.508 ms | 1.20% |
+| I32 |        1 |    100000 |     100000 |     11x | 965.110 ms | 0.08% | 965.109 ms | 0.08% |
+| I64 |        0 |      1000 |       1000 |   2112x |   1.456 ms | 0.87% |   1.452 ms | 0.82% |
+| I64 |        0 |    100000 |       1000 |   1456x |   6.969 ms | 1.51% |   6.965 ms | 1.51% |
+| I64 |        0 |    100000 |     100000 |     11x | 708.555 ms | 0.09% | 708.553 ms | 0.09% |
+| I64 |        1 |      1000 |       1000 |   2976x |   1.937 ms | 0.72% |   1.933 ms | 0.69% |
+| I64 |        1 |    100000 |       1000 |   1312x |   9.902 ms | 1.27% |   9.897 ms | 1.27% |
+| I64 |        1 |    100000 |     100000 |     11x |    1.005 s | 0.05% |    1.005 s | 0.05% |
+
+## conditional_left_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   2464x |   1.418 ms | 0.71% |   1.414 ms | 0.65% |
+| I32 |        0 |    100000 |       1000 |   1472x |   6.823 ms | 1.44% |   6.818 ms | 1.44% |
+| I32 |        0 |    100000 |     100000 |     11x | 686.249 ms | 0.04% | 686.248 ms | 0.04% |
+| I32 |        1 |      1000 |       1000 |   2320x |   1.796 ms | 0.91% |   1.792 ms | 0.88% |
+| I32 |        1 |    100000 |       1000 |   1536x |   9.522 ms | 1.24% |   9.518 ms | 1.24% |
+| I32 |        1 |    100000 |     100000 |     11x | 964.422 ms | 0.07% | 964.422 ms | 0.07% |
+| I64 |        0 |      1000 |       1000 |   2832x |   1.456 ms | 0.66% |   1.452 ms | 0.60% |
+| I64 |        0 |    100000 |       1000 |   1456x |   6.987 ms | 1.43% |   6.983 ms | 1.43% |
+| I64 |        0 |    100000 |     100000 |     11x | 707.974 ms | 0.06% | 707.972 ms | 0.06% |
+| I64 |        1 |      1000 |       1000 |   2976x |   1.939 ms | 0.73% |   1.936 ms | 0.71% |
+| I64 |        1 |    100000 |       1000 |   1056x |   9.935 ms | 1.34% |   9.930 ms | 1.34% |
+| I64 |        1 |    100000 |     100000 |     11x |    1.004 s | 0.06% |    1.004 s | 0.06% |
+
+## inner_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   5328x |  97.966 us | 8.88% |  93.929 us | 7.77% |
+| I32 |        0 |    100000 |       1000 |   3184x | 161.211 us | 3.19% | 157.180 us | 1.86% |
+| I32 |        0 |  10000000 |       1000 |   1088x |   8.982 ms | 1.20% |   8.978 ms | 1.20% |
+| I32 |        0 |    100000 |     100000 |   2560x | 200.093 us | 4.12% | 196.031 us | 3.54% |
+| I32 |        0 |  10000000 |     100000 |   1184x |   9.861 ms | 1.06% |   9.857 ms | 1.06% |
+| I32 |        0 |  10000000 |   10000000 |     15x |  34.331 ms | 0.10% |  34.327 ms | 0.10% |
+| I32 |        1 |      1000 |       1000 |   4928x | 105.905 us | 5.39% | 101.787 us | 3.51% |
+| I32 |        1 |    100000 |       1000 |   3696x | 139.757 us | 5.40% | 135.711 us | 4.50% |
+| I32 |        1 |  10000000 |       1000 |   1328x |   4.292 ms | 1.35% |   4.288 ms | 1.35% |
+| I32 |        1 |    100000 |     100000 |   3200x | 161.059 us | 4.22% | 156.964 us | 3.28% |
+| I32 |        1 |  10000000 |     100000 |   1632x |   4.535 ms | 1.17% |   4.530 ms | 1.16% |
+| I32 |        1 |  10000000 |   10000000 |    736x |  10.042 ms | 0.53% |  10.038 ms | 0.53% |
+| I64 |        0 |      1000 |       1000 |   5312x |  98.445 us | 6.77% |  94.372 us | 5.18% |
+| I64 |        0 |    100000 |       1000 |   3088x | 166.204 us | 6.67% | 162.181 us | 6.20% |
+| I64 |        0 |  10000000 |       1000 |   1168x |   9.459 ms | 1.29% |   9.454 ms | 1.29% |
+| I64 |        0 |    100000 |     100000 |   2512x | 203.910 us | 3.54% | 199.877 us | 2.87% |
+| I64 |        0 |  10000000 |     100000 |   1440x |  10.334 ms | 1.15% |  10.330 ms | 1.15% |
+| I64 |        0 |  10000000 |   10000000 |     15x |  34.611 ms | 0.15% |  34.607 ms | 0.14% |
+| I64 |        1 |      1000 |       1000 |   4864x | 107.090 us | 5.35% | 103.000 us | 3.55% |
+| I64 |        1 |    100000 |       1000 |   3648x | 141.108 us | 7.98% | 137.066 us | 7.43% |
+| I64 |        1 |  10000000 |       1000 |   1824x |   4.461 ms | 1.36% |   4.456 ms | 1.36% |
+| I64 |        1 |    100000 |     100000 |   3216x | 161.954 us | 4.84% | 157.906 us | 4.06% |
+| I64 |        1 |  10000000 |     100000 |   1744x |   4.839 ms | 1.27% |   4.835 ms | 1.27% |
+| I64 |        1 |  10000000 |   10000000 |    544x |  10.236 ms | 0.72% |  10.232 ms | 0.71% |
+
+## left_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   5184x | 100.838 us | 6.63% |  96.708 us | 5.02% |
+| I32 |        0 |    100000 |       1000 |   2880x | 178.155 us | 2.97% | 174.106 us | 1.83% |
+| I32 |        0 |  10000000 |       1000 |    896x |  10.234 ms | 1.21% |  10.229 ms | 1.21% |
+| I32 |        0 |    100000 |     100000 |   2432x | 209.810 us | 4.37% | 205.707 us | 3.85% |
+| I32 |        0 |  10000000 |     100000 |   1120x |  11.255 ms | 0.95% |  11.251 ms | 0.95% |
+| I32 |        0 |  10000000 |   10000000 |     15x |  35.594 ms | 0.15% |  35.590 ms | 0.15% |
+| I32 |        1 |      1000 |       1000 |   4912x | 106.104 us | 5.28% | 102.032 us | 3.42% |
+| I32 |        1 |    100000 |       1000 |   3488x | 147.600 us | 3.70% | 143.581 us | 2.41% |
+| I32 |        1 |  10000000 |       1000 |   1616x |   5.258 ms | 1.30% |   5.253 ms | 1.30% |
+| I32 |        1 |    100000 |     100000 |   3008x | 170.740 us | 5.04% | 166.642 us | 4.36% |
+| I32 |        1 |  10000000 |     100000 |   1712x |   5.664 ms | 0.97% |   5.659 ms | 0.96% |
+| I32 |        1 |  10000000 |   10000000 |     45x |  11.284 ms | 0.42% |  11.280 ms | 0.42% |
+| I64 |        0 |      1000 |       1000 |   5120x | 101.878 us | 6.48% |  97.801 us | 4.90% |
+| I64 |        0 |    100000 |       1000 |   2864x | 178.929 us | 3.48% | 174.918 us | 2.61% |
+| I64 |        0 |  10000000 |       1000 |   1072x |  10.753 ms | 1.19% |  10.748 ms | 1.19% |
+| I64 |        0 |    100000 |     100000 |   2304x | 221.520 us | 3.43% | 217.389 us | 2.82% |
+| I64 |        0 |  10000000 |     100000 |   1200x |  11.829 ms | 1.03% |  11.825 ms | 1.03% |
+| I64 |        0 |  10000000 |   10000000 |     14x |  35.886 ms | 0.16% |  35.882 ms | 0.16% |
+| I64 |        1 |      1000 |       1000 |   4864x | 107.120 us | 5.44% | 103.058 us | 3.72% |
+| I64 |        1 |    100000 |       1000 |   3472x | 148.663 us | 3.79% | 144.610 us | 2.54% |
+| I64 |        1 |  10000000 |       1000 |   1744x |   5.413 ms | 1.16% |   5.409 ms | 1.15% |
+| I64 |        1 |    100000 |     100000 |   2992x | 171.909 us | 4.61% | 167.838 us | 3.86% |
+| I64 |        1 |  10000000 |     100000 |   1744x |   5.999 ms | 1.09% |   5.995 ms | 1.09% |
+| I64 |        1 |  10000000 |   10000000 |     51x |  11.464 ms | 0.50% |  11.460 ms | 0.50% |
+
+## full_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   2992x | 170.762 us | 4.75% | 167.166 us | 4.22% |
+| I32 |        0 |    100000 |       1000 |   2336x | 219.150 us | 2.93% | 215.133 us | 2.24% |
+| I32 |        0 |  10000000 |       1000 |   1264x |  10.633 ms | 1.07% |  10.629 ms | 1.07% |
+| I32 |        0 |    100000 |     100000 |   1792x | 284.028 us | 3.67% | 280.405 us | 3.41% |
+| I32 |        0 |  10000000 |     100000 |    832x |  11.565 ms | 0.96% |  11.561 ms | 0.96% |
+| I32 |        0 |  10000000 |   10000000 |     13x |  41.420 ms | 0.18% |  41.417 ms | 0.18% |
+| I32 |        1 |      1000 |       1000 |   2912x | 175.577 us | 3.80% | 171.983 us | 3.14% |
+| I32 |        1 |    100000 |       1000 |   2320x | 219.266 us | 4.50% | 215.658 us | 4.17% |
+| I32 |        1 |  10000000 |       1000 |   1312x |   6.060 ms | 0.97% |   6.057 ms | 0.97% |
+| I32 |        1 |    100000 |     100000 |   2080x | 245.047 us | 2.95% | 241.473 us | 2.53% |
+| I32 |        1 |  10000000 |     100000 |    912x |   6.486 ms | 0.96% |   6.483 ms | 0.95% |
+| I32 |        1 |  10000000 |   10000000 |     37x |  13.581 ms | 0.40% |  13.577 ms | 0.40% |
+| I64 |        0 |      1000 |       1000 |   2976x | 171.647 us | 4.15% | 168.022 us | 3.53% |
+| I64 |        0 |    100000 |       1000 |   2496x | 223.005 us | 6.28% | 218.971 us | 5.97% |
+| I64 |        0 |  10000000 |       1000 |    928x |  11.122 ms | 1.20% |  11.118 ms | 1.20% |
+| I64 |        0 |    100000 |     100000 |   1824x | 297.356 us | 2.62% | 293.728 us | 2.30% |
+| I64 |        0 |  10000000 |     100000 |   1152x |  12.125 ms | 1.03% |  12.121 ms | 1.03% |
+| I64 |        0 |  10000000 |   10000000 |     13x |  41.675 ms | 0.21% |  41.671 ms | 0.21% |
+| I64 |        1 |      1000 |       1000 |   2896x | 176.306 us | 3.49% | 172.687 us | 2.76% |
+| I64 |        1 |    100000 |       1000 |   2800x | 221.499 us | 7.16% | 217.923 us | 6.97% |
+| I64 |        1 |  10000000 |       1000 |   1536x |   6.214 ms | 0.88% |   6.210 ms | 0.88% |
+| I64 |        1 |    100000 |     100000 |   2240x | 248.047 us | 4.38% | 244.351 us | 4.08% |
+| I64 |        1 |  10000000 |     100000 |   1168x |   6.813 ms | 1.01% |   6.809 ms | 1.00% |
+| I64 |        1 |  10000000 |   10000000 |     37x |  13.743 ms | 0.38% |  13.740 ms | 0.38% |
+
+## mixed_inner_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   3392x | 151.717 us | 4.04% | 148.023 us | 3.13% |
+| I32 |        0 |    100000 |       1000 |   2096x | 243.578 us | 2.36% | 239.851 us | 1.76% |
+| I32 |        0 |  10000000 |       1000 |    960x |  12.433 ms | 0.94% |  12.429 ms | 0.94% |
+| I32 |        0 |    100000 |     100000 |   1984x | 306.253 us | 4.79% | 302.519 us | 4.61% |
+| I32 |        0 |  10000000 |     100000 |    816x |  15.342 ms | 0.88% |  15.338 ms | 0.88% |
+| I32 |        0 |  10000000 |   10000000 |     11x |  49.640 ms | 0.08% |  49.636 ms | 0.08% |
+| I32 |        1 |      1000 |       1000 |   3328x | 154.391 us | 3.91% | 150.686 us | 3.01% |
+| I32 |        1 |    100000 |       1000 |   2480x | 304.987 us | 3.06% | 301.167 us | 2.76% |
+| I32 |        1 |  10000000 |       1000 |     33x |  15.497 ms | 0.32% |  15.493 ms | 0.32% |
+| I32 |        1 |    100000 |     100000 |   1456x | 349.152 us | 1.72% | 345.397 us | 1.32% |
+| I32 |        1 |  10000000 |     100000 |     28x |  18.409 ms | 0.19% |  18.404 ms | 0.19% |
+| I32 |        1 |  10000000 |   10000000 |     21x |  24.326 ms | 0.34% |  24.322 ms | 0.34% |
+| I64 |        0 |      1000 |       1000 |   3248x | 157.888 us | 3.52% | 154.222 us | 2.59% |
+| I64 |        0 |    100000 |       1000 |   1856x | 274.704 us | 2.15% | 270.956 us | 1.62% |
+| I64 |        0 |  10000000 |       1000 |    704x |  14.583 ms | 0.76% |  14.579 ms | 0.76% |
+| I64 |        0 |    100000 |     100000 |   2144x | 338.961 us | 3.95% | 335.225 us | 3.76% |
+| I64 |        0 |  10000000 |     100000 |    736x |  18.813 ms | 0.80% |  18.808 ms | 0.80% |
+| I64 |        0 |  10000000 |   10000000 |     11x |  50.399 ms | 0.13% |  50.395 ms | 0.13% |
+| I64 |        1 |      1000 |       1000 |   3312x | 154.900 us | 4.42% | 151.168 us | 3.64% |
+| I64 |        1 |    100000 |       1000 |   1648x | 307.433 us | 1.74% | 303.732 us | 1.24% |
+| I64 |        1 |  10000000 |       1000 |     32x |  15.741 ms | 0.31% |  15.737 ms | 0.31% |
+| I64 |        1 |    100000 |     100000 |   1424x | 357.525 us | 1.87% | 353.750 us | 1.54% |
+| I64 |        1 |  10000000 |     100000 |     27x |  18.820 ms | 0.14% |  18.816 ms | 0.14% |
+| I64 |        1 |  10000000 |   10000000 |     21x |  24.903 ms | 0.22% |  24.899 ms | 0.22% |
+
+## mixed_left_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   3328x | 154.130 us | 7.89% | 150.438 us | 7.48% |
+| I32 |        0 |    100000 |       1000 |   2016x | 252.958 us | 2.40% | 249.257 us | 1.86% |
+| I32 |        0 |  10000000 |       1000 |   1097x |  13.645 ms | 0.90% |  13.641 ms | 0.90% |
+| I32 |        0 |    100000 |     100000 |   2096x | 318.121 us | 3.91% | 314.384 us | 3.70% |
+| I32 |        0 |  10000000 |     100000 |    906x |  16.545 ms | 0.72% |  16.541 ms | 0.71% |
+| I32 |        0 |  10000000 |   10000000 |     11x |  50.546 ms | 0.03% |  50.542 ms | 0.03% |
+| I32 |        1 |      1000 |       1000 |   3280x | 156.236 us | 5.48% | 152.471 us | 4.88% |
+| I32 |        1 |    100000 |       1000 |   1568x | 323.674 us | 1.80% | 319.891 us | 1.35% |
+| I32 |        1 |  10000000 |       1000 |     28x |  17.917 ms | 0.18% |  17.913 ms | 0.18% |
+| I32 |        1 |    100000 |     100000 |   1376x | 368.044 us | 1.65% | 364.238 us | 1.27% |
+| I32 |        1 |  10000000 |     100000 |     25x |  20.808 ms | 0.22% |  20.804 ms | 0.22% |
+| I32 |        1 |  10000000 |   10000000 |     19x |  26.677 ms | 0.27% |  26.673 ms | 0.27% |
+| I64 |        0 |      1000 |       1000 |   3120x | 164.451 us | 3.94% | 160.764 us | 3.21% |
+| I64 |        0 |    100000 |       1000 |   2592x | 287.062 us | 4.38% | 283.372 us | 4.17% |
+| I64 |        0 |  10000000 |       1000 |    752x |  15.552 ms | 0.84% |  15.548 ms | 0.84% |
+| I64 |        0 |    100000 |     100000 |   1456x | 350.003 us | 2.79% | 346.286 us | 2.57% |
+| I64 |        0 |  10000000 |     100000 |    672x |  19.913 ms | 1.02% |  19.909 ms | 1.01% |
+| I64 |        0 |  10000000 |   10000000 |     11x |  51.228 ms | 0.07% |  51.224 ms | 0.07% |
+| I64 |        1 |      1000 |       1000 |   3296x | 156.156 us | 4.49% | 152.427 us | 3.75% |
+| I64 |        1 |    100000 |       1000 |   1552x | 327.720 us | 1.94% | 323.971 us | 1.56% |
+| I64 |        1 |  10000000 |       1000 |     28x |  18.170 ms | 0.16% |  18.166 ms | 0.16% |
+| I64 |        1 |    100000 |     100000 |   1920x | 377.311 us | 2.35% | 373.509 us | 2.10% |
+| I64 |        1 |  10000000 |     100000 |     24x |  21.245 ms | 0.19% |  21.241 ms | 0.18% |
+| I64 |        1 |  10000000 |   10000000 |     19x |  27.309 ms | 0.22% |  27.304 ms | 0.22% |
+
+## mixed_full_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   2336x | 227.673 us | 5.24% | 224.111 us | 4.96% |
+| I32 |        0 |    100000 |       1000 |   1712x | 298.525 us | 2.37% | 294.431 us | 1.90% |
+| I32 |        0 |  10000000 |       1000 |    992x |  14.052 ms | 0.87% |  14.048 ms | 0.87% |
+| I32 |        0 |    100000 |     100000 |   1264x | 400.901 us | 2.43% | 397.368 us | 2.26% |
+| I32 |        0 |  10000000 |     100000 |    890x |  16.844 ms | 0.76% |  16.840 ms | 0.76% |
+| I32 |        0 |  10000000 |   10000000 |     11x |  56.426 ms | 0.07% |  56.422 ms | 0.07% |
+| I32 |        1 |      1000 |       1000 |   2224x | 229.680 us | 3.00% | 226.085 us | 2.53% |
+| I32 |        1 |    100000 |       1000 |   1264x | 400.945 us | 1.73% | 397.445 us | 1.48% |
+| I32 |        1 |  10000000 |       1000 |     27x |  18.834 ms | 0.18% |  18.831 ms | 0.18% |
+| I32 |        1 |    100000 |     100000 |   1792x | 454.522 us | 4.45% | 450.962 us | 4.36% |
+| I32 |        1 |  10000000 |     100000 |     24x |  21.721 ms | 0.18% |  21.718 ms | 0.18% |
+| I32 |        1 |  10000000 |   10000000 |     18x |  29.167 ms | 0.21% |  29.163 ms | 0.21% |
+| I64 |        0 |      1000 |       1000 |   2128x | 239.070 us | 4.03% | 235.539 us | 3.73% |
+| I64 |        0 |    100000 |       1000 |   1536x | 330.750 us | 2.17% | 326.712 us | 1.77% |
+| I64 |        0 |  10000000 |       1000 |    704x |  15.920 ms | 0.81% |  15.916 ms | 0.81% |
+| I64 |        0 |    100000 |     100000 |   2624x | 431.708 us | 4.05% | 428.128 us | 3.95% |
+| I64 |        0 |  10000000 |     100000 |    747x |  20.074 ms | 0.83% |  20.070 ms | 0.83% |
+| I64 |        0 |  10000000 |   10000000 |     11x |  57.110 ms | 0.10% |  57.107 ms | 0.10% |
+| I64 |        1 |      1000 |       1000 |   2208x | 231.686 us | 3.66% | 228.085 us | 3.29% |
+| I64 |        1 |    100000 |       1000 |   1264x | 404.058 us | 1.60% | 400.456 us | 1.31% |
+| I64 |        1 |  10000000 |       1000 |     27x |  19.071 ms | 0.24% |  19.067 ms | 0.24% |
+| I64 |        1 |    100000 |     100000 |   2432x | 459.430 us | 2.86% | 455.883 us | 2.75% |
+| I64 |        1 |  10000000 |     100000 |     23x |  22.145 ms | 0.12% |  22.142 ms | 0.12% |
+| I64 |        1 |  10000000 |   10000000 |     17x |  29.802 ms | 0.28% |  29.799 ms | 0.28% |
+
+## mixed_left_semi_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   3728x | 138.194 us | 3.80% | 134.163 us | 2.31% |
+| I32 |        0 |    100000 |       1000 |   1008x | 503.838 us | 1.15% | 499.787 us | 0.81% |
+| I32 |        0 |  10000000 |       1000 |     14x |  37.562 ms | 0.09% |  37.558 ms | 0.08% |
+| I32 |        0 |    100000 |     100000 |   1744x | 570.286 us | 1.20% | 566.244 us | 0.95% |
+| I32 |        0 |  10000000 |     100000 |     12x |  42.630 ms | 0.09% |  42.626 ms | 0.08% |
+| I32 |        0 |  10000000 |   10000000 |     11x |  69.619 ms | 0.12% |  69.616 ms | 0.12% |
+| I32 |        1 |      1000 |       1000 |   3712x | 138.864 us | 4.16% | 134.873 us | 2.90% |
+| I32 |        1 |    100000 |       1000 |   1296x | 393.538 us | 1.52% | 389.571 us | 1.12% |
+| I32 |        1 |  10000000 |       1000 |     19x |  26.839 ms | 0.08% |  26.835 ms | 0.08% |
+| I32 |        1 |    100000 |     100000 |   2176x | 435.874 us | 3.05% | 431.919 us | 2.91% |
+| I32 |        1 |  10000000 |     100000 |     18x |  28.662 ms | 0.09% |  28.658 ms | 0.09% |
+| I32 |        1 |  10000000 |   10000000 |     14x |  37.165 ms | 0.10% |  37.161 ms | 0.10% |
+| I64 |        0 |      1000 |       1000 |   4096x | 126.210 us | 4.40% | 122.161 us | 2.84% |
+| I64 |        0 |    100000 |       1000 |   1024x | 493.744 us | 1.21% | 489.714 us | 0.88% |
+| I64 |        0 |  10000000 |       1000 |     14x |  38.221 ms | 0.07% |  38.217 ms | 0.07% |
+| I64 |        0 |    100000 |     100000 |   1936x | 588.734 us | 1.26% | 584.686 us | 1.05% |
+| I64 |        0 |  10000000 |     100000 |     12x |  43.345 ms | 0.11% |  43.342 ms | 0.11% |
+| I64 |        0 |  10000000 |   10000000 |     11x |  70.660 ms | 0.09% |  70.657 ms | 0.09% |
+| I64 |        1 |      1000 |       1000 |   3728x | 138.547 us | 4.14% | 134.525 us | 2.85% |
+| I64 |        1 |    100000 |       1000 |   1248x | 408.844 us | 1.46% | 404.807 us | 1.05% |
+| I64 |        1 |  10000000 |       1000 |     18x |  28.509 ms | 0.11% |  28.506 ms | 0.10% |
+| I64 |        1 |    100000 |     100000 |   1152x | 438.690 us | 1.40% | 434.688 us | 1.05% |
+| I64 |        1 |  10000000 |     100000 |     18x |  28.735 ms | 0.08% |  28.732 ms | 0.08% |
+| I64 |        1 |  10000000 |   10000000 |     14x |  35.790 ms | 0.06% |  35.786 ms | 0.06% |
+
+## mixed_left_anti_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   3712x | 138.784 us | 5.18% | 134.784 us | 4.25% |
+| I32 |        0 |    100000 |       1000 |   1008x | 504.166 us | 1.20% | 500.121 us | 0.88% |
+| I32 |        0 |  10000000 |       1000 |     14x |  37.716 ms | 0.09% |  37.713 ms | 0.09% |
+| I32 |        0 |    100000 |     100000 |    896x | 570.306 us | 1.03% | 566.284 us | 0.74% |
+| I32 |        0 |  10000000 |     100000 |     12x |  42.756 ms | 0.09% |  42.752 ms | 0.09% |
+| I32 |        0 |  10000000 |   10000000 |     11x |  69.720 ms | 0.10% |  69.717 ms | 0.10% |
+| I32 |        1 |      1000 |       1000 |   3712x | 138.969 us | 4.18% | 134.980 us | 2.93% |
+| I32 |        1 |    100000 |       1000 |   2784x | 395.729 us | 3.06% | 391.739 us | 2.88% |
+| I32 |        1 |  10000000 |       1000 |     19x |  27.017 ms | 0.06% |  27.013 ms | 0.06% |
+| I32 |        1 |    100000 |     100000 |   2480x | 435.799 us | 2.85% | 431.790 us | 2.69% |
+| I32 |        1 |  10000000 |     100000 |     18x |  28.826 ms | 0.08% |  28.822 ms | 0.08% |
+| I32 |        1 |  10000000 |   10000000 |     14x |  37.323 ms | 0.05% |  37.319 ms | 0.05% |
+| I64 |        0 |      1000 |       1000 |   4032x | 128.279 us | 8.91% | 124.248 us | 8.26% |
+| I64 |        0 |    100000 |       1000 |   1024x | 493.823 us | 1.18% | 489.795 us | 0.84% |
+| I64 |        0 |  10000000 |       1000 |     14x |  38.360 ms | 0.07% |  38.357 ms | 0.07% |
+| I64 |        0 |    100000 |     100000 |   2656x | 589.585 us | 1.67% | 585.588 us | 1.52% |
+| I64 |        0 |  10000000 |     100000 |     12x |  43.451 ms | 0.06% |  43.447 ms | 0.06% |
+| I64 |        0 |  10000000 |   10000000 |     11x |  70.776 ms | 0.11% |  70.773 ms | 0.11% |
+| I64 |        1 |      1000 |       1000 |   3712x | 138.825 us | 4.30% | 134.821 us | 3.07% |
+| I64 |        1 |    100000 |       1000 |   1248x | 409.194 us | 1.57% | 405.166 us | 1.20% |
+| I64 |        1 |  10000000 |       1000 |     18x |  28.699 ms | 0.07% |  28.694 ms | 0.07% |
+| I64 |        1 |    100000 |     100000 |   1152x | 439.286 us | 1.44% | 435.255 us | 1.09% |
+| I64 |        1 |  10000000 |     100000 |     18x |  28.902 ms | 0.07% |  28.898 ms | 0.07% |
+| I64 |        1 |  10000000 |   10000000 |     14x |  35.967 ms | 0.07% |  35.963 ms | 0.07% |
+
+## distinct_inner_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|-----|----------|-----------|------------|---------|------------|-------|------------|-------|
+| I32 |        0 |      1000 |       1000 |   6976x |  75.880 us | 7.30% |  71.820 us | 4.57% |
+| I32 |        0 |    100000 |       1000 |   5392x |  97.018 us | 5.29% |  92.992 us | 3.01% |
+| I32 |        0 |  10000000 |       1000 |   2336x |   2.733 ms | 1.42% |   2.729 ms | 1.41% |
+| I32 |        0 |    100000 |     100000 |   4384x | 118.348 us | 5.14% | 114.320 us | 3.60% |
+| I32 |        0 |  10000000 |     100000 |   2112x |   2.620 ms | 1.41% |   2.616 ms | 1.39% |
+| I32 |        0 |  10000000 |   10000000 |     20x |  25.084 ms | 0.17% |  25.080 ms | 0.17% |
+| I32 |        1 |      1000 |       1000 |   5024x | 103.686 us | 5.49% |  99.671 us | 3.70% |
+| I32 |        1 |    100000 |       1000 |   4624x | 112.280 us | 4.97% | 108.278 us | 3.31% |
+| I32 |        1 |  10000000 |       1000 |   2240x |   1.147 ms | 1.65% |   1.142 ms | 1.60% |
+| I32 |        1 |    100000 |     100000 |   3952x | 130.628 us | 6.47% | 126.590 us | 5.56% |
+| I32 |        1 |  10000000 |     100000 |   2320x |   1.402 ms | 1.42% |   1.398 ms | 1.38% |
+| I32 |        1 |  10000000 |   10000000 |     76x |   6.643 ms | 0.38% |   6.639 ms | 0.37% |
+| I64 |        0 |      1000 |       1000 |   6992x |  75.577 us | 7.57% |  71.541 us | 4.56% |
+| I64 |        0 |    100000 |       1000 |   5376x |  97.053 us | 5.63% |  93.041 us | 3.58% |
+| I64 |        0 |  10000000 |       1000 |   1968x |   2.830 ms | 1.42% |   2.826 ms | 1.42% |
+| I64 |        0 |    100000 |     100000 |   4256x | 121.492 us | 4.84% | 117.482 us | 3.36% |
+| I64 |        0 |  10000000 |     100000 |   2368x |   2.792 ms | 1.48% |   2.788 ms | 1.47% |
+| I64 |        0 |  10000000 |   10000000 |     20x |  25.268 ms | 0.18% |  25.264 ms | 0.18% |
+| I64 |        1 |      1000 |       1000 |   5024x | 103.723 us | 5.69% |  99.682 us | 3.93% |
+| I64 |        1 |    100000 |       1000 |   4560x | 113.826 us | 6.30% | 109.845 us | 5.15% |
+| I64 |        1 |  10000000 |       1000 |   2592x |   1.201 ms | 1.49% |   1.197 ms | 1.44% |
+| I64 |        1 |    100000 |     100000 |   4416x | 133.720 us | 7.83% | 129.685 us | 7.14% |
+| I64 |        1 |  10000000 |     100000 |   2384x |   1.497 ms | 1.23% |   1.492 ms | 1.20% |
+| I64 |        1 |  10000000 |   10000000 |     75x |   6.751 ms | 0.32% |   6.747 ms | 0.31% |
+
+## distinct_left_join
+
+### [0] Tesla T4
+
+| Key | Nullable | left_size | right_size | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  |
+|-----|----------|-----------|------------|---------|------------|--------|------------|--------|
+| I32 |        0 |      1000 |       1000 |   9728x |  55.144 us |  8.25% |  51.441 us |  3.84% |
+| I32 |        0 |    100000 |       1000 |   7264x |  72.645 us |  6.16% |  68.928 us |  2.83% |
+| I32 |        0 |  10000000 |       1000 |   2064x |   2.443 ms |  1.49% |   2.438 ms |  1.48% |
+| I32 |        0 |    100000 |     100000 |   5584x |  93.491 us |  5.75% |  89.706 us |  3.80% |
+| I32 |        0 |  10000000 |     100000 |   2352x |   2.319 ms |  1.63% |   2.315 ms |  1.62% |
+| I32 |        0 |  10000000 |   10000000 |     21x |  24.774 ms |  0.15% |  24.770 ms |  0.14% |
+| I32 |        1 |      1000 |       1000 |   6512x |  83.876 us |  9.89% |  80.205 us |  8.74% |
+| I32 |        1 |    100000 |       1000 |   5872x |  88.967 us |  5.95% |  85.282 us |  3.99% |
+| I32 |        1 |  10000000 |       1000 |   2512x | 910.519 us |  1.96% | 906.339 us |  1.90% |
+| I32 |        1 |    100000 |     100000 |   4848x | 107.028 us | 14.28% | 103.313 us | 13.80% |
+| I32 |        1 |  10000000 |     100000 |   2224x |   1.167 ms |  1.49% |   1.162 ms |  1.44% |
+| I32 |        1 |  10000000 |   10000000 |     78x |   6.415 ms |  0.30% |   6.411 ms |  0.29% |
+| I64 |        0 |      1000 |       1000 |   9856x |  54.435 us |  8.54% |  50.742 us |  4.36% |
+| I64 |        0 |    100000 |       1000 |   7200x |  73.295 us |  7.20% |  69.545 us |  4.61% |
+| I64 |        0 |  10000000 |       1000 |   1888x |   2.536 ms |  1.65% |   2.532 ms |  1.64% |
+| I64 |        0 |    100000 |     100000 |   5408x |  96.386 us |  5.59% |  92.541 us |  3.58% |
+| I64 |        0 |  10000000 |     100000 |   2352x |   2.506 ms |  1.68% |   2.502 ms |  1.67% |
+| I64 |        0 |  10000000 |   10000000 |     21x |  24.974 ms |  0.17% |  24.970 ms |  0.17% |
+| I64 |        1 |      1000 |       1000 |   6368x |  82.319 us |  6.57% |  78.664 us |  4.60% |
+| I64 |        1 |    100000 |       1000 |   5808x |  89.875 us |  5.78% |  86.206 us |  3.86% |
+| I64 |        1 |  10000000 |       1000 |   2624x | 965.900 us |  1.89% | 960.912 us |  1.79% |
+| I64 |        1 |    100000 |     100000 |   4800x | 108.038 us |  5.13% | 104.317 us |  3.57% |
+| I64 |        1 |  10000000 |     100000 |   2480x |   1.262 ms |  1.30% |   1.258 ms |  1.25% |
+| I64 |        1 |  10000000 |   10000000 |     77x |   6.534 ms |  0.44% |   6.530 ms |  0.43% |

@@ -1,0 +1,25 @@
+[2025-02-07 10:34:54.981] [CUDF] [warning] Running benchmarks without dropping the L3 cache; results may not reflect file IO throughput
+[2025-02-07 11:10:39.856] [RMM] [error] [A][Stream 0x1][Upstream 11728420352B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:10:39.860] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:11:04.459] [RMM] [error] [A][Stream 0x1][Upstream 11728470784B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:11:04.460] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:11:29.197] [RMM] [error] [A][Stream 0x1][Upstream 11524573440B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:11:29.198] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:11:47.811] [RMM] [error] [A][Stream 0x1][Upstream 11728420352B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:11:47.812] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:11:55.949] [RMM] [error] [A][Stream 0x1][Upstream 11728470784B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:11:55.950] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:12:14.766] [RMM] [error] [A][Stream 0x1][Upstream 11524573440B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:12:14.767] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:12:24.818] [RMM] [error] [A][Stream 0x1][Upstream 11728420352B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:12:24.818] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:12:43.803] [RMM] [error] [A][Stream 0x1][Upstream 11728470784B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:12:43.804] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:13:02.879] [RMM] [error] [A][Stream 0x1][Upstream 11524573440B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:13:02.880] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:13:34.375] [RMM] [error] [A][Stream 0x1][Upstream 11728420352B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:13:34.375] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:13:40.088] [RMM] [error] [A][Stream 0x1][Upstream 11728470784B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:13:40.089] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.
+[2025-02-07 11:13:56.402] [RMM] [error] [A][Stream 0x1][Upstream 11524573440B][FAILURE maximum pool size exceeded]
+[2025-02-07 11:13:56.404] [CUDF] [error] Parquet writer encountered exception during processing. No data has been written to the sink.

@@ -1,0 +1,108 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/28] replace_nulls [Device=0 row_width=32 num_rows=32768]
+Pass: Cold: 0.145872ms GPU, 0.150147ms CPU, 0.50s total GPU, 0.62s total wall, 3440x 
+Run:  [2/28] replace_nulls [Device=0 row_width=64 num_rows=32768]
+Pass: Cold: 0.138103ms GPU, 0.141889ms CPU, 0.53s total GPU, 0.66s total wall, 3856x 
+Run:  [3/28] replace_nulls [Device=0 row_width=128 num_rows=32768]
+Pass: Cold: 0.172743ms GPU, 0.176550ms CPU, 0.50s total GPU, 0.59s total wall, 2896x 
+Run:  [4/28] replace_nulls [Device=0 row_width=256 num_rows=32768]
+Pass: Cold: 0.245728ms GPU, 0.249534ms CPU, 0.50s total GPU, 0.57s total wall, 2048x 
+Run:  [5/28] replace_nulls [Device=0 row_width=512 num_rows=32768]
+Pass: Cold: 0.266285ms GPU, 0.270128ms CPU, 0.50s total GPU, 0.56s total wall, 1888x 
+Run:  [6/28] replace_nulls [Device=0 row_width=1024 num_rows=32768]
+Pass: Cold: 0.335696ms GPU, 0.339570ms CPU, 0.73s total GPU, 0.79s total wall, 2160x 
+Run:  [7/28] replace_nulls [Device=0 row_width=2048 num_rows=32768]
+Pass: Cold: 0.499098ms GPU, 0.502947ms CPU, 0.50s total GPU, 0.53s total wall, 1008x 
+Run:  [8/28] replace_nulls [Device=0 row_width=32 num_rows=262144]
+Pass: Cold: 0.305774ms GPU, 0.309624ms CPU, 0.50s total GPU, 0.55s total wall, 1648x 
+Run:  [9/28] replace_nulls [Device=0 row_width=64 num_rows=262144]
+Pass: Cold: 0.403447ms GPU, 0.407472ms CPU, 0.50s total GPU, 0.54s total wall, 1248x 
+Run:  [10/28] replace_nulls [Device=0 row_width=128 num_rows=262144]
+Pass: Cold: 0.587468ms GPU, 0.591613ms CPU, 0.81s total GPU, 0.85s total wall, 1376x 
+Run:  [11/28] replace_nulls [Device=0 row_width=256 num_rows=262144]
+Pass: Cold: 0.916140ms GPU, 0.920252ms CPU, 0.79s total GPU, 0.82s total wall, 864x 
+Run:  [12/28] replace_nulls [Device=0 row_width=512 num_rows=262144]
+Pass: Cold: 1.194125ms GPU, 1.198338ms CPU, 1.76s total GPU, 1.81s total wall, 1472x 
+Run:  [13/28] replace_nulls [Device=0 row_width=1024 num_rows=262144]
+Pass: Cold: 1.835038ms GPU, 1.839196ms CPU, 1.76s total GPU, 1.79s total wall, 960x 
+Run:  [14/28] replace_nulls [Device=0 row_width=2048 num_rows=262144]
+Pass: Cold: 3.203209ms GPU, 3.207386ms CPU, 0.50s total GPU, 0.51s total wall, 157x 
+Run:  [15/28] replace_nulls [Device=0 row_width=32 num_rows=2097152]
+Pass: Cold: 1.806337ms GPU, 1.810674ms CPU, 3.61s total GPU, 3.68s total wall, 2000x 
+Run:  [16/28] replace_nulls [Device=0 row_width=64 num_rows=2097152]
+Pass: Cold: 2.523087ms GPU, 2.527729ms CPU, 2.62s total GPU, 2.66s total wall, 1040x 
+Run:  [17/28] replace_nulls [Device=0 row_width=128 num_rows=2097152]
+Pass: Cold: 3.989147ms GPU, 3.993958ms CPU, 8.17s total GPU, 8.24s total wall, 2048x 
+Run:  [18/28] replace_nulls [Device=0 row_width=256 num_rows=2097152]
+Pass: Cold: 6.082055ms GPU, 6.086734ms CPU, 0.50s total GPU, 0.51s total wall, 83x 
+Run:  [19/28] replace_nulls [Device=0 row_width=512 num_rows=2097152]
+Pass: Cold: 8.200404ms GPU, 8.205089ms CPU, 0.50s total GPU, 0.50s total wall, 61x 
+Run:  [20/28] replace_nulls [Device=0 row_width=1024 num_rows=2097152]
+Skip: Skip benchmarks greater than size_type limit
+Run:  [21/28] replace_nulls [Device=0 row_width=2048 num_rows=2097152]
+Skip: Skip benchmarks greater than size_type limit
+Run:  [22/28] replace_nulls [Device=0 row_width=32 num_rows=16777216]
+Pass: Cold: 13.958133ms GPU, 13.962646ms CPU, 5.14s total GPU, 5.15s total wall, 368x 
+Run:  [23/28] replace_nulls [Device=0 row_width=64 num_rows=16777216]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.99% > 0.50%)
+Pass: Cold: 20.073038ms GPU, 20.077977ms CPU, 14.97s total GPU, 15.00s total wall, 746x 
+Run:  [24/28] replace_nulls [Device=0 row_width=128 num_rows=16777216]
+Skip: Skip benchmarks greater than size_type limit
+Run:  [25/28] replace_nulls [Device=0 row_width=256 num_rows=16777216]
+Skip: Skip benchmarks greater than size_type limit
+Run:  [26/28] replace_nulls [Device=0 row_width=512 num_rows=16777216]
+Skip: Skip benchmarks greater than size_type limit
+Run:  [27/28] replace_nulls [Device=0 row_width=1024 num_rows=16777216]
+Skip: Skip benchmarks greater than size_type limit
+Run:  [28/28] replace_nulls [Device=0 row_width=2048 num_rows=16777216]
+Skip: Skip benchmarks greater than size_type limit
+```
+
+# Benchmark Results
+
+## replace_nulls
+
+### [0] Tesla T4
+
+| row_width | num_rows | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | GlobalMem BW | BWUtil |
+|-----------|----------|---------|------------|--------|------------|--------|--------------|--------|
+|        32 |    32768 |   3440x | 150.147 us | 16.78% | 145.872 us | 16.23% |   7.071 GB/s |  2.21% |
+|        64 |    32768 |   3856x | 141.889 us |  5.30% | 138.103 us |  4.47% |  14.941 GB/s |  4.67% |
+|       128 |    32768 |   2896x | 176.550 us |  3.81% | 172.743 us |  3.07% |  23.876 GB/s |  7.46% |
+|       256 |    32768 |   2048x | 249.534 us |  2.63% | 245.728 us |  2.11% |  33.569 GB/s | 10.49% |
+|       512 |    32768 |   1888x | 270.128 us |  2.46% | 266.285 us |  1.97% |  61.956 GB/s | 19.36% |
+|      1024 |    32768 |   2160x | 339.570 us |  3.13% | 335.696 us |  2.88% |  98.295 GB/s | 30.71% |
+|      2048 |    32768 |   1008x | 502.947 us |  1.32% | 499.098 us |  1.05% | 132.228 GB/s | 41.31% |
+|        32 |   262144 |   1648x | 309.624 us |  1.86% | 305.774 us |  1.35% |  26.906 GB/s |  8.41% |
+|        64 |   262144 |   1248x | 407.472 us |  3.99% | 403.447 us |  3.84% |  40.799 GB/s | 12.75% |
+|       128 |   262144 |   1376x | 591.613 us |  1.51% | 587.468 us |  1.33% |  56.009 GB/s | 17.50% |
+|       256 |   262144 |    864x | 920.252 us |  0.95% | 916.140 us |  0.83% |  71.827 GB/s | 22.44% |
+|       512 |   262144 |   1472x |   1.198 ms |  0.91% |   1.194 ms |  0.83% | 110.215 GB/s | 34.44% |
+|      1024 |   262144 |    960x |   1.839 ms |  0.67% |   1.835 ms |  0.63% | 143.446 GB/s | 44.82% |
+|      2048 |   262144 |    157x |   3.207 ms |  0.43% |   3.203 ms |  0.40% | 164.353 GB/s | 51.35% |
+|        32 |  2097152 |   2000x |   1.811 ms |  0.88% |   1.806 ms |  0.85% |  36.404 GB/s | 11.37% |
+|        64 |  2097152 |   1040x |   2.528 ms |  0.84% |   2.523 ms |  0.81% |  52.136 GB/s | 16.29% |
+|       128 |  2097152 |   2048x |   3.994 ms |  0.81% |   3.989 ms |  0.80% |  65.918 GB/s | 20.60% |
+|       256 |  2097152 |     83x |   6.087 ms |  0.35% |   6.082 ms |  0.35% |  86.466 GB/s | 27.02% |
+|       512 |  2097152 |     61x |   8.205 ms |  0.20% |   8.200 ms |  0.18% | 128.263 GB/s | 40.07% |
+|        32 | 16777216 |    368x |  13.963 ms |  0.66% |  13.958 ms |  0.66% |  37.736 GB/s | 11.79% |
+|        64 | 16777216 |    746x |  20.078 ms |  1.00% |  20.073 ms |  0.99% |  52.490 GB/s | 16.40% |

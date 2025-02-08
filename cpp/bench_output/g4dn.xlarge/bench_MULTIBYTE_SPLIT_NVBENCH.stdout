@@ -1,0 +1,230 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.609104ms GPU, 9.614076ms CPU, 8.46s total GPU, 8.49s total wall, 880x 
+Run:  [2/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.804465ms GPU, 9.809480ms CPU, 6.43s total GPU, 6.46s total wall, 656x 
+Run:  [3/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=0 delim_size=4 delim_percent=1 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.619315ms GPU, 9.624144ms CPU, 5.23s total GPU, 5.25s total wall, 544x 
+Run:  [4/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=1 delim_size=4 delim_percent=1 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.718436ms GPU, 9.723393ms CPU, 7.77s total GPU, 7.80s total wall, 800x 
+Run:  [5/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=0 delim_size=7 delim_percent=1 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.663519ms GPU, 9.668463ms CPU, 11.29s total GPU, 11.33s total wall, 1168x 
+Run:  [6/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=1 delim_size=7 delim_percent=1 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.753448ms GPU, 9.758430ms CPU, 5.93s total GPU, 5.95s total wall, 608x 
+Run:  [7/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=0 delim_size=1 delim_percent=25 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.599029ms GPU, 9.603893ms CPU, 5.07s total GPU, 5.09s total wall, 528x 
+Run:  [8/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=1 delim_size=1 delim_percent=25 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.694986ms GPU, 9.699881ms CPU, 8.22s total GPU, 8.25s total wall, 848x 
+Run:  [9/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=0 delim_size=4 delim_percent=25 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.572486ms GPU, 9.577396ms CPU, 6.28s total GPU, 6.30s total wall, 656x 
+Run:  [10/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=1 delim_size=4 delim_percent=25 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.693522ms GPU, 9.698460ms CPU, 5.27s total GPU, 5.29s total wall, 544x 
+Run:  [11/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=0 delim_size=7 delim_percent=25 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.550770ms GPU, 9.555566ms CPU, 5.65s total GPU, 5.68s total wall, 592x 
+Run:  [12/60] multibyte_split_delimiters [Device=0 T=file strip_delimiters=1 delim_size=7 delim_percent=25 size_approx=2^15 byte_range_percent=50]
+Pass: Cold: 9.699679ms GPU, 9.704535ms CPU, 5.28s total GPU, 5.30s total wall, 544x 
+Run:  [13/60] multibyte_split_source [Device=0 T=device strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 0.148804ms GPU, 0.153619ms CPU, 0.56s total GPU, 0.69s total wall, 3744x 
+Run:  [14/60] multibyte_split_source [Device=0 T=device strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 0.201447ms GPU, 0.205697ms CPU, 0.50s total GPU, 0.59s total wall, 2496x 
+Run:  [15/60] multibyte_split_source [Device=0 T=device strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Pass: Cold: 4.542831ms GPU, 4.546860ms CPU, 7.63s total GPU, 7.69s total wall, 1680x 
+Run:  [16/60] multibyte_split_source [Device=0 T=device strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Pass: Cold: 7.184716ms GPU, 7.189232ms CPU, 12.99s total GPU, 13.06s total wall, 1808x 
+Run:  [17/60] multibyte_split_source [Device=0 T=device strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 0.122384ms GPU, 0.126235ms CPU, 0.50s total GPU, 0.64s total wall, 4096x 
+Run:  [18/60] multibyte_split_source [Device=0 T=device strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 0.222926ms GPU, 0.226936ms CPU, 0.57s total GPU, 0.66s total wall, 2576x 
+Run:  [19/60] multibyte_split_source [Device=0 T=device strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.68% > 0.50%)
+Pass: Cold: 40.527973ms GPU, 40.531928ms CPU, 15.00s total GPU, 15.01s total wall, 370x 
+Run:  [20/60] multibyte_split_source [Device=0 T=device strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Warn: Current measurement timed out (15.03s) while over noise threshold (1.04% > 0.50%)
+Pass: Cold: 68.591382ms GPU, 68.595864ms CPU, 15.02s total GPU, 15.03s total wall, 219x 
+Run:  [21/60] multibyte_split_source [Device=0 T=file strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 9.580597ms GPU, 9.585040ms CPU, 5.06s total GPU, 5.08s total wall, 528x 
+Run:  [22/60] multibyte_split_source [Device=0 T=file strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 9.683051ms GPU, 9.688172ms CPU, 5.27s total GPU, 5.29s total wall, 544x 
+Run:  [23/60] multibyte_split_source [Device=0 T=file strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Warn: Current measurement timed out (15.00s) while over noise threshold (2.71% > 0.50%)
+Pass: Cold: 48.040812ms GPU, 48.044369ms CPU, 14.99s total GPU, 15.00s total wall, 312x 
+Run:  [24/60] multibyte_split_source [Device=0 T=file strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Warn: Current measurement timed out (15.05s) while over noise threshold (2.84% > 0.50%)
+Pass: Cold: 51.323924ms GPU, 51.327844ms CPU, 15.04s total GPU, 15.05s total wall, 293x 
+Run:  [25/60] multibyte_split_source [Device=0 T=file strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 9.617361ms GPU, 9.622171ms CPU, 13.85s total GPU, 13.91s total wall, 1440x 
+Run:  [26/60] multibyte_split_source [Device=0 T=file strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 9.861233ms GPU, 9.866172ms CPU, 13.41s total GPU, 13.46s total wall, 1360x 
+Run:  [27/60] multibyte_split_source [Device=0 T=file strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Warn: Current measurement timed out (15.22s) while over noise threshold (2.35% > 0.50%)
+Pass: Cold: 241.471398ms GPU, 241.472558ms CPU, 15.21s total GPU, 15.22s total wall, 63x 
+Run:  [28/60] multibyte_split_source [Device=0 T=file strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Warn: Current measurement timed out (15.02s) while over noise threshold (2.14% > 0.50%)
+Pass: Cold: 263.549355ms GPU, 263.551422ms CPU, 15.02s total GPU, 15.02s total wall, 57x 
+Run:  [29/60] multibyte_split_source [Device=0 T=file_datasource strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 0.167130ms GPU, 0.170993ms CPU, 0.50s total GPU, 0.60s total wall, 2992x 
+Run:  [30/60] multibyte_split_source [Device=0 T=file_datasource strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 0.230362ms GPU, 0.234275ms CPU, 0.50s total GPU, 0.57s total wall, 2176x 
+Run:  [31/60] multibyte_split_source [Device=0 T=file_datasource strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Warn: Current measurement timed out (15.02s) while over noise threshold (1.56% > 0.50%)
+Pass: Cold: 33.933385ms GPU, 33.937123ms CPU, 15.00s total GPU, 15.02s total wall, 442x 
+Run:  [32/60] multibyte_split_source [Device=0 T=file_datasource strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Warn: Current measurement timed out (15.03s) while over noise threshold (1.56% > 0.50%)
+Pass: Cold: 35.912664ms GPU, 35.917145ms CPU, 15.01s total GPU, 15.03s total wall, 418x 
+Run:  [33/60] multibyte_split_source [Device=0 T=file_datasource strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 0.167668ms GPU, 0.171443ms CPU, 0.50s total GPU, 0.60s total wall, 2992x 
+Run:  [34/60] multibyte_split_source [Device=0 T=file_datasource strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 0.265394ms GPU, 0.269524ms CPU, 0.50s total GPU, 0.56s total wall, 1888x 
+Run:  [35/60] multibyte_split_source [Device=0 T=file_datasource strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Warn: Current measurement timed out (15.15s) while over noise threshold (1.20% > 0.50%)
+Pass: Cold: 216.401114ms GPU, 216.402776ms CPU, 15.15s total GPU, 15.15s total wall, 70x 
+Run:  [36/60] multibyte_split_source [Device=0 T=file_datasource strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Pass: Cold: 234.690257ms GPU, 234.692370ms CPU, 1.64s total GPU, 1.64s total wall, 7x 
+Run:  [37/60] multibyte_split_source [Device=0 T=host strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 0.127002ms GPU, 0.130827ms CPU, 0.50s total GPU, 0.63s total wall, 3952x 
+Run:  [38/60] multibyte_split_source [Device=0 T=host strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 0.185547ms GPU, 0.189502ms CPU, 0.50s total GPU, 0.59s total wall, 2704x 
+Run:  [39/60] multibyte_split_source [Device=0 T=host strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Pass: Cold: 37.509280ms GPU, 37.512791ms CPU, 0.53s total GPU, 0.53s total wall, 14x 
+Run:  [40/60] multibyte_split_source [Device=0 T=host strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Pass: Cold: 39.666454ms GPU, 39.670294ms CPU, 0.52s total GPU, 0.52s total wall, 13x 
+Run:  [41/60] multibyte_split_source [Device=0 T=host strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 0.138119ms GPU, 0.141941ms CPU, 0.50s total GPU, 0.62s total wall, 3632x 
+Run:  [42/60] multibyte_split_source [Device=0 T=host strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 0.234534ms GPU, 0.238487ms CPU, 0.50s total GPU, 0.57s total wall, 2144x 
+Run:  [43/60] multibyte_split_source [Device=0 T=host strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Pass: Cold: 244.453827ms GPU, 244.454959ms CPU, 1.22s total GPU, 1.22s total wall, 5x 
+Run:  [44/60] multibyte_split_source [Device=0 T=host strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Pass: Cold: 265.530676ms GPU, 265.532138ms CPU, 1.33s total GPU, 1.33s total wall, 5x 
+Run:  [45/60] multibyte_split_source [Device=0 T=host_pinned strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 0.128228ms GPU, 0.132107ms CPU, 0.50s total GPU, 0.63s total wall, 3904x 
+Run:  [46/60] multibyte_split_source [Device=0 T=host_pinned strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 0.188661ms GPU, 0.192568ms CPU, 0.50s total GPU, 0.59s total wall, 2656x 
+Run:  [47/60] multibyte_split_source [Device=0 T=host_pinned strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Pass: Cold: 28.365419ms GPU, 28.368860ms CPU, 0.51s total GPU, 0.51s total wall, 18x 
+Run:  [48/60] multibyte_split_source [Device=0 T=host_pinned strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Pass: Cold: 30.540454ms GPU, 30.544240ms CPU, 0.52s total GPU, 0.52s total wall, 17x 
+Run:  [49/60] multibyte_split_source [Device=0 T=host_pinned strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 0.132843ms GPU, 0.136697ms CPU, 0.50s total GPU, 0.63s total wall, 3776x 
+Run:  [50/60] multibyte_split_source [Device=0 T=host_pinned strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 0.232592ms GPU, 0.236570ms CPU, 0.59s total GPU, 0.68s total wall, 2544x 
+Run:  [51/60] multibyte_split_source [Device=0 T=host_pinned strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Pass: Cold: 183.997327ms GPU, 183.999169ms CPU, 0.92s total GPU, 0.92s total wall, 5x 
+Run:  [52/60] multibyte_split_source [Device=0 T=host_pinned strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Pass: Cold: 204.898395ms GPU, 204.900383ms CPU, 1.02s total GPU, 1.02s total wall, 5x 
+Run:  [53/60] multibyte_split_source [Device=0 T=file_bgzip strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 0.997490ms GPU, 1.001366ms CPU, 1.80s total GPU, 1.86s total wall, 1808x 
+Run:  [54/60] multibyte_split_source [Device=0 T=file_bgzip strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=10]
+Pass: Cold: 1.060181ms GPU, 1.064146ms CPU, 1.97s total GPU, 2.03s total wall, 1856x 
+Run:  [55/60] multibyte_split_source [Device=0 T=file_bgzip strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Warn: Current measurement timed out (15.06s) while over noise threshold (3.88% > 0.50%)
+Pass: Cold: 80.916875ms GPU, 80.920264ms CPU, 15.05s total GPU, 15.06s total wall, 186x 
+Run:  [56/60] multibyte_split_source [Device=0 T=file_bgzip strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=10]
+Warn: Current measurement timed out (15.08s) while over noise threshold (5.20% > 0.50%)
+Pass: Cold: 84.187217ms GPU, 84.190740ms CPU, 15.07s total GPU, 15.08s total wall, 179x 
+Run:  [57/60] multibyte_split_source [Device=0 T=file_bgzip strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 1.007220ms GPU, 1.011061ms CPU, 1.95s total GPU, 2.02s total wall, 1936x 
+Run:  [58/60] multibyte_split_source [Device=0 T=file_bgzip strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^15 byte_range_percent=100]
+Pass: Cold: 1.112726ms GPU, 1.116712ms CPU, 2.60s total GPU, 2.68s total wall, 2336x 
+Run:  [59/60] multibyte_split_source [Device=0 T=file_bgzip strip_delimiters=0 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Warn: Current measurement timed out (15.13s) while over noise threshold (0.73% > 0.50%)
+Pass: Cold: 280.136858ms GPU, 280.137716ms CPU, 15.13s total GPU, 15.13s total wall, 54x 
+Run:  [60/60] multibyte_split_source [Device=0 T=file_bgzip strip_delimiters=1 delim_size=1 delim_percent=1 size_approx=2^30 byte_range_percent=100]
+Warn: Current measurement timed out (15.09s) while over noise threshold (1.75% > 0.50%)
+Pass: Cold: 314.403930ms GPU, 314.405877ms CPU, 15.09s total GPU, 15.09s total wall, 48x 
+```
+
+# Benchmark Results
+
+## multibyte_split_delimiters
+
+### [0] Tesla T4
+
+|  T   | strip_delimiters | delim_size | delim_percent | size_approx  | byte_range_percent | Samples | CPU Time | Noise | GPU Time | Noise | Peak Memory Usage | Encoded file size |
+|------|------------------|------------|---------------|--------------|--------------------|---------|----------|-------|----------|-------|-------------------|-------------------|
+| file |                0 |          1 |             1 | 2^15 = 32768 |                 50 |    880x | 9.614 ms | 3.21% | 9.609 ms | 3.21% |       576.415 MiB |        15.489 KiB |
+| file |                1 |          1 |             1 | 2^15 = 32768 |                 50 |    656x | 9.809 ms | 2.98% | 9.804 ms | 2.98% |       576.415 MiB |        15.489 KiB |
+| file |                0 |          4 |             1 | 2^15 = 32768 |                 50 |    544x | 9.624 ms | 3.34% | 9.619 ms | 3.34% |       576.415 MiB |        15.883 KiB |
+| file |                1 |          4 |             1 | 2^15 = 32768 |                 50 |    800x | 9.723 ms | 3.42% | 9.718 ms | 3.42% |       576.415 MiB |        15.883 KiB |
+| file |                0 |          7 |             1 | 2^15 = 32768 |                 50 |   1168x | 9.668 ms | 2.59% | 9.664 ms | 2.59% |       576.416 MiB |        16.031 KiB |
+| file |                1 |          7 |             1 | 2^15 = 32768 |                 50 |    608x | 9.758 ms | 2.99% | 9.753 ms | 2.99% |       576.416 MiB |        16.031 KiB |
+| file |                0 |          1 |            25 | 2^15 = 32768 |                 50 |    528x | 9.604 ms | 3.45% | 9.599 ms | 3.45% |       576.451 MiB |        13.885 KiB |
+| file |                1 |          1 |            25 | 2^15 = 32768 |                 50 |    848x | 9.700 ms | 3.34% | 9.695 ms | 3.34% |       576.447 MiB |        13.885 KiB |
+| file |                0 |          4 |            25 | 2^15 = 32768 |                 50 |    656x | 9.577 ms | 3.69% | 9.572 ms | 3.69% |       576.430 MiB |        15.346 KiB |
+| file |                1 |          4 |            25 | 2^15 = 32768 |                 50 |    544x | 9.698 ms | 3.54% | 9.694 ms | 3.54% |       576.426 MiB |        15.346 KiB |
+| file |                0 |          7 |            25 | 2^15 = 32768 |                 50 |    592x | 9.556 ms | 4.01% | 9.551 ms | 4.01% |       576.416 MiB |        15.360 KiB |
+| file |                1 |          7 |            25 | 2^15 = 32768 |                 50 |    544x | 9.705 ms | 3.70% | 9.700 ms | 3.69% |       576.412 MiB |        15.360 KiB |
+
+## multibyte_split_source
+
+### [0] Tesla T4
+
+|        T        | strip_delimiters | delim_size | delim_percent |    size_approx    | byte_range_percent | Samples |  CPU Time  | Noise  |  GPU Time  | Noise | Peak Memory Usage | Encoded file size |
+|-----------------|------------------|------------|---------------|-------------------|--------------------|---------|------------|--------|------------|-------|-------------------|-------------------|
+|          device |                0 |          1 |             1 |      2^15 = 32768 |                 10 |   3744x | 153.619 us |  6.44% | 148.804 us | 5.48% |       576.383 MiB |         3.098 KiB |
+|          device |                1 |          1 |             1 |      2^15 = 32768 |                 10 |   2496x | 205.697 us |  7.35% | 201.447 us | 6.93% |       576.383 MiB |         3.098 KiB |
+|          device |                0 |          1 |             1 | 2^30 = 1073741824 |                 10 |   1680x |   4.547 ms |  0.70% |   4.543 ms | 0.69% |       929.351 MiB |       101.184 MiB |
+|          device |                1 |          1 |             1 | 2^30 = 1073741824 |                 10 |   1808x |   7.189 ms |  0.96% |   7.185 ms | 0.96% |       927.467 MiB |       101.184 MiB |
+|          device |                0 |          1 |             1 |      2^15 = 32768 |                100 |   4096x | 126.235 us |  5.92% | 122.384 us | 4.96% |       576.444 MiB |        30.979 KiB |
+|          device |                1 |          1 |             1 |      2^15 = 32768 |                100 |   2576x | 226.936 us |  8.60% | 222.926 us | 8.37% |       576.443 MiB |        30.979 KiB |
+|          device |                0 |          1 |             1 | 2^30 = 1073741824 |                100 |    370x |  40.532 ms |  0.68% |  40.528 ms | 0.68% |         3.885 GiB |      1011.838 MiB |
+|          device |                1 |          1 |             1 | 2^30 = 1073741824 |                100 |    219x |  68.596 ms |  1.04% |  68.591 ms | 1.04% |         3.867 GiB |      1011.838 MiB |
+|            file |                0 |          1 |             1 |      2^15 = 32768 |                 10 |    528x |   9.585 ms |  3.79% |   9.581 ms | 3.79% |       576.396 MiB |         3.098 KiB |
+|            file |                1 |          1 |             1 |      2^15 = 32768 |                 10 |    544x |   9.688 ms |  3.96% |   9.683 ms | 3.96% |       576.396 MiB |         3.098 KiB |
+|            file |                0 |          1 |             1 | 2^30 = 1073741824 |                 10 |    312x |  48.044 ms |  2.71% |  48.041 ms | 2.71% |       961.351 MiB |       101.184 MiB |
+|            file |                1 |          1 |             1 | 2^30 = 1073741824 |                 10 |    293x |  51.328 ms |  2.84% |  51.324 ms | 2.84% |       959.467 MiB |       101.184 MiB |
+|            file |                0 |          1 |             1 |      2^15 = 32768 |                100 |   1440x |   9.622 ms |  2.99% |   9.617 ms | 2.98% |       576.444 MiB |        30.979 KiB |
+|            file |                1 |          1 |             1 |      2^15 = 32768 |                100 |   1360x |   9.866 ms |  2.62% |   9.861 ms | 2.62% |       576.443 MiB |        30.979 KiB |
+|            file |                0 |          1 |             1 | 2^30 = 1073741824 |                100 |     63x | 241.473 ms |  2.35% | 241.471 ms | 2.35% |         3.885 GiB |      1011.838 MiB |
+|            file |                1 |          1 |             1 | 2^30 = 1073741824 |                100 |     57x | 263.551 ms |  2.14% | 263.549 ms | 2.14% |         3.867 GiB |      1011.838 MiB |
+| file_datasource |                0 |          1 |             1 |      2^15 = 32768 |                 10 |   2992x | 170.993 us |  8.59% | 167.130 us | 8.22% |       576.396 MiB |         3.098 KiB |
+| file_datasource |                1 |          1 |             1 |      2^15 = 32768 |                 10 |   2176x | 234.275 us |  4.47% | 230.362 us | 4.10% |       576.396 MiB |         3.098 KiB |
+| file_datasource |                0 |          1 |             1 | 2^30 = 1073741824 |                 10 |    442x |  33.937 ms |  1.56% |  33.933 ms | 1.56% |       961.351 MiB |       101.184 MiB |
+| file_datasource |                1 |          1 |             1 | 2^30 = 1073741824 |                 10 |    418x |  35.917 ms |  1.56% |  35.913 ms | 1.56% |       959.467 MiB |       101.184 MiB |
+| file_datasource |                0 |          1 |             1 |      2^15 = 32768 |                100 |   2992x | 171.443 us |  5.33% | 167.668 us | 4.83% |       576.444 MiB |        30.979 KiB |
+| file_datasource |                1 |          1 |             1 |      2^15 = 32768 |                100 |   1888x | 269.524 us |  3.95% | 265.394 us | 3.59% |       576.443 MiB |        30.979 KiB |
+| file_datasource |                0 |          1 |             1 | 2^30 = 1073741824 |                100 |     70x | 216.403 ms |  1.20% | 216.401 ms | 1.20% |         3.885 GiB |      1011.838 MiB |
+| file_datasource |                1 |          1 |             1 | 2^30 = 1073741824 |                100 |      7x | 234.692 ms |  0.47% | 234.690 ms | 0.47% |         3.867 GiB |      1011.838 MiB |
+|            host |                0 |          1 |             1 |      2^15 = 32768 |                 10 |   3952x | 130.827 us |  5.26% | 127.002 us | 4.30% |       576.396 MiB |         3.098 KiB |
+|            host |                1 |          1 |             1 |      2^15 = 32768 |                 10 |   2704x | 189.502 us |  3.79% | 185.547 us | 3.12% |       576.396 MiB |         3.098 KiB |
+|            host |                0 |          1 |             1 | 2^30 = 1073741824 |                 10 |     14x |  37.513 ms |  0.30% |  37.509 ms | 0.30% |       961.351 MiB |       101.184 MiB |
+|            host |                1 |          1 |             1 | 2^30 = 1073741824 |                 10 |     13x |  39.670 ms |  0.29% |  39.666 ms | 0.29% |       959.467 MiB |       101.184 MiB |
+|            host |                0 |          1 |             1 |      2^15 = 32768 |                100 |   3632x | 141.941 us | 10.20% | 138.119 us | 9.81% |       576.444 MiB |        30.979 KiB |
+|            host |                1 |          1 |             1 |      2^15 = 32768 |                100 |   2144x | 238.487 us |  3.42% | 234.534 us | 2.97% |       576.443 MiB |        30.979 KiB |
+|            host |                0 |          1 |             1 | 2^30 = 1073741824 |                100 |      5x | 244.455 ms |  0.44% | 244.454 ms | 0.44% |         3.885 GiB |      1011.838 MiB |
+|            host |                1 |          1 |             1 | 2^30 = 1073741824 |                100 |      5x | 265.532 ms |  0.26% | 265.531 ms | 0.26% |         3.867 GiB |      1011.838 MiB |
+|     host_pinned |                0 |          1 |             1 |      2^15 = 32768 |                 10 |   3904x | 132.107 us |  5.32% | 128.228 us | 4.34% |       576.396 MiB |         3.098 KiB |
+|     host_pinned |                1 |          1 |             1 |      2^15 = 32768 |                 10 |   2656x | 192.568 us |  6.51% | 188.661 us | 6.17% |       576.396 MiB |         3.098 KiB |
+|     host_pinned |                0 |          1 |             1 | 2^30 = 1073741824 |                 10 |     18x |  28.369 ms |  0.02% |  28.365 ms | 0.02% |       961.351 MiB |       101.184 MiB |
+|     host_pinned |                1 |          1 |             1 | 2^30 = 1073741824 |                 10 |     17x |  30.544 ms |  0.04% |  30.540 ms | 0.04% |       959.467 MiB |       101.184 MiB |
+|     host_pinned |                0 |          1 |             1 |      2^15 = 32768 |                100 |   3776x | 136.697 us |  5.46% | 132.843 us | 4.61% |       576.444 MiB |        30.979 KiB |
+|     host_pinned |                1 |          1 |             1 |      2^15 = 32768 |                100 |   2544x | 236.570 us |  5.17% | 232.592 us | 4.86% |       576.443 MiB |        30.979 KiB |
+|     host_pinned |                0 |          1 |             1 | 2^30 = 1073741824 |                100 |      5x | 183.999 ms |  0.01% | 183.997 ms | 0.01% |         3.885 GiB |      1011.838 MiB |
+|     host_pinned |                1 |          1 |             1 | 2^30 = 1073741824 |                100 |      5x | 204.900 ms |  0.03% | 204.898 ms | 0.03% |         3.867 GiB |      1011.838 MiB |
+|      file_bgzip |                0 |          1 |             1 |      2^15 = 32768 |                 10 |   1808x |   1.001 ms |  1.09% | 997.490 us | 1.02% |       576.432 MiB |         3.098 KiB |
+|      file_bgzip |                1 |          1 |             1 |      2^15 = 32768 |                 10 |   1856x |   1.064 ms |  1.33% |   1.060 ms | 1.27% |       576.432 MiB |         3.098 KiB |
+|      file_bgzip |                0 |          1 |             1 | 2^30 = 1073741824 |                 10 |    186x |  80.920 ms |  3.88% |  80.917 ms | 3.88% |         1.013 GiB |       101.184 MiB |
+|      file_bgzip |                1 |          1 |             1 | 2^30 = 1073741824 |                 10 |    179x |  84.191 ms |  5.20% |  84.187 ms | 5.20% |         1.011 GiB |       101.184 MiB |
+|      file_bgzip |                0 |          1 |             1 |      2^15 = 32768 |                100 |   1936x |   1.011 ms |  1.17% |   1.007 ms | 1.10% |       576.479 MiB |        30.979 KiB |
+|      file_bgzip |                1 |          1 |             1 |      2^15 = 32768 |                100 |   2336x |   1.117 ms |  1.41% |   1.113 ms | 1.36% |       576.479 MiB |        30.979 KiB |
+|      file_bgzip |                0 |          1 |             1 | 2^30 = 1073741824 |                100 |     54x | 280.138 ms |  0.73% | 280.137 ms | 0.73% |         3.959 GiB |      1011.838 MiB |
+|      file_bgzip |                1 |          1 |             1 | 2^30 = 1073741824 |                100 |     48x | 314.406 ms |  1.75% | 314.404 ms | 1.75% |         3.941 GiB |      1011.838 MiB |

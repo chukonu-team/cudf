@@ -1,0 +1,4 @@
+[2025-02-07 15:21:37.596] [RMM] [error] [A][Stream 0x1][Upstream 4000000000B][FAILURE maximum pool size exceeded]
+[2025-02-07 15:21:45.965] [RMM] [error] [A][Stream 0x1][Upstream 4000000000B][FAILURE maximum pool size exceeded]
+/home/ubuntu/cudf/cpp/build/_deps/nvbench-src/nvbench/blocking_kernel.cu:113: Cuda API call returned error: cudaErrorIllegalAddress: an illegal memory access was encountered
+Command: 'cudaHostUnregister(&m_host_flag)'

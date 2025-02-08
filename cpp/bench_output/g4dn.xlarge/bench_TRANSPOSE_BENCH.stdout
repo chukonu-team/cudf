@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------------------------
+Benchmark                                             Time             CPU   Iterations UserCounters...
+-------------------------------------------------------------------------------------------------------
+Transpose/transpose_simple/4/manual_time          0.063 ms        0.092 ms        11091 bytes_per_second=9.65244M/s
+Transpose/transpose_simple/16/manual_time         0.066 ms        0.094 ms        10693 bytes_per_second=59.6026M/s
+Transpose/transpose_simple/64/manual_time         0.078 ms        0.106 ms         8780 bytes_per_second=503.181M/s
+Transpose/transpose_simple/256/manual_time        0.137 ms        0.163 ms         5141 bytes_per_second=3.7894G/s
+Transpose/transpose_simple/1024/manual_time       0.551 ms        0.577 ms         1257 bytes_per_second=14.6206G/s
+Transpose/transpose_simple/4096/manual_time        5.04 ms         5.07 ms          100 bytes_per_second=25.5905G/s
+Transpose/transpose_simple/16384/manual_time        199 ms          199 ms            3 bytes_per_second=10.3608G/s
+Transpose/transpose_simple/32768/manual_time       2093 ms         2091 ms            1 bytes_per_second=3.9411G/s

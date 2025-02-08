@@ -1,0 +1,491 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/124] range_grouped_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=0 cardinality=10]
+Pass: Cold: 0.278797ms GPU, 0.284076ms CPU, 0.59s total GPU, 0.66s total wall, 2112x 
+Run:  [2/124] range_grouped_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=0 cardinality=10]
+Pass: Cold: 4.016211ms GPU, 4.020709ms CPU, 5.08s total GPU, 5.12s total wall, 1264x 
+Run:  [3/124] range_grouped_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=0 cardinality=10]
+Pass: Cold: 1074.955089ms GPU, 1074.951190ms CPU, 11.82s total GPU, 11.82s total wall, 11x 
+Run:  [4/124] range_grouped_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=1 cardinality=10]
+Pass: Cold: 0.433806ms GPU, 0.437874ms CPU, 0.90s total GPU, 0.96s total wall, 2064x 
+Run:  [5/124] range_grouped_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=1 cardinality=10]
+Pass: Cold: 50.779989ms GPU, 50.783747ms CPU, 4.06s total GPU, 4.07s total wall, 80x 
+Run:  [6/124] range_grouped_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=1 cardinality=10]
+Warn: Current measurement timed out (16.44s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (16.44s) before accumulating min_samples (4 < 10)
+Pass: Cold: 4110.921570ms GPU, 4110.890004ms CPU, 16.44s total GPU, 16.44s total wall, 4x 
+Run:  [7/124] range_grouped_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=0 cardinality=100]
+Pass: Cold: 0.233649ms GPU, 0.237753ms CPU, 0.50s total GPU, 0.57s total wall, 2144x 
+Run:  [8/124] range_grouped_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=0 cardinality=100]
+Pass: Cold: 3.173273ms GPU, 3.177730ms CPU, 6.25s total GPU, 6.31s total wall, 1968x 
+Run:  [9/124] range_grouped_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=0 cardinality=100]
+Pass: Cold: 332.111589ms GPU, 332.113539ms CPU, 3.65s total GPU, 3.65s total wall, 11x 
+Run:  [10/124] range_grouped_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=1 cardinality=100]
+Pass: Cold: 0.260597ms GPU, 0.264688ms CPU, 0.50s total GPU, 0.56s total wall, 1920x 
+Run:  [11/124] range_grouped_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=1 cardinality=100]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.75% > 0.50%)
+Pass: Cold: 8.155309ms GPU, 8.159251ms CPU, 14.94s total GPU, 15.00s total wall, 1832x 
+Run:  [12/124] range_grouped_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=1 cardinality=100]
+Pass: Cold: 692.394232ms GPU, 692.392940ms CPU, 7.62s total GPU, 7.62s total wall, 11x 
+Run:  [13/124] range_grouped_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=0 cardinality=1000000]
+Pass: Cold: 0.231492ms GPU, 0.235603ms CPU, 0.50s total GPU, 0.57s total wall, 2160x 
+Run:  [14/124] range_grouped_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=0 cardinality=1000000]
+Pass: Cold: 2.473298ms GPU, 2.477590ms CPU, 0.50s total GPU, 0.51s total wall, 203x 
+Run:  [15/124] range_grouped_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=0 cardinality=1000000]
+Pass: Cold: 144.410565ms GPU, 144.414265ms CPU, 1.59s total GPU, 1.59s total wall, 11x 
+Run:  [16/124] range_grouped_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=1 cardinality=1000000]
+Pass: Cold: 0.234973ms GPU, 0.239063ms CPU, 0.50s total GPU, 0.57s total wall, 2128x 
+Run:  [17/124] range_grouped_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=1 cardinality=1000000]
+Pass: Cold: 2.477018ms GPU, 2.481372ms CPU, 4.08s total GPU, 4.14s total wall, 1648x 
+Run:  [18/124] range_grouped_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=1 cardinality=1000000]
+Pass: Cold: 144.278542ms GPU, 144.282463ms CPU, 1.59s total GPU, 1.59s total wall, 11x 
+Run:  [19/124] range_grouped_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=0 cardinality=100000000]
+Pass: Cold: 0.233174ms GPU, 0.237235ms CPU, 0.53s total GPU, 0.60s total wall, 2256x 
+Run:  [20/124] range_grouped_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=0 cardinality=100000000]
+Pass: Cold: 2.500658ms GPU, 2.504900ms CPU, 0.50s total GPU, 0.51s total wall, 200x 
+Run:  [21/124] range_grouped_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=0 cardinality=100000000]
+Pass: Cold: 141.473573ms GPU, 141.477234ms CPU, 1.56s total GPU, 1.56s total wall, 11x 
+Run:  [22/124] range_grouped_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=1 cardinality=100000000]
+Pass: Cold: 0.235131ms GPU, 0.239220ms CPU, 0.50s total GPU, 0.57s total wall, 2128x 
+Run:  [23/124] range_grouped_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=1 cardinality=100000000]
+Pass: Cold: 2.494457ms GPU, 2.498697ms CPU, 0.50s total GPU, 0.51s total wall, 201x 
+Run:  [24/124] range_grouped_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=1 cardinality=100000000]
+Pass: Cold: 141.330375ms GPU, 141.334234ms CPU, 1.55s total GPU, 1.56s total wall, 11x 
+Run:  [25/124] range_grouped_rolling_sum_large_windows [Device=0 num_rows=2^28 preceding_range=10000 following_range=0 has_nulls=0 cardinality=100]
+Warn: Current measurement timed out (18.35s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (18.35s) before accumulating min_samples (2 < 10)
+Pass: Cold: 9176.015137ms GPU, 9175.945940ms CPU, 18.35s total GPU, 18.35s total wall, 2x 
+Run:  [26/124] range_grouped_rolling_sum_large_windows [Device=0 num_rows=2^28 preceding_range=40000 following_range=0 has_nulls=0 cardinality=100]
+Warn: Current measurement timed out (36.71s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (36.71s) before accumulating min_samples (1 < 10)
+Pass: Cold: 36715.210938ms GPU, 36714.923448ms CPU, 36.72s total GPU, 36.71s total wall, 1x 
+Run:  [27/124] range_grouped_rolling_sum_large_windows [Device=0 num_rows=2^28 preceding_range=10000 following_range=0 has_nulls=1 cardinality=100]
+Warn: Current measurement timed out (19.09s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (19.09s) before accumulating min_samples (2 < 10)
+Pass: Cold: 9545.265625ms GPU, 9545.197304ms CPU, 19.09s total GPU, 19.09s total wall, 2x 
+Run:  [28/124] range_grouped_rolling_sum_large_windows [Device=0 num_rows=2^28 preceding_range=40000 following_range=0 has_nulls=1 cardinality=100]
+Warn: Current measurement timed out (37.09s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (37.09s) before accumulating min_samples (1 < 10)
+Pass: Cold: 37085.628906ms GPU, 37085.335915ms CPU, 37.09s total GPU, 37.09s total wall, 1x 
+Run:  [29/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1 cardinality=10]
+Pass: Cold: 0.132784ms GPU, 0.136791ms CPU, 0.50s total GPU, 0.63s total wall, 3776x 
+Run:  [30/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1 cardinality=10]
+Pass: Cold: 72.066967ms GPU, 72.071159ms CPU, 0.79s total GPU, 0.79s total wall, 11x 
+Run:  [31/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1 cardinality=10]
+Pass: Cold: 0.132980ms GPU, 0.137044ms CPU, 0.50s total GPU, 0.63s total wall, 3760x 
+Run:  [32/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1 cardinality=10]
+Pass: Cold: 73.284298ms GPU, 73.288401ms CPU, 0.81s total GPU, 0.81s total wall, 11x 
+Run:  [33/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1 cardinality=100]
+Pass: Cold: 0.132533ms GPU, 0.136567ms CPU, 0.50s total GPU, 0.63s total wall, 3776x 
+Run:  [34/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1 cardinality=100]
+Pass: Cold: 72.103430ms GPU, 72.107309ms CPU, 0.79s total GPU, 0.79s total wall, 11x 
+Run:  [35/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1 cardinality=100]
+Pass: Cold: 0.133593ms GPU, 0.137665ms CPU, 0.56s total GPU, 0.71s total wall, 4224x 
+Run:  [36/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1 cardinality=100]
+Pass: Cold: 73.281536ms GPU, 73.285391ms CPU, 0.81s total GPU, 0.81s total wall, 11x 
+Run:  [37/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1 cardinality=1000000]
+Pass: Cold: 0.134972ms GPU, 0.139036ms CPU, 0.50s total GPU, 0.63s total wall, 3712x 
+Run:  [38/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1 cardinality=1000000]
+Pass: Cold: 74.234807ms GPU, 74.238702ms CPU, 0.82s total GPU, 0.82s total wall, 11x 
+Run:  [39/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1 cardinality=1000000]
+Pass: Cold: 0.134664ms GPU, 0.138722ms CPU, 0.50s total GPU, 0.63s total wall, 3728x 
+Run:  [40/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1 cardinality=1000000]
+Pass: Cold: 76.149544ms GPU, 76.153628ms CPU, 0.84s total GPU, 0.84s total wall, 11x 
+Run:  [41/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1 cardinality=100000000]
+Pass: Cold: 0.134670ms GPU, 0.138758ms CPU, 0.50s total GPU, 0.63s total wall, 3728x 
+Run:  [42/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1 cardinality=100000000]
+Pass: Cold: 84.748095ms GPU, 84.752135ms CPU, 0.93s total GPU, 0.93s total wall, 11x 
+Run:  [43/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1 cardinality=100000000]
+Pass: Cold: 0.133921ms GPU, 0.138003ms CPU, 0.50s total GPU, 0.63s total wall, 3744x 
+Run:  [44/124] row_grouped_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1 cardinality=100000000]
+Pass: Cold: 88.401006ms GPU, 88.405114ms CPU, 0.97s total GPU, 0.97s total wall, 11x 
+Run:  [45/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1 cardinality=10]
+Pass: Cold: 0.132627ms GPU, 0.136679ms CPU, 0.50s total GPU, 0.63s total wall, 3776x 
+Run:  [46/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1 cardinality=10]
+Pass: Cold: 76.420000ms GPU, 76.423843ms CPU, 0.84s total GPU, 0.84s total wall, 11x 
+Run:  [47/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1 cardinality=10]
+Pass: Cold: 0.132507ms GPU, 0.136573ms CPU, 0.50s total GPU, 0.63s total wall, 3776x 
+Run:  [48/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1 cardinality=10]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.51% > 0.50%)
+Pass: Cold: 92.000734ms GPU, 92.004624ms CPU, 15.00s total GPU, 15.00s total wall, 163x 
+Run:  [49/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1 cardinality=100]
+Pass: Cold: 0.132223ms GPU, 0.136291ms CPU, 0.50s total GPU, 0.63s total wall, 3792x 
+Run:  [50/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1 cardinality=100]
+Pass: Cold: 76.366674ms GPU, 76.370607ms CPU, 0.84s total GPU, 0.84s total wall, 11x 
+Run:  [51/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1 cardinality=100]
+Pass: Cold: 0.132550ms GPU, 0.136626ms CPU, 0.50s total GPU, 0.63s total wall, 3776x 
+Run:  [52/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1 cardinality=100]
+Pass: Cold: 92.064464ms GPU, 92.068226ms CPU, 1.38s total GPU, 1.38s total wall, 15x 
+Run:  [53/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1 cardinality=1000000]
+Pass: Cold: 0.133811ms GPU, 0.137866ms CPU, 0.57s total GPU, 0.71s total wall, 4224x 
+Run:  [54/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1 cardinality=1000000]
+Pass: Cold: 78.872110ms GPU, 78.876057ms CPU, 0.87s total GPU, 0.87s total wall, 11x 
+Run:  [55/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1 cardinality=1000000]
+Pass: Cold: 0.134589ms GPU, 0.138675ms CPU, 0.50s total GPU, 0.63s total wall, 3728x 
+Run:  [56/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1 cardinality=1000000]
+Pass: Cold: 95.906245ms GPU, 95.910009ms CPU, 1.05s total GPU, 1.06s total wall, 11x 
+Run:  [57/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1 cardinality=100000000]
+Pass: Cold: 0.132841ms GPU, 0.136934ms CPU, 0.50s total GPU, 0.63s total wall, 3776x 
+Run:  [58/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1 cardinality=100000000]
+Pass: Cold: 88.945068ms GPU, 88.948851ms CPU, 0.98s total GPU, 0.98s total wall, 11x 
+Run:  [59/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1 cardinality=100000000]
+Pass: Cold: 0.133010ms GPU, 0.137079ms CPU, 0.50s total GPU, 0.63s total wall, 3760x 
+Run:  [60/124] row_grouped_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1 cardinality=100000000]
+Pass: Cold: 110.389778ms GPU, 110.393397ms CPU, 1.21s total GPU, 1.21s total wall, 11x 
+Run:  [61/124] row_grouped_rolling_sum_large_windows [Device=0 T=I32 num_rows=2^28 preceding_size=10000 following_size=0 min_periods=1 cardinality=10]
+Warn: Current measurement timed out (18.02s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (18.02s) before accumulating min_samples (4 < 10)
+Pass: Cold: 4505.414551ms GPU, 4505.381833ms CPU, 18.02s total GPU, 18.02s total wall, 4x 
+Run:  [62/124] row_grouped_rolling_sum_large_windows [Device=0 T=I32 num_rows=2^28 preceding_size=40000 following_size=0 min_periods=1 cardinality=10]
+Warn: Current measurement timed out (17.39s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (17.39s) before accumulating min_samples (1 < 10)
+Pass: Cold: 17385.103516ms GPU, 17384.968518ms CPU, 17.39s total GPU, 17.39s total wall, 1x 
+Run:  [63/124] row_grouped_rolling_sum_large_windows [Device=0 T=I32 num_rows=2^28 preceding_size=10000 following_size=0 min_periods=1 cardinality=100]
+Warn: Current measurement timed out (17.97s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (17.97s) before accumulating min_samples (4 < 10)
+Pass: Cold: 4491.751465ms GPU, 4491.718689ms CPU, 17.97s total GPU, 17.97s total wall, 4x 
+Run:  [64/124] row_grouped_rolling_sum_large_windows [Device=0 T=I32 num_rows=2^28 preceding_size=40000 following_size=0 min_periods=1 cardinality=100]
+Warn: Current measurement timed out (17.19s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (17.19s) before accumulating min_samples (1 < 10)
+Pass: Cold: 17186.632812ms GPU, 17186.497211ms CPU, 17.19s total GPU, 17.19s total wall, 1x 
+Run:  [65/124] range_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=0]
+Pass: Cold: 0.114465ms GPU, 0.118570ms CPU, 0.50s total GPU, 0.65s total wall, 4384x 
+Run:  [66/124] range_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=0]
+Pass: Cold: 4.892660ms GPU, 4.897351ms CPU, 8.92s total GPU, 8.99s total wall, 1824x 
+Run:  [67/124] range_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=0]
+Fail: Unexpected error: std::bad_alloc: out_of_memory: RMM failure at:/home/ubuntu/cudf/cpp/build/_deps/rmm-src/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded
+Run:  [68/124] range_rolling_sum [Device=0 num_rows=2^14 preceding_range=100 following_range=100 has_nulls=1]
+Pass: Cold: 0.144188ms GPU, 0.148221ms CPU, 0.54s total GPU, 0.66s total wall, 3712x 
+Run:  [69/124] range_rolling_sum [Device=0 num_rows=2^22 preceding_range=100 following_range=100 has_nulls=1]
+Pass: Cold: 4.934666ms GPU, 4.939392ms CPU, 10.34s total GPU, 10.42s total wall, 2096x 
+Run:  [70/124] range_rolling_sum [Device=0 num_rows=2^28 preceding_range=100 following_range=100 has_nulls=1]
+Pass: Cold: 479.267620ms GPU, 479.268885ms CPU, 5.27s total GPU, 5.27s total wall, 11x 
+Run:  [71/124] range_rolling_sum_large_windows [Device=0 num_rows=2^28 preceding_range=10000 following_range=0 has_nulls=0]
+Fail: Unexpected error: std::bad_alloc: out_of_memory: RMM failure at:/home/ubuntu/cudf/cpp/build/_deps/rmm-src/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded
+Run:  [72/124] range_rolling_sum_large_windows [Device=0 num_rows=2^28 preceding_range=40000 following_range=0 has_nulls=0]
+Fail: Unexpected error: std::bad_alloc: out_of_memory: RMM failure at:/home/ubuntu/cudf/cpp/build/_deps/rmm-src/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded
+Run:  [73/124] range_rolling_sum_large_windows [Device=0 num_rows=2^28 preceding_range=10000 following_range=0 has_nulls=1]
+Warn: Current measurement timed out (16.27s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (16.27s) before accumulating min_samples (3 < 10)
+Pass: Cold: 5423.913737ms GPU, 5423.874771ms CPU, 16.27s total GPU, 16.27s total wall, 3x 
+Run:  [74/124] range_rolling_sum_large_windows [Device=0 num_rows=2^28 preceding_range=40000 following_range=0 has_nulls=1]
+Warn: Current measurement timed out (20.07s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (20.07s) before accumulating min_samples (1 < 10)
+Pass: Cold: 20072.158203ms GPU, 20072.020680ms CPU, 20.07s total GPU, 20.07s total wall, 1x 
+Run:  [75/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1]
+Pass: Cold: 0.020273ms GPU, 0.024334ms CPU, 0.50s total GPU, 1.68s total wall, 24672x 
+Run:  [76/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^22 preceding_size=1 following_size=2 min_periods=1]
+Pass: Cold: 0.249521ms GPU, 0.253833ms CPU, 0.50s total GPU, 0.57s total wall, 2016x 
+Run:  [77/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1]
+Pass: Cold: 14.383309ms GPU, 14.387860ms CPU, 0.50s total GPU, 0.50s total wall, 35x 
+Run:  [78/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1]
+Pass: Cold: 0.021745ms GPU, 0.025818ms CPU, 0.50s total GPU, 1.58s total wall, 23008x 
+Run:  [79/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^22 preceding_size=10 following_size=2 min_periods=1]
+Pass: Cold: 0.256284ms GPU, 0.260792ms CPU, 0.50s total GPU, 0.57s total wall, 1952x 
+Run:  [80/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1]
+Pass: Cold: 16.228421ms GPU, 16.233124ms CPU, 14.80s total GPU, 14.83s total wall, 912x 
+Run:  [81/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=100 following_size=2 min_periods=1]
+Pass: Cold: 0.028403ms GPU, 0.032487ms CPU, 0.50s total GPU, 1.26s total wall, 17616x 
+Run:  [82/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^22 preceding_size=100 following_size=2 min_periods=1]
+Pass: Cold: 0.850729ms GPU, 0.855600ms CPU, 2.30s total GPU, 2.40s total wall, 2704x 
+Run:  [83/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=100 following_size=2 min_periods=1]
+Warn: Current measurement timed out (15.04s) while over noise threshold (0.76% > 0.50%)
+Pass: Cold: 55.267020ms GPU, 55.271681ms CPU, 15.03s total GPU, 15.04s total wall, 272x 
+Run:  [84/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=1 following_size=2 min_periods=20]
+Pass: Cold: 0.020567ms GPU, 0.024719ms CPU, 0.50s total GPU, 1.67s total wall, 24320x 
+Run:  [85/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^22 preceding_size=1 following_size=2 min_periods=20]
+Pass: Cold: 0.250153ms GPU, 0.254444ms CPU, 0.50s total GPU, 0.57s total wall, 2000x 
+Run:  [86/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=1 following_size=2 min_periods=20]
+Pass: Cold: 14.421718ms GPU, 14.426084ms CPU, 0.50s total GPU, 0.51s total wall, 35x 
+Run:  [87/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=10 following_size=2 min_periods=20]
+Pass: Cold: 0.021446ms GPU, 0.025588ms CPU, 0.50s total GPU, 1.60s total wall, 23328x 
+Run:  [88/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^22 preceding_size=10 following_size=2 min_periods=20]
+Pass: Cold: 0.254587ms GPU, 0.259058ms CPU, 0.50s total GPU, 0.57s total wall, 1968x 
+Run:  [89/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=10 following_size=2 min_periods=20]
+Warn: Current measurement timed out (15.01s) while over noise threshold (1.24% > 0.50%)
+Pass: Cold: 16.096679ms GPU, 16.101321ms CPU, 14.97s total GPU, 15.01s total wall, 930x 
+Run:  [90/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=100 following_size=2 min_periods=20]
+Pass: Cold: 0.028749ms GPU, 0.032919ms CPU, 0.50s total GPU, 1.26s total wall, 17408x 
+Run:  [91/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^22 preceding_size=100 following_size=2 min_periods=20]
+Pass: Cold: 0.850042ms GPU, 0.854855ms CPU, 2.49s total GPU, 2.60s total wall, 2928x 
+Run:  [92/124] row_fixed_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=100 following_size=2 min_periods=20]
+Warn: Current measurement timed out (15.03s) while over noise threshold (0.89% > 0.50%)
+Pass: Cold: 55.213869ms GPU, 55.218409ms CPU, 15.02s total GPU, 15.03s total wall, 272x 
+Run:  [93/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=1 following_size=2 min_periods=1]
+Pass: Cold: 0.022360ms GPU, 0.026502ms CPU, 0.50s total GPU, 1.54s total wall, 22368x 
+Run:  [94/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^22 preceding_size=1 following_size=2 min_periods=1]
+Pass: Cold: 0.309942ms GPU, 0.314376ms CPU, 0.50s total GPU, 0.56s total wall, 1616x 
+Run:  [95/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=1 following_size=2 min_periods=1]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.72% > 0.50%)
+Pass: Cold: 19.350750ms GPU, 19.355318ms CPU, 14.98s total GPU, 15.01s total wall, 774x 
+Run:  [96/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=10 following_size=2 min_periods=1]
+Pass: Cold: 0.028767ms GPU, 0.032872ms CPU, 0.50s total GPU, 1.25s total wall, 17392x 
+Run:  [97/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^22 preceding_size=10 following_size=2 min_periods=1]
+Pass: Cold: 0.583177ms GPU, 0.587546ms CPU, 1.65s total GPU, 1.75s total wall, 2832x 
+Run:  [98/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=10 following_size=2 min_periods=1]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.80% > 0.50%)
+Pass: Cold: 37.017563ms GPU, 37.021637ms CPU, 14.99s total GPU, 15.01s total wall, 405x 
+Run:  [99/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=100 following_size=2 min_periods=1]
+Pass: Cold: 0.045379ms GPU, 0.049494ms CPU, 0.50s total GPU, 0.93s total wall, 11024x 
+Run:  [100/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^22 preceding_size=100 following_size=2 min_periods=1]
+Pass: Cold: 4.053833ms GPU, 4.057823ms CPU, 0.50s total GPU, 0.51s total wall, 124x 
+Run:  [101/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=100 following_size=2 min_periods=1]
+Pass: Cold: 257.471105ms GPU, 257.473307ms CPU, 2.83s total GPU, 2.83s total wall, 11x 
+Run:  [102/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=1 following_size=2 min_periods=20]
+Pass: Cold: 0.022253ms GPU, 0.026346ms CPU, 0.50s total GPU, 1.54s total wall, 22480x 
+Run:  [103/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^22 preceding_size=1 following_size=2 min_periods=20]
+Pass: Cold: 0.307922ms GPU, 0.312369ms CPU, 0.50s total GPU, 0.56s total wall, 1632x 
+Run:  [104/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=1 following_size=2 min_periods=20]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.67% > 0.50%)
+Pass: Cold: 19.317266ms GPU, 19.321801ms CPU, 14.99s total GPU, 15.02s total wall, 776x 
+Run:  [105/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=10 following_size=2 min_periods=20]
+Pass: Cold: 0.028988ms GPU, 0.033063ms CPU, 0.50s total GPU, 1.24s total wall, 17264x 
+Run:  [106/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^22 preceding_size=10 following_size=2 min_periods=20]
+Pass: Cold: 0.582359ms GPU, 0.586675ms CPU, 1.63s total GPU, 1.73s total wall, 2800x 
+Run:  [107/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=10 following_size=2 min_periods=20]
+Pass: Cold: 36.972372ms GPU, 36.976536ms CPU, 7.10s total GPU, 7.11s total wall, 192x 
+Run:  [108/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=100 following_size=2 min_periods=20]
+Pass: Cold: 0.045360ms GPU, 0.049396ms CPU, 0.50s total GPU, 0.93s total wall, 11024x 
+Run:  [109/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^22 preceding_size=100 following_size=2 min_periods=20]
+Pass: Cold: 4.055895ms GPU, 4.059882ms CPU, 0.50s total GPU, 0.51s total wall, 124x 
+Run:  [110/124] row_fixed_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=100 following_size=2 min_periods=20]
+Pass: Cold: 257.466347ms GPU, 257.468689ms CPU, 2.83s total GPU, 2.83s total wall, 11x 
+Run:  [111/124] row_variable_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=10 following_size=2]
+Pass: Cold: 0.028293ms GPU, 0.032306ms CPU, 0.50s total GPU, 1.26s total wall, 17680x 
+Run:  [112/124] row_variable_rolling_sum [Device=0 T=I32 num_rows=2^22 preceding_size=10 following_size=2]
+Pass: Cold: 0.366996ms GPU, 0.371229ms CPU, 0.50s total GPU, 0.55s total wall, 1376x 
+Run:  [113/124] row_variable_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=10 following_size=2]
+Pass: Cold: 21.809588ms GPU, 21.813749ms CPU, 0.50s total GPU, 0.50s total wall, 23x 
+Run:  [114/124] row_variable_rolling_sum [Device=0 T=I32 num_rows=2^14 preceding_size=100 following_size=2]
+Pass: Cold: 0.028574ms GPU, 0.032609ms CPU, 0.50s total GPU, 1.25s total wall, 17504x 
+Run:  [115/124] row_variable_rolling_sum [Device=0 T=I32 num_rows=2^22 preceding_size=100 following_size=2]
+Pass: Cold: 0.913968ms GPU, 0.918751ms CPU, 2.63s total GPU, 2.74s total wall, 2880x 
+Run:  [116/124] row_variable_rolling_sum [Device=0 T=I32 num_rows=2^28 preceding_size=100 following_size=2]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.81% > 0.50%)
+Pass: Cold: 58.832316ms GPU, 58.836705ms CPU, 15.00s total GPU, 15.01s total wall, 255x 
+Run:  [117/124] row_variable_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=10 following_size=2]
+Pass: Cold: 0.028955ms GPU, 0.033006ms CPU, 0.50s total GPU, 1.24s total wall, 17280x 
+Run:  [118/124] row_variable_rolling_sum [Device=0 T=F64 num_rows=2^22 preceding_size=10 following_size=2]
+Pass: Cold: 0.595756ms GPU, 0.600107ms CPU, 1.73s total GPU, 1.83s total wall, 2912x 
+Run:  [119/124] row_variable_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=10 following_size=2]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.98% > 0.50%)
+Pass: Cold: 37.680115ms GPU, 37.684278ms CPU, 15.00s total GPU, 15.01s total wall, 398x 
+Run:  [120/124] row_variable_rolling_sum [Device=0 T=F64 num_rows=2^14 preceding_size=100 following_size=2]
+Pass: Cold: 0.045254ms GPU, 0.049285ms CPU, 0.52s total GPU, 0.97s total wall, 11584x 
+Run:  [121/124] row_variable_rolling_sum [Device=0 T=F64 num_rows=2^22 preceding_size=100 following_size=2]
+Pass: Cold: 4.043266ms GPU, 4.047328ms CPU, 0.50s total GPU, 0.51s total wall, 124x 
+Run:  [122/124] row_variable_rolling_sum [Device=0 T=F64 num_rows=2^28 preceding_size=100 following_size=2]
+Pass: Cold: 255.988168ms GPU, 255.989940ms CPU, 2.82s total GPU, 2.82s total wall, 11x 
+Run:  [123/124] row_fixed_rolling_sum_large_windows [Device=0 T=I32 num_rows=2^28 preceding_size=10000 following_size=0 min_periods=1]
+Warn: Current measurement timed out (17.74s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (17.74s) before accumulating min_samples (4 < 10)
+Pass: Cold: 4434.667847ms GPU, 4434.633351ms CPU, 17.74s total GPU, 17.74s total wall, 4x 
+Run:  [124/124] row_fixed_rolling_sum_large_windows [Device=0 T=I32 num_rows=2^28 preceding_size=40000 following_size=0 min_periods=1]
+Warn: Current measurement timed out (17.35s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (17.35s) before accumulating min_samples (1 < 10)
+Pass: Cold: 17354.978516ms GPU, 17354.834467ms CPU, 17.35s total GPU, 17.35s total wall, 1x 
+```
+
+# Benchmark Results
+
+## range_grouped_rolling_sum
+
+### [0] Tesla T4
+
+|     num_rows     | preceding_range | following_range | has_nulls | cardinality | Samples |  CPU Time  | Noise |  GPU Time  | Noise | Mrows/s | peak_memory_usage |
+|------------------|-----------------|-----------------|-----------|-------------|---------|------------|-------|------------|-------|---------|-------------------|
+|     2^14 = 16384 |             100 |             100 |         0 |          10 |   2112x | 284.076 us | 7.32% | 278.797 us | 7.02% |      58 |       322.219 KiB |
+|   2^22 = 4194304 |             100 |             100 |         0 |          10 |   1264x |   4.021 ms | 1.17% |   4.016 ms | 1.16% |    1044 |        80.500 MiB |
+| 2^28 = 268435456 |             100 |             100 |         0 |          10 |     11x |    1.075 s | 0.08% |    1.075 s | 0.08% |     249 |         5.031 GiB |
+|     2^14 = 16384 |             100 |             100 |         1 |          10 |   2064x | 437.874 us | 2.88% | 433.806 us | 2.71% |      37 |       322.219 KiB |
+|   2^22 = 4194304 |             100 |             100 |         1 |          10 |     80x |  50.784 ms | 0.50% |  50.780 ms | 0.50% |      82 |        80.500 MiB |
+| 2^28 = 268435456 |             100 |             100 |         1 |          10 |      4x |    4.111 s |  inf% |    4.111 s |  inf% |      65 |         5.031 GiB |
+|     2^14 = 16384 |             100 |             100 |         0 |         100 |   2144x | 237.753 us | 3.43% | 233.649 us | 2.92% |      70 |       323.266 KiB |
+|   2^22 = 4194304 |             100 |             100 |         0 |         100 |   1968x |   3.178 ms | 0.85% |   3.173 ms | 0.83% |    1321 |        80.501 MiB |
+| 2^28 = 268435456 |             100 |             100 |         0 |         100 |     11x | 332.114 ms | 0.12% | 332.112 ms | 0.12% |     808 |         5.031 GiB |
+|     2^14 = 16384 |             100 |             100 |         1 |         100 |   1920x | 264.688 us | 3.72% | 260.597 us | 3.33% |      62 |       323.266 KiB |
+|   2^22 = 4194304 |             100 |             100 |         1 |         100 |   1832x |   8.159 ms | 0.76% |   8.155 ms | 0.75% |     514 |        80.501 MiB |
+| 2^28 = 268435456 |             100 |             100 |         1 |         100 |     11x | 692.393 ms | 0.14% | 692.394 ms | 0.14% |     387 |         5.031 GiB |
+|     2^14 = 16384 |             100 |             100 |         0 |     1000000 |   2160x | 235.603 us | 4.50% | 231.492 us | 4.10% |      70 |       352.547 KiB |
+|   2^22 = 4194304 |             100 |             100 |         0 |     1000000 |    203x |   2.478 ms | 0.51% |   2.473 ms | 0.48% |    1695 |        86.089 MiB |
+| 2^28 = 268435456 |             100 |             100 |         0 |     1000000 |     11x | 144.414 ms | 0.20% | 144.411 ms | 0.20% |    1858 |         5.041 GiB |
+|     2^14 = 16384 |             100 |             100 |         1 |     1000000 |   2128x | 239.063 us | 4.38% | 234.973 us | 3.99% |      69 |       352.547 KiB |
+|   2^22 = 4194304 |             100 |             100 |         1 |     1000000 |   1648x |   2.481 ms | 0.93% |   2.477 ms | 0.91% |    1693 |        86.089 MiB |
+| 2^28 = 268435456 |             100 |             100 |         1 |     1000000 |     11x | 144.282 ms | 0.33% | 144.279 ms | 0.33% |    1860 |         5.041 GiB |
+|     2^14 = 16384 |             100 |             100 |         0 |   100000000 |   2256x | 237.235 us | 4.99% | 233.174 us | 4.63% |      70 |       352.547 KiB |
+|   2^22 = 4194304 |             100 |             100 |         0 |   100000000 |    200x |   2.505 ms | 0.50% |   2.501 ms | 0.47% |    1677 |        88.128 MiB |
+| 2^28 = 268435456 |             100 |             100 |         0 |   100000000 |     11x | 141.477 ms | 0.19% | 141.474 ms | 0.19% |    1897 |         5.440 GiB |
+|     2^14 = 16384 |             100 |             100 |         1 |   100000000 |   2128x | 239.220 us | 3.45% | 235.131 us | 2.95% |      69 |       352.547 KiB |
+|   2^22 = 4194304 |             100 |             100 |         1 |   100000000 |    201x |   2.499 ms | 0.47% |   2.494 ms | 0.44% |    1681 |        88.128 MiB |
+| 2^28 = 268435456 |             100 |             100 |         1 |   100000000 |     11x | 141.334 ms | 0.18% | 141.330 ms | 0.18% |    1899 |         5.440 GiB |
+
+## range_grouped_rolling_sum_large_windows
+
+### [0] Tesla T4
+
+|     num_rows     | preceding_range | following_range | has_nulls | cardinality | Samples | CPU Time | Noise | GPU Time | Noise | Mrows/s | peak_memory_usage |
+|------------------|-----------------|-----------------|-----------|-------------|---------|----------|-------|----------|-------|---------|-------------------|
+| 2^28 = 268435456 |           10000 |               0 |         0 |         100 |      2x |  9.176 s |  inf% |  9.176 s |  inf% |      29 |         5.031 GiB |
+| 2^28 = 268435456 |           40000 |               0 |         0 |         100 |      1x | 36.715 s |  inf% | 36.715 s |  inf% |       7 |         5.031 GiB |
+| 2^28 = 268435456 |           10000 |               0 |         1 |         100 |      2x |  9.545 s |  inf% |  9.545 s |  inf% |      28 |         5.031 GiB |
+| 2^28 = 268435456 |           40000 |               0 |         1 |         100 |      1x | 37.085 s |  inf% | 37.086 s |  inf% |       7 |         5.031 GiB |
+
+## row_grouped_rolling_sum
+
+### [0] Tesla T4
+
+|  T  |     num_rows     | preceding_size | following_size | min_periods | cardinality | Samples |  CPU Time  | Noise |  GPU Time  | Noise | Mrows/s | peak_memory_usage |
+|-----|------------------|----------------|----------------|-------------|-------------|---------|------------|-------|------------|-------|---------|-------------------|
+| I32 |     2^14 = 16384 |              1 |              2 |           1 |          10 |   3776x | 136.791 us | 4.80% | 132.784 us | 3.69% |     123 |       322.031 KiB |
+| I32 | 2^28 = 268435456 |              1 |              2 |           1 |          10 |     11x |  72.071 ms | 0.26% |  72.067 ms | 0.26% |    3724 |         5.031 GiB |
+| I32 |     2^14 = 16384 |             10 |              2 |           1 |          10 |   3760x | 137.044 us | 4.82% | 132.980 us | 3.68% |     123 |       322.031 KiB |
+| I32 | 2^28 = 268435456 |             10 |              2 |           1 |          10 |     11x |  73.288 ms | 0.24% |  73.284 ms | 0.24% |    3662 |         5.031 GiB |
+| I32 |     2^14 = 16384 |              1 |              2 |           1 |         100 |   3776x | 136.567 us | 4.67% | 132.533 us | 3.51% |     123 |       322.031 KiB |
+| I32 | 2^28 = 268435456 |              1 |              2 |           1 |         100 |     11x |  72.107 ms | 0.29% |  72.103 ms | 0.29% |    3722 |         5.031 GiB |
+| I32 |     2^14 = 16384 |             10 |              2 |           1 |         100 |   4224x | 137.665 us | 6.39% | 133.593 us | 5.58% |     122 |       322.031 KiB |
+| I32 | 2^28 = 268435456 |             10 |              2 |           1 |         100 |     11x |  73.285 ms | 0.30% |  73.282 ms | 0.30% |    3663 |         5.031 GiB |
+| I32 |     2^14 = 16384 |              1 |              2 |           1 |     1000000 |   3712x | 139.036 us | 7.38% | 134.972 us | 6.72% |     121 |       322.031 KiB |
+| I32 | 2^28 = 268435456 |              1 |              2 |           1 |     1000000 |     11x |  74.239 ms | 0.32% |  74.235 ms | 0.32% |    3616 |         5.031 GiB |
+| I32 |     2^14 = 16384 |             10 |              2 |           1 |     1000000 |   3728x | 138.722 us | 6.74% | 134.664 us | 6.01% |     121 |       322.031 KiB |
+| I32 | 2^28 = 268435456 |             10 |              2 |           1 |     1000000 |     11x |  76.154 ms | 0.30% |  76.150 ms | 0.30% |    3525 |         5.031 GiB |
+| I32 |     2^14 = 16384 |              1 |              2 |           1 |   100000000 |   3728x | 138.758 us | 6.66% | 134.670 us | 5.89% |     121 |       322.031 KiB |
+| I32 | 2^28 = 268435456 |              1 |              2 |           1 |   100000000 |     11x |  84.752 ms | 0.21% |  84.748 ms | 0.21% |    3167 |         5.031 GiB |
+| I32 |     2^14 = 16384 |             10 |              2 |           1 |   100000000 |   3744x | 138.003 us | 5.44% | 133.921 us | 4.47% |     122 |       322.031 KiB |
+| I32 | 2^28 = 268435456 |             10 |              2 |           1 |   100000000 |     11x |  88.405 ms | 0.27% |  88.401 ms | 0.27% |    3036 |         5.031 GiB |
+| F64 |     2^14 = 16384 |              1 |              2 |           1 |          10 |   3776x | 136.679 us | 4.70% | 132.627 us | 3.54% |     123 |       322.031 KiB |
+| F64 | 2^28 = 268435456 |              1 |              2 |           1 |          10 |     11x |  76.424 ms | 0.25% |  76.420 ms | 0.25% |    3512 |         5.031 GiB |
+| F64 |     2^14 = 16384 |             10 |              2 |           1 |          10 |   3776x | 136.573 us | 4.68% | 132.507 us | 3.48% |     123 |       322.031 KiB |
+| F64 | 2^28 = 268435456 |             10 |              2 |           1 |          10 |    163x |  92.005 ms | 0.51% |  92.001 ms | 0.51% |    2917 |         5.031 GiB |
+| F64 |     2^14 = 16384 |              1 |              2 |           1 |         100 |   3792x | 136.291 us | 5.71% | 132.223 us | 4.79% |     123 |       322.031 KiB |
+| F64 | 2^28 = 268435456 |              1 |              2 |           1 |         100 |     11x |  76.371 ms | 0.32% |  76.367 ms | 0.32% |    3515 |         5.031 GiB |
+| F64 |     2^14 = 16384 |             10 |              2 |           1 |         100 |   3776x | 136.626 us | 5.84% | 132.550 us | 4.92% |     123 |       322.031 KiB |
+| F64 | 2^28 = 268435456 |             10 |              2 |           1 |         100 |     15x |  92.068 ms | 0.49% |  92.064 ms | 0.49% |    2915 |         5.031 GiB |
+| F64 |     2^14 = 16384 |              1 |              2 |           1 |     1000000 |   4224x | 137.866 us | 8.00% | 133.811 us | 7.35% |     122 |       322.031 KiB |
+| F64 | 2^28 = 268435456 |              1 |              2 |           1 |     1000000 |     11x |  78.876 ms | 0.34% |  78.872 ms | 0.34% |    3403 |         5.031 GiB |
+| F64 |     2^14 = 16384 |             10 |              2 |           1 |     1000000 |   3728x | 138.675 us | 8.67% | 134.589 us | 8.05% |     121 |       322.031 KiB |
+| F64 | 2^28 = 268435456 |             10 |              2 |           1 |     1000000 |     11x |  95.910 ms | 0.38% |  95.906 ms | 0.38% |    2798 |         5.031 GiB |
+| F64 |     2^14 = 16384 |              1 |              2 |           1 |   100000000 |   3776x | 136.934 us | 5.64% | 132.841 us | 4.65% |     123 |       322.031 KiB |
+| F64 | 2^28 = 268435456 |              1 |              2 |           1 |   100000000 |     11x |  88.949 ms | 0.24% |  88.945 ms | 0.24% |    3017 |         5.031 GiB |
+| F64 |     2^14 = 16384 |             10 |              2 |           1 |   100000000 |   3760x | 137.079 us | 5.73% | 133.010 us | 4.80% |     123 |       322.031 KiB |
+| F64 | 2^28 = 268435456 |             10 |              2 |           1 |   100000000 |     11x | 110.393 ms | 0.31% | 110.390 ms | 0.31% |    2431 |         5.031 GiB |
+
+## row_grouped_rolling_sum_large_windows
+
+### [0] Tesla T4
+
+|  T  |     num_rows     | preceding_size | following_size | min_periods | cardinality | Samples | CPU Time | Noise | GPU Time | Noise | Mrows/s | peak_memory_usage |
+|-----|------------------|----------------|----------------|-------------|-------------|---------|----------|-------|----------|-------|---------|-------------------|
+| I32 | 2^28 = 268435456 |          10000 |              0 |           1 |          10 |      4x |  4.505 s |  inf% |  4.505 s |  inf% |      59 |         5.031 GiB |
+| I32 | 2^28 = 268435456 |          40000 |              0 |           1 |          10 |      1x | 17.385 s |  inf% | 17.385 s |  inf% |      15 |         5.031 GiB |
+| I32 | 2^28 = 268435456 |          10000 |              0 |           1 |         100 |      4x |  4.492 s |  inf% |  4.492 s |  inf% |      59 |         5.031 GiB |
+| I32 | 2^28 = 268435456 |          40000 |              0 |           1 |         100 |      1x | 17.186 s |  inf% | 17.187 s |  inf% |      15 |         5.031 GiB |
+
+## range_rolling_sum
+
+### [0] Tesla T4
+
+|     num_rows     | preceding_range | following_range | has_nulls | Samples |  CPU Time  | Noise |  GPU Time  | Noise | Mrows/s | peak_memory_usage |
+|------------------|-----------------|-----------------|-----------|---------|------------|-------|------------|-------|---------|-------------------|
+|     2^14 = 16384 |             100 |             100 |         0 |   4384x | 118.570 us | 5.58% | 114.465 us | 4.22% |     143 |       258.078 KiB |
+|   2^22 = 4194304 |             100 |             100 |         0 |   1824x |   4.897 ms | 1.88% |   4.893 ms | 1.87% |     857 |        64.500 MiB |
+|     2^14 = 16384 |             100 |             100 |         1 |   3712x | 148.221 us | 7.87% | 144.188 us | 7.33% |     113 |       258.078 KiB |
+|   2^22 = 4194304 |             100 |             100 |         1 |   2096x |   4.939 ms | 1.83% |   4.935 ms | 1.82% |     849 |        64.500 MiB |
+| 2^28 = 268435456 |             100 |             100 |         1 |     11x | 479.269 ms | 0.14% | 479.268 ms | 0.14% |     560 |         4.031 GiB |
+
+## range_rolling_sum_large_windows
+
+### [0] Tesla T4
+
+|     num_rows     | preceding_range | following_range | has_nulls | Samples | CPU Time | Noise | GPU Time | Noise | Mrows/s | peak_memory_usage |
+|------------------|-----------------|-----------------|-----------|---------|----------|-------|----------|-------|---------|-------------------|
+| 2^28 = 268435456 |           10000 |               0 |         1 |      3x |  5.424 s |  inf% |  5.424 s |  inf% |      49 |         4.031 GiB |
+| 2^28 = 268435456 |           40000 |               0 |         1 |      1x | 20.072 s |  inf% | 20.072 s |  inf% |      13 |         4.031 GiB |
+
+## row_fixed_rolling_sum
+
+### [0] Tesla T4
+
+|  T  |     num_rows     | preceding_size | following_size | min_periods | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | Mrows/s | peak_memory_usage |
+|-----|------------------|----------------|----------------|-------------|---------|------------|--------|------------|--------|---------|-------------------|
+| I32 |     2^14 = 16384 |              1 |              2 |           1 |  24672x |  24.334 us | 23.32% |  20.273 us | 11.51% |     808 |       130.016 KiB |
+| I32 |   2^22 = 4194304 |              1 |              2 |           1 |   2016x | 253.833 us |  2.17% | 249.521 us |  1.30% |   16809 |        32.500 MiB |
+| I32 | 2^28 = 268435456 |              1 |              2 |           1 |     35x |  14.388 ms |  0.48% |  14.383 ms |  0.48% |   18662 |         2.031 GiB |
+| I32 |     2^14 = 16384 |             10 |              2 |           1 |  23008x |  25.818 us | 25.11% |  21.745 us | 16.46% |     753 |       130.016 KiB |
+| I32 |   2^22 = 4194304 |             10 |              2 |           1 |   1952x | 260.792 us |  2.39% | 256.284 us |  1.62% |   16365 |        32.500 MiB |
+| I32 | 2^28 = 268435456 |             10 |              2 |           1 |    912x |  16.233 ms |  1.20% |  16.228 ms |  1.20% |   16541 |         2.031 GiB |
+| I32 |     2^14 = 16384 |            100 |              2 |           1 |  17616x |  32.487 us | 15.65% |  28.403 us |  5.83% |     576 |       130.016 KiB |
+| I32 |   2^22 = 4194304 |            100 |              2 |           1 |   2704x | 855.600 us |  4.88% | 850.729 us |  4.83% |    4930 |        32.500 MiB |
+| I32 | 2^28 = 268435456 |            100 |              2 |           1 |    272x |  55.272 ms |  0.76% |  55.267 ms |  0.76% |    4857 |         2.031 GiB |
+| I32 |     2^14 = 16384 |              1 |              2 |          20 |  24320x |  24.719 us | 24.95% |  20.567 us | 14.18% |     796 |       130.016 KiB |
+| I32 |   2^22 = 4194304 |              1 |              2 |          20 |   2000x | 254.444 us |  2.20% | 250.153 us |  1.37% |   16766 |        32.500 MiB |
+| I32 | 2^28 = 268435456 |              1 |              2 |          20 |     35x |  14.426 ms |  0.44% |  14.422 ms |  0.44% |   18613 |         2.031 GiB |
+| I32 |     2^14 = 16384 |             10 |              2 |          20 |  23328x |  25.588 us | 24.98% |  21.446 us | 15.67% |     763 |       130.016 KiB |
+| I32 |   2^22 = 4194304 |             10 |              2 |          20 |   1968x | 259.058 us |  2.42% | 254.587 us |  1.64% |   16474 |        32.500 MiB |
+| I32 | 2^28 = 268435456 |             10 |              2 |          20 |    930x |  16.101 ms |  1.24% |  16.097 ms |  1.24% |   16676 |         2.031 GiB |
+| I32 |     2^14 = 16384 |            100 |              2 |          20 |  17408x |  32.919 us | 17.31% |  28.749 us |  9.21% |     569 |       130.016 KiB |
+| I32 |   2^22 = 4194304 |            100 |              2 |          20 |   2928x | 854.855 us |  4.55% | 850.042 us |  4.50% |    4934 |        32.500 MiB |
+| I32 | 2^28 = 268435456 |            100 |              2 |          20 |    272x |  55.218 ms |  0.89% |  55.214 ms |  0.89% |    4861 |         2.031 GiB |
+| F64 |     2^14 = 16384 |              1 |              2 |           1 |  22368x |  26.502 us | 25.06% |  22.360 us | 16.43% |     732 |       130.016 KiB |
+| F64 |   2^22 = 4194304 |              1 |              2 |           1 |   1616x | 314.376 us |  2.28% | 309.942 us |  1.75% |   13532 |        32.500 MiB |
+| F64 | 2^28 = 268435456 |              1 |              2 |           1 |    774x |  19.355 ms |  0.72% |  19.351 ms |  0.72% |   13872 |         2.031 GiB |
+| F64 |     2^14 = 16384 |             10 |              2 |           1 |  17392x |  32.872 us | 16.28% |  28.767 us |  7.56% |     569 |       130.016 KiB |
+| F64 |   2^22 = 4194304 |             10 |              2 |           1 |   2832x | 587.546 us |  2.62% | 583.177 us |  2.49% |    7192 |        32.500 MiB |
+| F64 | 2^28 = 268435456 |             10 |              2 |           1 |    405x |  37.022 ms |  0.80% |  37.018 ms |  0.80% |    7251 |         2.031 GiB |
+| F64 |     2^14 = 16384 |            100 |              2 |           1 |  11024x |  49.494 us | 10.44% |  45.379 us |  5.00% |     361 |       130.016 KiB |
+| F64 |   2^22 = 4194304 |            100 |              2 |           1 |    124x |   4.058 ms |  0.13% |   4.054 ms |  0.09% |    1034 |        32.500 MiB |
+| F64 | 2^28 = 268435456 |            100 |              2 |           1 |     11x | 257.473 ms |  0.01% | 257.471 ms |  0.01% |    1042 |         2.031 GiB |
+| F64 |     2^14 = 16384 |              1 |              2 |          20 |  22480x |  26.346 us | 24.82% |  22.253 us | 16.46% |     736 |       130.016 KiB |
+| F64 |   2^22 = 4194304 |              1 |              2 |          20 |   1632x | 312.369 us |  1.75% | 307.922 us |  0.97% |   13621 |        32.500 MiB |
+| F64 | 2^28 = 268435456 |              1 |              2 |          20 |    776x |  19.322 ms |  0.67% |  19.317 ms |  0.67% |   13896 |         2.031 GiB |
+| F64 |     2^14 = 16384 |             10 |              2 |          20 |  17264x |  33.063 us | 16.73% |  28.988 us |  8.73% |     565 |       130.016 KiB |
+| F64 |   2^22 = 4194304 |             10 |              2 |          20 |   2800x | 586.675 us |  2.36% | 582.359 us |  2.23% |    7202 |        32.500 MiB |
+| F64 | 2^28 = 268435456 |             10 |              2 |          20 |    192x |  36.977 ms |  0.77% |  36.972 ms |  0.77% |    7260 |         2.031 GiB |
+| F64 |     2^14 = 16384 |            100 |              2 |          20 |  11024x |  49.396 us | 10.07% |  45.360 us |  4.53% |     361 |       130.016 KiB |
+| F64 |   2^22 = 4194304 |            100 |              2 |          20 |    124x |   4.060 ms |  0.17% |   4.056 ms |  0.14% |    1034 |        32.500 MiB |
+| F64 | 2^28 = 268435456 |            100 |              2 |          20 |     11x | 257.469 ms |  0.01% | 257.466 ms |  0.01% |    1042 |         2.031 GiB |
+
+## row_variable_rolling_sum
+
+### [0] Tesla T4
+
+|  T  |     num_rows     | preceding_size | following_size | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | Mrows/s | peak_memory_usage |
+|-----|------------------|----------------|----------------|---------|------------|--------|------------|--------|---------|-------------------|
+| I32 |     2^14 = 16384 |             10 |              2 |  17680x |  32.306 us | 17.99% |  28.293 us | 10.91% |     579 |       130.016 KiB |
+| I32 |   2^22 = 4194304 |             10 |              2 |   1376x | 371.229 us |  1.36% | 366.996 us |  0.72% |   11428 |        32.500 MiB |
+| I32 | 2^28 = 268435456 |             10 |              2 |     23x |  21.814 ms |  0.13% |  21.810 ms |  0.13% |   12308 |         2.031 GiB |
+| I32 |     2^14 = 16384 |            100 |              2 |  17504x |  32.609 us | 18.57% |  28.574 us | 11.66% |     573 |       130.016 KiB |
+| I32 |   2^22 = 4194304 |            100 |              2 |   2880x | 918.751 us |  4.31% | 913.968 us |  4.27% |    4589 |        32.500 MiB |
+| I32 | 2^28 = 268435456 |            100 |              2 |    255x |  58.837 ms |  0.81% |  58.832 ms |  0.81% |    4562 |         2.031 GiB |
+| F64 |     2^14 = 16384 |             10 |              2 |  17280x |  33.006 us | 17.22% |  28.955 us |  9.92% |     565 |       130.016 KiB |
+| F64 |   2^22 = 4194304 |             10 |              2 |   2912x | 600.107 us |  2.79% | 595.756 us |  2.68% |    7040 |        32.500 MiB |
+| F64 | 2^28 = 268435456 |             10 |              2 |    398x |  37.684 ms |  0.98% |  37.680 ms |  0.98% |    7124 |         2.031 GiB |
+| F64 |     2^14 = 16384 |            100 |              2 |  11584x |  49.285 us | 10.63% |  45.254 us |  5.66% |     362 |       130.016 KiB |
+| F64 |   2^22 = 4194304 |            100 |              2 |    124x |   4.047 ms |  0.36% |   4.043 ms |  0.34% |    1037 |        32.500 MiB |
+| F64 | 2^28 = 268435456 |            100 |              2 |     11x | 255.990 ms |  0.01% | 255.988 ms |  0.01% |    1048 |         2.031 GiB |
+
+## row_fixed_rolling_sum_large_windows
+
+### [0] Tesla T4
+
+|  T  |     num_rows     | preceding_size | following_size | min_periods | Samples | CPU Time | Noise | GPU Time | Noise | Mrows/s | peak_memory_usage |
+|-----|------------------|----------------|----------------|-------------|---------|----------|-------|----------|-------|---------|-------------------|
+| I32 | 2^28 = 268435456 |          10000 |              0 |           1 |      4x |  4.435 s |  inf% |  4.435 s |  inf% |      60 |         2.031 GiB |
+| I32 | 2^28 = 268435456 |          40000 |              0 |           1 |      1x | 17.355 s |  inf% | 17.355 s |  inf% |      15 |         2.031 GiB |

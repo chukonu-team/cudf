@@ -1,0 +1,44 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7208 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/3] ndsh_q9 [Device=0 scale_factor=0.01]
+Creating managed pool just for data generation
+Warn: Current measurement timed out (15.01s) while over noise threshold (4.24% > 0.50%)
+Pass: Cold: 10.069403ms GPU, 10.073555ms CPU, 14.94s total GPU, 15.01s total wall, 1484x 
+Run:  [2/3] ndsh_q9 [Device=0 scale_factor=0.1]
+Creating managed pool just for data generation
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.93% > 0.50%)
+Pass: Cold: 30.955538ms GPU, 30.959632ms CPU, 14.98s total GPU, 15.00s total wall, 484x 
+Run:  [3/3] ndsh_q9 [Device=0 scale_factor=1]
+Creating managed pool just for data generation
+Pass: Cold: 88.689956ms GPU, 88.693737ms CPU, 0.98s total GPU, 0.98s total wall, 11x 
+```
+
+# Benchmark Results
+
+## ndsh_q9
+
+### [0] Tesla T4
+
+| scale_factor | Samples | CPU Time  | Noise | GPU Time  | Noise |
+|--------------|---------|-----------|-------|-----------|-------|
+|         0.01 |   1484x | 10.074 ms | 4.24% | 10.069 ms | 4.24% |
+|          0.1 |    484x | 30.960 ms | 0.93% | 30.956 ms | 0.93% |
+|            1 |     11x | 88.694 ms | 0.30% | 88.690 ms | 0.30% |

@@ -1,0 +1,146 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/36] have_overlap [Device=0 num_rows=2^10 depth=1 null_frequency=0]
+Pass: Cold: 0.188980ms GPU, 0.193460ms CPU, 0.59s total GPU, 0.70s total wall, 3136x 
+Run:  [2/36] have_overlap [Device=0 num_rows=2^13 depth=1 null_frequency=0]
+Pass: Cold: 0.168517ms GPU, 0.172176ms CPU, 0.50s total GPU, 0.60s total wall, 2976x 
+Run:  [3/36] have_overlap [Device=0 num_rows=2^16 depth=1 null_frequency=0]
+Pass: Cold: 0.540600ms GPU, 0.544353ms CPU, 0.60s total GPU, 0.62s total wall, 1104x 
+Run:  [4/36] have_overlap [Device=0 num_rows=2^10 depth=4 null_frequency=0]
+Pass: Cold: 22.895180ms GPU, 22.898685ms CPU, 12.23s total GPU, 12.24s total wall, 534x 
+Run:  [5/36] have_overlap [Device=0 num_rows=2^13 depth=4 null_frequency=0]
+Pass: Cold: 120.892725ms GPU, 120.895276ms CPU, 5.80s total GPU, 5.80s total wall, 48x 
+Run:  [6/36] have_overlap [Device=0 num_rows=2^16 depth=4 null_frequency=0]
+Pass: Cold: 398.529610ms GPU, 398.529775ms CPU, 4.38s total GPU, 4.38s total wall, 11x 
+Run:  [7/36] have_overlap [Device=0 num_rows=2^10 depth=1 null_frequency=0.2]
+Pass: Cold: 0.172773ms GPU, 0.176454ms CPU, 0.50s total GPU, 0.59s total wall, 2896x 
+Run:  [8/36] have_overlap [Device=0 num_rows=2^13 depth=1 null_frequency=0.2]
+Pass: Cold: 0.186564ms GPU, 0.190232ms CPU, 0.50s total GPU, 0.59s total wall, 2688x 
+Run:  [9/36] have_overlap [Device=0 num_rows=2^16 depth=1 null_frequency=0.2]
+Pass: Cold: 0.398961ms GPU, 0.402625ms CPU, 0.50s total GPU, 0.53s total wall, 1264x 
+Run:  [10/36] have_overlap [Device=0 num_rows=2^10 depth=4 null_frequency=0.2]
+Pass: Cold: 20.014980ms GPU, 20.018449ms CPU, 5.84s total GPU, 5.85s total wall, 292x 
+Run:  [11/36] have_overlap [Device=0 num_rows=2^13 depth=4 null_frequency=0.2]
+Pass: Cold: 9.026430ms GPU, 9.030263ms CPU, 5.49s total GPU, 5.50s total wall, 608x 
+Run:  [12/36] have_overlap [Device=0 num_rows=2^16 depth=4 null_frequency=0.2]
+Pass: Cold: 68.257905ms GPU, 68.261287ms CPU, 5.46s total GPU, 5.46s total wall, 80x 
+Run:  [13/36] have_overlap [Device=0 num_rows=2^10 depth=1 null_frequency=0.8]
+Pass: Cold: 0.163407ms GPU, 0.167073ms CPU, 0.50s total GPU, 0.60s total wall, 3072x 
+Run:  [14/36] have_overlap [Device=0 num_rows=2^13 depth=1 null_frequency=0.8]
+Pass: Cold: 0.173356ms GPU, 0.176952ms CPU, 0.50s total GPU, 0.59s total wall, 2896x 
+Run:  [15/36] have_overlap [Device=0 num_rows=2^16 depth=1 null_frequency=0.8]
+Pass: Cold: 0.189802ms GPU, 0.193450ms CPU, 0.52s total GPU, 0.61s total wall, 2752x 
+Run:  [16/36] have_overlap [Device=0 num_rows=2^10 depth=4 null_frequency=0.8]
+Pass: Cold: 0.356105ms GPU, 0.359726ms CPU, 0.50s total GPU, 0.54s total wall, 1408x 
+Run:  [17/36] have_overlap [Device=0 num_rows=2^13 depth=4 null_frequency=0.8]
+Pass: Cold: 0.384066ms GPU, 0.387724ms CPU, 0.50s total GPU, 0.54s total wall, 1312x 
+Run:  [18/36] have_overlap [Device=0 num_rows=2^16 depth=4 null_frequency=0.8]
+Pass: Cold: 0.461492ms GPU, 0.465063ms CPU, 1.16s total GPU, 1.24s total wall, 2512x 
+Run:  [19/36] intersect_distinct [Device=0 num_rows=2^10 depth=1 null_frequency=0]
+Pass: Cold: 0.289988ms GPU, 0.293574ms CPU, 0.50s total GPU, 0.55s total wall, 1728x 
+Run:  [20/36] intersect_distinct [Device=0 num_rows=2^13 depth=1 null_frequency=0]
+Pass: Cold: 0.327547ms GPU, 0.331179ms CPU, 0.74s total GPU, 0.82s total wall, 2272x 
+Run:  [21/36] intersect_distinct [Device=0 num_rows=2^16 depth=1 null_frequency=0]
+Pass: Cold: 0.969948ms GPU, 0.973724ms CPU, 0.96s total GPU, 0.99s total wall, 992x 
+Run:  [22/36] intersect_distinct [Device=0 num_rows=2^10 depth=4 null_frequency=0]
+Pass: Cold: 34.583548ms GPU, 34.586875ms CPU, 4.95s total GPU, 4.95s total wall, 143x 
+Run:  [23/36] intersect_distinct [Device=0 num_rows=2^13 depth=4 null_frequency=0]
+Pass: Cold: 202.328631ms GPU, 202.330487ms CPU, 2.23s total GPU, 2.23s total wall, 11x 
+Run:  [24/36] intersect_distinct [Device=0 num_rows=2^16 depth=4 null_frequency=0]
+Pass: Cold: 782.672225ms GPU, 782.668792ms CPU, 8.61s total GPU, 8.61s total wall, 11x 
+Run:  [25/36] intersect_distinct [Device=0 num_rows=2^10 depth=1 null_frequency=0.2]
+Pass: Cold: 0.410411ms GPU, 0.414513ms CPU, 0.51s total GPU, 0.55s total wall, 1232x 
+Run:  [26/36] intersect_distinct [Device=0 num_rows=2^13 depth=1 null_frequency=0.2]
+Pass: Cold: 0.442181ms GPU, 0.446235ms CPU, 0.50s total GPU, 0.54s total wall, 1136x 
+Run:  [27/36] intersect_distinct [Device=0 num_rows=2^16 depth=1 null_frequency=0.2]
+Pass: Cold: 0.812415ms GPU, 0.816467ms CPU, 2.25s total GPU, 2.34s total wall, 2768x 
+Run:  [28/36] intersect_distinct [Device=0 num_rows=2^10 depth=4 null_frequency=0.2]
+Pass: Cold: 29.491092ms GPU, 29.494900ms CPU, 6.66s total GPU, 6.67s total wall, 226x 
+Run:  [29/36] intersect_distinct [Device=0 num_rows=2^13 depth=4 null_frequency=0.2]
+Pass: Cold: 19.635748ms GPU, 19.639988ms CPU, 10.68s total GPU, 10.70s total wall, 544x 
+Run:  [30/36] intersect_distinct [Device=0 num_rows=2^16 depth=4 null_frequency=0.2]
+Warn: Current measurement timed out (15.06s) while over noise threshold (0.76% > 0.50%)
+Pass: Cold: 150.563079ms GPU, 150.566372ms CPU, 15.06s total GPU, 15.06s total wall, 100x 
+Run:  [31/36] intersect_distinct [Device=0 num_rows=2^10 depth=1 null_frequency=0.8]
+Pass: Cold: 0.399605ms GPU, 0.403687ms CPU, 0.88s total GPU, 0.95s total wall, 2192x 
+Run:  [32/36] intersect_distinct [Device=0 num_rows=2^13 depth=1 null_frequency=0.8]
+Pass: Cold: 0.414793ms GPU, 0.418869ms CPU, 0.50s total GPU, 0.54s total wall, 1216x 
+Run:  [33/36] intersect_distinct [Device=0 num_rows=2^16 depth=1 null_frequency=0.8]
+Pass: Cold: 0.442604ms GPU, 0.446683ms CPU, 0.50s total GPU, 0.54s total wall, 1136x 
+Run:  [34/36] intersect_distinct [Device=0 num_rows=2^10 depth=4 null_frequency=0.8]
+Pass: Cold: 1.641055ms GPU, 1.645607ms CPU, 4.36s total GPU, 4.45s total wall, 2656x 
+Run:  [35/36] intersect_distinct [Device=0 num_rows=2^13 depth=4 null_frequency=0.8]
+Pass: Cold: 1.667807ms GPU, 1.672088ms CPU, 3.10s total GPU, 3.16s total wall, 1856x 
+Run:  [36/36] intersect_distinct [Device=0 num_rows=2^16 depth=4 null_frequency=0.8]
+Pass: Cold: 1.833510ms GPU, 1.837723ms CPU, 3.61s total GPU, 3.68s total wall, 1968x 
+```
+
+# Benchmark Results
+
+## have_overlap
+
+### [0] Tesla T4
+
+|   num_rows   | depth | null_frequency | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  |
+|--------------|-------|----------------|---------|------------|--------|------------|--------|
+|  2^10 = 1024 |     1 |              0 |   3136x | 193.460 us | 10.90% | 188.980 us | 10.47% |
+|  2^13 = 8192 |     1 |              0 |   2976x | 172.176 us |  4.17% | 168.517 us |  3.54% |
+| 2^16 = 65536 |     1 |              0 |   1104x | 544.353 us |  1.23% | 540.600 us |  1.01% |
+|  2^10 = 1024 |     4 |              0 |    534x |  22.899 ms |  0.50% |  22.895 ms |  0.50% |
+|  2^13 = 8192 |     4 |              0 |     48x | 120.895 ms |  0.50% | 120.893 ms |  0.50% |
+| 2^16 = 65536 |     4 |              0 |     11x | 398.530 ms |  0.31% | 398.530 ms |  0.31% |
+|  2^10 = 1024 |     1 |            0.2 |   2896x | 176.454 us |  3.51% | 172.773 us |  2.75% |
+|  2^13 = 8192 |     1 |            0.2 |   2688x | 190.232 us |  3.58% | 186.564 us |  2.97% |
+| 2^16 = 65536 |     1 |            0.2 |   1264x | 402.625 us |  1.62% | 398.961 us |  1.33% |
+|  2^10 = 1024 |     4 |            0.2 |    292x |  20.018 ms |  0.50% |  20.015 ms |  0.50% |
+|  2^13 = 8192 |     4 |            0.2 |    608x |   9.030 ms |  0.99% |   9.026 ms |  0.98% |
+| 2^16 = 65536 |     4 |            0.2 |     80x |  68.261 ms |  0.91% |  68.258 ms |  0.91% |
+|  2^10 = 1024 |     1 |            0.8 |   3072x | 167.073 us |  9.28% | 163.407 us |  8.99% |
+|  2^13 = 8192 |     1 |            0.8 |   2896x | 176.952 us |  8.74% | 173.356 us |  8.49% |
+| 2^16 = 65536 |     1 |            0.8 |   2752x | 193.450 us |  5.08% | 189.802 us |  4.69% |
+|  2^10 = 1024 |     4 |            0.8 |   1408x | 359.726 us |  2.20% | 356.105 us |  1.96% |
+|  2^13 = 8192 |     4 |            0.8 |   1312x | 387.724 us |  2.60% | 384.066 us |  2.41% |
+| 2^16 = 65536 |     4 |            0.8 |   2512x | 465.063 us |  3.68% | 461.492 us |  3.58% |
+
+## intersect_distinct
+
+### [0] Tesla T4
+
+|   num_rows   | depth | null_frequency | Samples |  CPU Time  | Noise |  GPU Time  | Noise |
+|--------------|-------|----------------|---------|------------|-------|------------|-------|
+|  2^10 = 1024 |     1 |              0 |   1728x | 293.574 us | 2.47% | 289.988 us | 2.14% |
+|  2^13 = 8192 |     1 |              0 |   2272x | 331.179 us | 3.74% | 327.547 us | 3.56% |
+| 2^16 = 65536 |     1 |              0 |    992x | 973.724 us | 0.68% | 969.948 us | 0.55% |
+|  2^10 = 1024 |     4 |              0 |    143x |  34.587 ms | 0.50% |  34.584 ms | 0.50% |
+|  2^13 = 8192 |     4 |              0 |     11x | 202.330 ms | 0.29% | 202.329 ms | 0.29% |
+| 2^16 = 65536 |     4 |              0 |     11x | 782.669 ms | 0.15% | 782.672 ms | 0.15% |
+|  2^10 = 1024 |     1 |            0.2 |   1232x | 414.513 us | 3.00% | 410.411 us | 2.80% |
+|  2^13 = 8192 |     1 |            0.2 |   1136x | 446.235 us | 2.01% | 442.181 us | 1.77% |
+| 2^16 = 65536 |     1 |            0.2 |   2768x | 816.467 us | 2.97% | 812.415 us | 2.92% |
+|  2^10 = 1024 |     4 |            0.2 |    226x |  29.495 ms | 0.50% |  29.491 ms | 0.50% |
+|  2^13 = 8192 |     4 |            0.2 |    544x |  19.640 ms | 1.06% |  19.636 ms | 1.06% |
+| 2^16 = 65536 |     4 |            0.2 |    100x | 150.566 ms | 0.76% | 150.563 ms | 0.76% |
+|  2^10 = 1024 |     1 |            0.8 |   2192x | 403.687 us | 4.01% | 399.605 us | 3.87% |
+|  2^13 = 8192 |     1 |            0.8 |   1216x | 418.869 us | 2.28% | 414.793 us | 2.06% |
+| 2^16 = 65536 |     1 |            0.8 |   1136x | 446.683 us | 2.05% | 442.604 us | 1.82% |
+|  2^10 = 1024 |     4 |            0.8 |   2656x |   1.646 ms | 7.03% |   1.641 ms | 7.00% |
+|  2^13 = 8192 |     4 |            0.8 |   1856x |   1.672 ms | 5.63% |   1.668 ms | 5.60% |
+| 2^16 = 65536 |     4 |            0.8 |   1968x |   1.838 ms | 5.33% |   1.834 ms | 5.32% |

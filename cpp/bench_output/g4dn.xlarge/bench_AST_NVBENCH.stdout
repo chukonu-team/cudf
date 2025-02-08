@@ -1,0 +1,587 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/168] ast_int32_imbalanced_unique [Device=0 tree_levels=1 num_rows=100000]
+Pass: Cold: 0.030415ms GPU, 0.034471ms CPU, 0.50s total GPU, 1.21s total wall, 16448x 
+Run:  [2/168] ast_int32_imbalanced_unique [Device=0 tree_levels=5 num_rows=100000]
+Pass: Cold: 0.042821ms GPU, 0.046617ms CPU, 0.50s total GPU, 0.95s total wall, 11680x 
+Run:  [3/168] ast_int32_imbalanced_unique [Device=0 tree_levels=10 num_rows=100000]
+Pass: Cold: 0.062807ms GPU, 0.066627ms CPU, 0.50s total GPU, 0.75s total wall, 7968x 
+Run:  [4/168] ast_int32_imbalanced_unique [Device=0 tree_levels=1 num_rows=1000000]
+Pass: Cold: 0.072714ms GPU, 0.076617ms CPU, 0.50s total GPU, 0.75s total wall, 6880x 
+Run:  [5/168] ast_int32_imbalanced_unique [Device=0 tree_levels=5 num_rows=1000000]
+Pass: Cold: 0.200104ms GPU, 0.204343ms CPU, 0.50s total GPU, 0.58s total wall, 2512x 
+Run:  [6/168] ast_int32_imbalanced_unique [Device=0 tree_levels=10 num_rows=1000000]
+Pass: Cold: 0.371515ms GPU, 0.375845ms CPU, 0.56s total GPU, 0.60s total wall, 1504x 
+Run:  [7/168] ast_int32_imbalanced_unique [Device=0 tree_levels=1 num_rows=10000000]
+Pass: Cold: 0.525924ms GPU, 0.530407ms CPU, 0.53s total GPU, 0.56s total wall, 1008x 
+Run:  [8/168] ast_int32_imbalanced_unique [Device=0 tree_levels=5 num_rows=10000000]
+Pass: Cold: 1.928812ms GPU, 1.933404ms CPU, 1.36s total GPU, 1.38s total wall, 704x 
+Run:  [9/168] ast_int32_imbalanced_unique [Device=0 tree_levels=10 num_rows=10000000]
+Pass: Cold: 3.661965ms GPU, 3.666716ms CPU, 2.11s total GPU, 2.13s total wall, 576x 
+Run:  [10/168] ast_int32_imbalanced_unique [Device=0 tree_levels=1 num_rows=100000000]
+Pass: Cold: 5.309459ms GPU, 5.314396ms CPU, 4.08s total GPU, 4.11s total wall, 768x 
+Run:  [11/168] ast_int32_imbalanced_unique [Device=0 tree_levels=5 num_rows=100000000]
+Pass: Cold: 19.432763ms GPU, 19.437656ms CPU, 10.26s total GPU, 10.28s total wall, 528x 
+Run:  [12/168] ast_int32_imbalanced_unique [Device=0 tree_levels=10 num_rows=100000000]
+Warn: Current measurement timed out (15.03s) while over noise threshold (0.91% > 0.50%)
+Pass: Cold: 36.792348ms GPU, 36.798180ms CPU, 15.01s total GPU, 15.03s total wall, 408x 
+Run:  [13/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=1 num_rows=100000]
+Pass: Cold: 0.026745ms GPU, 0.030552ms CPU, 0.50s total GPU, 1.31s total wall, 18704x 
+Run:  [14/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=5 num_rows=100000]
+Pass: Cold: 0.037440ms GPU, 0.041246ms CPU, 0.50s total GPU, 1.04s total wall, 13360x 
+Run:  [15/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=10 num_rows=100000]
+Pass: Cold: 0.049200ms GPU, 0.053011ms CPU, 0.50s total GPU, 0.89s total wall, 10176x 
+Run:  [16/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=1 num_rows=1000000]
+Pass: Cold: 0.059976ms GPU, 0.063845ms CPU, 0.50s total GPU, 0.81s total wall, 8352x 
+Run:  [17/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=5 num_rows=1000000]
+Pass: Cold: 0.157861ms GPU, 0.161973ms CPU, 0.50s total GPU, 0.61s total wall, 3168x 
+Run:  [18/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=10 num_rows=1000000]
+Pass: Cold: 0.283484ms GPU, 0.287647ms CPU, 0.50s total GPU, 0.56s total wall, 1776x 
+Run:  [19/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=1 num_rows=10000000]
+Pass: Cold: 0.485295ms GPU, 0.489673ms CPU, 1.35s total GPU, 1.45s total wall, 2784x 
+Run:  [20/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=5 num_rows=10000000]
+Pass: Cold: 1.517810ms GPU, 1.522257ms CPU, 1.02s total GPU, 1.04s total wall, 672x 
+Run:  [21/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=10 num_rows=10000000]
+Pass: Cold: 2.746420ms GPU, 2.750979ms CPU, 2.46s total GPU, 2.49s total wall, 896x 
+Run:  [22/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=1 num_rows=100000000]
+Pass: Cold: 4.879941ms GPU, 4.884873ms CPU, 5.93s total GPU, 5.98s total wall, 1216x 
+Run:  [23/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=5 num_rows=100000000]
+Pass: Cold: 15.163746ms GPU, 15.168664ms CPU, 8.73s total GPU, 8.76s total wall, 576x 
+Run:  [24/168] ast_int32_imbalanced_reuse [Device=0 tree_levels=10 num_rows=100000000]
+Pass: Cold: 27.497914ms GPU, 27.503210ms CPU, 5.72s total GPU, 5.73s total wall, 208x 
+Run:  [25/168] ast_double_imbalanced_unique [Device=0 tree_levels=1 num_rows=100000]
+Pass: Cold: 0.032937ms GPU, 0.036764ms CPU, 0.50s total GPU, 1.14s total wall, 15184x 
+Run:  [26/168] ast_double_imbalanced_unique [Device=0 tree_levels=5 num_rows=100000]
+Pass: Cold: 0.052431ms GPU, 0.056318ms CPU, 0.50s total GPU, 0.83s total wall, 9552x 
+Run:  [27/168] ast_double_imbalanced_unique [Device=0 tree_levels=10 num_rows=100000]
+Pass: Cold: 0.076565ms GPU, 0.080432ms CPU, 0.50s total GPU, 0.70s total wall, 6544x 
+Run:  [28/168] ast_double_imbalanced_unique [Device=0 tree_levels=1 num_rows=1000000]
+Pass: Cold: 0.119229ms GPU, 0.123092ms CPU, 0.50s total GPU, 0.65s total wall, 4208x 
+Run:  [29/168] ast_double_imbalanced_unique [Device=0 tree_levels=5 num_rows=1000000]
+Pass: Cold: 0.253944ms GPU, 0.258204ms CPU, 0.54s total GPU, 0.60s total wall, 2128x 
+Run:  [30/168] ast_double_imbalanced_unique [Device=0 tree_levels=10 num_rows=1000000]
+Pass: Cold: 0.451665ms GPU, 0.456040ms CPU, 0.72s total GPU, 0.76s total wall, 1584x 
+Run:  [31/168] ast_double_imbalanced_unique [Device=0 tree_levels=1 num_rows=10000000]
+Pass: Cold: 0.966274ms GPU, 0.970607ms CPU, 0.50s total GPU, 0.52s total wall, 518x 
+Run:  [32/168] ast_double_imbalanced_unique [Device=0 tree_levels=5 num_rows=10000000]
+Pass: Cold: 2.312702ms GPU, 2.317485ms CPU, 3.22s total GPU, 3.26s total wall, 1392x 
+Run:  [33/168] ast_double_imbalanced_unique [Device=0 tree_levels=10 num_rows=10000000]
+Pass: Cold: 4.358568ms GPU, 4.363349ms CPU, 0.80s total GPU, 0.81s total wall, 184x 
+Run:  [34/168] ast_double_imbalanced_unique [Device=0 tree_levels=1 num_rows=100000000]
+Pass: Cold: 9.436373ms GPU, 9.441084ms CPU, 0.50s total GPU, 0.50s total wall, 53x 
+Run:  [35/168] ast_double_imbalanced_unique [Device=0 tree_levels=5 num_rows=100000000]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.69% > 0.50%)
+Pass: Cold: 23.075612ms GPU, 23.080703ms CPU, 15.00s total GPU, 15.02s total wall, 650x 
+Run:  [36/168] ast_double_imbalanced_unique [Device=0 tree_levels=10 num_rows=100000000]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.59% > 0.50%)
+Pass: Cold: 43.707835ms GPU, 43.713692ms CPU, 14.99s total GPU, 15.00s total wall, 343x 
+Run:  [37/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=1 num_rows=100000]
+Pass: Cold: 0.062009ms GPU, 0.065830ms CPU, 0.50s total GPU, 0.80s total wall, 8064x 
+Run:  [38/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=5 num_rows=100000]
+Pass: Cold: 0.080131ms GPU, 0.083892ms CPU, 0.50s total GPU, 0.71s total wall, 6240x 
+Run:  [39/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=10 num_rows=100000]
+Pass: Cold: 0.107326ms GPU, 0.111084ms CPU, 0.50s total GPU, 0.63s total wall, 4672x 
+Run:  [40/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=1 num_rows=1000000]
+Pass: Cold: 0.214913ms GPU, 0.218730ms CPU, 0.50s total GPU, 0.58s total wall, 2336x 
+Run:  [41/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=5 num_rows=1000000]
+Pass: Cold: 0.388244ms GPU, 0.392262ms CPU, 0.81s total GPU, 0.86s total wall, 2080x 
+Run:  [42/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=10 num_rows=1000000]
+Pass: Cold: 0.609868ms GPU, 0.613945ms CPU, 0.82s total GPU, 0.85s total wall, 1344x 
+Run:  [43/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=1 num_rows=10000000]
+Pass: Cold: 1.841338ms GPU, 1.845263ms CPU, 1.94s total GPU, 1.98s total wall, 1056x 
+Run:  [44/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=5 num_rows=10000000]
+Pass: Cold: 3.532890ms GPU, 3.536986ms CPU, 4.07s total GPU, 4.10s total wall, 1152x 
+Run:  [45/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=10 num_rows=10000000]
+Pass: Cold: 5.794188ms GPU, 5.798366ms CPU, 4.45s total GPU, 4.47s total wall, 768x 
+Run:  [46/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=1 num_rows=100000000]
+Pass: Cold: 18.130657ms GPU, 18.134503ms CPU, 9.86s total GPU, 9.88s total wall, 544x 
+Run:  [47/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=5 num_rows=100000000]
+Pass: Cold: 35.225573ms GPU, 35.229465ms CPU, 2.82s total GPU, 2.82s total wall, 80x 
+Run:  [48/168] ast_int32_imbalanced_unique_nulls [Device=0 tree_levels=10 num_rows=100000000]
+Pass: Cold: 57.703685ms GPU, 57.707282ms CPU, 4.62s total GPU, 4.62s total wall, 80x 
+Run:  [49/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=1 num_rows=100000]
+Pass: Cold: 0.058974ms GPU, 0.062796ms CPU, 0.50s total GPU, 0.81s total wall, 8480x 
+Run:  [50/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=5 num_rows=100000]
+Pass: Cold: 0.071244ms GPU, 0.075018ms CPU, 0.50s total GPU, 0.75s total wall, 7024x 
+Run:  [51/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=10 num_rows=100000]
+Pass: Cold: 0.089460ms GPU, 0.093259ms CPU, 0.50s total GPU, 0.70s total wall, 5600x 
+Run:  [52/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=1 num_rows=1000000]
+Pass: Cold: 0.198811ms GPU, 0.202583ms CPU, 0.50s total GPU, 0.59s total wall, 2528x 
+Run:  [53/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=5 num_rows=1000000]
+Pass: Cold: 0.326124ms GPU, 0.330124ms CPU, 0.57s total GPU, 0.63s total wall, 1744x 
+Run:  [54/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=10 num_rows=1000000]
+Pass: Cold: 0.500372ms GPU, 0.504424ms CPU, 0.99s total GPU, 1.06s total wall, 1984x 
+Run:  [55/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=1 num_rows=10000000]
+Pass: Cold: 1.714056ms GPU, 1.717958ms CPU, 1.32s total GPU, 1.34s total wall, 768x 
+Run:  [56/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=5 num_rows=10000000]
+Pass: Cold: 3.014789ms GPU, 3.018899ms CPU, 4.34s total GPU, 4.39s total wall, 1440x 
+Run:  [57/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=10 num_rows=10000000]
+Pass: Cold: 4.741859ms GPU, 4.746030ms CPU, 2.88s total GPU, 2.90s total wall, 608x 
+Run:  [58/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=1 num_rows=100000000]
+Pass: Cold: 16.918828ms GPU, 16.922693ms CPU, 11.64s total GPU, 11.66s total wall, 688x 
+Run:  [59/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=5 num_rows=100000000]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.67% > 0.50%)
+Pass: Cold: 29.950891ms GPU, 29.954820ms CPU, 15.01s total GPU, 15.02s total wall, 501x 
+Run:  [60/168] ast_int32_imbalanced_reuse_nulls [Device=0 tree_levels=10 num_rows=100000000]
+Warn: Current measurement timed out (15.04s) while over noise threshold (0.72% > 0.50%)
+Pass: Cold: 47.258766ms GPU, 47.262612ms CPU, 15.03s total GPU, 15.04s total wall, 318x 
+Run:  [61/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=1 num_rows=100000]
+Pass: Cold: 0.064736ms GPU, 0.068502ms CPU, 0.50s total GPU, 0.78s total wall, 7728x 
+Run:  [62/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=5 num_rows=100000]
+Pass: Cold: 0.087186ms GPU, 0.090927ms CPU, 0.50s total GPU, 0.66s total wall, 5744x 
+Run:  [63/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=10 num_rows=100000]
+Pass: Cold: 0.115959ms GPU, 0.119744ms CPU, 0.50s total GPU, 0.61s total wall, 4320x 
+Run:  [64/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=1 num_rows=1000000]
+Pass: Cold: 0.236593ms GPU, 0.240358ms CPU, 0.61s total GPU, 0.69s total wall, 2592x 
+Run:  [65/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=5 num_rows=1000000]
+Pass: Cold: 0.419446ms GPU, 0.423505ms CPU, 0.76s total GPU, 0.81s total wall, 1808x 
+Run:  [66/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=10 num_rows=1000000]
+Pass: Cold: 0.681261ms GPU, 0.685381ms CPU, 0.65s total GPU, 0.68s total wall, 960x 
+Run:  [67/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=1 num_rows=10000000]
+Pass: Cold: 2.043977ms GPU, 2.047837ms CPU, 3.37s total GPU, 3.42s total wall, 1648x 
+Run:  [68/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=5 num_rows=10000000]
+Pass: Cold: 3.869602ms GPU, 3.873723ms CPU, 3.71s total GPU, 3.74s total wall, 960x 
+Run:  [69/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=10 num_rows=10000000]
+Pass: Cold: 6.550379ms GPU, 6.554460ms CPU, 5.66s total GPU, 5.68s total wall, 864x 
+Run:  [70/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=1 num_rows=100000000]
+Pass: Cold: 20.079003ms GPU, 20.082995ms CPU, 0.64s total GPU, 0.64s total wall, 32x 
+Run:  [71/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=5 num_rows=100000000]
+Warn: Current measurement timed out (15.03s) while over noise threshold (0.87% > 0.50%)
+Pass: Cold: 38.409579ms GPU, 38.413404ms CPU, 15.02s total GPU, 15.03s total wall, 391x 
+Run:  [72/168] ast_double_imbalanced_unique_nulls [Device=0 tree_levels=10 num_rows=100000000]
+Pass: Cold: 64.996382ms GPU, 65.000188ms CPU, 0.71s total GPU, 0.72s total wall, 11x 
+Run:  [73/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=32768 tree_levels=1 hit_rate=50]
+Pass: Cold: 0.050233ms GPU, 0.054100ms CPU, 0.50s total GPU, 0.87s total wall, 9968x 
+Run:  [74/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=32768 tree_levels=1 hit_rate=50]
+Pass: Cold: 0.133603ms GPU, 0.137708ms CPU, 0.50s total GPU, 0.59s total wall, 3744x 
+Run:  [75/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=32768 tree_levels=1 hit_rate=50]
+Pass: Cold: 0.971710ms GPU, 0.976214ms CPU, 0.58s total GPU, 0.59s total wall, 592x 
+Run:  [76/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=32768 tree_levels=1 hit_rate=50]
+Pass: Cold: 2.497852ms GPU, 2.502315ms CPU, 1.32s total GPU, 1.33s total wall, 528x 
+Run:  [77/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=262144 tree_levels=1 hit_rate=50]
+Pass: Cold: 0.310916ms GPU, 0.314961ms CPU, 0.50s total GPU, 0.54s total wall, 1616x 
+Run:  [78/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=262144 tree_levels=1 hit_rate=50]
+Pass: Cold: 0.541052ms GPU, 0.545232ms CPU, 0.50s total GPU, 0.52s total wall, 928x 
+Run:  [79/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=262144 tree_levels=1 hit_rate=50]
+Pass: Cold: 10.030836ms GPU, 10.035552ms CPU, 8.35s total GPU, 8.37s total wall, 832x 
+Run:  [80/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=262144 tree_levels=1 hit_rate=50]
+Pass: Cold: 29.238176ms GPU, 29.243404ms CPU, 11.70s total GPU, 11.71s total wall, 400x 
+Run:  [81/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=2097152 tree_levels=1 hit_rate=50]
+Pass: Cold: 1.690537ms GPU, 1.695064ms CPU, 0.89s total GPU, 0.91s total wall, 528x 
+Run:  [82/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=2097152 tree_levels=1 hit_rate=50]
+Pass: Cold: 3.703373ms GPU, 3.707855ms CPU, 7.41s total GPU, 7.46s total wall, 2000x 
+Run:  [83/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=2097152 tree_levels=1 hit_rate=50]
+Pass: Cold: 81.776486ms GPU, 81.783065ms CPU, 0.90s total GPU, 0.90s total wall, 11x 
+Run:  [84/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=2097152 tree_levels=1 hit_rate=50]
+Pass: Cold: 240.520805ms GPU, 240.528440ms CPU, 2.65s total GPU, 2.65s total wall, 11x 
+Run:  [85/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=32768 tree_levels=2 hit_rate=50]
+Pass: Cold: 0.072617ms GPU, 0.076477ms CPU, 0.50s total GPU, 0.69s total wall, 6896x 
+Run:  [86/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=32768 tree_levels=2 hit_rate=50]
+Pass: Cold: 0.232013ms GPU, 0.236154ms CPU, 0.52s total GPU, 0.58s total wall, 2256x 
+Run:  [87/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=32768 tree_levels=2 hit_rate=50]
+Pass: Cold: 1.814419ms GPU, 1.818861ms CPU, 1.05s total GPU, 1.06s total wall, 576x 
+Run:  [88/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=32768 tree_levels=2 hit_rate=50]
+Pass: Cold: 4.773078ms GPU, 4.777626ms CPU, 2.67s total GPU, 2.69s total wall, 560x 
+Run:  [89/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=262144 tree_levels=2 hit_rate=50]
+Pass: Cold: 0.431759ms GPU, 0.435979ms CPU, 0.50s total GPU, 0.53s total wall, 1168x 
+Run:  [90/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=262144 tree_levels=2 hit_rate=50]
+Pass: Cold: 1.077956ms GPU, 1.082192ms CPU, 0.86s total GPU, 0.88s total wall, 800x 
+Run:  [91/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=262144 tree_levels=2 hit_rate=50]
+Pass: Cold: 20.045944ms GPU, 20.050785ms CPU, 0.56s total GPU, 0.56s total wall, 28x 
+Run:  [92/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=262144 tree_levels=2 hit_rate=50]
+Pass: Cold: 58.775872ms GPU, 58.779877ms CPU, 0.65s total GPU, 0.65s total wall, 11x 
+Run:  [93/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=2097152 tree_levels=2 hit_rate=50]
+Pass: Cold: 2.503708ms GPU, 2.508140ms CPU, 2.56s total GPU, 2.59s total wall, 1024x 
+Run:  [94/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=2097152 tree_levels=2 hit_rate=50]
+Pass: Cold: 7.694579ms GPU, 7.699196ms CPU, 6.89s total GPU, 6.92s total wall, 896x 
+Run:  [95/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=2097152 tree_levels=2 hit_rate=50]
+Pass: Cold: 163.196747ms GPU, 163.202953ms CPU, 1.80s total GPU, 1.80s total wall, 11x 
+Run:  [96/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=2097152 tree_levels=2 hit_rate=50]
+Pass: Cold: 483.317017ms GPU, 483.322816ms CPU, 5.32s total GPU, 5.32s total wall, 11x 
+Run:  [97/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=32768 tree_levels=3 hit_rate=50]
+Pass: Cold: 0.092158ms GPU, 0.096157ms CPU, 0.50s total GPU, 0.64s total wall, 5440x 
+Run:  [98/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=32768 tree_levels=3 hit_rate=50]
+Pass: Cold: 0.325029ms GPU, 0.329197ms CPU, 0.78s total GPU, 0.84s total wall, 2400x 
+Run:  [99/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=32768 tree_levels=3 hit_rate=50]
+Pass: Cold: 2.599988ms GPU, 2.604429ms CPU, 1.37s total GPU, 1.39s total wall, 528x 
+Run:  [100/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=32768 tree_levels=3 hit_rate=50]
+Pass: Cold: 7.079208ms GPU, 7.083800ms CPU, 1.36s total GPU, 1.36s total wall, 192x 
+Run:  [101/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=262144 tree_levels=3 hit_rate=50]
+Pass: Cold: 0.564942ms GPU, 0.569122ms CPU, 0.51s total GPU, 0.53s total wall, 896x 
+Run:  [102/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=262144 tree_levels=3 hit_rate=50]
+Pass: Cold: 1.612339ms GPU, 1.616652ms CPU, 1.68s total GPU, 1.70s total wall, 1040x 
+Run:  [103/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=262144 tree_levels=3 hit_rate=50]
+Pass: Cold: 29.837046ms GPU, 29.841383ms CPU, 0.51s total GPU, 0.51s total wall, 17x 
+Run:  [104/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=262144 tree_levels=3 hit_rate=50]
+Pass: Cold: 87.539083ms GPU, 87.544030ms CPU, 2.01s total GPU, 2.01s total wall, 23x 
+Run:  [105/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=2097152 tree_levels=3 hit_rate=50]
+Pass: Cold: 3.758563ms GPU, 3.763092ms CPU, 4.69s total GPU, 4.72s total wall, 1248x 
+Run:  [106/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=2097152 tree_levels=3 hit_rate=50]
+Warn: Current measurement timed out (15.00s) while over noise threshold (2.06% > 0.50%)
+Pass: Cold: 11.693169ms GPU, 11.697772ms CPU, 14.97s total GPU, 15.00s total wall, 1280x 
+Run:  [107/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=2097152 tree_levels=3 hit_rate=50]
+Pass: Cold: 244.119748ms GPU, 244.126460ms CPU, 2.69s total GPU, 2.69s total wall, 11x 
+Run:  [108/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=2097152 tree_levels=3 hit_rate=50]
+Pass: Cold: 720.518932ms GPU, 720.523000ms CPU, 7.93s total GPU, 7.93s total wall, 11x 
+Run:  [109/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=32768 tree_levels=4 hit_rate=50]
+Pass: Cold: 0.113312ms GPU, 0.117372ms CPU, 0.50s total GPU, 0.61s total wall, 4416x 
+Run:  [110/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=32768 tree_levels=4 hit_rate=50]
+Pass: Cold: 0.408669ms GPU, 0.412882ms CPU, 0.75s total GPU, 0.80s total wall, 1840x 
+Run:  [111/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=32768 tree_levels=4 hit_rate=50]
+Pass: Cold: 3.328081ms GPU, 3.332610ms CPU, 1.01s total GPU, 1.02s total wall, 304x 
+Run:  [112/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=32768 tree_levels=4 hit_rate=50]
+Pass: Cold: 9.326157ms GPU, 9.330844ms CPU, 4.92s total GPU, 4.94s total wall, 528x 
+Run:  [113/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=262144 tree_levels=4 hit_rate=50]
+Pass: Cold: 0.739220ms GPU, 0.743499ms CPU, 0.52s total GPU, 0.54s total wall, 704x 
+Run:  [114/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=262144 tree_levels=4 hit_rate=50]
+Pass: Cold: 3.203893ms GPU, 3.208471ms CPU, 1.69s total GPU, 1.71s total wall, 528x 
+Run:  [115/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=262144 tree_levels=4 hit_rate=50]
+Pass: Cold: 39.183737ms GPU, 39.188195ms CPU, 0.51s total GPU, 0.51s total wall, 13x 
+Run:  [116/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=262144 tree_levels=4 hit_rate=50]
+Pass: Cold: 116.183334ms GPU, 116.189481ms CPU, 2.21s total GPU, 2.21s total wall, 19x 
+Run:  [117/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=2097152 tree_levels=4 hit_rate=50]
+Pass: Cold: 5.033663ms GPU, 5.038387ms CPU, 4.75s total GPU, 4.78s total wall, 944x 
+Run:  [118/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=2097152 tree_levels=4 hit_rate=50]
+Pass: Cold: 23.199348ms GPU, 23.204708ms CPU, 8.54s total GPU, 8.55s total wall, 368x 
+Run:  [119/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=2097152 tree_levels=4 hit_rate=50]
+Pass: Cold: 320.804793ms GPU, 320.810873ms CPU, 3.53s total GPU, 3.53s total wall, 11x 
+Run:  [120/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=2097152 tree_levels=4 hit_rate=50]
+Pass: Cold: 960.392883ms GPU, 960.395734ms CPU, 10.56s total GPU, 10.56s total wall, 11x 
+Run:  [121/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=32768 tree_levels=1 hit_rate=100]
+Pass: Cold: 0.056565ms GPU, 0.060378ms CPU, 0.50s total GPU, 0.81s total wall, 8848x 
+Run:  [122/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=32768 tree_levels=1 hit_rate=100]
+Pass: Cold: 0.148886ms GPU, 0.152851ms CPU, 0.50s total GPU, 0.58s total wall, 3360x 
+Run:  [123/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=32768 tree_levels=1 hit_rate=100]
+Pass: Cold: 1.379663ms GPU, 1.383937ms CPU, 1.57s total GPU, 1.60s total wall, 1136x 
+Run:  [124/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=32768 tree_levels=1 hit_rate=100]
+Pass: Cold: 3.364528ms GPU, 3.368939ms CPU, 0.54s total GPU, 0.54s total wall, 160x 
+Run:  [125/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=262144 tree_levels=1 hit_rate=100]
+Pass: Cold: 0.398474ms GPU, 0.402527ms CPU, 0.50s total GPU, 0.53s total wall, 1264x 
+Run:  [126/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=262144 tree_levels=1 hit_rate=100]
+Pass: Cold: 0.646649ms GPU, 0.650824ms CPU, 0.72s total GPU, 0.75s total wall, 1120x 
+Run:  [127/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=262144 tree_levels=1 hit_rate=100]
+Pass: Cold: 14.510071ms GPU, 14.514705ms CPU, 0.51s total GPU, 0.51s total wall, 35x 
+Run:  [128/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=262144 tree_levels=1 hit_rate=100]
+Warn: Current measurement timed out (15.04s) while over noise threshold (1.08% > 0.50%)
+Pass: Cold: 37.653005ms GPU, 37.658333ms CPU, 15.02s total GPU, 15.04s total wall, 399x 
+Run:  [129/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=2097152 tree_levels=1 hit_rate=100]
+Pass: Cold: 1.940059ms GPU, 1.944260ms CPU, 1.12s total GPU, 1.13s total wall, 576x 
+Run:  [130/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=2097152 tree_levels=1 hit_rate=100]
+Pass: Cold: 5.392409ms GPU, 5.396862ms CPU, 0.52s total GPU, 0.52s total wall, 96x 
+Run:  [131/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=2097152 tree_levels=1 hit_rate=100]
+Pass: Cold: 117.081780ms GPU, 117.087683ms CPU, 1.29s total GPU, 1.29s total wall, 11x 
+Run:  [132/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=2097152 tree_levels=1 hit_rate=100]
+Pass: Cold: 310.424336ms GPU, 310.431446ms CPU, 3.41s total GPU, 3.42s total wall, 11x 
+Run:  [133/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=32768 tree_levels=2 hit_rate=100]
+Pass: Cold: 0.080081ms GPU, 0.084091ms CPU, 0.50s total GPU, 0.66s total wall, 6256x 
+Run:  [134/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=32768 tree_levels=2 hit_rate=100]
+Pass: Cold: 0.252012ms GPU, 0.256068ms CPU, 0.60s total GPU, 0.66s total wall, 2384x 
+Run:  [135/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=32768 tree_levels=2 hit_rate=100]
+Pass: Cold: 2.594757ms GPU, 2.599136ms CPU, 1.45s total GPU, 1.47s total wall, 560x 
+Run:  [136/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=32768 tree_levels=2 hit_rate=100]
+Pass: Cold: 6.616239ms GPU, 6.620847ms CPU, 0.74s total GPU, 0.74s total wall, 112x 
+Run:  [137/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=262144 tree_levels=2 hit_rate=100]
+Pass: Cold: 0.874662ms GPU, 0.878770ms CPU, 0.69s total GPU, 0.70s total wall, 784x 
+Run:  [138/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=262144 tree_levels=2 hit_rate=100]
+Pass: Cold: 1.250189ms GPU, 1.254393ms CPU, 0.84s total GPU, 0.86s total wall, 672x 
+Run:  [139/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=262144 tree_levels=2 hit_rate=100]
+Pass: Cold: 28.560380ms GPU, 28.566192ms CPU, 0.51s total GPU, 0.51s total wall, 18x 
+Run:  [140/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=262144 tree_levels=2 hit_rate=100]
+Pass: Cold: 74.386598ms GPU, 74.392312ms CPU, 0.82s total GPU, 0.82s total wall, 11x 
+Run:  [141/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=2097152 tree_levels=2 hit_rate=100]
+Pass: Cold: 5.230735ms GPU, 5.235290ms CPU, 1.42s total GPU, 1.43s total wall, 272x 
+Run:  [142/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=2097152 tree_levels=2 hit_rate=100]
+Warn: Current measurement timed out (15.01s) while over noise threshold (1.41% > 0.50%)
+Pass: Cold: 9.052737ms GPU, 9.057389ms CPU, 14.96s total GPU, 15.01s total wall, 1653x 
+Run:  [143/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=2097152 tree_levels=2 hit_rate=100]
+Pass: Cold: 234.408383ms GPU, 234.415578ms CPU, 2.58s total GPU, 2.58s total wall, 11x 
+Run:  [144/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=2097152 tree_levels=2 hit_rate=100]
+Pass: Cold: 614.095670ms GPU, 614.100381ms CPU, 6.76s total GPU, 6.76s total wall, 11x 
+Run:  [145/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=32768 tree_levels=3 hit_rate=100]
+Pass: Cold: 0.102407ms GPU, 0.106430ms CPU, 0.50s total GPU, 0.62s total wall, 4896x 
+Run:  [146/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=32768 tree_levels=3 hit_rate=100]
+Pass: Cold: 0.349613ms GPU, 0.353700ms CPU, 0.76s total GPU, 0.81s total wall, 2176x 
+Run:  [147/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=32768 tree_levels=3 hit_rate=100]
+Pass: Cold: 3.760470ms GPU, 3.764843ms CPU, 2.17s total GPU, 2.18s total wall, 576x 
+Run:  [148/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=32768 tree_levels=3 hit_rate=100]
+Pass: Cold: 9.730427ms GPU, 9.735146ms CPU, 5.14s total GPU, 5.15s total wall, 528x 
+Run:  [149/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=262144 tree_levels=3 hit_rate=100]
+Pass: Cold: 1.321842ms GPU, 1.326087ms CPU, 1.76s total GPU, 1.79s total wall, 1328x 
+Run:  [150/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=262144 tree_levels=3 hit_rate=100]
+Pass: Cold: 2.031795ms GPU, 2.036161ms CPU, 1.56s total GPU, 1.58s total wall, 768x 
+Run:  [151/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=262144 tree_levels=3 hit_rate=100]
+Pass: Cold: 42.528885ms GPU, 42.534352ms CPU, 0.51s total GPU, 0.51s total wall, 12x 
+Run:  [152/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=262144 tree_levels=3 hit_rate=100]
+Pass: Cold: 110.913220ms GPU, 110.919782ms CPU, 1.22s total GPU, 1.22s total wall, 11x 
+Run:  [153/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=2097152 tree_levels=3 hit_rate=100]
+Pass: Cold: 8.701490ms GPU, 8.706063ms CPU, 6.13s total GPU, 6.14s total wall, 704x 
+Run:  [154/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=2097152 tree_levels=3 hit_rate=100]
+Warn: Current measurement timed out (15.02s) while over noise threshold (14.23% > 0.50%)
+Pass: Cold: 19.808626ms GPU, 19.813796ms CPU, 15.00s total GPU, 15.02s total wall, 757x 
+Run:  [155/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=2097152 tree_levels=3 hit_rate=100]
+Pass: Cold: 347.424033ms GPU, 347.429435ms CPU, 3.82s total GPU, 3.82s total wall, 11x 
+Run:  [156/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=2097152 tree_levels=3 hit_rate=100]
+Pass: Cold: 917.672924ms GPU, 917.674665ms CPU, 10.09s total GPU, 10.10s total wall, 11x 
+Run:  [157/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=32768 tree_levels=4 hit_rate=100]
+Pass: Cold: 0.125160ms GPU, 0.129167ms CPU, 0.50s total GPU, 0.60s total wall, 4000x 
+Run:  [158/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=32768 tree_levels=4 hit_rate=100]
+Pass: Cold: 0.437815ms GPU, 0.441923ms CPU, 0.54s total GPU, 0.57s total wall, 1232x 
+Run:  [159/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=32768 tree_levels=4 hit_rate=100]
+Pass: Cold: 4.847492ms GPU, 4.852027ms CPU, 3.26s total GPU, 3.27s total wall, 672x 
+Run:  [160/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=32768 tree_levels=4 hit_rate=100]
+Pass: Cold: 12.819850ms GPU, 12.824562ms CPU, 6.77s total GPU, 6.78s total wall, 528x 
+Run:  [161/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=262144 tree_levels=4 hit_rate=100]
+Pass: Cold: 1.752097ms GPU, 1.756403ms CPU, 2.27s total GPU, 2.30s total wall, 1296x 
+Run:  [162/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=262144 tree_levels=4 hit_rate=100]
+Pass: Cold: 2.538337ms GPU, 2.542669ms CPU, 2.84s total GPU, 2.87s total wall, 1120x 
+Run:  [163/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=262144 tree_levels=4 hit_rate=100]
+Pass: Cold: 56.179194ms GPU, 56.185920ms CPU, 0.62s total GPU, 0.62s total wall, 11x 
+Run:  [164/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=262144 tree_levels=4 hit_rate=100]
+Pass: Cold: 147.105198ms GPU, 147.111252ms CPU, 1.62s total GPU, 1.62s total wall, 11x 
+Run:  [165/168] ast_string_equal_logical_and [Device=0 string_width=32 num_rows=2097152 tree_levels=4 hit_rate=100]
+Pass: Cold: 11.719630ms GPU, 11.724305ms CPU, 1.50s total GPU, 1.50s total wall, 128x 
+Run:  [166/168] ast_string_equal_logical_and [Device=0 string_width=64 num_rows=2097152 tree_levels=4 hit_rate=100]
+Warn: Current measurement timed out (15.02s) while over noise threshold (10.04% > 0.50%)
+Pass: Cold: 19.473932ms GPU, 19.478987ms CPU, 14.99s total GPU, 15.02s total wall, 770x 
+Run:  [167/168] ast_string_equal_logical_and [Device=0 string_width=128 num_rows=2097152 tree_levels=4 hit_rate=100]
+Pass: Cold: 462.966883ms GPU, 462.972686ms CPU, 5.09s total GPU, 5.09s total wall, 11x 
+Run:  [168/168] ast_string_equal_logical_and [Device=0 string_width=256 num_rows=2097152 tree_levels=4 hit_rate=100]
+Pass: Cold: 1214.491688ms GPU, 1214.492310ms CPU, 13.36s total GPU, 13.36s total wall, 11x 
+```
+
+# Benchmark Results
+
+## ast_int32_imbalanced_unique
+
+### [0] Tesla T4
+
+| tree_levels | num_rows  | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | GlobalMem BW | BWUtil |
+|-------------|-----------|---------|------------|--------|------------|--------|--------------|--------|
+|           1 |    100000 |  16448x |  34.471 us | 19.02% |  30.415 us | 12.39% |  39.454 GB/s | 12.33% |
+|           5 |    100000 |  11680x |  46.617 us |  9.74% |  42.821 us |  3.84% |  65.389 GB/s | 20.43% |
+|          10 |    100000 |   7968x |  66.627 us |  6.76% |  62.807 us |  2.83% |  76.424 GB/s | 23.88% |
+|           1 |   1000000 |   6880x |  76.617 us |  6.99% |  72.714 us |  4.22% | 165.031 GB/s | 51.56% |
+|           5 |   1000000 |   2512x | 204.343 us |  4.62% | 200.104 us |  4.06% | 139.928 GB/s | 43.72% |
+|          10 |   1000000 |   1504x | 375.845 us |  2.50% | 371.515 us |  2.20% | 129.201 GB/s | 40.37% |
+|           1 |  10000000 |   1008x | 530.407 us |  1.58% | 525.924 us |  1.32% | 228.170 GB/s | 71.29% |
+|           5 |  10000000 |    704x |   1.933 ms |  1.23% |   1.929 ms |  1.20% | 145.167 GB/s | 45.36% |
+|          10 |  10000000 |    576x |   3.667 ms |  1.49% |   3.662 ms |  1.48% | 131.077 GB/s | 40.95% |
+|           1 | 100000000 |    768x |   5.314 ms |  1.45% |   5.309 ms |  1.45% | 226.012 GB/s | 70.61% |
+|           5 | 100000000 |    528x |  19.438 ms |  1.29% |  19.433 ms |  1.29% | 144.087 GB/s | 45.02% |
+|          10 | 100000000 |    408x |  36.798 ms |  0.91% |  36.792 ms |  0.91% | 130.462 GB/s | 40.76% |
+
+## ast_int32_imbalanced_reuse
+
+### [0] Tesla T4
+
+| tree_levels | num_rows  | Samples |  CPU Time  | Noise  |  GPU Time  | Noise | GlobalMem BW | BWUtil |
+|-------------|-----------|---------|------------|--------|------------|-------|--------------|--------|
+|           1 |    100000 |  18704x |  30.552 us | 15.98% |  26.745 us | 6.79% |  44.868 GB/s | 14.02% |
+|           5 |    100000 |  13360x |  41.246 us | 12.58% |  37.440 us | 7.24% |  74.787 GB/s | 23.37% |
+|          10 |    100000 |  10176x |  53.011 us |  8.59% |  49.200 us | 3.60% |  97.561 GB/s | 30.48% |
+|           1 |   1000000 |   8352x |  63.845 us |  7.25% |  59.976 us | 3.13% | 200.081 GB/s | 62.51% |
+|           5 |   1000000 |   3168x | 161.973 us |  4.49% | 157.861 us | 3.59% | 177.371 GB/s | 55.42% |
+|          10 |   1000000 |   1776x | 287.647 us |  1.81% | 283.484 us | 1.02% | 169.321 GB/s | 52.90% |
+|           1 |  10000000 |   2784x | 489.673 us |  2.34% | 485.295 us | 2.15% | 247.272 GB/s | 77.26% |
+|           5 |  10000000 |    672x |   1.522 ms |  1.71% |   1.518 ms | 1.68% | 184.476 GB/s | 57.64% |
+|          10 |  10000000 |    896x |   2.751 ms |  1.19% |   2.746 ms | 1.18% | 174.773 GB/s | 54.61% |
+|           1 | 100000000 |   1216x |   4.885 ms |  1.51% |   4.880 ms | 1.50% | 245.905 GB/s | 76.83% |
+|           5 | 100000000 |    576x |  15.169 ms |  1.21% |  15.164 ms | 1.21% | 184.651 GB/s | 57.69% |
+|          10 | 100000000 |    208x |  27.503 ms |  0.98% |  27.498 ms | 0.98% | 174.559 GB/s | 54.54% |
+
+## ast_double_imbalanced_unique
+
+### [0] Tesla T4
+
+| tree_levels | num_rows  | Samples |  CPU Time  | Noise  |  GPU Time  | Noise | GlobalMem BW | BWUtil |
+|-------------|-----------|---------|------------|--------|------------|-------|--------------|--------|
+|           1 |    100000 |  15184x |  36.764 us | 12.92% |  32.937 us | 5.22% |  72.866 GB/s | 22.77% |
+|           5 |    100000 |   9552x |  56.318 us |  8.72% |  52.431 us | 4.39% | 106.807 GB/s | 33.37% |
+|          10 |    100000 |   6544x |  80.432 us |  5.78% |  76.565 us | 2.67% | 125.384 GB/s | 39.17% |
+|           1 |   1000000 |   4208x | 123.092 us |  3.56% | 119.229 us | 1.40% | 201.293 GB/s | 62.89% |
+|           5 |   1000000 |   2128x | 258.204 us |  2.25% | 253.944 us | 1.43% | 220.521 GB/s | 68.90% |
+|          10 |   1000000 |   1584x | 456.040 us |  1.37% | 451.665 us | 0.96% | 212.547 GB/s | 66.41% |
+|           1 |  10000000 |    518x | 970.607 us |  0.50% | 966.274 us | 0.22% | 248.377 GB/s | 77.60% |
+|           5 |  10000000 |   1392x |   2.317 ms |  0.79% |   2.313 ms | 0.76% | 242.141 GB/s | 75.65% |
+|          10 |  10000000 |    184x |   4.363 ms |  0.51% |   4.359 ms | 0.50% | 220.256 GB/s | 68.82% |
+|           1 | 100000000 |     53x |   9.441 ms |  0.24% |   9.436 ms | 0.24% | 254.335 GB/s | 79.46% |
+|           5 | 100000000 |    650x |  23.081 ms |  0.69% |  23.076 ms | 0.69% | 242.680 GB/s | 75.82% |
+|          10 | 100000000 |    343x |  43.714 ms |  0.59% |  43.708 ms | 0.59% | 219.640 GB/s | 68.62% |
+
+## ast_int32_imbalanced_unique_nulls
+
+### [0] Tesla T4
+
+| tree_levels | num_rows  | Samples |  CPU Time  | Noise |  GPU Time  | Noise | GlobalMem BW | BWUtil |
+|-------------|-----------|---------|------------|-------|------------|-------|--------------|--------|
+|           1 |    100000 |   8064x |  65.830 us | 9.14% |  62.009 us | 6.57% |  19.352 GB/s |  6.05% |
+|           5 |    100000 |   6240x |  83.892 us | 5.92% |  80.131 us | 3.53% |  34.943 GB/s | 10.92% |
+|          10 |    100000 |   4672x | 111.084 us | 4.43% | 107.326 us | 2.59% |  44.724 GB/s | 13.97% |
+|           1 |   1000000 |   2336x | 218.730 us | 2.72% | 214.913 us | 2.01% |  55.837 GB/s | 17.45% |
+|           5 |   1000000 |   2080x | 392.262 us | 2.33% | 388.244 us | 2.07% |  72.120 GB/s | 22.53% |
+|          10 |   1000000 |   1344x | 613.945 us | 1.77% | 609.868 us | 1.63% |  78.706 GB/s | 24.59% |
+|           1 |  10000000 |   1056x |   1.845 ms | 0.93% |   1.841 ms | 0.90% |  65.170 GB/s | 20.36% |
+|           5 |  10000000 |   1152x |   3.537 ms | 0.92% |   3.533 ms | 0.91% |  79.255 GB/s | 24.76% |
+|          10 |  10000000 |    768x |   5.798 ms | 0.82% |   5.794 ms | 0.82% |  82.842 GB/s | 25.88% |
+|           1 | 100000000 |    544x |  18.135 ms | 0.54% |  18.131 ms | 0.54% |  66.186 GB/s | 20.68% |
+|           5 | 100000000 |     80x |  35.229 ms | 0.78% |  35.226 ms | 0.78% |  79.488 GB/s | 24.83% |
+|          10 | 100000000 |     80x |  57.707 ms | 0.70% |  57.704 ms | 0.70% |  83.184 GB/s | 25.99% |
+
+## ast_int32_imbalanced_reuse_nulls
+
+### [0] Tesla T4
+
+| tree_levels | num_rows  | Samples |  CPU Time  | Noise |  GPU Time  | Noise | GlobalMem BW | BWUtil |
+|-------------|-----------|---------|------------|-------|------------|-------|--------------|--------|
+|           1 |    100000 |   8480x |  62.796 us | 8.29% |  58.974 us | 4.95% |  20.348 GB/s |  6.36% |
+|           5 |    100000 |   7024x |  75.018 us | 6.37% |  71.244 us | 3.50% |  39.301 GB/s | 12.28% |
+|          10 |    100000 |   5600x |  93.259 us | 7.95% |  89.460 us | 6.65% |  53.655 GB/s | 16.76% |
+|           1 |   1000000 |   2528x | 202.583 us | 2.56% | 198.811 us | 1.71% |  60.359 GB/s | 18.86% |
+|           5 |   1000000 |   1744x | 330.124 us | 2.81% | 326.124 us | 2.50% |  85.857 GB/s | 26.82% |
+|          10 |   1000000 |   1984x | 504.424 us | 1.69% | 500.372 us | 1.47% |  95.929 GB/s | 29.97% |
+|           1 |  10000000 |    768x |   1.718 ms | 0.73% |   1.714 ms | 0.69% |  70.009 GB/s | 21.87% |
+|           5 |  10000000 |   1440x |   3.019 ms | 1.07% |   3.015 ms | 1.06% |  92.875 GB/s | 29.02% |
+|          10 |  10000000 |    608x |   4.746 ms | 1.07% |   4.742 ms | 1.07% | 101.226 GB/s | 31.63% |
+|           1 | 100000000 |    688x |  16.923 ms | 0.60% |  16.919 ms | 0.60% |  70.927 GB/s | 22.16% |
+|           5 | 100000000 |    501x |  29.955 ms | 0.67% |  29.951 ms | 0.67% |  93.486 GB/s | 29.21% |
+|          10 | 100000000 |    318x |  47.263 ms | 0.72% |  47.259 ms | 0.72% | 101.568 GB/s | 31.73% |
+
+## ast_double_imbalanced_unique_nulls
+
+### [0] Tesla T4
+
+| tree_levels | num_rows  | Samples |  CPU Time  | Noise |  GPU Time  | Noise | GlobalMem BW | BWUtil |
+|-------------|-----------|---------|------------|-------|------------|-------|--------------|--------|
+|           1 |    100000 |   7728x |  68.502 us | 9.97% |  64.736 us | 7.95% |  37.074 GB/s | 11.58% |
+|           5 |    100000 |   5744x |  90.927 us | 5.12% |  87.186 us | 2.76% |  64.230 GB/s | 20.07% |
+|          10 |    100000 |   4320x | 119.744 us | 4.07% | 115.959 us | 2.38% |  82.788 GB/s | 25.87% |
+|           1 |   1000000 |   2592x | 240.358 us | 3.12% | 236.593 us | 2.67% | 101.440 GB/s | 31.69% |
+|           5 |   1000000 |   1808x | 423.505 us | 2.46% | 419.446 us | 2.25% | 133.509 GB/s | 41.71% |
+|          10 |   1000000 |    960x | 685.381 us | 1.75% | 681.261 us | 1.63% | 140.915 GB/s | 44.03% |
+|           1 |  10000000 |   1648x |   2.048 ms | 0.76% |   2.044 ms | 0.73% | 117.418 GB/s | 36.69% |
+|           5 |  10000000 |    960x |   3.874 ms | 0.97% |   3.870 ms | 0.97% | 144.718 GB/s | 45.22% |
+|          10 |  10000000 |    864x |   6.554 ms | 1.38% |   6.550 ms | 1.38% | 146.556 GB/s | 45.79% |
+|           1 | 100000000 |     32x |  20.083 ms | 0.50% |  20.079 ms | 0.50% | 119.528 GB/s | 37.34% |
+|           5 | 100000000 |    391x |  38.413 ms | 0.87% |  38.410 ms | 0.87% | 145.797 GB/s | 45.55% |
+|          10 | 100000000 |     11x |  65.000 ms | 0.46% |  64.996 ms | 0.46% | 147.701 GB/s | 46.15% |
+
+## ast_string_equal_logical_and
+
+### [0] Tesla T4
+
+| string_width | num_rows | tree_levels | hit_rate | chars_size | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | Elem/s  | GlobalMem BW | BWUtil |
+|--------------|----------|-------------|----------|------------|---------|------------|--------|------------|--------|---------|--------------|--------|
+|           32 |    32768 |           1 |       50 |    1858398 |   9968x |  54.100 us | 10.20% |  50.233 us |  6.27% | 36.995G |  39.605 GB/s | 12.37% |
+|           64 |    32768 |           1 |       50 |    3716796 |   3744x | 137.708 us |  3.79% | 133.603 us |  1.87% | 27.820G |  28.801 GB/s |  9.00% |
+|          128 |    32768 |           1 |       50 |    7433592 |    592x | 976.214 us |  1.74% | 971.710 us |  1.67% |  7.650G |   7.785 GB/s |  2.43% |
+|          256 |    32768 |           1 |       50 |   14867184 |    528x |   2.502 ms |  1.57% |   2.498 ms |  1.56% |  5.952G |   6.004 GB/s |  1.88% |
+|           32 |   262144 |           1 |       50 |   14880202 |   1616x | 314.961 us |  4.55% | 310.916 us |  4.36% | 47.859G |  51.232 GB/s | 16.01% |
+|           64 |   262144 |           1 |       50 |   29760404 |    928x | 545.232 us |  3.80% | 541.052 us |  3.72% | 55.005G |  56.943 GB/s | 17.79% |
+|          128 |   262144 |           1 |       50 |   59520808 |    832x |  10.036 ms |  0.75% |  10.031 ms |  0.75% |  5.934G |   6.038 GB/s |  1.89% |
+|          256 |   262144 |           1 |       50 |  119041616 |    400x |  29.243 ms |  0.55% |  29.238 ms |  0.55% |  4.071G |   4.107 GB/s |  1.28% |
+|           32 |  2097152 |           1 |       50 |  118860588 |    528x |   1.695 ms | 11.04% |   1.691 ms | 11.04% | 70.309G |  75.271 GB/s | 23.52% |
+|           64 |  2097152 |           1 |       50 |  237721176 |   2000x |   3.708 ms |  2.10% |   3.703 ms |  2.09% | 64.190G |  66.456 GB/s | 20.76% |
+|          128 |  2097152 |           1 |       50 |  475442352 |     11x |  81.783 ms |  0.25% |  81.776 ms |  0.25% |  5.814G |   5.917 GB/s |  1.85% |
+|          256 |  2097152 |           1 |       50 |  950884704 |     11x | 240.528 ms |  0.34% | 240.521 ms |  0.34% |  3.953G |   3.988 GB/s |  1.25% |
+|           32 |    32768 |           2 |       50 |    3716796 |   6896x |  76.477 us |  6.94% |  72.617 us |  4.29% | 51.184G |  52.989 GB/s | 16.56% |
+|           64 |    32768 |           2 |       50 |    7433592 |   2256x | 236.154 us |  2.58% | 232.013 us |  1.81% | 32.040G |  32.605 GB/s | 10.19% |
+|          128 |    32768 |           2 |       50 |   14867184 |    576x |   1.819 ms |  0.97% |   1.814 ms |  0.94% |  8.194G |   8.266 GB/s |  2.58% |
+|          256 |    32768 |           2 |       50 |   29734368 |    560x |   4.778 ms |  1.87% |   4.773 ms |  1.87% |  6.230G |   6.257 GB/s |  1.95% |
+|           32 |   262144 |           2 |       50 |   29760404 |   1168x | 435.979 us |  7.92% | 431.759 us |  7.86% | 68.928G |  71.357 GB/s | 22.29% |
+|           64 |   262144 |           2 |       50 |   59520808 |    800x |   1.082 ms |  5.27% |   1.078 ms |  5.25% | 55.216G |  56.189 GB/s | 17.56% |
+|          128 |   262144 |           2 |       50 |  119041616 |     28x |  20.051 ms |  0.50% |  20.046 ms |  0.50% |  5.938G |   5.991 GB/s |  1.87% |
+|          256 |   262144 |           2 |       50 |  238083232 |     11x |  58.780 ms |  0.44% |  58.776 ms |  0.44% |  4.051G |   4.069 GB/s |  1.27% |
+|           32 |  2097152 |           2 |       50 |  237721176 |   1024x |   2.508 ms |  1.80% |   2.504 ms |  1.79% | 94.948G |  98.298 GB/s | 30.71% |
+|           64 |  2097152 |           2 |       50 |  475442352 |    896x |   7.699 ms |  6.51% |   7.695 ms |  6.51% | 61.789G |  62.879 GB/s | 19.65% |
+|          128 |  2097152 |           2 |       50 |  950884704 |     11x | 163.203 ms |  0.27% | 163.197 ms |  0.27% |  5.827G |   5.878 GB/s |  1.84% |
+|          256 |  2097152 |           2 |       50 | 1901769408 |     11x | 483.323 ms |  0.16% | 483.317 ms |  0.16% |  3.935G |   3.952 GB/s |  1.23% |
+|           32 |    32768 |           3 |       50 |    5575194 |   5440x |  96.157 us |  5.93% |  92.158 us |  3.97% | 60.496G |  61.918 GB/s | 19.35% |
+|           64 |    32768 |           3 |       50 |   11150388 |   2400x | 329.197 us |  2.35% | 325.029 us |  1.96% | 34.306G |  34.709 GB/s | 10.84% |
+|          128 |    32768 |           3 |       50 |   22300776 |    528x |   2.604 ms |  0.97% |   2.600 ms |  0.96% |  8.577G |   8.628 GB/s |  2.70% |
+|          256 |    32768 |           3 |       50 |   44601552 |    192x |   7.084 ms |  1.38% |   7.079 ms |  1.37% |  6.300G |   6.319 GB/s |  1.97% |
+|           32 |   262144 |           3 |       50 |   44640606 |    896x | 569.122 us |  3.15% | 564.942 us |  3.06% | 79.018G |  80.874 GB/s | 25.27% |
+|           64 |   262144 |           3 |       50 |   89281212 |   1040x |   1.617 ms |  2.58% |   1.612 ms |  2.56% | 55.374G |  56.024 GB/s | 17.50% |
+|          128 |   262144 |           3 |       50 |  178562424 |     17x |  29.841 ms |  0.42% |  29.837 ms |  0.42% |  5.985G |   6.020 GB/s |  1.88% |
+|          256 |   262144 |           3 |       50 |  357124848 |     23x |  87.544 ms |  0.50% |  87.539 ms |  0.50% |  4.080G |   4.092 GB/s |  1.28% |
+|           32 |  2097152 |           3 |       50 |  356581764 |   1248x |   3.763 ms |  1.34% |   3.759 ms |  1.33% | 94.872G |  97.104 GB/s | 30.34% |
+|           64 |  2097152 |           3 |       50 |  713163528 |   1280x |  11.698 ms |  2.06% |  11.693 ms |  2.06% | 60.990G |  61.707 GB/s | 19.28% |
+|          128 |  2097152 |           3 |       50 | 1426327056 |     11x | 244.126 ms |  0.16% | 244.120 ms |  0.16% |  5.843G |   5.877 GB/s |  1.84% |
+|          256 |  2097152 |           3 |       50 | 2852654112 |     11x | 720.523 ms |  0.20% | 720.519 ms |  0.20% |  3.959G |   3.971 GB/s |  1.24% |
+|           32 |    32768 |           4 |       50 |    7433592 |   4416x | 117.372 us |  5.46% | 113.312 us |  4.02% | 65.603G |  66.760 GB/s | 20.86% |
+|           64 |    32768 |           4 |       50 |   14867184 |   1840x | 412.882 us |  2.55% | 408.669 us |  2.33% | 36.380G |  36.700 GB/s | 11.47% |
+|          128 |    32768 |           4 |       50 |   29734368 |    304x |   3.333 ms |  1.10% |   3.328 ms |  1.09% |  8.934G |   8.974 GB/s |  2.80% |
+|          256 |    32768 |           4 |       50 |   59468736 |    528x |   9.331 ms |  1.14% |   9.326 ms |  1.14% |  6.377G |   6.391 GB/s |  2.00% |
+|           32 |   262144 |           4 |       50 |   59520808 |    704x | 743.499 us |  2.43% | 739.220 us |  2.35% | 80.518G |  81.937 GB/s | 25.60% |
+|           64 |   262144 |           4 |       50 |  119041616 |    528x |   3.208 ms |  9.04% |   3.204 ms |  9.04% | 37.155G |  37.483 GB/s | 11.71% |
+|          128 |   262144 |           4 |       50 |  238083232 |     13x |  39.188 ms |  0.44% |  39.184 ms |  0.44% |  6.076G |   6.103 GB/s |  1.91% |
+|          256 |   262144 |           4 |       50 |  476166464 |     19x | 116.189 ms |  0.49% | 116.183 ms |  0.49% |  4.098G |   4.107 GB/s |  1.28% |
+|           32 |  2097152 |           4 |       50 |  475442352 |    944x |   5.038 ms |  1.21% |   5.034 ms |  1.20% | 94.453G |  96.119 GB/s | 30.03% |
+|           64 |  2097152 |           4 |       50 |  950884704 |    368x |  23.205 ms | 16.91% |  23.199 ms | 16.90% | 40.988G |  41.349 GB/s | 12.92% |
+|          128 |  2097152 |           4 |       50 | 1901769408 |     11x | 320.811 ms |  0.23% | 320.805 ms |  0.23% |  5.928G |   5.954 GB/s |  1.86% |
+|          256 |  2097152 |           4 |       50 | 3803538816 |     11x | 960.396 ms |  0.10% | 960.393 ms |  0.10% |  3.960G |   3.969 GB/s |  1.24% |
+|           32 |    32768 |           1 |      100 |    2097152 |   8848x |  60.378 us |  9.59% |  56.565 us |  6.73% | 37.075G |  39.393 GB/s | 12.31% |
+|           64 |    32768 |           1 |      100 |    4194304 |   3360x | 152.851 us |  2.99% | 148.886 us |  1.34% | 28.171G |  29.052 GB/s |  9.08% |
+|          128 |    32768 |           1 |      100 |    8388608 |   1136x |   1.384 ms |  1.31% |   1.380 ms |  1.27% |  6.080G |   6.175 GB/s |  1.93% |
+|          256 |    32768 |           1 |      100 |   16777216 |    160x |   3.369 ms |  3.41% |   3.365 ms |  3.41% |  4.986G |   5.025 GB/s |  1.57% |
+|           32 |   262144 |           1 |      100 |   16777216 |   1264x | 402.527 us |  3.61% | 398.474 us |  3.45% | 42.104G |  44.735 GB/s | 13.98% |
+|           64 |   262144 |           1 |      100 |   33554432 |   1120x | 650.824 us |  1.09% | 646.649 us |  0.88% | 51.890G |  53.511 GB/s | 16.72% |
+|          128 |   262144 |           1 |      100 |   67108864 |     35x |  14.515 ms |  0.49% |  14.510 ms |  0.49% |  4.625G |   4.697 GB/s |  1.47% |
+|          256 |   262144 |           1 |      100 |  134217728 |    399x |  37.658 ms |  1.08% |  37.653 ms |  1.08% |  3.565G |   3.592 GB/s |  1.12% |
+|           32 |  2097152 |           1 |      100 |  134217728 |    576x |   1.944 ms |  4.11% |   1.940 ms |  4.11% | 69.182G |  73.506 GB/s | 22.97% |
+|           64 |  2097152 |           1 |      100 |  268435456 |     96x |   5.397 ms |  7.87% |   5.392 ms |  7.87% | 49.780G |  51.336 GB/s | 16.04% |
+|          128 |  2097152 |           1 |      100 |  536870912 |     11x | 117.088 ms |  0.33% | 117.082 ms |  0.33% |  4.585G |   4.657 GB/s |  1.46% |
+|          256 |  2097152 |           1 |      100 | 1073741824 |     11x | 310.431 ms |  0.43% | 310.424 ms |  0.43% |  3.459G |   3.486 GB/s |  1.09% |
+|           32 |    32768 |           2 |      100 |    4194304 |   6256x |  84.091 us |  7.71% |  80.081 us |  5.86% | 52.376G |  54.012 GB/s | 16.88% |
+|           64 |    32768 |           2 |      100 |    8388608 |   2384x | 256.068 us |  2.32% | 252.012 us |  1.65% | 33.286G |  33.807 GB/s | 10.56% |
+|          128 |    32768 |           2 |      100 |   16777216 |    560x |   2.599 ms |  0.82% |   2.595 ms |  0.80% |  6.466G |   6.516 GB/s |  2.04% |
+|          256 |    32768 |           2 |      100 |   33554432 |    112x |   6.621 ms |  2.15% |   6.616 ms |  2.15% |  5.072G |   5.091 GB/s |  1.59% |
+|           32 |   262144 |           2 |      100 |   33554432 |    784x | 878.770 us |  1.92% | 874.662 us |  1.86% | 38.363G |  39.562 GB/s | 12.36% |
+|           64 |   262144 |           2 |      100 |   67108864 |    672x |   1.254 ms |  0.77% |   1.250 ms |  0.69% | 53.679G |  54.518 GB/s | 17.03% |
+|          128 |   262144 |           2 |      100 |  134217728 |     18x |  28.566 ms |  0.42% |  28.560 ms |  0.42% |  4.699G |   4.736 GB/s |  1.48% |
+|          256 |   262144 |           2 |      100 |  268435456 |     11x |  74.392 ms |  0.33% |  74.387 ms |  0.33% |  3.609G |   3.623 GB/s |  1.13% |
+|           32 |  2097152 |           2 |      100 |  268435456 |    272x |   5.235 ms |  5.57% |   5.231 ms |  5.56% | 51.319G |  52.923 GB/s | 16.54% |
+|           64 |  2097152 |           2 |      100 |  536870912 |   1653x |   9.057 ms |  1.41% |   9.053 ms |  1.41% | 59.305G |  60.231 GB/s | 18.82% |
+|          128 |  2097152 |           2 |      100 | 1073741824 |     11x | 234.416 ms |  0.12% | 234.408 ms |  0.12% |  4.581G |   4.616 GB/s |  1.44% |
+|          256 |  2097152 |           2 |      100 | 2147483648 |     11x | 614.100 ms |  0.20% | 614.096 ms |  0.20% |  3.497G |   3.511 GB/s |  1.10% |
+|           32 |    32768 |           3 |      100 |    6291456 |   4896x | 106.430 us |  9.27% | 102.407 us |  8.39% | 61.436G |  62.716 GB/s | 19.59% |
+|           64 |    32768 |           3 |      100 |   12582912 |   2176x | 353.700 us |  1.83% | 349.613 us |  1.39% | 35.991G |  36.366 GB/s | 11.36% |
+|          128 |    32768 |           3 |      100 |   25165824 |    576x |   3.765 ms |  0.68% |   3.760 ms |  0.67% |  6.692G |   6.727 GB/s |  2.10% |
+|          256 |    32768 |           3 |      100 |   50331648 |    528x |   9.735 ms |  1.68% |   9.730 ms |  1.68% |  5.173G |   5.186 GB/s |  1.62% |
+|           32 |   262144 |           3 |      100 |   50331648 |   1328x |   1.326 ms |  1.60% |   1.322 ms |  1.57% | 38.077G |  38.870 GB/s | 12.14% |
+|           64 |   262144 |           3 |      100 |  100663296 |    768x |   2.036 ms |  9.72% |   2.032 ms |  9.72% | 49.544G |  50.060 GB/s | 15.64% |
+|          128 |   262144 |           3 |      100 |  201326592 |     12x |  42.534 ms |  0.40% |  42.529 ms |  0.40% |  4.734G |   4.759 GB/s |  1.49% |
+|          256 |   262144 |           3 |      100 |  402653184 |     11x | 110.920 ms |  0.42% | 110.913 ms |  0.42% |  3.630G |   3.640 GB/s |  1.14% |
+|           32 |  2097152 |           3 |      100 |  402653184 |    704x |   8.706 ms |  5.71% |   8.701 ms |  5.71% | 46.274G |  47.238 GB/s | 14.76% |
+|           64 |  2097152 |           3 |      100 |  805306368 |    757x |  19.814 ms | 14.23% |  19.809 ms | 14.23% | 40.654G |  41.078 GB/s | 12.83% |
+|          128 |  2097152 |           3 |      100 | 1610612736 |     11x | 347.429 ms |  0.34% | 347.424 ms |  0.34% |  4.636G |   4.660 GB/s |  1.46% |
+|          256 |  2097152 |           3 |      100 | 3221225472 |     11x | 917.675 ms |  0.41% | 917.673 ms |  0.41% |  3.510G |   3.519 GB/s |  1.10% |
+|           32 |    32768 |           4 |      100 |    8388608 |   4000x | 129.167 us |  8.81% | 125.160 us |  8.20% | 67.023G |  68.071 GB/s | 21.27% |
+|           64 |    32768 |           4 |      100 |   16777216 |   1232x | 441.923 us |  1.92% | 437.815 us |  1.67% | 38.320G |  38.620 GB/s | 12.07% |
+|          128 |    32768 |           4 |      100 |   33554432 |    672x |   4.852 ms |  0.70% |   4.847 ms |  0.69% |  6.922G |   6.949 GB/s |  2.17% |
+|          256 |    32768 |           4 |      100 |   67108864 |    528x |  12.825 ms |  1.50% |  12.820 ms |  1.50% |  5.235G |   5.245 GB/s |  1.64% |
+|           32 |   262144 |           4 |      100 |   67108864 |   1296x |   1.756 ms |  1.34% |   1.752 ms |  1.31% | 38.302G |  38.901 GB/s | 12.15% |
+|           64 |   262144 |           4 |      100 |  134217728 |   1120x |   2.543 ms |  4.82% |   2.538 ms |  4.82% | 52.876G |  53.289 GB/s | 16.65% |
+|          128 |   262144 |           4 |      100 |  268435456 |     11x |  56.186 ms |  0.31% |  56.179 ms |  0.31% |  4.778G |   4.797 GB/s |  1.50% |
+|          256 |   262144 |           4 |      100 |  536870912 |     11x | 147.111 ms |  0.21% | 147.105 ms |  0.21% |  3.650G |   3.657 GB/s |  1.14% |
+|           32 |  2097152 |           4 |      100 |  536870912 |    128x |  11.724 ms |  5.65% |  11.720 ms |  5.65% | 45.810G |  46.525 GB/s | 14.54% |
+|           64 |  2097152 |           4 |      100 | 1073741824 |    770x |  19.479 ms | 10.04% |  19.474 ms | 10.04% | 55.137G |  55.568 GB/s | 17.36% |
+|          128 |  2097152 |           4 |      100 | 2147483648 |     11x | 462.973 ms |  0.09% | 462.967 ms |  0.09% |  4.639G |   4.657 GB/s |  1.45% |
+|          256 |  2097152 |           4 |      100 | 4294967296 |     11x |    1.214 s |  0.23% |    1.214 s |  0.23% |  3.536G |   3.543 GB/s |  1.11% |

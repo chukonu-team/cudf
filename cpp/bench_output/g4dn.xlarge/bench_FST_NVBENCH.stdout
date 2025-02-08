@@ -1,0 +1,192 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7208 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/44] FST_JSON [Device=0 string_size=2^20]
+Pass: Cold: 0.080702ms GPU, 0.084600ms CPU, 0.50s total GPU, 0.72s total wall, 6208x 
+Run:  [2/44] FST_JSON [Device=0 string_size=2^21]
+Pass: Cold: 0.119246ms GPU, 0.123116ms CPU, 0.50s total GPU, 0.64s total wall, 4208x 
+Run:  [3/44] FST_JSON [Device=0 string_size=2^22]
+Pass: Cold: 0.227199ms GPU, 0.231220ms CPU, 0.50s total GPU, 0.58s total wall, 2208x 
+Run:  [4/44] FST_JSON [Device=0 string_size=2^23]
+Pass: Cold: 0.438475ms GPU, 0.442627ms CPU, 0.65s total GPU, 0.69s total wall, 1472x 
+Run:  [5/44] FST_JSON [Device=0 string_size=2^24]
+Pass: Cold: 0.869042ms GPU, 0.873372ms CPU, 2.06s total GPU, 2.14s total wall, 2368x 
+Run:  [6/44] FST_JSON [Device=0 string_size=2^25]
+Pass: Cold: 1.734541ms GPU, 1.738924ms CPU, 4.05s total GPU, 4.13s total wall, 2336x 
+Run:  [7/44] FST_JSON [Device=0 string_size=2^26]
+Pass: Cold: 3.465135ms GPU, 3.469707ms CPU, 7.65s total GPU, 7.73s total wall, 2208x 
+Run:  [8/44] FST_JSON [Device=0 string_size=2^27]
+Pass: Cold: 6.936318ms GPU, 6.940921ms CPU, 12.76s total GPU, 12.83s total wall, 1840x 
+Run:  [9/44] FST_JSON [Device=0 string_size=2^28]
+Warn: Current measurement timed out (15.01s) while over noise threshold (1.24% > 0.50%)
+Pass: Cold: 13.884012ms GPU, 13.888975ms CPU, 14.97s total GPU, 15.01s total wall, 1078x 
+Run:  [10/44] FST_JSON [Device=0 string_size=2^29]
+Warn: Current measurement timed out (15.01s) while over noise threshold (1.17% > 0.50%)
+Pass: Cold: 27.764763ms GPU, 27.770165ms CPU, 14.99s total GPU, 15.01s total wall, 540x 
+Run:  [11/44] FST_JSON [Device=0 string_size=2^30]
+Warn: Current measurement timed out (15.02s) while over noise threshold (4.70% > 0.50%)
+Pass: Cold: 55.590927ms GPU, 55.597445ms CPU, 15.01s total GPU, 15.02s total wall, 270x 
+Run:  [12/44] FST_JSON_no_outidx [Device=0 string_size=2^20]
+Pass: Cold: 0.058179ms GPU, 0.062048ms CPU, 0.50s total GPU, 0.81s total wall, 8608x 
+Run:  [13/44] FST_JSON_no_outidx [Device=0 string_size=2^21]
+Pass: Cold: 0.089416ms GPU, 0.093471ms CPU, 0.50s total GPU, 0.69s total wall, 5600x 
+Run:  [14/44] FST_JSON_no_outidx [Device=0 string_size=2^22]
+Pass: Cold: 0.165838ms GPU, 0.169961ms CPU, 0.50s total GPU, 0.60s total wall, 3024x 
+Run:  [15/44] FST_JSON_no_outidx [Device=0 string_size=2^23]
+Pass: Cold: 0.320355ms GPU, 0.324576ms CPU, 0.62s total GPU, 0.68s total wall, 1936x 
+Run:  [16/44] FST_JSON_no_outidx [Device=0 string_size=2^24]
+Pass: Cold: 0.631282ms GPU, 0.635617ms CPU, 1.69s total GPU, 1.78s total wall, 2672x 
+Run:  [17/44] FST_JSON_no_outidx [Device=0 string_size=2^25]
+Pass: Cold: 1.255635ms GPU, 1.260105ms CPU, 3.09s total GPU, 3.18s total wall, 2464x 
+Run:  [18/44] FST_JSON_no_outidx [Device=0 string_size=2^26]
+Pass: Cold: 2.505581ms GPU, 2.510130ms CPU, 5.21s total GPU, 5.28s total wall, 2080x 
+Run:  [19/44] FST_JSON_no_outidx [Device=0 string_size=2^27]
+Pass: Cold: 5.008081ms GPU, 5.012663ms CPU, 9.38s total GPU, 9.44s total wall, 1872x 
+Run:  [20/44] FST_JSON_no_outidx [Device=0 string_size=2^28]
+Warn: Current measurement timed out (15.00s) while over noise threshold (1.57% > 0.50%)
+Pass: Cold: 10.011314ms GPU, 10.016075ms CPU, 14.95s total GPU, 15.00s total wall, 1493x 
+Run:  [21/44] FST_JSON_no_outidx [Device=0 string_size=2^29]
+Warn: Current measurement timed out (15.00s) while over noise threshold (1.88% > 0.50%)
+Pass: Cold: 19.991184ms GPU, 19.995965ms CPU, 14.97s total GPU, 15.00s total wall, 749x 
+Run:  [22/44] FST_JSON_no_outidx [Device=0 string_size=2^30]
+Warn: Current measurement timed out (15.01s) while over noise threshold (5.67% > 0.50%)
+Pass: Cold: 39.976771ms GPU, 39.981663ms CPU, 14.99s total GPU, 15.01s total wall, 375x 
+Run:  [23/44] FST_JSON_no_out [Device=0 string_size=2^20]
+Pass: Cold: 0.043358ms GPU, 0.047244ms CPU, 0.50s total GPU, 0.92s total wall, 11536x 
+Run:  [24/44] FST_JSON_no_out [Device=0 string_size=2^21]
+Pass: Cold: 0.058629ms GPU, 0.062475ms CPU, 0.50s total GPU, 0.80s total wall, 8544x 
+Run:  [25/44] FST_JSON_no_out [Device=0 string_size=2^22]
+Pass: Cold: 0.096901ms GPU, 0.100827ms CPU, 0.50s total GPU, 0.64s total wall, 5168x 
+Run:  [26/44] FST_JSON_no_out [Device=0 string_size=2^23]
+Pass: Cold: 0.179705ms GPU, 0.183817ms CPU, 0.50s total GPU, 0.56s total wall, 2784x 
+Run:  [27/44] FST_JSON_no_out [Device=0 string_size=2^24]
+Pass: Cold: 0.340727ms GPU, 0.344926ms CPU, 0.50s total GPU, 0.53s total wall, 1472x 
+Run:  [28/44] FST_JSON_no_out [Device=0 string_size=2^25]
+Pass: Cold: 0.666145ms GPU, 0.670501ms CPU, 0.50s total GPU, 0.52s total wall, 752x 
+Run:  [29/44] FST_JSON_no_out [Device=0 string_size=2^26]
+Pass: Cold: 1.314038ms GPU, 1.318564ms CPU, 0.88s total GPU, 0.90s total wall, 672x 
+Run:  [30/44] FST_JSON_no_out [Device=0 string_size=2^27]
+Pass: Cold: 2.608660ms GPU, 2.613178ms CPU, 1.67s total GPU, 1.68s total wall, 640x 
+Run:  [31/44] FST_JSON_no_out [Device=0 string_size=2^28]
+Pass: Cold: 5.205443ms GPU, 5.210142ms CPU, 2.92s total GPU, 2.93s total wall, 560x 
+Run:  [32/44] FST_JSON_no_out [Device=0 string_size=2^29]
+Pass: Cold: 10.404687ms GPU, 10.409493ms CPU, 1.33s total GPU, 1.33s total wall, 128x 
+Run:  [33/44] FST_JSON_no_out [Device=0 string_size=2^30]
+Pass: Cold: 20.648631ms GPU, 20.653530ms CPU, 7.27s total GPU, 7.28s total wall, 352x 
+Run:  [34/44] FST_JSON_no_str [Device=0 string_size=2^20]
+Pass: Cold: 0.070475ms GPU, 0.074383ms CPU, 0.50s total GPU, 0.76s total wall, 7104x 
+Run:  [35/44] FST_JSON_no_str [Device=0 string_size=2^21]
+Pass: Cold: 0.112155ms GPU, 0.116048ms CPU, 0.50s total GPU, 0.65s total wall, 4464x 
+Run:  [36/44] FST_JSON_no_str [Device=0 string_size=2^22]
+Pass: Cold: 0.192112ms GPU, 0.196151ms CPU, 0.50s total GPU, 0.59s total wall, 2608x 
+Run:  [37/44] FST_JSON_no_str [Device=0 string_size=2^23]
+Pass: Cold: 0.369538ms GPU, 0.373711ms CPU, 0.85s total GPU, 0.93s total wall, 2304x 
+Run:  [38/44] FST_JSON_no_str [Device=0 string_size=2^24]
+Pass: Cold: 0.725893ms GPU, 0.730223ms CPU, 1.96s total GPU, 2.06s total wall, 2704x 
+Run:  [39/44] FST_JSON_no_str [Device=0 string_size=2^25]
+Pass: Cold: 1.438367ms GPU, 1.442802ms CPU, 4.07s total GPU, 4.17s total wall, 2832x 
+Run:  [40/44] FST_JSON_no_str [Device=0 string_size=2^26]
+Pass: Cold: 2.875683ms GPU, 2.880158ms CPU, 6.40s total GPU, 6.47s total wall, 2224x 
+Run:  [41/44] FST_JSON_no_str [Device=0 string_size=2^27]
+Pass: Cold: 5.750223ms GPU, 5.754892ms CPU, 11.96s total GPU, 12.04s total wall, 2080x 
+Run:  [42/44] FST_JSON_no_str [Device=0 string_size=2^28]
+Warn: Current measurement timed out (15.00s) while over noise threshold (1.26% > 0.50%)
+Pass: Cold: 11.503157ms GPU, 11.507905ms CPU, 14.95s total GPU, 15.00s total wall, 1300x 
+Run:  [43/44] FST_JSON_no_str [Device=0 string_size=2^29]
+Warn: Current measurement timed out (15.01s) while over noise threshold (1.23% > 0.50%)
+Pass: Cold: 23.023383ms GPU, 23.028363ms CPU, 14.99s total GPU, 15.01s total wall, 651x 
+Run:  [44/44] FST_JSON_no_str [Device=0 string_size=2^30]
+Warn: Current measurement timed out (15.03s) while over noise threshold (4.60% > 0.50%)
+Pass: Cold: 46.200462ms GPU, 46.206179ms CPU, 15.02s total GPU, 15.03s total wall, 325x 
+```
+
+# Benchmark Results
+
+## FST_JSON
+
+### [0] Tesla T4
+
+|    string_size    | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  | Elem/s  |
+|-------------------|---------|------------|--------|------------|--------|---------|
+|    2^20 = 1048576 |   6208x |  84.600 us | 27.84% |  80.702 us | 26.86% | 12.993G |
+|    2^21 = 2097152 |   4208x | 123.116 us |  3.71% | 119.246 us |  1.74% | 17.587G |
+|    2^22 = 4194304 |   2208x | 231.220 us |  3.06% | 227.199 us |  2.45% | 18.461G |
+|    2^23 = 8388608 |   1472x | 442.627 us |  2.18% | 438.475 us |  1.96% | 19.131G |
+|   2^24 = 16777216 |   2368x | 873.372 us |  2.37% | 869.042 us |  2.31% | 19.305G |
+|   2^25 = 33554432 |   2336x |   1.739 ms |  2.06% |   1.735 ms |  2.04% | 19.345G |
+|   2^26 = 67108864 |   2208x |   3.470 ms |  1.76% |   3.465 ms |  1.76% | 19.367G |
+|  2^27 = 134217728 |   1840x |   6.941 ms |  1.47% |   6.936 ms |  1.47% | 19.350G |
+|  2^28 = 268435456 |   1078x |  13.889 ms |  1.24% |  13.884 ms |  1.24% | 19.334G |
+|  2^29 = 536870912 |    540x |  27.770 ms |  1.17% |  27.765 ms |  1.17% | 19.336G |
+| 2^30 = 1073741824 |    270x |  55.597 ms |  4.70% |  55.591 ms |  4.70% | 19.315G |
+
+## FST_JSON_no_outidx
+
+### [0] Tesla T4
+
+|    string_size    | Samples |  CPU Time  | Noise |  GPU Time  | Noise | Elem/s  |
+|-------------------|---------|------------|-------|------------|-------|---------|
+|    2^20 = 1048576 |   8608x |  62.048 us | 7.13% |  58.179 us | 2.28% | 18.023G |
+|    2^21 = 2097152 |   5600x |  93.471 us | 5.19% |  89.416 us | 2.19% | 23.454G |
+|    2^22 = 4194304 |   3024x | 169.961 us | 3.52% | 165.838 us | 2.40% | 25.292G |
+|    2^23 = 8388608 |   1936x | 324.576 us | 2.24% | 320.355 us | 1.78% | 26.185G |
+|   2^24 = 16777216 |   2672x | 635.617 us | 2.51% | 631.282 us | 2.41% | 26.576G |
+|   2^25 = 33554432 |   2464x |   1.260 ms | 2.16% |   1.256 ms | 2.12% | 26.723G |
+|   2^26 = 67108864 |   2080x |   2.510 ms | 1.89% |   2.506 ms | 1.88% | 26.784G |
+|  2^27 = 134217728 |   1872x |   5.013 ms | 1.64% |   5.008 ms | 1.64% | 26.800G |
+|  2^28 = 268435456 |   1493x |  10.016 ms | 1.57% |  10.011 ms | 1.57% | 26.813G |
+|  2^29 = 536870912 |    749x |  19.996 ms | 1.88% |  19.991 ms | 1.88% | 26.855G |
+| 2^30 = 1073741824 |    375x |  39.982 ms | 5.67% |  39.977 ms | 5.67% | 26.859G |
+
+## FST_JSON_no_out
+
+### [0] Tesla T4
+
+|    string_size    | Samples |  CPU Time  | Noise  |  GPU Time  | Noise | Elem/s  |
+|-------------------|---------|------------|--------|------------|-------|---------|
+|    2^20 = 1048576 |  11536x |  47.244 us | 24.45% |  43.358 us | 2.99% | 24.184G |
+|    2^21 = 2097152 |   8544x |  62.475 us |  6.90% |  58.629 us | 2.04% | 35.770G |
+|    2^22 = 4194304 |   5168x | 100.827 us |  4.72% |  96.901 us | 2.18% | 43.284G |
+|    2^23 = 8388608 |   2784x | 183.817 us |  3.28% | 179.705 us | 2.32% | 46.680G |
+|   2^24 = 16777216 |   1472x | 344.926 us |  1.66% | 340.727 us | 1.11% | 49.240G |
+|   2^25 = 33554432 |    752x | 670.501 us |  1.47% | 666.145 us | 1.31% | 50.371G |
+|   2^26 = 67108864 |    672x |   1.319 ms |  0.97% |   1.314 ms | 0.91% | 51.071G |
+|  2^27 = 134217728 |    640x |   2.613 ms |  0.90% |   2.609 ms | 0.88% | 51.451G |
+|  2^28 = 268435456 |    560x |   5.210 ms |  0.88% |   5.205 ms | 0.88% | 51.568G |
+|  2^29 = 536870912 |    128x |  10.409 ms |  0.90% |  10.405 ms | 0.90% | 51.599G |
+| 2^30 = 1073741824 |    352x |  20.654 ms |  0.93% |  20.649 ms | 0.93% | 52.001G |
+
+## FST_JSON_no_str
+
+### [0] Tesla T4
+
+|    string_size    | Samples |  CPU Time  | Noise |  GPU Time  | Noise | Elem/s  |
+|-------------------|---------|------------|-------|------------|-------|---------|
+|    2^20 = 1048576 |   7104x |  74.383 us | 6.69% |  70.475 us | 3.53% | 14.879G |
+|    2^21 = 2097152 |   4464x | 116.048 us | 4.12% | 112.155 us | 2.15% | 18.699G |
+|    2^22 = 4194304 |   2608x | 196.151 us | 3.23% | 192.112 us | 2.40% | 21.833G |
+|    2^23 = 8388608 |   2304x | 373.711 us | 1.97% | 369.538 us | 1.58% | 22.700G |
+|   2^24 = 16777216 |   2704x | 730.223 us | 2.16% | 725.893 us | 2.07% | 23.113G |
+|   2^25 = 33554432 |   2832x |   1.443 ms | 2.03% |   1.438 ms | 2.00% | 23.328G |
+|   2^26 = 67108864 |   2224x |   2.880 ms | 1.77% |   2.876 ms | 1.76% | 23.337G |
+|  2^27 = 134217728 |   2080x |   5.755 ms | 1.34% |   5.750 ms | 1.34% | 23.341G |
+|  2^28 = 268435456 |   1300x |  11.508 ms | 1.26% |  11.503 ms | 1.26% | 23.336G |
+|  2^29 = 536870912 |    651x |  23.028 ms | 1.23% |  23.023 ms | 1.23% | 23.319G |
+| 2^30 = 1073741824 |    325x |  46.206 ms | 4.60% |  46.200 ms | 4.60% | 23.241G |

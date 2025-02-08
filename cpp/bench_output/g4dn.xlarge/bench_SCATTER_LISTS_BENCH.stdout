@@ -1,0 +1,45 @@
+------------------------------------------------------------------------------------------------------------------
+Benchmark                                                        Time             CPU   Iterations UserCounters...
+------------------------------------------------------------------------------------------------------------------
+ScatterLists/double_coalesced/1024/64/manual_time            82884 ns       110098 ns         8454 bytes_per_second=188.518M/s
+ScatterLists/double_coalesced/4096/64/manual_time            82884 ns       109783 ns         8048 bytes_per_second=754.062M/s
+ScatterLists/double_coalesced/32768/64/manual_time           83974 ns       109696 ns         8275 bytes_per_second=5.81469G/s
+ScatterLists/double_coalesced/262144/64/manual_time         103215 ns       124691 ns         6349 bytes_per_second=37.8456G/s
+ScatterLists/double_coalesced/2097152/64/manual_time        292802 ns       321376 ns         2398 bytes_per_second=106.728G/s
+ScatterLists/double_coalesced/16777216/64/manual_time      2107803 ns      2137596 ns          329 bytes_per_second=118.607G/s
+ScatterLists/double_coalesced/33554432/64/manual_time      4283030 ns      4313676 ns          164 bytes_per_second=116.74G/s
+ScatterLists/double_coalesced/1024/512/manual_time           82915 ns       110118 ns         8287 bytes_per_second=188.445M/s
+ScatterLists/double_coalesced/4096/512/manual_time           83845 ns       110931 ns         8445 bytes_per_second=745.423M/s
+ScatterLists/double_coalesced/32768/512/manual_time          82882 ns       108639 ns         8433 bytes_per_second=5.89126G/s
+ScatterLists/double_coalesced/262144/512/manual_time         99042 ns       120500 ns         7143 bytes_per_second=39.4402G/s
+ScatterLists/double_coalesced/2097152/512/manual_time       249668 ns       278131 ns         2810 bytes_per_second=125.166G/s
+ScatterLists/double_coalesced/16777216/512/manual_time     1729812 ns      1759887 ns          398 bytes_per_second=144.524G/s
+ScatterLists/double_coalesced/33554432/512/manual_time     3518247 ns      3548976 ns          200 bytes_per_second=142.116G/s
+ScatterLists/double_coalesced/1024/2048/manual_time          83192 ns       110346 ns         8367 bytes_per_second=187.819M/s
+ScatterLists/double_coalesced/4096/2048/manual_time          82747 ns       109709 ns         8476 bytes_per_second=755.311M/s
+ScatterLists/double_coalesced/32768/2048/manual_time         83300 ns       109272 ns         8432 bytes_per_second=5.86171G/s
+ScatterLists/double_coalesced/262144/2048/manual_time        95690 ns       116446 ns         7316 bytes_per_second=40.8219G/s
+ScatterLists/double_coalesced/2097152/2048/manual_time      227768 ns       256291 ns         3085 bytes_per_second=137.201G/s
+ScatterLists/double_coalesced/16777216/2048/manual_time    1544502 ns      1574456 ns          443 bytes_per_second=161.864G/s
+ScatterLists/double_coalesced/33554432/2048/manual_time    3142271 ns      3173130 ns          223 bytes_per_second=159.121G/s
+ScatterLists/double_shuffled/1024/64/manual_time             83062 ns       110231 ns         8332 bytes_per_second=188.113M/s
+ScatterLists/double_shuffled/4096/64/manual_time             83279 ns       110240 ns         8459 bytes_per_second=750.494M/s
+ScatterLists/double_shuffled/32768/64/manual_time            84075 ns       109717 ns         8291 bytes_per_second=5.80766G/s
+ScatterLists/double_shuffled/262144/64/manual_time          103872 ns       125385 ns         6779 bytes_per_second=37.6065G/s
+ScatterLists/double_shuffled/2097152/64/manual_time         293887 ns       322487 ns         2402 bytes_per_second=106.333G/s
+ScatterLists/double_shuffled/16777216/64/manual_time       2110601 ns      2141089 ns          332 bytes_per_second=118.45G/s
+ScatterLists/double_shuffled/33554432/64/manual_time       4288397 ns      4318654 ns          163 bytes_per_second=116.594G/s
+ScatterLists/double_shuffled/1024/512/manual_time            83522 ns       110727 ns         8330 bytes_per_second=187.077M/s
+ScatterLists/double_shuffled/4096/512/manual_time            83098 ns       110129 ns         8418 bytes_per_second=752.12M/s
+ScatterLists/double_shuffled/32768/512/manual_time           83593 ns       109408 ns         8431 bytes_per_second=5.84117G/s
+ScatterLists/double_shuffled/262144/512/manual_time          97907 ns       119206 ns         7161 bytes_per_second=39.8976G/s
+ScatterLists/double_shuffled/2097152/512/manual_time        250253 ns       278756 ns         2805 bytes_per_second=124.874G/s
+ScatterLists/double_shuffled/16777216/512/manual_time      1735775 ns      1765584 ns          403 bytes_per_second=144.028G/s
+ScatterLists/double_shuffled/33554432/512/manual_time      3522219 ns      3553488 ns          200 bytes_per_second=141.956G/s
+ScatterLists/double_shuffled/1024/2048/manual_time           82925 ns       109952 ns         8380 bytes_per_second=188.423M/s
+ScatterLists/double_shuffled/4096/2048/manual_time           83898 ns       110851 ns         8432 bytes_per_second=744.952M/s
+ScatterLists/double_shuffled/32768/2048/manual_time          83320 ns       109264 ns         8431 bytes_per_second=5.86029G/s
+ScatterLists/double_shuffled/262144/2048/manual_time         96064 ns       116860 ns         7306 bytes_per_second=40.6631G/s
+ScatterLists/double_shuffled/2097152/2048/manual_time       227662 ns       256151 ns         3086 bytes_per_second=137.265G/s
+ScatterLists/double_shuffled/16777216/2048/manual_time     1547127 ns      1577542 ns          445 bytes_per_second=161.59G/s
+ScatterLists/double_shuffled/33554432/2048/manual_time     3140397 ns      3171325 ns          224 bytes_per_second=159.216G/s

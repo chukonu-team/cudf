@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------------------
+Benchmark                                 Time             CPU   Iterations UserCounters...
+-------------------------------------------------------------------------------------------
+Merge/pow2tables/2/manual_time        0.488 ms        0.514 ms         1441 bytes_per_second=21.7195G/s
+Merge/pow2tables/4/manual_time         1.69 ms         1.72 ms          415 bytes_per_second=11.1775G/s
+Merge/pow2tables/8/manual_time         4.71 ms         4.74 ms          149 bytes_per_second=7.66035G/s
+Merge/pow2tables/16/manual_time        11.7 ms         11.8 ms           60 bytes_per_second=5.8655G/s
+Merge/pow2tables/32/manual_time        26.1 ms         26.2 ms           27 bytes_per_second=4.78383G/s
+Merge/pow2tables/64/manual_time        63.0 ms         63.1 ms           11 bytes_per_second=4.01291G/s
+Merge/pow2tables/128/manual_time        151 ms          151 ms            5 bytes_per_second=3.46901G/s

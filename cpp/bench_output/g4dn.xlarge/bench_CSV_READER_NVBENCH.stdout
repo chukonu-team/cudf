@@ -1,0 +1,105 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/18] csv_read_data_type [Device=0 data_type=INTEGRAL io=DEVICE_BUFFER]
+Pass: Cold: 349.759740ms GPU, 349.759865ms CPU, 2.10s total GPU, 2.10s total wall, 6x 
+Run:  [2/18] csv_read_data_type [Device=0 data_type=FLOAT io=DEVICE_BUFFER]
+Pass: Cold: 404.090735ms GPU, 404.089893ms CPU, 2.02s total GPU, 2.02s total wall, 5x 
+Run:  [3/18] csv_read_data_type [Device=0 data_type=DECIMAL io=DEVICE_BUFFER]
+Pass: Cold: 470.070648ms GPU, 470.069820ms CPU, 2.35s total GPU, 2.35s total wall, 5x 
+Run:  [4/18] csv_read_data_type [Device=0 data_type=TIMESTAMP io=DEVICE_BUFFER]
+Pass: Cold: 466.009399ms GPU, 466.008305ms CPU, 2.33s total GPU, 2.33s total wall, 5x 
+Run:  [5/18] csv_read_data_type [Device=0 data_type=DURATION io=DEVICE_BUFFER]
+Pass: Cold: 611.661157ms GPU, 611.658820ms CPU, 3.06s total GPU, 3.06s total wall, 5x 
+Run:  [6/18] csv_read_data_type [Device=0 data_type=STRING io=DEVICE_BUFFER]
+Pass: Cold: 111.380269ms GPU, 111.383184ms CPU, 0.56s total GPU, 0.56s total wall, 5x 
+Run:  [7/18] csv_read_io [Device=0 io=FILEPATH]
+Pass: Cold: 519.484778ms GPU, 519.483860ms CPU, 2.60s total GPU, 2.60s total wall, 5x 
+Run:  [8/18] csv_read_io [Device=0 io=HOST_BUFFER]
+Pass: Cold: 555.809961ms GPU, 555.808039ms CPU, 2.78s total GPU, 2.78s total wall, 5x 
+Run:  [9/18] csv_read_column_selection [Device=0 column_selection=ALL row_selection=ALL num_chunks=1]
+Pass: Cold: 538.816003ms GPU, 538.814098ms CPU, 2.69s total GPU, 2.69s total wall, 5x 
+Run:  [10/18] csv_read_column_selection [Device=0 column_selection=ALTERNATE row_selection=ALL num_chunks=1]
+Pass: Cold: 457.676923ms GPU, 457.676199ms CPU, 2.29s total GPU, 2.29s total wall, 5x 
+Run:  [11/18] csv_read_column_selection [Device=0 column_selection=FIRST_HALF row_selection=ALL num_chunks=1]
+Pass: Cold: 446.744495ms GPU, 446.743778ms CPU, 2.23s total GPU, 2.23s total wall, 5x 
+Run:  [12/18] csv_read_column_selection [Device=0 column_selection=SECOND_HALF row_selection=ALL num_chunks=1]
+Pass: Cold: 469.774371ms GPU, 469.773688ms CPU, 2.35s total GPU, 2.35s total wall, 5x 
+Run:  [13/18] csv_read_row_selection [Device=0 column_selection=ALL row_selection=BYTE_RANGE num_chunks=1]
+Pass: Cold: 578.122876ms GPU, 578.121043ms CPU, 2.89s total GPU, 2.89s total wall, 5x 
+Run:  [14/18] csv_read_row_selection [Device=0 column_selection=ALL row_selection=BYTE_RANGE num_chunks=8]
+Pass: Cold: 540.585742ms GPU, 540.583219ms CPU, 2.70s total GPU, 2.70s total wall, 5x 
+Run:  [15/18] csv_read_row_selection [Device=0 column_selection=ALL row_selection=NROWS num_chunks=1]
+Pass: Cold: 576.903040ms GPU, 576.900907ms CPU, 2.88s total GPU, 2.88s total wall, 5x 
+Run:  [16/18] csv_read_row_selection [Device=0 column_selection=ALL row_selection=NROWS num_chunks=8]
+Pass: Cold: 1219.144482ms GPU, 1219.134580ms CPU, 6.10s total GPU, 6.10s total wall, 5x 
+Run:  [17/18] csv_read_row_selection [Device=0 column_selection=ALL row_selection=SKIPFOOTER num_chunks=1]
+Pass: Cold: 538.407544ms GPU, 538.405979ms CPU, 2.69s total GPU, 2.69s total wall, 5x 
+Run:  [18/18] csv_read_row_selection [Device=0 column_selection=ALL row_selection=SKIPFOOTER num_chunks=8]
+Pass: Cold: 1945.235620ms GPU, 1945.217068ms CPU, 9.73s total GPU, 9.73s total wall, 5x 
+```
+
+# Benchmark Results
+
+## csv_read_data_type
+
+### [0] Tesla T4
+
+| data_type |      io       | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|-----------|---------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|  INTEGRAL | DEVICE_BUFFER |      6x | 349.760 ms | 0.46% | 349.760 ms | 0.46% |        767485291 |         1.205 GiB |       671.889 MiB |
+|     FLOAT | DEVICE_BUFFER |      5x | 404.090 ms | 0.11% | 404.091 ms | 0.11% |        664295003 |         1.041 GiB |       713.653 MiB |
+|   DECIMAL | DEVICE_BUFFER |      5x | 470.070 ms | 0.38% | 470.071 ms | 0.38% |        571053430 |         1.503 GiB |       783.255 MiB |
+| TIMESTAMP | DEVICE_BUFFER |      5x | 466.008 ms | 0.36% | 466.009 ms | 0.36% |        576030132 |         2.283 GiB |       814.047 MiB |
+|  DURATION | DEVICE_BUFFER |      5x | 611.659 ms | 0.07% | 611.661 ms | 0.07% |        438863009 |         2.596 GiB |       974.849 MiB |
+|    STRING | DEVICE_BUFFER |      5x | 111.383 ms | 0.32% | 111.380 ms | 0.32% |       2410080876 |       723.779 MiB |       232.968 MiB |
+
+## csv_read_io
+
+### [0] Tesla T4
+
+|     io      | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|-------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|    FILEPATH |      5x | 519.484 ms | 0.24% | 519.485 ms | 0.24% |        516734016 |         1.610 GiB |       725.745 MiB |
+| HOST_BUFFER |      5x | 555.808 ms | 0.13% | 555.810 ms | 0.13% |        482962657 |         1.610 GiB |       725.745 MiB |
+
+## csv_read_column_selection
+
+### [0] Tesla T4
+
+| column_selection | row_selection | num_chunks | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|------------------|---------------|------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|              ALL |           ALL |          1 |      5x | 538.814 ms | 0.18% | 538.816 ms | 0.18% |        498195031 |         1.685 GiB |       729.225 MiB |
+|        ALTERNATE |           ALL |          1 |      5x | 457.676 ms | 0.08% | 457.677 ms | 0.08% |        293258675 |         1.271 GiB |       760.910 MiB |
+|       FIRST_HALF |           ALL |          1 |      5x | 446.744 ms | 0.30% | 446.744 ms | 0.30% |        300435102 |         1.189 GiB |       729.225 MiB |
+|      SECOND_HALF |           ALL |          1 |      5x | 469.774 ms | 0.25% | 469.774 ms | 0.25% |        285706790 |         1.233 GiB |       729.225 MiB |
+
+## csv_read_row_selection
+
+### [0] Tesla T4
+
+| column_selection | row_selection | num_chunks | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|------------------|---------------|------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|              ALL |    BYTE_RANGE |          1 |      5x | 578.121 ms | 0.38% | 578.123 ms | 0.38% |        464322494 |         1.685 GiB |       729.225 MiB |
+|              ALL |    BYTE_RANGE |          8 |      5x | 540.583 ms | 0.13% | 540.586 ms | 0.13% |        496564069 |       215.701 MiB |       729.225 MiB |
+|              ALL |         NROWS |          1 |      5x | 576.901 ms | 0.06% | 576.903 ms | 0.06% |        465304284 |         1.685 GiB |       729.225 MiB |
+|              ALL |         NROWS |          8 |      5x |    1.219 s | 0.35% |    1.219 s | 0.35% |        220183464 |       320.753 MiB |       729.225 MiB |
+|              ALL |    SKIPFOOTER |          1 |      5x | 538.406 ms | 0.09% | 538.408 ms | 0.09% |        498572984 |         1.685 GiB |       729.225 MiB |
+|              ALL |    SKIPFOOTER |          8 |      5x |    1.945 s | 0.40% |    1.945 s | 0.40% |        137996370 |         1.406 GiB |       729.225 MiB |

@@ -1,0 +1,12 @@
+2025-02-07T14:53:57+00:00
+Running build/benchmarks/FILL_BENCH
+Run on (4 X 3106.43 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x2)
+  L1 Instruction 32 KiB (x2)
+  L2 Unified 1024 KiB (x2)
+  L3 Unified 36608 KiB (x1)
+Load Average: 1.01, 1.02, 1.06
+[2025-02-07 14:54:11.999] [RMM] [error] [A][Stream 0x1][Upstream 805204224B][FAILURE maximum pool size exceeded]
+terminate called after throwing an instance of 'rmm::out_of_memory'
+  what():  std::bad_alloc: out_of_memory: RMM failure at:/home/ubuntu/cudf/cpp/build/_deps/rmm-src/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded

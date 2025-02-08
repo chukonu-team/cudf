@@ -1,0 +1,665 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/196] nested_json_gpu_parser [Device=0 string_size=2^20]
+Pass: Cold: 2.565290ms GPU, 2.569452ms CPU, 7.14s total GPU, 7.23s total wall, 2784x 
+Run:  [2/196] nested_json_gpu_parser [Device=0 string_size=2^21]
+Pass: Cold: 3.050952ms GPU, 3.055080ms CPU, 4.30s total GPU, 4.34s total wall, 1408x 
+Run:  [3/196] nested_json_gpu_parser [Device=0 string_size=2^22]
+Pass: Cold: 4.439555ms GPU, 4.443544ms CPU, 0.50s total GPU, 0.50s total wall, 113x 
+Run:  [4/196] nested_json_gpu_parser [Device=0 string_size=2^23]
+Pass: Cold: 7.465497ms GPU, 7.469578ms CPU, 0.52s total GPU, 0.52s total wall, 69x 
+Run:  [5/196] nested_json_gpu_parser [Device=0 string_size=2^24]
+Pass: Cold: 13.541172ms GPU, 13.545173ms CPU, 10.62s total GPU, 10.64s total wall, 784x 
+Run:  [6/196] nested_json_gpu_parser [Device=0 string_size=2^25]
+Pass: Cold: 25.639762ms GPU, 25.643881ms CPU, 13.95s total GPU, 13.96s total wall, 544x 
+Run:  [7/196] nested_json_gpu_parser [Device=0 string_size=2^26]
+Warn: Current measurement timed out (15.02s) while over noise threshold (0.79% > 0.50%)
+Pass: Cold: 49.701060ms GPU, 49.705082ms CPU, 15.01s total GPU, 15.02s total wall, 302x 
+Run:  [8/196] nested_json_gpu_parser [Device=0 string_size=2^27]
+Pass: Cold: 97.470944ms GPU, 97.474595ms CPU, 7.80s total GPU, 7.80s total wall, 80x 
+Run:  [9/196] nested_json_gpu_parser [Device=0 string_size=2^28]
+Pass: Cold: 193.733459ms GPU, 193.736177ms CPU, 2.13s total GPU, 2.13s total wall, 11x 
+Run:  [10/196] nested_json_gpu_parser [Device=0 string_size=2^29]
+Pass: Cold: 387.981792ms GPU, 387.982580ms CPU, 4.27s total GPU, 4.27s total wall, 11x 
+Run:  [11/196] nested_json_gpu_parser [Device=0 string_size=2^30]
+Pass: Cold: 779.346269ms GPU, 779.343361ms CPU, 8.57s total GPU, 8.57s total wall, 11x 
+Run:  [12/196] nested_json_gpu_parser_depth [Device=0 depth=2^1 string_size=2^20]
+Pass: Cold: 2.931245ms GPU, 2.935336ms CPU, 8.40s total GPU, 8.49s total wall, 2864x 
+Run:  [13/196] nested_json_gpu_parser_depth [Device=0 depth=2^2 string_size=2^20]
+Pass: Cold: 2.936614ms GPU, 2.940703ms CPU, 6.20s total GPU, 6.27s total wall, 2112x 
+Run:  [14/196] nested_json_gpu_parser_depth [Device=0 depth=2^3 string_size=2^20]
+Pass: Cold: 8.055581ms GPU, 8.059741ms CPU, 1.55s total GPU, 1.55s total wall, 192x 
+Run:  [15/196] nested_json_gpu_parser_depth [Device=0 depth=2^4 string_size=2^20]
+Warn: Current measurement timed out (15.01s) while over noise threshold (2.00% > 0.50%)
+Pass: Cold: 10.345301ms GPU, 10.349333ms CPU, 14.96s total GPU, 15.01s total wall, 1446x 
+Run:  [16/196] nested_json_gpu_parser_depth [Device=0 depth=2^1 string_size=2^22]
+Pass: Cold: 6.018584ms GPU, 6.022953ms CPU, 0.51s total GPU, 0.51s total wall, 84x 
+Run:  [17/196] nested_json_gpu_parser_depth [Device=0 depth=2^2 string_size=2^22]
+Pass: Cold: 6.018683ms GPU, 6.022685ms CPU, 0.51s total GPU, 0.51s total wall, 84x 
+Run:  [18/196] nested_json_gpu_parser_depth [Device=0 depth=2^3 string_size=2^22]
+Pass: Cold: 10.504723ms GPU, 10.508604ms CPU, 0.50s total GPU, 0.51s total wall, 48x 
+Run:  [19/196] nested_json_gpu_parser_depth [Device=0 depth=2^4 string_size=2^22]
+Pass: Cold: 13.619465ms GPU, 13.623531ms CPU, 11.99s total GPU, 12.01s total wall, 880x 
+Run:  [20/196] nested_json_gpu_parser_depth [Device=0 depth=2^1 string_size=2^24]
+Pass: Cold: 18.664242ms GPU, 18.668351ms CPU, 12.24s total GPU, 12.26s total wall, 656x 
+Run:  [21/196] nested_json_gpu_parser_depth [Device=0 depth=2^2 string_size=2^24]
+Pass: Cold: 18.676680ms GPU, 18.680775ms CPU, 11.06s total GPU, 11.08s total wall, 592x 
+Run:  [22/196] nested_json_gpu_parser_depth [Device=0 depth=2^3 string_size=2^24]
+Warn: Current measurement timed out (15.00s) while over noise threshold (1.24% > 0.50%)
+Pass: Cold: 21.586804ms GPU, 21.590810ms CPU, 14.98s total GPU, 15.00s total wall, 694x 
+Run:  [23/196] nested_json_gpu_parser_depth [Device=0 depth=2^4 string_size=2^24]
+Warn: Current measurement timed out (15.02s) while over noise threshold (1.32% > 0.50%)
+Pass: Cold: 28.475392ms GPU, 28.479330ms CPU, 15.01s total GPU, 15.02s total wall, 527x 
+Run:  [24/196] nested_json_gpu_parser_depth [Device=0 depth=2^1 string_size=2^26]
+Pass: Cold: 69.395257ms GPU, 69.399269ms CPU, 0.76s total GPU, 0.76s total wall, 11x 
+Run:  [25/196] nested_json_gpu_parser_depth [Device=0 depth=2^2 string_size=2^26]
+Pass: Cold: 69.359316ms GPU, 69.363154ms CPU, 2.01s total GPU, 2.01s total wall, 29x 
+Run:  [26/196] nested_json_gpu_parser_depth [Device=0 depth=2^3 string_size=2^26]
+Pass: Cold: 77.123432ms GPU, 77.127307ms CPU, 3.01s total GPU, 3.01s total wall, 39x 
+Run:  [27/196] nested_json_gpu_parser_depth [Device=0 depth=2^4 string_size=2^26]
+Pass: Cold: 102.297098ms GPU, 102.300795ms CPU, 1.13s total GPU, 1.13s total wall, 11x 
+Run:  [28/196] nested_json_gpu_parser_depth [Device=0 depth=2^1 string_size=2^28]
+Pass: Cold: 274.590773ms GPU, 274.592477ms CPU, 3.02s total GPU, 3.02s total wall, 11x 
+Run:  [29/196] nested_json_gpu_parser_depth [Device=0 depth=2^2 string_size=2^28]
+Pass: Cold: 274.253582ms GPU, 274.255425ms CPU, 3.02s total GPU, 3.02s total wall, 11x 
+Run:  [30/196] nested_json_gpu_parser_depth [Device=0 depth=2^3 string_size=2^28]
+Warn: Current measurement timed out (15.08s) while over noise threshold (0.59% > 0.50%)
+Pass: Cold: 301.660068ms GPU, 301.661641ms CPU, 15.08s total GPU, 15.08s total wall, 50x 
+Run:  [31/196] nested_json_gpu_parser_depth [Device=0 depth=2^4 string_size=2^28]
+Pass: Cold: 409.413219ms GPU, 409.413739ms CPU, 6.96s total GPU, 6.96s total wall, 17x 
+Run:  [32/196] nested_json_gpu_parser_depth [Device=0 depth=2^1 string_size=2^30]
+Pass: Cold: 1108.290161ms GPU, 1108.284118ms CPU, 12.19s total GPU, 12.19s total wall, 11x 
+Run:  [33/196] nested_json_gpu_parser_depth [Device=0 depth=2^2 string_size=2^30]
+Pass: Cold: 1106.699763ms GPU, 1106.693931ms CPU, 12.17s total GPU, 12.17s total wall, 11x 
+Run:  [34/196] nested_json_gpu_parser_depth [Device=0 depth=2^3 string_size=2^30]
+Pass: Cold: 1191.487205ms GPU, 1191.480339ms CPU, 13.11s total GPU, 13.11s total wall, 11x 
+Run:  [35/196] nested_json_gpu_parser_depth [Device=0 depth=2^4 string_size=2^30]
+Pass: Cold: 1621.452722ms GPU, 1621.441263ms CPU, 16.21s total GPU, 16.21s total wall, 10x 
+Run:  [36/196] json_read_data_type [Device=0 data_type=INTEGRAL io=DEVICE_BUFFER]
+Fail: Unexpected error: std::bad_alloc: out_of_memory: RMM failure at:/home/ubuntu/cudf/cpp/build/_deps/rmm-src/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded
+Run:  [37/196] json_read_data_type [Device=0 data_type=FLOAT io=DEVICE_BUFFER]
+Pass: Cold: 1644.321265ms GPU, 1644.309144ms CPU, 8.22s total GPU, 8.22s total wall, 5x 
+Run:  [38/196] json_read_data_type [Device=0 data_type=DECIMAL io=DEVICE_BUFFER]
+Pass: Cold: 1782.712646ms GPU, 1782.698575ms CPU, 8.91s total GPU, 8.91s total wall, 5x 
+Run:  [39/196] json_read_data_type [Device=0 data_type=TIMESTAMP io=DEVICE_BUFFER]
+Pass: Cold: 2005.622583ms GPU, 2005.605609ms CPU, 10.03s total GPU, 10.03s total wall, 5x 
+Run:  [40/196] json_read_data_type [Device=0 data_type=DURATION io=DEVICE_BUFFER]
+Pass: Cold: 2323.638428ms GPU, 2323.617992ms CPU, 11.62s total GPU, 11.62s total wall, 5x 
+Run:  [41/196] json_read_data_type [Device=0 data_type=STRING io=DEVICE_BUFFER]
+Pass: Cold: 553.427942ms GPU, 553.426936ms CPU, 2.77s total GPU, 2.77s total wall, 5x 
+Run:  [42/196] json_read_data_type [Device=0 data_type=LIST io=DEVICE_BUFFER]
+Pass: Cold: 739.176257ms GPU, 739.173411ms CPU, 3.70s total GPU, 3.70s total wall, 5x 
+Run:  [43/196] json_read_data_type [Device=0 data_type=STRUCT io=DEVICE_BUFFER]
+Pass: Cold: 1732.376294ms GPU, 1732.363150ms CPU, 8.66s total GPU, 8.66s total wall, 5x 
+Run:  [44/196] json_read_io [Device=0 io=FILEPATH]
+Pass: Cold: 1100.810254ms GPU, 1100.803072ms CPU, 5.50s total GPU, 5.50s total wall, 5x 
+Run:  [45/196] json_read_io [Device=0 io=HOST_BUFFER]
+Pass: Cold: 1168.760376ms GPU, 1168.752409ms CPU, 5.84s total GPU, 5.84s total wall, 5x 
+Run:  [46/196] json_read_io [Device=0 io=DEVICE_BUFFER]
+Pass: Cold: 907.148560ms GPU, 907.143472ms CPU, 4.54s total GPU, 4.54s total wall, 5x 
+Run:  [47/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^20 num_sources=1]
+Warn: Current measurement timed out (15.01s) while over noise threshold (5.88% > 0.50%)
+Pass: Cold: 19.491393ms GPU, 19.496173ms CPU, 14.91s total GPU, 15.01s total wall, 765x 
+Run:  [48/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^21 num_sources=1]
+Warn: Current measurement timed out (15.00s) while over noise threshold (1.94% > 0.50%)
+Pass: Cold: 29.743119ms GPU, 29.748305ms CPU, 14.93s total GPU, 15.00s total wall, 502x 
+Run:  [49/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^22 num_sources=1]
+Warn: Current measurement timed out (15.01s) while over noise threshold (2.14% > 0.50%)
+Pass: Cold: 49.864825ms GPU, 49.870082ms CPU, 14.96s total GPU, 15.01s total wall, 300x 
+Run:  [50/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^23 num_sources=1]
+Warn: Current measurement timed out (15.02s) while over noise threshold (1.27% > 0.50%)
+Pass: Cold: 83.744195ms GPU, 83.748999ms CPU, 14.99s total GPU, 15.02s total wall, 179x 
+Run:  [51/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^24 num_sources=1]
+Warn: Current measurement timed out (15.04s) while over noise threshold (0.87% > 0.50%)
+Pass: Cold: 183.247333ms GPU, 183.250769ms CPU, 15.03s total GPU, 15.04s total wall, 82x 
+Run:  [52/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^25 num_sources=1]
+Warn: Current measurement timed out (15.15s) while over noise threshold (0.90% > 0.50%)
+Pass: Cold: 329.294891ms GPU, 329.296205ms CPU, 15.15s total GPU, 15.15s total wall, 46x 
+Run:  [53/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^26 num_sources=1]
+Pass: Cold: 609.352148ms GPU, 609.348536ms CPU, 3.05s total GPU, 3.05s total wall, 5x 
+Run:  [54/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^27 num_sources=1]
+Pass: Cold: 1224.820264ms GPU, 1224.808182ms CPU, 6.12s total GPU, 6.12s total wall, 5x 
+Run:  [55/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^28 num_sources=1]
+Warn: Current measurement timed out (15.26s) while over noise threshold (0.73% > 0.50%)
+Pass: Cold: 2543.869832ms GPU, 2543.839265ms CPU, 15.26s total GPU, 15.26s total wall, 6x 
+Run:  [56/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^29 num_sources=1]
+Warn: Current measurement timed out (19.93s) while over noise threshold (inf% > 0.50%)
+Pass: Cold: 4981.246582ms GPU, 4981.181740ms CPU, 19.92s total GPU, 19.93s total wall, 4x 
+Run:  [57/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^20 num_sources=2]
+Pass: Cold: 19.696265ms GPU, 19.700476ms CPU, 14.18s total GPU, 14.28s total wall, 720x 
+Run:  [58/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^21 num_sources=2]
+Pass: Cold: 29.667307ms GPU, 29.671463ms CPU, 0.50s total GPU, 0.51s total wall, 17x 
+Run:  [59/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^22 num_sources=2]
+Pass: Cold: 50.656477ms GPU, 50.660546ms CPU, 0.51s total GPU, 0.51s total wall, 10x 
+Run:  [60/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^23 num_sources=2]
+Warn: Current measurement timed out (15.04s) while over noise threshold (2.26% > 0.50%)
+Pass: Cold: 89.875878ms GPU, 89.879331ms CPU, 15.01s total GPU, 15.04s total wall, 167x 
+Run:  [61/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^24 num_sources=2]
+Warn: Current measurement timed out (15.06s) while over noise threshold (2.75% > 0.50%)
+Pass: Cold: 206.187413ms GPU, 206.190228ms CPU, 15.05s total GPU, 15.06s total wall, 73x 
+Run:  [62/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^25 num_sources=2]
+Warn: Current measurement timed out (15.04s) while over noise threshold (1.14% > 0.50%)
+Pass: Cold: 375.921241ms GPU, 375.921028ms CPU, 15.04s total GPU, 15.04s total wall, 40x 
+Run:  [63/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^26 num_sources=2]
+Pass: Cold: 754.944312ms GPU, 754.938795ms CPU, 3.77s total GPU, 3.78s total wall, 5x 
+Run:  [64/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^27 num_sources=2]
+Pass: Cold: 1542.324536ms GPU, 1542.308770ms CPU, 7.71s total GPU, 7.71s total wall, 5x 
+Run:  [65/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^28 num_sources=2]
+Pass: Cold: 3111.293506ms GPU, 3111.255544ms CPU, 15.56s total GPU, 15.56s total wall, 5x 
+Run:  [66/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^29 num_sources=2]
+Warn: Current measurement timed out (18.56s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (18.56s) before accumulating min_samples (3 < 4)
+Pass: Cold: 6185.935059ms GPU, 6185.857723ms CPU, 18.56s total GPU, 18.56s total wall, 3x 
+Run:  [67/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^20 num_sources=3]
+Warn: Current measurement timed out (15.02s) while over noise threshold (1.62% > 0.50%)
+Pass: Cold: 24.852366ms GPU, 24.856668ms CPU, 14.94s total GPU, 15.02s total wall, 601x 
+Run:  [68/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^21 num_sources=3]
+Pass: Cold: 39.740579ms GPU, 39.744514ms CPU, 0.52s total GPU, 0.52s total wall, 13x 
+Run:  [69/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^22 num_sources=3]
+Warn: Current measurement timed out (15.05s) while over noise threshold (2.08% > 0.50%)
+Pass: Cold: 68.867826ms GPU, 68.871699ms CPU, 15.01s total GPU, 15.05s total wall, 218x 
+Run:  [70/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^23 num_sources=3]
+Pass: Cold: 125.461908ms GPU, 125.464755ms CPU, 0.63s total GPU, 0.63s total wall, 5x 
+Run:  [71/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^24 num_sources=3]
+Warn: Current measurement timed out (15.17s) while over noise threshold (1.04% > 0.50%)
+Pass: Cold: 261.441736ms GPU, 261.443309ms CPU, 15.16s total GPU, 15.17s total wall, 58x 
+Run:  [72/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^25 num_sources=3]
+Pass: Cold: 517.175928ms GPU, 517.173697ms CPU, 2.59s total GPU, 2.59s total wall, 5x 
+Run:  [73/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^26 num_sources=3]
+Pass: Cold: 1040.462109ms GPU, 1040.452591ms CPU, 5.20s total GPU, 5.20s total wall, 5x 
+Run:  [74/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^27 num_sources=3]
+Pass: Cold: 2082.900244ms GPU, 2082.877184ms CPU, 10.41s total GPU, 10.42s total wall, 5x 
+Run:  [75/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^28 num_sources=3]
+Warn: Current measurement timed out (16.60s) while over noise threshold (inf% > 0.50%)
+Pass: Cold: 4150.756226ms GPU, 4150.703527ms CPU, 16.60s total GPU, 16.60s total wall, 4x 
+Run:  [76/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^29 num_sources=3]
+Warn: Current measurement timed out (22.25s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (22.25s) before accumulating min_samples (2 < 4)
+Pass: Cold: 11126.184570ms GPU, 11126.032772ms CPU, 22.25s total GPU, 22.25s total wall, 2x 
+Run:  [77/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^20 num_sources=4]
+Warn: Current measurement timed out (15.03s) while over noise threshold (3.11% > 0.50%)
+Pass: Cold: 27.280943ms GPU, 27.285241ms CPU, 14.95s total GPU, 15.03s total wall, 548x 
+Run:  [78/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^21 num_sources=4]
+Warn: Current measurement timed out (15.03s) while over noise threshold (4.30% > 0.50%)
+Pass: Cold: 44.198774ms GPU, 44.203014ms CPU, 14.98s total GPU, 15.03s total wall, 339x 
+Run:  [79/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^22 num_sources=4]
+Warn: Current measurement timed out (15.02s) while over noise threshold (2.57% > 0.50%)
+Pass: Cold: 77.663600ms GPU, 77.667305ms CPU, 14.99s total GPU, 15.02s total wall, 193x 
+Run:  [80/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^23 num_sources=4]
+Warn: Current measurement timed out (15.06s) while over noise threshold (1.82% > 0.50%)
+Pass: Cold: 146.095311ms GPU, 146.098167ms CPU, 15.05s total GPU, 15.06s total wall, 103x 
+Run:  [81/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^24 num_sources=4]
+Warn: Current measurement timed out (15.15s) while over noise threshold (0.89% > 0.50%)
+Pass: Cold: 315.408724ms GPU, 315.409477ms CPU, 15.14s total GPU, 15.15s total wall, 48x 
+Run:  [82/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^25 num_sources=4]
+Warn: Current measurement timed out (15.21s) while over noise threshold (0.71% > 0.50%)
+Pass: Cold: 633.752907ms GPU, 633.749494ms CPU, 15.21s total GPU, 15.21s total wall, 24x 
+Run:  [83/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^26 num_sources=4]
+Pass: Cold: 1298.360718ms GPU, 1298.347535ms CPU, 6.49s total GPU, 6.49s total wall, 5x 
+Run:  [84/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^27 num_sources=4]
+Warn: Current measurement timed out (15.52s) while over noise threshold (1.25% > 0.50%)
+Pass: Cold: 2587.035522ms GPU, 2587.005523ms CPU, 15.52s total GPU, 15.52s total wall, 6x 
+Run:  [85/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^28 num_sources=4]
+Warn: Current measurement timed out (15.59s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (15.59s) before accumulating min_samples (3 < 4)
+Pass: Cold: 5195.430501ms GPU, 5195.373256ms CPU, 15.59s total GPU, 15.59s total wall, 3x 
+Run:  [86/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^29 num_sources=4]
+Warn: Current measurement timed out (24.72s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (24.72s) before accumulating min_samples (2 < 4)
+Pass: Cold: 12361.536621ms GPU, 12361.371866ms CPU, 24.72s total GPU, 24.72s total wall, 2x 
+Run:  [87/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^20 num_sources=5]
+Warn: Current measurement timed out (15.02s) while over noise threshold (2.60% > 0.50%)
+Pass: Cold: 33.450385ms GPU, 33.454606ms CPU, 14.95s total GPU, 15.02s total wall, 447x 
+Run:  [88/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^21 num_sources=5]
+Warn: Current measurement timed out (15.02s) while over noise threshold (2.23% > 0.50%)
+Pass: Cold: 56.961656ms GPU, 56.965606ms CPU, 14.98s total GPU, 15.02s total wall, 263x 
+Run:  [89/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^22 num_sources=5]
+Warn: Current measurement timed out (15.06s) while over noise threshold (1.72% > 0.50%)
+Pass: Cold: 104.397518ms GPU, 104.400813ms CPU, 15.03s total GPU, 15.06s total wall, 144x 
+Run:  [90/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^23 num_sources=5]
+Warn: Current measurement timed out (15.16s) while over noise threshold (1.22% > 0.50%)
+Pass: Cold: 199.254815ms GPU, 199.257298ms CPU, 15.14s total GPU, 15.16s total wall, 76x 
+Run:  [91/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^24 num_sources=5]
+Pass: Cold: 445.833783ms GPU, 445.832424ms CPU, 2.23s total GPU, 2.23s total wall, 5x 
+Run:  [92/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^25 num_sources=5]
+Warn: Current measurement timed out (15.36s) while over noise threshold (0.62% > 0.50%)
+Pass: Cold: 903.119902ms GPU, 903.112457ms CPU, 15.35s total GPU, 15.36s total wall, 17x 
+Run:  [93/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^26 num_sources=5]
+Pass: Cold: 1811.249268ms GPU, 1811.229656ms CPU, 9.06s total GPU, 9.06s total wall, 5x 
+Run:  [94/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^27 num_sources=5]
+Pass: Cold: 3623.459766ms GPU, 3623.414691ms CPU, 18.12s total GPU, 18.12s total wall, 5x 
+Run:  [95/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^28 num_sources=5]
+Warn: Current measurement timed out (15.14s) while over noise threshold (inf% > 0.50%)
+Warn: Current measurement timed out (15.14s) before accumulating min_samples (2 < 4)
+Pass: Cold: 7569.887451ms GPU, 7569.792515ms CPU, 15.14s total GPU, 15.14s total wall, 2x 
+Run:  [96/196] json_read_compressed_io [Device=0 compression_type=GZIP data_size=2^29 num_sources=5]
+Fail: Unexpected error: std::bad_alloc: out_of_memory: RMM failure at:/home/ubuntu/cudf/cpp/build/_deps/rmm-src/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded
+Run:  [97/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^20 num_sources=1]
+Pass: Cold: 17.907911ms GPU, 17.912196ms CPU, 0.50s total GPU, 0.51s total wall, 28x 
+Run:  [98/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^21 num_sources=1]
+Pass: Cold: 26.200248ms GPU, 26.204402ms CPU, 0.52s total GPU, 0.53s total wall, 20x 
+Run:  [99/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^22 num_sources=1]
+Pass: Cold: 42.278688ms GPU, 42.283017ms CPU, 0.51s total GPU, 0.51s total wall, 12x 
+Run:  [100/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^23 num_sources=1]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [101/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^24 num_sources=1]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [102/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^25 num_sources=1]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [103/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^26 num_sources=1]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [104/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^27 num_sources=1]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [105/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^28 num_sources=1]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [106/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^29 num_sources=1]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [107/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^20 num_sources=2]
+Warn: Current measurement timed out (15.01s) while over noise threshold (2.91% > 0.50%)
+Pass: Cold: 20.086751ms GPU, 20.091164ms CPU, 14.90s total GPU, 15.01s total wall, 742x 
+Run:  [108/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^21 num_sources=2]
+Warn: Current measurement timed out (15.01s) while over noise threshold (3.18% > 0.50%)
+Pass: Cold: 30.005211ms GPU, 30.009533ms CPU, 14.94s total GPU, 15.01s total wall, 498x 
+Run:  [109/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^22 num_sources=2]
+Warn: Current measurement timed out (15.03s) while over noise threshold (3.78% > 0.50%)
+Pass: Cold: 51.134723ms GPU, 51.138903ms CPU, 14.98s total GPU, 15.03s total wall, 293x 
+Run:  [110/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^23 num_sources=2]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [111/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^24 num_sources=2]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [112/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^25 num_sources=2]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [113/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^26 num_sources=2]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [114/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^27 num_sources=2]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [115/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^28 num_sources=2]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [116/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^29 num_sources=2]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [117/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^20 num_sources=3]
+Warn: Current measurement timed out (15.01s) while over noise threshold (2.15% > 0.50%)
+Pass: Cold: 25.553584ms GPU, 25.557951ms CPU, 14.92s total GPU, 15.01s total wall, 584x 
+Run:  [118/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^21 num_sources=3]
+Pass: Cold: 41.496037ms GPU, 41.499985ms CPU, 0.54s total GPU, 0.54s total wall, 13x 
+Run:  [119/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^22 num_sources=3]
+Pass: Cold: 72.474285ms GPU, 72.477730ms CPU, 0.51s total GPU, 0.51s total wall, 7x 
+Run:  [120/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^23 num_sources=3]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [121/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^24 num_sources=3]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [122/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^25 num_sources=3]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [123/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^26 num_sources=3]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [124/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^27 num_sources=3]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [125/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^28 num_sources=3]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [126/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^29 num_sources=3]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [127/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^20 num_sources=4]
+Warn: Current measurement timed out (15.01s) while over noise threshold (2.76% > 0.50%)
+Pass: Cold: 27.960204ms GPU, 27.964491ms CPU, 14.93s total GPU, 15.01s total wall, 534x 
+Run:  [128/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^21 num_sources=4]
+Warn: Current measurement timed out (15.00s) while over noise threshold (2.62% > 0.50%)
+Pass: Cold: 45.731016ms GPU, 45.735076ms CPU, 14.95s total GPU, 15.00s total wall, 327x 
+Run:  [129/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^22 num_sources=4]
+Warn: Current measurement timed out (15.07s) while over noise threshold (2.34% > 0.50%)
+Pass: Cold: 80.834577ms GPU, 80.838104ms CPU, 15.04s total GPU, 15.07s total wall, 186x 
+Run:  [130/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^23 num_sources=4]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [131/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^24 num_sources=4]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [132/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^25 num_sources=4]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [133/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^26 num_sources=4]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [134/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^27 num_sources=4]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [135/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^28 num_sources=4]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [136/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^29 num_sources=4]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [137/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^20 num_sources=5]
+Pass: Cold: 34.325093ms GPU, 34.329308ms CPU, 3.30s total GPU, 3.31s total wall, 96x 
+Run:  [138/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^21 num_sources=5]
+Warn: Current measurement timed out (15.00s) while over noise threshold (2.11% > 0.50%)
+Pass: Cold: 58.670422ms GPU, 58.674430ms CPU, 14.96s total GPU, 15.00s total wall, 255x 
+Run:  [139/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^22 num_sources=5]
+Warn: Current measurement timed out (15.05s) while over noise threshold (1.69% > 0.50%)
+Pass: Cold: 107.355908ms GPU, 107.359190ms CPU, 15.03s total GPU, 15.05s total wall, 140x 
+Run:  [140/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^23 num_sources=5]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [141/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^24 num_sources=5]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [142/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^25 num_sources=5]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [143/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^26 num_sources=5]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [144/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^27 num_sources=5]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [145/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^28 num_sources=5]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [146/196] json_read_compressed_io [Device=0 compression_type=SNAPPY data_size=2^29 num_sources=5]
+Fail: Unexpected error: CUDF failure at: /home/ubuntu/cudf/cpp/src/io/comp/comp.cpp:120: snappy compression failed
+Run:  [147/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^20 num_sources=1]
+Pass: Cold: 11.577018ms GPU, 11.581462ms CPU, 0.51s total GPU, 0.52s total wall, 44x 
+Run:  [148/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^21 num_sources=1]
+Pass: Cold: 13.665867ms GPU, 13.670357ms CPU, 0.51s total GPU, 0.51s total wall, 37x 
+Run:  [149/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^22 num_sources=1]
+Pass: Cold: 17.590923ms GPU, 17.595255ms CPU, 0.51s total GPU, 0.51s total wall, 29x 
+Run:  [150/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^23 num_sources=1]
+Warn: Current measurement timed out (15.01s) while over noise threshold (0.92% > 0.50%)
+Pass: Cold: 25.231666ms GPU, 25.236060ms CPU, 14.91s total GPU, 15.01s total wall, 591x 
+Run:  [151/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^24 num_sources=1]
+Pass: Cold: 40.790440ms GPU, 40.794538ms CPU, 0.53s total GPU, 0.53s total wall, 13x 
+Run:  [152/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^25 num_sources=1]
+Pass: Cold: 72.126504ms GPU, 72.130397ms CPU, 0.50s total GPU, 0.51s total wall, 7x 
+Run:  [153/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^26 num_sources=1]
+Pass: Cold: 136.458603ms GPU, 136.461493ms CPU, 0.68s total GPU, 0.68s total wall, 5x 
+Run:  [154/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^27 num_sources=1]
+Pass: Cold: 277.962164ms GPU, 277.963294ms CPU, 1.39s total GPU, 1.39s total wall, 5x 
+Run:  [155/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^28 num_sources=1]
+Pass: Cold: 587.056750ms GPU, 587.055943ms CPU, 2.94s total GPU, 2.94s total wall, 5x 
+Run:  [156/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^29 num_sources=1]
+Pass: Cold: 1168.594946ms GPU, 1168.585424ms CPU, 5.84s total GPU, 5.84s total wall, 5x 
+Run:  [157/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^20 num_sources=2]
+Warn: Current measurement timed out (15.01s) while over noise threshold (2.45% > 0.50%)
+Pass: Cold: 13.746155ms GPU, 13.750726ms CPU, 14.86s total GPU, 15.01s total wall, 1081x 
+Run:  [158/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^21 num_sources=2]
+Pass: Cold: 17.750967ms GPU, 17.755786ms CPU, 0.51s total GPU, 0.52s total wall, 29x 
+Run:  [159/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^22 num_sources=2]
+Pass: Cold: 25.063280ms GPU, 25.067693ms CPU, 0.50s total GPU, 0.50s total wall, 20x 
+Run:  [160/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^23 num_sources=2]
+Warn: Current measurement timed out (15.01s) while over noise threshold (1.17% > 0.50%)
+Pass: Cold: 40.730880ms GPU, 40.735170ms CPU, 14.95s total GPU, 15.01s total wall, 367x 
+Run:  [161/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^24 num_sources=2]
+Pass: Cold: 72.274331ms GPU, 72.278169ms CPU, 0.51s total GPU, 0.51s total wall, 7x 
+Run:  [162/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^25 num_sources=2]
+Pass: Cold: 137.110292ms GPU, 137.113428ms CPU, 1.65s total GPU, 1.65s total wall, 12x 
+Run:  [163/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^26 num_sources=2]
+Pass: Cold: 278.891412ms GPU, 278.892722ms CPU, 1.39s total GPU, 1.40s total wall, 5x 
+Run:  [164/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^27 num_sources=2]
+Pass: Cold: 587.799377ms GPU, 587.797271ms CPU, 2.94s total GPU, 2.94s total wall, 5x 
+Run:  [165/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^28 num_sources=2]
+Pass: Cold: 1168.206250ms GPU, 1168.197346ms CPU, 5.84s total GPU, 5.84s total wall, 5x 
+Run:  [166/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^29 num_sources=2]
+Pass: Cold: 2348.816357ms GPU, 2348.793263ms CPU, 11.74s total GPU, 11.74s total wall, 5x 
+Run:  [167/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^20 num_sources=3]
+Pass: Cold: 15.842340ms GPU, 15.846636ms CPU, 0.51s total GPU, 0.51s total wall, 32x 
+Run:  [168/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^21 num_sources=3]
+Pass: Cold: 21.473220ms GPU, 21.477520ms CPU, 0.52s total GPU, 0.52s total wall, 24x 
+Run:  [169/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^22 num_sources=3]
+Pass: Cold: 32.914916ms GPU, 32.919239ms CPU, 0.53s total GPU, 0.53s total wall, 16x 
+Run:  [170/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^23 num_sources=3]
+Pass: Cold: 56.408928ms GPU, 56.413083ms CPU, 0.51s total GPU, 0.51s total wall, 9x 
+Run:  [171/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^24 num_sources=3]
+Pass: Cold: 103.675320ms GPU, 103.678905ms CPU, 0.52s total GPU, 0.52s total wall, 5x 
+Run:  [172/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^25 num_sources=3]
+Pass: Cold: 206.457263ms GPU, 206.459601ms CPU, 1.03s total GPU, 1.03s total wall, 5x 
+Run:  [173/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^26 num_sources=3]
+Pass: Cold: 430.612390ms GPU, 430.612308ms CPU, 2.15s total GPU, 2.15s total wall, 5x 
+Run:  [174/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^27 num_sources=3]
+Pass: Cold: 871.149097ms GPU, 871.143934ms CPU, 4.36s total GPU, 4.36s total wall, 5x 
+Run:  [175/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^28 num_sources=3]
+Pass: Cold: 1754.637598ms GPU, 1754.626158ms CPU, 8.77s total GPU, 8.77s total wall, 5x 
+Run:  [176/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^29 num_sources=3]
+Pass: Cold: 3534.410840ms GPU, 3534.374860ms CPU, 17.67s total GPU, 17.67s total wall, 5x 
+Run:  [177/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^20 num_sources=4]
+Pass: Cold: 17.804797ms GPU, 17.809290ms CPU, 0.52s total GPU, 0.52s total wall, 29x 
+Run:  [178/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^21 num_sources=4]
+Pass: Cold: 25.153979ms GPU, 25.158110ms CPU, 0.50s total GPU, 0.51s total wall, 20x 
+Run:  [179/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^22 num_sources=4]
+Warn: Current measurement timed out (15.02s) while over noise threshold (1.06% > 0.50%)
+Pass: Cold: 40.324327ms GPU, 40.328605ms CPU, 14.96s total GPU, 15.02s total wall, 371x 
+Run:  [180/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^23 num_sources=4]
+Pass: Cold: 71.893244ms GPU, 71.897005ms CPU, 0.50s total GPU, 0.50s total wall, 7x 
+Run:  [181/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^24 num_sources=4]
+Pass: Cold: 136.631354ms GPU, 136.634683ms CPU, 0.68s total GPU, 0.68s total wall, 5x 
+Run:  [182/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^25 num_sources=4]
+Pass: Cold: 278.579199ms GPU, 278.580967ms CPU, 1.39s total GPU, 1.39s total wall, 5x 
+Run:  [183/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^26 num_sources=4]
+Pass: Cold: 587.738806ms GPU, 587.737403ms CPU, 2.94s total GPU, 2.94s total wall, 5x 
+Run:  [184/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^27 num_sources=4]
+Pass: Cold: 1168.693677ms GPU, 1168.683237ms CPU, 5.84s total GPU, 5.84s total wall, 5x 
+Run:  [185/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^28 num_sources=4]
+Pass: Cold: 2352.561963ms GPU, 2352.539633ms CPU, 11.76s total GPU, 11.76s total wall, 5x 
+Run:  [186/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^29 num_sources=4]
+Warn: Current measurement timed out (18.83s) while over noise threshold (inf% > 0.50%)
+Pass: Cold: 4707.408447ms GPU, 4707.359806ms CPU, 18.83s total GPU, 18.83s total wall, 4x 
+Run:  [187/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^20 num_sources=5]
+Warn: Current measurement timed out (15.00s) while over noise threshold (0.94% > 0.50%)
+Pass: Cold: 19.597243ms GPU, 19.601632ms CPU, 14.89s total GPU, 15.00s total wall, 760x 
+Run:  [188/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^21 num_sources=5]
+Pass: Cold: 28.650551ms GPU, 28.654899ms CPU, 0.52s total GPU, 0.52s total wall, 18x 
+Run:  [189/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^22 num_sources=5]
+Pass: Cold: 47.698895ms GPU, 47.702954ms CPU, 0.52s total GPU, 0.53s total wall, 11x 
+Run:  [190/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^23 num_sources=5]
+Pass: Cold: 87.160824ms GPU, 87.164631ms CPU, 1.39s total GPU, 1.40s total wall, 16x 
+Run:  [191/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^24 num_sources=5]
+Pass: Cold: 170.607221ms GPU, 170.610166ms CPU, 1.19s total GPU, 1.20s total wall, 7x 
+Run:  [192/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^25 num_sources=5]
+Pass: Cold: 351.996173ms GPU, 351.996962ms CPU, 1.76s total GPU, 1.76s total wall, 5x 
+Run:  [193/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^26 num_sources=5]
+Pass: Cold: 728.189697ms GPU, 728.187137ms CPU, 3.64s total GPU, 3.64s total wall, 5x 
+Run:  [194/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^27 num_sources=5]
+Pass: Cold: 1458.113599ms GPU, 1458.101869ms CPU, 7.29s total GPU, 7.29s total wall, 5x 
+Run:  [195/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^28 num_sources=5]
+Pass: Cold: 2947.913818ms GPU, 2947.885149ms CPU, 14.74s total GPU, 14.74s total wall, 5x 
+Run:  [196/196] json_read_compressed_io [Device=0 compression_type=NONE data_size=2^29 num_sources=5]
+Fail: Unexpected error: std::bad_alloc: out_of_memory: RMM failure at:/home/ubuntu/cudf/cpp/build/_deps/rmm-src/include/rmm/mr/device/pool_memory_resource.hpp:276: Maximum pool size exceeded
+```
+
+# Benchmark Results
+
+## nested_json_gpu_parser
+
+### [0] Tesla T4
+
+|    string_size    | Samples |  CPU Time  | Noise |  GPU Time  | Noise |  Elem/s  | bytes_per_second | peak_memory_usage |
+|-------------------|---------|------------|-------|------------|-------|----------|------------------|-------------------|
+|    2^20 = 1048576 |   2784x |   2.569 ms | 8.66% |   2.565 ms | 8.65% | 408.755M |        408755422 |         4.993 MiB |
+|    2^21 = 2097152 |   1408x |   3.055 ms | 2.28% |   3.051 ms | 2.27% | 687.376M |        687376207 |         9.977 MiB |
+|    2^22 = 4194304 |    113x |   4.444 ms | 0.40% |   4.440 ms | 0.39% | 944.758M |        944757793 |        19.945 MiB |
+|    2^23 = 8388608 |     69x |   7.470 ms | 0.50% |   7.465 ms | 0.50% |   1.124G |       1123650369 |        39.882 MiB |
+|   2^24 = 16777216 |    784x |  13.545 ms | 0.65% |  13.541 ms | 0.65% |   1.239G |       1238978116 |        79.754 MiB |
+|   2^25 = 33554432 |    544x |  25.644 ms | 0.64% |  25.640 ms | 0.64% |   1.309G |       1308687339 |       159.498 MiB |
+|   2^26 = 67108864 |    302x |  49.705 ms | 0.79% |  49.701 ms | 0.79% |   1.350G |       1350250157 |       318.987 MiB |
+|  2^27 = 134217728 |     80x |  97.475 ms | 0.82% |  97.471 ms | 0.82% |   1.377G |       1377002437 |       637.966 MiB |
+|  2^28 = 268435456 |     11x | 193.736 ms | 0.36% | 193.733 ms | 0.36% |   1.386G |       1385591609 |         1.246 GiB |
+|  2^29 = 536870912 |     11x | 387.983 ms | 0.26% | 387.982 ms | 0.26% |   1.384G |       1383752853 |         2.492 GiB |
+| 2^30 = 1073741824 |     11x | 779.343 ms | 0.29% | 779.346 ms | 0.29% |   1.378G |       1377746794 |         4.984 GiB |
+
+## nested_json_gpu_parser_depth
+
+### [0] Tesla T4
+
+|  depth   |    string_size    | Samples |  CPU Time  | Noise |  GPU Time  | Noise |  Elem/s  | bytes_per_second | peak_memory_usage |
+|----------|-------------------|---------|------------|-------|------------|-------|----------|------------------|-------------------|
+|  2^1 = 2 |    2^20 = 1048576 |   2864x |   2.935 ms | 2.47% |   2.931 ms | 2.46% | 357.728M |        357723813 |         8.695 MiB |
+|  2^2 = 4 |    2^20 = 1048576 |   2112x |   2.941 ms | 1.60% |   2.937 ms | 1.59% | 357.074M |        357069786 |         8.695 MiB |
+|  2^3 = 8 |    2^20 = 1048576 |    192x |   8.060 ms | 0.50% |   8.056 ms | 0.50% | 130.173M |        130167649 |         6.722 MiB |
+| 2^4 = 16 |    2^20 = 1048576 |   1446x |  10.349 ms | 2.00% |  10.345 ms | 2.00% | 101.365M |        101357712 |         7.785 MiB |
+|  2^1 = 2 |    2^22 = 4194304 |     84x |   6.023 ms | 0.40% |   6.019 ms | 0.39% | 696.900M |        696892160 |        34.749 MiB |
+|  2^2 = 4 |    2^22 = 4194304 |     84x |   6.023 ms | 0.39% |   6.019 ms | 0.38% | 696.889M |        696880688 |        34.749 MiB |
+|  2^3 = 8 |    2^22 = 4194304 |     48x |  10.509 ms | 0.36% |  10.505 ms | 0.36% | 399.287M |        399277937 |        26.862 MiB |
+| 2^4 = 16 |    2^22 = 4194304 |    880x |  13.624 ms | 2.86% |  13.619 ms | 2.86% | 307.965M |        307963935 |        31.110 MiB |
+|  2^1 = 2 |   2^24 = 16777216 |    656x |  18.668 ms | 0.87% |  18.664 ms | 0.87% | 898.897M |        898896192 |       138.961 MiB |
+|  2^2 = 4 |   2^24 = 16777216 |    592x |  18.681 ms | 0.76% |  18.677 ms | 0.76% | 898.298M |        898297575 |       138.961 MiB |
+|  2^3 = 8 |   2^24 = 16777216 |    694x |  21.591 ms | 1.24% |  21.587 ms | 1.24% | 777.205M |        777197774 |       107.421 MiB |
+| 2^4 = 16 |   2^24 = 16777216 |    527x |  28.479 ms | 1.32% |  28.475 ms | 1.32% | 589.189M |        589182974 |       124.412 MiB |
+|  2^1 = 2 |   2^26 = 67108864 |     11x |  69.399 ms | 0.31% |  69.395 ms | 0.31% | 967.053M |        967052598 |       555.812 MiB |
+|  2^2 = 4 |   2^26 = 67108864 |     29x |  69.363 ms | 0.50% |  69.359 ms | 0.50% | 967.554M |        967553719 |       555.812 MiB |
+|  2^3 = 8 |   2^26 = 67108864 |     39x |  77.127 ms | 0.50% |  77.123 ms | 0.50% | 870.150M |        870148823 |       429.652 MiB |
+| 2^4 = 16 |   2^26 = 67108864 |     11x | 102.301 ms | 0.42% | 102.297 ms | 0.42% | 656.020M |        656019233 |       497.618 MiB |
+|  2^1 = 2 |  2^28 = 268435456 |     11x | 274.592 ms | 0.39% | 274.591 ms | 0.39% | 977.584M |        977583670 |         2.171 GiB |
+|  2^2 = 4 |  2^28 = 268435456 |     11x | 274.255 ms | 0.21% | 274.254 ms | 0.21% | 978.786M |        978785598 |         2.171 GiB |
+|  2^3 = 8 |  2^28 = 268435456 |     50x | 301.662 ms | 0.59% | 301.660 ms | 0.59% | 889.861M |        889860754 |         1.678 GiB |
+| 2^4 = 16 |  2^28 = 268435456 |     17x | 409.414 ms | 0.50% | 409.413 ms | 0.50% | 655.659M |        655658986 |         1.944 GiB |
+|  2^1 = 2 | 2^30 = 1073741824 |     11x |    1.108 s | 0.15% |    1.108 s | 0.15% | 968.827M |        968827353 |         8.684 GiB |
+|  2^2 = 4 | 2^30 = 1073741824 |     11x |    1.107 s | 0.16% |    1.107 s | 0.16% | 970.220M |        970219620 |         8.684 GiB |
+|  2^3 = 8 | 2^30 = 1073741824 |     11x |    1.191 s | 0.26% |    1.191 s | 0.26% | 901.178M |        901177805 |         6.713 GiB |
+| 2^4 = 16 | 2^30 = 1073741824 |     10x |    1.621 s | 0.34% |    1.621 s | 0.34% | 662.210M |        662209763 |         7.775 GiB |
+
+## json_read_data_type
+
+### [0] Tesla T4
+
+| data_type |      io       | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|-----------|---------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|     FLOAT | DEVICE_BUFFER |      5x |    1.644 s | 0.10% |    1.644 s | 0.10% |        326500011 |         8.128 GiB |         1.795 GiB |
+|   DECIMAL | DEVICE_BUFFER |      5x |    1.783 s | 0.10% |    1.783 s | 0.10% |        301153925 |         6.101 GiB |         1.790 GiB |
+| TIMESTAMP | DEVICE_BUFFER |      5x |    2.006 s | 0.05% |    2.006 s | 0.05% |        267682921 |         7.263 GiB |         2.063 GiB |
+|  DURATION | DEVICE_BUFFER |      5x |    2.324 s | 0.07% |    2.324 s | 0.07% |        231047526 |         6.830 GiB |         2.377 GiB |
+|    STRING | DEVICE_BUFFER |      5x | 553.427 ms | 0.15% | 553.428 ms | 0.15% |        970082772 |         2.774 GiB |       794.231 MiB |
+|      LIST | DEVICE_BUFFER |      5x | 739.173 ms | 0.16% | 739.176 ms | 0.16% |        726309735 |         6.462 GiB |         1.127 GiB |
+|    STRUCT | DEVICE_BUFFER |      5x |    1.732 s | 0.20% |    1.732 s | 0.20% |        309904328 |         9.847 GiB |         1.500 GiB |
+
+## json_read_io
+
+### [0] Tesla T4
+
+|      io       | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|---------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|      FILEPATH |      5x |    1.101 s | 0.18% |    1.101 s | 0.18% |        487705224 |         6.637 GiB |         1.229 GiB |
+|   HOST_BUFFER |      5x |    1.169 s | 0.13% |    1.169 s | 0.13% |        459350712 |         6.637 GiB |         1.229 GiB |
+| DEVICE_BUFFER |      5x | 907.143 ms | 0.31% | 907.149 ms | 0.31% |        591822481 |         6.637 GiB |         1.229 GiB |
+
+## json_read_compressed_io
+
+### [0] Tesla T4
+
+| compression_type |    data_size     | num_sources | Samples |  CPU Time  | Noise |  GPU Time  | Noise | bytes_per_second | peak_memory_usage | encoded_file_size |
+|------------------|------------------|-------------|---------|------------|-------|------------|-------|------------------|-------------------|-------------------|
+|             GZIP |   2^20 = 1048576 |           1 |    765x |  19.496 ms | 5.89% |  19.491 ms | 5.88% |         53796873 |        13.459 MiB |       386.727 KiB |
+|             GZIP |   2^21 = 2097152 |           1 |    502x |  29.748 ms | 1.94% |  29.743 ms | 1.94% |         70508813 |        26.706 MiB |       768.525 KiB |
+|             GZIP |   2^22 = 4194304 |           1 |    300x |  49.870 ms | 2.14% |  49.865 ms | 2.14% |         84113481 |        53.008 MiB |         1.492 MiB |
+|             GZIP |   2^23 = 8388608 |           1 |    179x |  83.749 ms | 1.27% |  83.744 ms | 1.27% |        100169426 |       106.042 MiB |         2.984 MiB |
+|             GZIP |  2^24 = 16777216 |           1 |     82x | 183.251 ms | 0.87% | 183.247 ms | 0.87% |         91555035 |       212.528 MiB |         5.981 MiB |
+|             GZIP |  2^25 = 33554432 |           1 |     46x | 329.296 ms | 0.90% | 329.295 ms | 0.90% |        101897821 |       425.116 MiB |        11.965 MiB |
+|             GZIP |  2^26 = 67108864 |           1 |      5x | 609.349 ms | 0.48% | 609.352 ms | 0.48% |        110131496 |       849.518 MiB |        23.925 MiB |
+|             GZIP | 2^27 = 134217728 |           1 |      5x |    1.225 s | 0.43% |    1.225 s | 0.43% |        109581570 |         1.657 GiB |        47.797 MiB |
+|             GZIP | 2^28 = 268435456 |           1 |      6x |    2.544 s | 0.73% |    2.544 s | 0.73% |        105522480 |         3.318 GiB |        95.642 MiB |
+|             GZIP | 2^29 = 536870912 |           1 |      4x |    4.981 s |  inf% |    4.981 s |  inf% |        107778425 |         6.637 GiB |       191.359 MiB |
+|             GZIP |   2^20 = 1048576 |           2 |    720x |  19.700 ms | 3.57% |  19.696 ms | 3.57% |        106474604 |        26.899 MiB |       773.453 KiB |
+|             GZIP |   2^21 = 2097152 |           2 |     17x |  29.671 ms | 0.44% |  29.667 ms | 0.44% |        141377981 |        53.387 MiB |         1.501 MiB |
+|             GZIP |   2^22 = 4194304 |           2 |     10x |  50.661 ms | 0.33% |  50.656 ms | 0.33% |        165597935 |       105.996 MiB |         2.984 MiB |
+|             GZIP |   2^23 = 8388608 |           2 |    167x |  89.879 ms | 2.26% |  89.876 ms | 2.26% |        186670955 |       212.066 MiB |         5.968 MiB |
+|             GZIP |  2^24 = 16777216 |           2 |     73x | 206.190 ms | 2.75% | 206.187 ms | 2.75% |        162737538 |       425.034 MiB |        11.962 MiB |
+|             GZIP |  2^25 = 33554432 |           2 |     40x | 375.921 ms | 1.14% | 375.921 ms | 1.14% |        178518414 |       850.212 MiB |        23.931 MiB |
+|             GZIP |  2^26 = 67108864 |           2 |      5x | 754.939 ms | 0.30% | 754.944 ms | 0.30% |        177784938 |         1.659 GiB |        47.850 MiB |
+|             GZIP | 2^27 = 134217728 |           2 |      5x |    1.542 s | 0.50% |    1.542 s | 0.50% |        174046025 |         3.315 GiB |        95.595 MiB |
+|             GZIP | 2^28 = 268435456 |           2 |      5x |    3.111 s | 0.40% |    3.111 s | 0.40% |        172555533 |         6.635 GiB |       191.284 MiB |
+|             GZIP | 2^29 = 536870912 |           2 |      3x |    6.186 s |  inf% |    6.186 s |  inf% |        173577933 |        10.781 GiB |       382.718 MiB |
+|             GZIP |   2^20 = 1048576 |           3 |    601x |  24.857 ms | 1.62% |  24.852 ms | 1.62% |        126576600 |        40.339 MiB |         1.133 MiB |
+|             GZIP |   2^21 = 2097152 |           3 |     13x |  39.745 ms | 0.43% |  39.741 ms | 0.43% |        158313145 |        80.076 MiB |         2.252 MiB |
+|             GZIP |   2^22 = 4194304 |           3 |    218x |  68.872 ms | 2.08% |  68.868 ms | 2.08% |        182711039 |       158.985 MiB |         4.477 MiB |
+|             GZIP |   2^23 = 8388608 |           3 |      5x | 125.465 ms | 0.42% | 125.462 ms | 0.42% |        200585376 |       318.087 MiB |         8.952 MiB |
+|             GZIP |  2^24 = 16777216 |           3 |     58x | 261.443 ms | 1.04% | 261.442 ms | 1.04% |        192515735 |       637.539 MiB |        17.943 MiB |
+|             GZIP |  2^25 = 33554432 |           3 |      5x | 517.174 ms | 0.42% | 517.176 ms | 0.42% |        194640335 |         1.245 GiB |        35.896 MiB |
+|             GZIP |  2^26 = 67108864 |           3 |      5x |    1.040 s | 0.36% |    1.040 s | 0.36% |        193497283 |         2.489 GiB |        71.775 MiB |
+|             GZIP | 2^27 = 134217728 |           3 |      5x |    2.083 s | 0.32% |    2.083 s | 0.32% |        193313714 |         4.972 GiB |       143.392 MiB |
+|             GZIP | 2^28 = 268435456 |           3 |      4x |    4.151 s |  inf% |    4.151 s |  inf% |        194014373 |         9.953 GiB |       286.926 MiB |
+|             GZIP | 2^29 = 536870912 |           3 |      2x |   11.126 s |  inf% |   11.126 s |  inf% |        144758764 |        10.775 GiB |       574.077 MiB |
+|             GZIP |   2^20 = 1048576 |           4 |    548x |  27.285 ms | 3.11% |  27.281 ms | 3.11% |        153744831 |        53.775 MiB |         1.511 MiB |
+|             GZIP |   2^21 = 2097152 |           4 |    339x |  44.203 ms | 4.30% |  44.199 ms | 4.30% |        189792773 |       106.757 MiB |         3.002 MiB |
+|             GZIP |   2^22 = 4194304 |           4 |    193x |  77.667 ms | 2.57% |  77.664 ms | 2.57% |        216024187 |       211.973 MiB |         5.969 MiB |
+|             GZIP |   2^23 = 8388608 |           4 |    103x | 146.098 ms | 1.82% | 146.095 ms | 1.82% |        229674941 |       424.110 MiB |        11.936 MiB |
+|             GZIP |  2^24 = 16777216 |           4 |     48x | 315.409 ms | 0.89% | 315.409 ms | 0.89% |        212767938 |       850.048 MiB |        23.925 MiB |
+|             GZIP |  2^25 = 33554432 |           4 |     24x | 633.749 ms | 0.71% | 633.753 ms | 0.71% |        211782425 |         1.661 GiB |        47.862 MiB |
+|             GZIP |  2^26 = 67108864 |           4 |      5x |    1.298 s | 0.44% |    1.298 s | 0.44% |        206749520 |         3.318 GiB |        95.700 MiB |
+|             GZIP | 2^27 = 134217728 |           4 |      6x |    2.587 s | 1.25% |    2.587 s | 1.25% |        207523594 |         6.629 GiB |       191.189 MiB |
+|             GZIP | 2^28 = 268435456 |           4 |      3x |    5.195 s |  inf% |    5.195 s |  inf% |        206670423 |        10.781 GiB |       382.568 MiB |
+|             GZIP | 2^29 = 536870912 |           4 |      2x |   12.361 s |  inf% |   12.362 s |  inf% |        173723034 |        12.329 GiB |       765.436 MiB |
+|             GZIP |   2^20 = 1048576 |           5 |    447x |  33.455 ms | 2.60% |  33.450 ms | 2.60% |        156736013 |        67.217 MiB |         1.888 MiB |
+|             GZIP |   2^21 = 2097152 |           5 |    263x |  56.966 ms | 2.23% |  56.962 ms | 2.23% |        184084536 |       133.446 MiB |         3.753 MiB |
+|             GZIP |   2^22 = 4194304 |           5 |    144x | 104.401 ms | 1.72% | 104.398 ms | 1.72% |        200881404 |       264.963 MiB |         7.461 MiB |
+|             GZIP |   2^23 = 8388608 |           5 |     76x | 199.257 ms | 1.22% | 199.255 ms | 1.22% |        210499505 |       530.135 MiB |        14.920 MiB |
+|             GZIP |  2^24 = 16777216 |           5 |      5x | 445.832 ms | 0.37% | 445.834 ms | 0.37% |        188155503 |         1.038 GiB |        29.906 MiB |
+|             GZIP |  2^25 = 33554432 |           5 |     17x | 903.112 ms | 0.62% | 903.120 ms | 0.62% |        185769530 |         2.076 GiB |        59.827 MiB |
+|             GZIP |  2^26 = 67108864 |           5 |      5x |    1.811 s | 0.38% |    1.811 s | 0.38% |        185255738 |         4.148 GiB |       119.625 MiB |
+|             GZIP | 2^27 = 134217728 |           5 |      5x |    3.623 s | 0.43% |    3.623 s | 0.43% |        185206593 |         8.287 GiB |       238.987 MiB |
+|             GZIP | 2^28 = 268435456 |           5 |      2x |    7.570 s |  inf% |    7.570 s |  inf% |        177304786 |        10.778 GiB |       478.210 MiB |
+|           SNAPPY |   2^20 = 1048576 |           1 |     28x |  17.912 ms | 0.41% |  17.908 ms | 0.41% |         58553787 |        13.459 MiB |         2.901 MiB |
+|           SNAPPY |   2^21 = 2097152 |           1 |     20x |  26.204 ms | 0.31% |  26.200 ms | 0.31% |         80043211 |        26.706 MiB |         5.762 MiB |
+|           SNAPPY |   2^22 = 4194304 |           1 |     12x |  42.283 ms | 0.20% |  42.279 ms | 0.20% |         99206105 |        53.008 MiB |        11.451 MiB |
+|           SNAPPY |   2^20 = 1048576 |           2 |    742x |  20.091 ms | 2.91% |  20.087 ms | 2.91% |        104404741 |        26.899 MiB |         5.803 MiB |
+|           SNAPPY |   2^21 = 2097152 |           2 |    498x |  30.010 ms | 3.18% |  30.005 ms | 3.18% |        139785850 |        53.387 MiB |        11.525 MiB |
+|           SNAPPY |   2^22 = 4194304 |           2 |    293x |  51.139 ms | 3.78% |  51.135 ms | 3.78% |        164049152 |       105.996 MiB |        22.902 MiB |
+|           SNAPPY |   2^20 = 1048576 |           3 |    584x |  25.558 ms | 2.15% |  25.554 ms | 2.15% |        123103200 |        40.339 MiB |         8.704 MiB |
+|           SNAPPY |   2^21 = 2097152 |           3 |     13x |  41.500 ms | 0.42% |  41.496 ms | 0.42% |        151615828 |        80.076 MiB |        17.287 MiB |
+|           SNAPPY |   2^22 = 4194304 |           3 |      7x |  72.478 ms | 0.18% |  72.474 ms | 0.18% |        173618988 |       158.985 MiB |        34.353 MiB |
+|           SNAPPY |   2^20 = 1048576 |           4 |    534x |  27.964 ms | 2.76% |  27.960 ms | 2.76% |        150009776 |        53.775 MiB |        11.605 MiB |
+|           SNAPPY |   2^21 = 2097152 |           4 |    327x |  45.735 ms | 2.62% |  45.731 ms | 2.62% |        183433668 |       106.757 MiB |        23.049 MiB |
+|           SNAPPY |   2^22 = 4194304 |           4 |    186x |  80.838 ms | 2.34% |  80.835 ms | 2.34% |        207549995 |       211.973 MiB |        45.804 MiB |
+|           SNAPPY |   2^20 = 1048576 |           5 |     96x |  34.329 ms | 2.27% |  34.325 ms | 2.27% |        152741901 |        67.217 MiB |        14.507 MiB |
+|           SNAPPY |   2^21 = 2097152 |           5 |    255x |  58.674 ms | 2.11% |  58.670 ms | 2.11% |        178723106 |       133.446 MiB |        28.811 MiB |
+|           SNAPPY |   2^22 = 4194304 |           5 |    140x | 107.359 ms | 1.69% | 107.356 ms | 1.69% |        195345745 |       264.963 MiB |        57.254 MiB |
+|             NONE |   2^20 = 1048576 |           1 |     44x |  11.581 ms | 0.43% |  11.577 ms | 0.43% |         90573927 |        13.459 MiB |         2.487 MiB |
+|             NONE |   2^21 = 2097152 |           1 |     37x |  13.670 ms | 0.36% |  13.666 ms | 0.36% |        153459123 |        26.706 MiB |         4.939 MiB |
+|             NONE |   2^22 = 4194304 |           1 |     29x |  17.595 ms | 0.37% |  17.591 ms | 0.37% |        238435698 |        53.008 MiB |         9.815 MiB |
+|             NONE |   2^23 = 8388608 |           1 |    591x |  25.236 ms | 0.92% |  25.232 ms | 0.92% |        332463500 |       106.042 MiB |        19.635 MiB |
+|             NONE |  2^24 = 16777216 |           1 |     13x |  40.795 ms | 0.33% |  40.790 ms | 0.33% |        411302652 |       212.528 MiB |        39.343 MiB |
+|             NONE |  2^25 = 33554432 |           1 |      7x |  72.130 ms | 0.17% |  72.127 ms | 0.17% |        465216392 |       425.116 MiB |        78.714 MiB |
+|             NONE |  2^26 = 67108864 |           1 |      5x | 136.461 ms | 0.33% | 136.459 ms | 0.34% |        491789176 |       849.518 MiB |       157.298 MiB |
+|             NONE | 2^27 = 134217728 |           1 |      5x | 277.963 ms | 0.29% | 277.962 ms | 0.29% |        482863300 |         1.657 GiB |       314.262 MiB |
+|             NONE | 2^28 = 268435456 |           1 |      5x | 587.056 ms | 0.17% | 587.057 ms | 0.17% |        457256399 |         3.318 GiB |       629.035 MiB |
+|             NONE | 2^29 = 536870912 |           1 |      5x |    1.169 s | 0.26% |    1.169 s | 0.26% |        459415739 |         6.637 GiB |         1.229 GiB |
+|             NONE |   2^20 = 1048576 |           2 |   1081x |  13.751 ms | 2.45% |  13.746 ms | 2.45% |        152562812 |        26.899 MiB |         4.974 MiB |
+|             NONE |   2^21 = 2097152 |           2 |     29x |  17.756 ms | 0.26% |  17.751 ms | 0.25% |        236285942 |        53.387 MiB |         9.878 MiB |
+|             NONE |   2^22 = 4194304 |           2 |     20x |  25.068 ms | 0.35% |  25.063 ms | 0.35% |        334697138 |       105.996 MiB |        19.630 MiB |
+|             NONE |   2^23 = 8388608 |           2 |    367x |  40.735 ms | 1.17% |  40.731 ms | 1.17% |        411904085 |       212.066 MiB |        39.271 MiB |
+|             NONE |  2^24 = 16777216 |           2 |      7x |  72.278 ms | 0.24% |  72.274 ms | 0.24% |        464264856 |       425.034 MiB |        78.686 MiB |
+|             NONE |  2^25 = 33554432 |           2 |     12x | 137.113 ms | 0.49% | 137.110 ms | 0.49% |        489451689 |       850.212 MiB |       157.428 MiB |
+|             NONE |  2^26 = 67108864 |           2 |      5x | 278.893 ms | 0.42% | 278.891 ms | 0.42% |        481254431 |         1.659 GiB |       314.597 MiB |
+|             NONE | 2^27 = 134217728 |           2 |      5x | 587.797 ms | 0.25% | 587.799 ms | 0.25% |        456678700 |         3.315 GiB |       628.524 MiB |
+|             NONE | 2^28 = 268435456 |           2 |      5x |    1.168 s | 0.27% |    1.168 s | 0.27% |        459568601 |         6.635 GiB |         1.229 GiB |
+|             NONE | 2^29 = 536870912 |           2 |      5x |    2.349 s | 0.12% |    2.349 s | 0.12% |        457141666 |        10.781 GiB |         2.458 GiB |
+|             NONE |   2^20 = 1048576 |           3 |     32x |  15.847 ms | 0.41% |  15.842 ms | 0.40% |        198564604 |        40.339 MiB |         7.461 MiB |
+|             NONE |   2^21 = 2097152 |           3 |     24x |  21.478 ms | 0.32% |  21.473 ms | 0.32% |        292990800 |        80.076 MiB |        14.817 MiB |
+|             NONE |   2^22 = 4194304 |           3 |     16x |  32.919 ms | 0.35% |  32.915 ms | 0.35% |        382286015 |       158.985 MiB |        29.445 MiB |
+|             NONE |   2^23 = 8388608 |           3 |      9x |  56.413 ms | 0.46% |  56.409 ms | 0.46% |        446131932 |       318.087 MiB |        58.906 MiB |
+|             NONE |  2^24 = 16777216 |           3 |      5x | 103.679 ms | 0.32% | 103.675 ms | 0.32% |        485473763 |       637.539 MiB |       118.029 MiB |
+|             NONE |  2^25 = 33554432 |           3 |      5x | 206.460 ms | 0.21% | 206.457 ms | 0.21% |        487574495 |         1.245 GiB |       236.141 MiB |
+|             NONE |  2^26 = 67108864 |           3 |      5x | 430.612 ms | 0.14% | 430.612 ms | 0.14% |        467535529 |         2.489 GiB |       471.895 MiB |
+|             NONE | 2^27 = 134217728 |           3 |      5x | 871.144 ms | 0.08% | 871.149 ms | 0.08% |        462209265 |         4.972 GiB |       942.787 MiB |
+|             NONE | 2^28 = 268435456 |           3 |      5x |    1.755 s | 0.23% |    1.755 s | 0.23% |        458958800 |         9.953 GiB |         1.843 GiB |
+|             NONE | 2^29 = 536870912 |           3 |      5x |    3.534 s | 0.12% |    3.534 s | 0.12% |        455694826 |        10.775 GiB |         3.687 GiB |
+|             NONE |   2^20 = 1048576 |           4 |     29x |  17.809 ms | 0.38% |  17.805 ms | 0.38% |        235571574 |        53.775 MiB |         9.947 MiB |
+|             NONE |   2^21 = 2097152 |           4 |     20x |  25.158 ms | 0.30% |  25.154 ms | 0.30% |        333490294 |       106.757 MiB |        19.756 MiB |
+|             NONE |   2^22 = 4194304 |           4 |    371x |  40.329 ms | 1.06% |  40.324 ms | 1.06% |        416056935 |       211.973 MiB |        39.260 MiB |
+|             NONE |   2^23 = 8388608 |           4 |      7x |  71.897 ms | 0.26% |  71.893 ms | 0.26% |        466725802 |       424.110 MiB |        78.542 MiB |
+|             NONE |  2^24 = 16777216 |           4 |      5x | 136.635 ms | 0.31% | 136.631 ms | 0.31% |        491167379 |       850.048 MiB |       157.372 MiB |
+|             NONE |  2^25 = 33554432 |           4 |      5x | 278.581 ms | 0.23% | 278.579 ms | 0.23% |        481793789 |         1.661 GiB |       314.855 MiB |
+|             NONE |  2^26 = 67108864 |           4 |      5x | 587.737 ms | 0.07% | 587.739 ms | 0.07% |        456725765 |         3.318 GiB |       629.194 MiB |
+|             NONE | 2^27 = 134217728 |           4 |      5x |    1.169 s | 0.13% |    1.169 s | 0.13% |        459376928 |         6.629 GiB |         1.228 GiB |
+|             NONE | 2^28 = 268435456 |           4 |      5x |    2.353 s | 0.10% |    2.353 s | 0.10% |        456413833 |        10.781 GiB |         2.457 GiB |
+|             NONE | 2^29 = 536870912 |           4 |      4x |    4.707 s |  inf% |    4.707 s |  inf% |        456192334 |        12.329 GiB |         4.915 GiB |
+|             NONE |   2^20 = 1048576 |           5 |    760x |  19.602 ms | 0.94% |  19.597 ms | 0.94% |        267531506 |        67.217 MiB |        12.434 MiB |
+|             NONE |   2^21 = 2097152 |           5 |     18x |  28.655 ms | 0.29% |  28.651 ms | 0.29% |        365988074 |       133.446 MiB |        24.695 MiB |
+|             NONE |   2^22 = 4194304 |           5 |     11x |  47.703 ms | 0.35% |  47.699 ms | 0.35% |        439664693 |       264.963 MiB |        49.075 MiB |
+|             NONE |   2^23 = 8388608 |           5 |     16x |  87.165 ms | 0.50% |  87.161 ms | 0.50% |        481214356 |       530.135 MiB |        98.177 MiB |
+|             NONE |  2^24 = 16777216 |           5 |      7x | 170.610 ms | 0.49% | 170.607 ms | 0.49% |        491691262 |         1.038 GiB |       196.715 MiB |
+|             NONE |  2^25 = 33554432 |           5 |      5x | 351.997 ms | 0.32% | 351.996 ms | 0.32% |        476630636 |         2.076 GiB |       393.569 MiB |
+|             NONE |  2^26 = 67108864 |           5 |      5x | 728.187 ms | 0.10% | 728.190 ms | 0.10% |        460792457 |         4.148 GiB |       786.492 MiB |
+|             NONE | 2^27 = 134217728 |           5 |      5x |    1.458 s | 0.21% |    1.458 s | 0.21% |        460244414 |         8.287 GiB |         1.534 GiB |
+|             NONE | 2^28 = 268435456 |           5 |      5x |    2.948 s | 0.12% |    2.948 s | 0.12% |        455297326 |        10.778 GiB |         3.071 GiB |

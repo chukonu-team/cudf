@@ -1,0 +1,139 @@
+RMM memory resource = pool
+CUIO host memory resource = pinned_pool
+# Devices
+
+## [0] `Tesla T4`
+* SM Version: 750 (PTX Version: 750)
+* Number of SMs: 40
+* SM Default Clock Rate: 1590 MHz
+* Global Memory: 7206 MiB Free / 14913 MiB Total
+* Global Memory Bus Peak: 320 GB/sec (256-bit DDR @5001MHz)
+* Max Shared Memory: 64 KiB/SM, 48 KiB/Block
+* L2 Cache Size: 4096 KiB
+* Maximum Active Blocks: 16/SM
+* Maximum Active Threads: 1024/SM, 1024/Block
+* Available Registers: 65536/SM, 65536/Block
+* ECC Enabled: Yes
+
+# Log
+
+```
+Run:  [1/34] contains_scalar [Device=0 data_size=2^10 has_nulls=0]
+Pass: Cold: 0.030031ms GPU, 0.035230ms CPU, 0.50s total GPU, 1.26s total wall, 16656x 
+Run:  [2/34] contains_scalar [Device=0 data_size=2^12 has_nulls=0]
+Pass: Cold: 0.030344ms GPU, 0.034667ms CPU, 0.50s total GPU, 1.21s total wall, 16480x 
+Run:  [3/34] contains_scalar [Device=0 data_size=2^14 has_nulls=0]
+Pass: Cold: 0.029772ms GPU, 0.033926ms CPU, 0.50s total GPU, 1.22s total wall, 16800x 
+Run:  [4/34] contains_scalar [Device=0 data_size=2^16 has_nulls=0]
+Pass: Cold: 0.030663ms GPU, 0.034740ms CPU, 0.50s total GPU, 1.18s total wall, 16320x 
+Run:  [5/34] contains_scalar [Device=0 data_size=2^18 has_nulls=0]
+Pass: Cold: 0.035800ms GPU, 0.039915ms CPU, 0.50s total GPU, 1.04s total wall, 13968x 
+Run:  [6/34] contains_scalar [Device=0 data_size=2^20 has_nulls=0]
+Pass: Cold: 0.051984ms GPU, 0.056121ms CPU, 0.50s total GPU, 0.81s total wall, 9632x 
+Run:  [7/34] contains_scalar [Device=0 data_size=2^22 has_nulls=0]
+Pass: Cold: 0.102850ms GPU, 0.107254ms CPU, 0.50s total GPU, 0.62s total wall, 4864x 
+Run:  [8/34] contains_scalar [Device=0 data_size=2^24 has_nulls=0]
+Pass: Cold: 0.289462ms GPU, 0.293897ms CPU, 0.50s total GPU, 0.54s total wall, 1728x 
+Run:  [9/34] contains_scalar [Device=0 data_size=2^26 has_nulls=0]
+Pass: Cold: 1.060651ms GPU, 1.065068ms CPU, 0.50s total GPU, 0.51s total wall, 472x 
+Run:  [10/34] contains_scalar [Device=0 data_size=2^10 has_nulls=1]
+Pass: Cold: 0.027432ms GPU, 0.031700ms CPU, 0.50s total GPU, 1.32s total wall, 18240x 
+Run:  [11/34] contains_scalar [Device=0 data_size=2^12 has_nulls=1]
+Pass: Cold: 0.030465ms GPU, 0.034716ms CPU, 0.50s total GPU, 1.21s total wall, 16416x 
+Run:  [12/34] contains_scalar [Device=0 data_size=2^14 has_nulls=1]
+Pass: Cold: 0.030362ms GPU, 0.034579ms CPU, 0.50s total GPU, 1.20s total wall, 16480x 
+Run:  [13/34] contains_scalar [Device=0 data_size=2^16 has_nulls=1]
+Pass: Cold: 0.031711ms GPU, 0.035932ms CPU, 0.50s total GPU, 1.16s total wall, 15776x 
+Run:  [14/34] contains_scalar [Device=0 data_size=2^18 has_nulls=1]
+Pass: Cold: 0.036267ms GPU, 0.040443ms CPU, 0.50s total GPU, 1.04s total wall, 13792x 
+Run:  [15/34] contains_scalar [Device=0 data_size=2^20 has_nulls=1]
+Pass: Cold: 0.053822ms GPU, 0.058005ms CPU, 0.50s total GPU, 0.80s total wall, 9296x 
+Run:  [16/34] contains_scalar [Device=0 data_size=2^22 has_nulls=1]
+Pass: Cold: 0.105274ms GPU, 0.109691ms CPU, 0.50s total GPU, 0.62s total wall, 4752x 
+Run:  [17/34] contains_scalar [Device=0 data_size=2^24 has_nulls=1]
+Pass: Cold: 0.297359ms GPU, 0.301726ms CPU, 0.50s total GPU, 0.54s total wall, 1696x 
+Run:  [18/34] contains_scalar [Device=0 data_size=2^26 has_nulls=1]
+Pass: Cold: 1.071575ms GPU, 1.076179ms CPU, 0.50s total GPU, 0.51s total wall, 467x 
+Run:  [19/34] contains_table [Device=0 type=I32 null_probability=0 table_size=10000]
+Pass: Cold: 0.037663ms GPU, 0.041505ms CPU, 0.50s total GPU, 1.02s total wall, 13280x 
+Run:  [20/34] contains_table [Device=0 type=I32 null_probability=0.1 table_size=10000]
+Pass: Cold: 0.038300ms GPU, 0.042143ms CPU, 0.50s total GPU, 1.01s total wall, 13056x 
+Run:  [21/34] contains_table [Device=0 type=I32 null_probability=0 table_size=100000]
+Pass: Cold: 0.038670ms GPU, 0.042500ms CPU, 0.50s total GPU, 1.00s total wall, 12944x 
+Run:  [22/34] contains_table [Device=0 type=I32 null_probability=0.1 table_size=100000]
+Pass: Cold: 0.040817ms GPU, 0.044664ms CPU, 0.50s total GPU, 0.96s total wall, 12256x 
+Run:  [23/34] contains_table [Device=0 type=I32 null_probability=0 table_size=1000000]
+Pass: Cold: 0.066546ms GPU, 0.070433ms CPU, 0.50s total GPU, 0.77s total wall, 7520x 
+Run:  [24/34] contains_table [Device=0 type=I32 null_probability=0.1 table_size=1000000]
+Pass: Cold: 0.077337ms GPU, 0.081219ms CPU, 0.50s total GPU, 0.72s total wall, 6480x 
+Run:  [25/34] contains_table [Device=0 type=I32 null_probability=0 table_size=10000000]
+Pass: Cold: 0.392482ms GPU, 0.396789ms CPU, 1.10s total GPU, 1.18s total wall, 2800x 
+Run:  [26/34] contains_table [Device=0 type=I32 null_probability=0.1 table_size=10000000]
+Pass: Cold: 0.503359ms GPU, 0.507720ms CPU, 0.51s total GPU, 0.54s total wall, 1008x 
+Run:  [27/34] contains_table [Device=0 type=cudf::list_view null_probability=0 table_size=10000]
+Pass: Cold: 0.770329ms GPU, 0.774459ms CPU, 2.35s total GPU, 2.46s total wall, 3056x 
+Run:  [28/34] contains_table [Device=0 type=cudf::list_view null_probability=0.1 table_size=10000]
+Pass: Cold: 0.972179ms GPU, 0.976157ms CPU, 0.50s total GPU, 0.52s total wall, 515x 
+Run:  [29/34] contains_table [Device=0 type=cudf::list_view null_probability=0 table_size=100000]
+Pass: Cold: 0.639530ms GPU, 0.643553ms CPU, 0.96s total GPU, 1.01s total wall, 1502x 
+Run:  [30/34] contains_table [Device=0 type=cudf::list_view null_probability=0.1 table_size=100000]
+Pass: Cold: 0.689082ms GPU, 0.693002ms CPU, 0.50s total GPU, 0.52s total wall, 726x 
+Run:  [31/34] contains_table [Device=0 type=cudf::list_view null_probability=0 table_size=1000000]
+Pass: Cold: 3.423332ms GPU, 3.427654ms CPU, 0.50s total GPU, 0.51s total wall, 147x 
+Run:  [32/34] contains_table [Device=0 type=cudf::list_view null_probability=0.1 table_size=1000000]
+Pass: Cold: 4.606041ms GPU, 4.610090ms CPU, 0.50s total GPU, 0.51s total wall, 109x 
+Run:  [33/34] contains_table [Device=0 type=cudf::list_view null_probability=0 table_size=10000000]
+Pass: Cold: 2.006522ms GPU, 2.010629ms CPU, 0.50s total GPU, 0.51s total wall, 250x 
+Run:  [34/34] contains_table [Device=0 type=cudf::list_view null_probability=0.1 table_size=10000000]
+Pass: Cold: 1.715196ms GPU, 1.719222ms CPU, 0.50s total GPU, 0.51s total wall, 292x 
+```
+
+# Benchmark Results
+
+## contains_scalar
+
+### [0] Tesla T4
+
+|    data_size    | has_nulls | Samples |  CPU Time  | Noise  |  GPU Time  | Noise  |
+|-----------------|-----------|---------|------------|--------|------------|--------|
+|     2^10 = 1024 |         0 |  16656x |  35.230 us | 20.04% |  30.031 us |  9.65% |
+|     2^12 = 4096 |         0 |  16480x |  34.667 us | 16.10% |  30.344 us |  6.76% |
+|    2^14 = 16384 |         0 |  16800x |  33.926 us | 15.88% |  29.772 us |  7.32% |
+|    2^16 = 65536 |         0 |  16320x |  34.740 us | 15.46% |  30.663 us |  7.68% |
+|   2^18 = 262144 |         0 |  13968x |  39.915 us | 12.67% |  35.800 us |  5.08% |
+|  2^20 = 1048576 |         0 |   9632x |  56.121 us |  8.80% |  51.984 us |  3.65% |
+|  2^22 = 4194304 |         0 |   4864x | 107.254 us |  5.85% | 102.850 us |  4.00% |
+| 2^24 = 16777216 |         0 |   1728x | 293.897 us |  1.69% | 289.462 us |  0.69% |
+| 2^26 = 67108864 |         0 |    472x |   1.065 ms |  0.47% |   1.061 ms |  0.22% |
+|     2^10 = 1024 |         1 |  18240x |  31.700 us | 18.52% |  27.432 us |  9.90% |
+|     2^12 = 4096 |         1 |  16416x |  34.716 us | 17.70% |  30.465 us | 10.73% |
+|    2^14 = 16384 |         1 |  16480x |  34.579 us | 15.19% |  30.362 us |  5.83% |
+|    2^16 = 65536 |         1 |  15776x |  35.932 us | 16.58% |  31.711 us |  9.70% |
+|   2^18 = 262144 |         1 |  13792x |  40.443 us | 12.56% |  36.267 us |  4.81% |
+|  2^20 = 1048576 |         1 |   9296x |  58.005 us | 10.24% |  53.822 us |  6.46% |
+|  2^22 = 4194304 |         1 |   4752x | 109.691 us |  4.51% | 105.274 us |  1.62% |
+| 2^24 = 16777216 |         1 |   1696x | 301.726 us |  1.59% | 297.359 us |  0.60% |
+| 2^26 = 67108864 |         1 |    467x |   1.076 ms |  0.49% |   1.072 ms |  0.23% |
+
+## contains_table
+
+### [0] Tesla T4
+
+|      type       | null_probability | table_size | Samples |  CPU Time  | Noise  |  GPU Time  | Noise | peak_memory_usage |
+|-----------------|------------------|------------|---------|------------|--------|------------|-------|-------------------|
+|             I32 |                0 |      10000 |  13280x |  41.505 us | 11.69% |  37.663 us | 5.43% |        21.531 KiB |
+|             I32 |              0.1 |      10000 |  13056x |  42.143 us | 11.19% |  38.300 us | 4.81% |        21.531 KiB |
+|             I32 |                0 |     100000 |  12944x |  42.500 us | 11.39% |  38.670 us | 5.46% |       213.250 KiB |
+|             I32 |              0.1 |     100000 |  12256x |  44.664 us | 10.42% |  40.817 us | 4.25% |       213.250 KiB |
+|             I32 |                0 |    1000000 |   7520x |  70.433 us |  6.79% |  66.546 us | 3.35% |         2.232 MiB |
+|             I32 |              0.1 |    1000000 |   6480x |  81.219 us |  5.55% |  77.337 us | 2.27% |         2.232 MiB |
+|             I32 |                0 |   10000000 |   2800x | 396.789 us |  2.95% | 392.482 us | 2.71% |        20.814 MiB |
+|             I32 |              0.1 |   10000000 |   1008x | 507.720 us |  1.23% | 503.359 us | 0.86% |        20.814 MiB |
+| cudf::list_view |                0 |      10000 |   3056x | 774.459 us |  2.20% | 770.329 us | 2.13% |         480.000 B |
+| cudf::list_view |              0.1 |      10000 |    515x | 976.157 us |  0.45% | 972.179 us | 0.19% |         480.000 B |
+| cudf::list_view |                0 |     100000 |   1502x | 643.553 us |  0.81% | 639.530 us | 0.50% |         928.000 B |
+| cudf::list_view |              0.1 |     100000 |    726x | 693.002 us |  0.73% | 689.082 us | 0.46% |         944.000 B |
+| cudf::list_view |                0 |    1000000 |    147x |   3.428 ms |  0.15% |   3.423 ms | 0.07% |         4.812 KiB |
+| cudf::list_view |              0.1 |    1000000 |    109x |   4.610 ms |  0.24% |   4.606 ms | 0.22% |         5.141 KiB |
+| cudf::list_view |                0 |   10000000 |    250x |   2.011 ms |  0.24% |   2.007 ms | 0.13% |        43.000 KiB |
+| cudf::list_view |              0.1 |   10000000 |    292x |   1.719 ms |  0.33% |   1.715 ms | 0.23% |        47.672 KiB |

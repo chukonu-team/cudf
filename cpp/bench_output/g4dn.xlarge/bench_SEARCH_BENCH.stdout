@@ -1,0 +1,43 @@
+----------------------------------------------------------------------------------------------
+Benchmark                                                    Time             CPU   Iterations
+----------------------------------------------------------------------------------------------
+Search/Column_AllValid/100000000/manual_time              78.0 ms         78.6 ms            9
+Search/Column_Nulls/100000000/manual_time                 94.9 ms         94.9 ms            8
+Search/Table/1/1000/manual_time                          0.056 ms        0.084 ms        11896
+Search/Table/1/10000/manual_time                         0.066 ms        0.093 ms        10704
+Search/Table/1/100000/manual_time                        0.109 ms        0.136 ms         6440
+Search/Table/1/1000000/manual_time                       0.910 ms        0.930 ms          741
+Search/Table/1/10000000/manual_time                       13.2 ms         13.2 ms           54
+Search/Table/1/100000000/manual_time                       197 ms          197 ms            4
+Search/Table/2/1000/manual_time                          0.066 ms        0.093 ms        10314
+Search/Table/2/10000/manual_time                         0.080 ms        0.107 ms         8699
+Search/Table/2/100000/manual_time                        0.164 ms        0.191 ms         4309
+Search/Table/2/1000000/manual_time                        1.53 ms         1.55 ms          437
+Search/Table/2/10000000/manual_time                       21.7 ms         21.7 ms           33
+Search/Table/2/100000000/manual_time                       321 ms          321 ms            2
+Search/Table/4/1000/manual_time                          0.086 ms        0.113 ms         7827
+Search/Table/4/10000/manual_time                         0.103 ms        0.130 ms         6834
+Search/Table/4/100000/manual_time                        0.233 ms        0.253 ms         3032
+Search/Table/4/1000000/manual_time                        2.28 ms         2.30 ms          301
+Search/Table/4/10000000/manual_time                       37.1 ms         37.1 ms           19
+Search/Table/4/100000000/manual_time                       578 ms          578 ms            1
+Search/Table/8/1000/manual_time                          0.121 ms        0.148 ms         5684
+Search/Table/8/10000/manual_time                         0.148 ms        0.175 ms         4683
+Search/Table/8/100000/manual_time                        0.384 ms        0.403 ms         1809
+Search/Table/8/1000000/manual_time                        4.75 ms         4.78 ms          147
+Search/Table/8/10000000/manual_time                       83.4 ms         83.4 ms            8
+Search/Table/8/100000000/manual_time                      1032 ms         1032 ms            1
+Search/ColumnContains_AllValid/1024/manual_time          0.053 ms        0.080 ms        13157
+Search/ColumnContains_AllValid/4096/manual_time          0.061 ms        0.088 ms        11351
+Search/ColumnContains_AllValid/32768/manual_time         0.080 ms        0.106 ms         8833
+Search/ColumnContains_AllValid/262144/manual_time        0.181 ms        0.205 ms         3880
+Search/ColumnContains_AllValid/2097152/manual_time        4.60 ms         4.63 ms          152
+Search/ColumnContains_AllValid/16777216/manual_time       44.1 ms         44.1 ms           16
+Search/ColumnContains_AllValid/67108864/manual_time       69.9 ms         69.9 ms           10
+Search/ColumnContains_Nulls/1024/manual_time             0.056 ms        0.084 ms        12057
+Search/ColumnContains_Nulls/4096/manual_time             0.062 ms        0.090 ms        11349
+Search/ColumnContains_Nulls/32768/manual_time            0.085 ms        0.111 ms         8233
+Search/ColumnContains_Nulls/262144/manual_time           0.215 ms        0.239 ms         3280
+Search/ColumnContains_Nulls/2097152/manual_time           4.33 ms         4.35 ms          162
+Search/ColumnContains_Nulls/16777216/manual_time          44.0 ms         44.0 ms           16
+Search/ColumnContains_Nulls/67108864/manual_time          70.7 ms         70.7 ms           10

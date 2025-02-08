@@ -1,0 +1,16 @@
+--------------------------------------------------------------------------------------------------------
+Benchmark                                              Time             CPU   Iterations UserCounters...
+--------------------------------------------------------------------------------------------------------
+Repeat/double_nulls/1024/1/manual_time             0.068 ms        0.096 ms        10385 bytes_per_second=312.005M/s
+Repeat/double_nulls/4096/1/manual_time             0.068 ms        0.096 ms        10167 bytes_per_second=1.15361G/s
+Repeat/double_nulls/32768/1/manual_time            0.075 ms        0.101 ms         9428 bytes_per_second=8.44335G/s
+Repeat/double_nulls/262144/1/manual_time           0.144 ms        0.167 ms         4854 bytes_per_second=34.4241G/s
+Repeat/double_nulls/2097152/1/manual_time          0.861 ms        0.881 ms          814 bytes_per_second=46.0543G/s
+Repeat/double_nulls/16777216/1/manual_time          6.71 ms         6.73 ms          103 bytes_per_second=47.3636G/s
+Repeat/double_nulls/67108864/1/manual_time          27.5 ms         27.5 ms           25 bytes_per_second=46.1212G/s
+Repeat/double_nulls/1024/8/manual_time             0.114 ms        0.141 ms         6107 bytes_per_second=1.45228G/s
+Repeat/double_nulls/4096/8/manual_time             0.117 ms        0.143 ms         6047 bytes_per_second=5.39432G/s
+Repeat/double_nulls/32768/8/manual_time            0.130 ms        0.154 ms         5378 bytes_per_second=38.8725G/s
+Repeat/double_nulls/262144/8/manual_time           0.428 ms        0.455 ms         1624 bytes_per_second=92.9817G/s
+Repeat/double_nulls/2097152/8/manual_time           2.91 ms         2.93 ms          242 bytes_per_second=109.171G/s
+Repeat/double_nulls/16777216/8/manual_time          22.9 ms         22.9 ms           31 bytes_per_second=111.078G/s

@@ -1,0 +1,23 @@
+-----------------------------------------------------------------------------------------------------------
+Benchmark                                                 Time             CPU   Iterations UserCounters...
+-----------------------------------------------------------------------------------------------------------
+Iterator/double_cub_raw/1000/manual_time              0.004 ms        0.032 ms       156789 bytes_per_second=1.66915G/s
+Iterator/double_cub_raw/10000/manual_time             0.008 ms        0.035 ms        92391 bytes_per_second=9.82149G/s
+Iterator/double_cub_raw/100000/manual_time            0.013 ms        0.040 ms        54493 bytes_per_second=57.9765G/s
+Iterator/double_cub_raw/1000000/manual_time           0.051 ms        0.069 ms        13777 bytes_per_second=146.361G/s
+Iterator/double_cub_raw/10000000/manual_time          0.318 ms        0.338 ms         2201 bytes_per_second=234.242G/s
+Iterator/double_cub_iter/1000/manual_time             0.004 ms        0.032 ms       157239 bytes_per_second=1.67337G/s
+Iterator/double_cub_iter/10000/manual_time            0.008 ms        0.035 ms        92256 bytes_per_second=9.81425G/s
+Iterator/double_cub_iter/100000/manual_time           0.013 ms        0.040 ms        54949 bytes_per_second=58.4512G/s
+Iterator/double_cub_iter/1000000/manual_time          0.051 ms        0.069 ms        13671 bytes_per_second=145.433G/s
+Iterator/double_cub_iter/10000000/manual_time         0.319 ms        0.339 ms         2190 bytes_per_second=233.214G/s
+Iterator/double_thrust_raw/1000/manual_time           0.122 ms        0.154 ms         5714 bytes_per_second=62.3718M/s
+Iterator/double_thrust_raw/10000/manual_time          0.129 ms        0.161 ms         5284 bytes_per_second=590.805M/s
+Iterator/double_thrust_raw/100000/manual_time         0.133 ms        0.164 ms         5248 bytes_per_second=5.60172G/s
+Iterator/double_thrust_raw/1000000/manual_time        0.177 ms        0.200 ms         3936 bytes_per_second=42.0594G/s
+Iterator/double_thrust_raw/10000000/manual_time       0.448 ms        0.472 ms         1565 bytes_per_second=166.371G/s
+Iterator/double_thrust_iter/1000/manual_time          0.124 ms        0.156 ms         5674 bytes_per_second=61.7245M/s
+Iterator/double_thrust_iter/10000/manual_time         0.131 ms        0.163 ms         5391 bytes_per_second=580.608M/s
+Iterator/double_thrust_iter/100000/manual_time        0.135 ms        0.165 ms         5209 bytes_per_second=5.53038G/s
+Iterator/double_thrust_iter/1000000/manual_time       0.179 ms        0.202 ms         3930 bytes_per_second=41.6562G/s
+Iterator/double_thrust_iter/10000000/manual_time      0.454 ms        0.479 ms         1559 bytes_per_second=164.096G/s

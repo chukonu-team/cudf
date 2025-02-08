@@ -1,0 +1,9 @@
+2025-02-07T07:05:04+00:00
+Running build/benchmarks/TYPE_DISPATCHER_BENCH
+Run on (4 X 3100.63 MHz CPU s)
+CPU Caches:
+  L1 Data 32 KiB (x2)
+  L1 Instruction 32 KiB (x2)
+  L2 Unified 1024 KiB (x2)
+  L3 Unified 36608 KiB (x1)
+Load Average: 0.05, 0.10, 0.25
